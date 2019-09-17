@@ -870,8 +870,12 @@ Item {
                 horizontalCenter: parent.horizontalCenter
             }
 
-            enabled: viewFinderOverlay.readyForCapture && !storageMonitor.diskSpaceCriticallyLow
-                     && !camera.timedCaptureInProgress
+            enabled: (
+                (camera.captureMode == Camera.CaptureVideo
+                    && camera.videoRecorder.recorderStatus == CameraRecorder.RecordingStatus) ||
+                (viewFinderOverlay.readyForCapture && !storageMonitor.diskSpaceCriticallyLow
+                     && !camera.timedCaptureInProgress)
+            )
             state: (camera.captureMode == Camera.CaptureVideo) ?
                    ((camera.videoRecorder.recorderState == CameraRecorder.StoppedState) ? "record_off" : "record_on") :
                    "camera"
