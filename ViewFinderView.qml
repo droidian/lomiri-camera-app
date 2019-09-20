@@ -339,6 +339,7 @@ FocusScope {
         anchors.fill: parent
         asynchronous: true
         camera: camera
+        sensorOrientation: camera.orientation
         opacity: status == Loader.Ready && overlayVisible && !photoRollHint.enabled ? 1.0 : 0.0
         readyForCapture: main.contentExportMode &&
                          viewFinderExportConfirmation.waitingForPictureCapture ? false : camera.imageCapture.ready
