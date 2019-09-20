@@ -25,6 +25,7 @@ Loader {
     property var controls: loader.item ? loader.item.controls : null
     property var settings: loader.item.settings
     property bool readyForCapture
+    property int sensorOrientation
 
     function showFocusRing(x, y) {
         loader.item.showFocusRing(x, y);
@@ -41,5 +42,6 @@ Loader {
 
     onLoaded: {
         loader.item.readyForCapture = Qt.binding(function() { return loader.readyForCapture });
+        loader.item.sensorOrientation = Qt.binding(function() { return loader.sensorOrientation });
     }
 }
