@@ -260,7 +260,6 @@ FocusScope {
                 } else {
                     return camera.orientation;
                 }
-                
             }
 
             transform: Rotation {
