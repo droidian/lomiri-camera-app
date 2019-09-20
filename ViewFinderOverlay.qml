@@ -720,6 +720,7 @@ Item {
         }
 
         function shoot() {
+            // Note that orientation now means the clockwise rotation of the image.
             var orientation = 0;
             if (orientationSensor.reading != null) {
                 switch (orientationSensor.reading.orientation) {
@@ -730,10 +731,10 @@ Item {
                         orientation = 180;
                         break;
                     case OrientationReading.LeftUp:
-                        orientation = 90;
+                        orientation = 270;
                         break;
                     case OrientationReading.RightUp:
-                        orientation = 270;
+                        orientation = 90;
                         break;
                     default:
                         /* Workaround for OrientationSensor not setting a valid value until
@@ -744,13 +745,16 @@ Item {
                            the orientation lock is not engaged.
                            Ref.: https://bugs.launchpad.net/camera-app/+bug/1422762
                         */
-                        orientation = Screen.angleBetween(Screen.orientation, Screen.primaryOrientation);
+                        orientation = Screen.angleBetween(Screen.primaryOrientation, Screen.orientation);
                         break;
                 }
             }
 
             // account for the orientation of the sensor
-            orientation -= viewFinderOverlay.sensorOrientation;
+            orientation += viewFinderOverlay.sensorOrientation;
+
+            // Ensure that the orientation is positive and within range.
+            orientation = (orientation + 360) % 360;
 
             if (camera.captureMode == Camera.CaptureVideo) {
                 if (main.contentExportMode) {
