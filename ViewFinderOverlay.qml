@@ -52,17 +52,31 @@ Item {
         property int encodingQuality: 2 // QMultimedia.NormalQuality
         property bool gridEnabled: false
         property bool preferRemovableStorage: false
-        property string videoResolution: "1920x1080"
         property bool playShutterSound: true
         property bool shutterVibration: false
         property var photoResolutions
+        property var videoResolutions
+        // Left for compatibility
+        property string videoResolution: ""
         property bool dateStampImages: false
         property string dateStampFormat: Qt.locale().dateFormat(Locale.ShortFormat)
         property color dateStampColor: UbuntuColors.orange;
         property real dateStampOpacity: 1.0;
         property int dateStampAlign :  Qt.AlignBottom | Qt.AlignRight;
 
-        Component.onCompleted: if (!photoResolutions) photoResolutions = {}
+        Component.onCompleted: {
+            if (!photoResolutions) photoResolutions = {}
+            if (!videoResolutions) {
+                videoResolutions = {}
+                if (videoResolution)
+                    // Migrate old value into default camera
+                    setVideoResolution(videoResolution);
+            }
+        }
+
+        onPhotoResolutionsChanged: updateViewfinderResolution();
+        onVideoResolutionsChanged: updateViewfinderResolution();
+
         onFlashModeChanged: if (flashMode != Camera.FlashOff) hdrEnabled = false;
         onHdrEnabledChanged: if (hdrEnabled) flashMode = Camera.FlashOff
     }
@@ -96,29 +110,69 @@ Item {
     Binding {
         target: camera.videoRecorder
         property: "resolution"
-        value: settings.videoResolution
+        value: settings.videoResolutions[camera.deviceId] || Qt.size(-1, -1)
     }
 
     Binding {
         target: camera.imageCapture
         property: "resolution"
-        value: settings.photoResolutions[camera.deviceId]
+        value: settings.photoResolutions[camera.deviceId] || Qt.size(-1, -1)
     }
 
+    // FIXME: where's the proper location for this?
+    function updateViewfinderResolution() {
+        var EPSILON = 0.02;
+        var supportedViewfinderResolutions = camera.supportedViewfinderResolutions();
+
+        if (supportedViewfinderResolutions.length === 0) {
+            console.log("updateViewfinderResolution: viewfinder resolutions is not known yet.");
+            return;
+        }
+
+        var targetResolution = stringToSize(
+            camera.captureMode === Camera.CaptureStillImage
+                ? settings.photoResolutions[camera.deviceId]
+                : settings.videoResolutions[camera.deviceId]
+        );
+
+        if (!targetResolution) {
+            // Resolution has not been selected yet.
+            return;
+        }
+
+        var targetAspectRatio = targetResolution.width / targetResolution.height;
+        var selectedResolution;
+
+        // Select the highest resolution with matching aspect ratio.
+        for (var i = 0; i < supportedViewfinderResolutions.length; i++) {
+            var currentResolution = supportedViewfinderResolutions[i];
+            var currentAspectRatio = currentResolution.width / currentResolution.height;
+
+            if (Math.abs(targetAspectRatio - currentAspectRatio) > EPSILON)
+                continue;
+
+            if (!selectedResolution ||
+                    currentResolution.width > selectedResolution.width) {
+                selectedResolution = currentResolution;
+            }
+        }
+
+        if (!selectedResolution) {
+            // This is strange. Not sure why this would happen.
+            console.log("updateViewfinderResolution: cannot find suitable viewfinder resolution. Use the default one.");
+            selectedResolution = supportedViewfinderResolutions[0];
+        }
+
+        console.log("updateViewfinderResolution: For target resolution " +
+                    sizeToString(targetResolution) + ", select " +
+                    sizeToString(selectedResolution) + " for viewfinder resolution.");
+
+        camera.viewfinder.resolution =
+                Qt.size(selectedResolution.width, selectedResolution.height);
+    }
 
     Connections {
         target: camera.imageCapture
-        onResolutionChanged: {
-            // FIXME: this is a necessary workaround because:
-            // - Neither camera.viewfinder.resolution nor camera.advanced.resolution
-            //   emit a changed signal when the underlying AalViewfinderSettingsControl's
-            //   resolution changes
-            // - we know that qtubuntu-camera changes the resolution of the
-            //   viewfinder automatically when the capture resolution is set
-            // - we need camera.viewfinder.resolution to hold the right
-            //   value
-            camera.viewfinder.resolution = camera.advanced.resolution;
-        }
         onImageCaptured: {
            if(settings.shutterVibration) {
                Haptics.play({intensity:0.25,duration:UbuntuAnimation.SnapDuration/3});
@@ -127,18 +181,18 @@ Item {
     }
 
     Connections {
-        target: camera.videoRecorder
-        onResolutionChanged: {
-            // FIXME: see workaround setting camera.viewfinder.resolution above
-            camera.viewfinder.resolution = camera.advanced.resolution;
-        }
-    }
-
-    Connections {
         target: camera
         onCaptureModeChanged: {
-            // FIXME: see workaround setting camera.viewfinder.resolution above
-            camera.viewfinder.resolution = camera.advanced.resolution;
+            updateViewfinderResolution();
+        }
+
+        onCameraStatusChanged: {
+            // Supported viewfinder resolution is guaranteed to be known at
+            // ActiveStatus, if not earlier.
+            if (camera.cameraStatus == Camera.LoadedStatus
+                || camera.cameraStatus == Camera.ActiveStatus) {
+                updateViewfinderResolution();
+            }
         }
     }
 
@@ -235,8 +289,8 @@ Item {
 
         // If resolution setting is not supported select the resolution automatically
         var photoResolution = settings.photoResolutions[camera.deviceId];
-        if (!isResolutionAnOption(photoResolution)) {
-            setPhotoResolution(getAutomaticResolution());
+        if (!isPhotoResolutionAnOption(photoResolution)) {
+            setPhotoResolution(getAutomaticPhotoResolution());
         }
 
     }
@@ -252,17 +306,26 @@ Item {
         }
     }
 
-    function getAutomaticResolution() {
+    function setVideoResolution(resolution) {
+        if (resolution !== settings.videoResolutions[camera.deviceId]) {
+            settings.videoResolutions[camera.deviceId] = resolution;
+            // FIXME: resetting the value of the property 'videoResolutions' is
+            // necessary to ensure that a change notification signal is emitted
+            settings.videoResolutions = settings.videoResolutions;
+        }
+    }
+
+    function getAutomaticPhotoResolution() {
         var fittingResolution = sizeToString(camera.advanced.fittingResolution);
         var maximumResolution = sizeToString(camera.advanced.maximumResolution);
-        if (isResolutionAnOption(fittingResolution)) {
+        if (isPhotoResolutionAnOption(fittingResolution)) {
             return fittingResolution;
         } else {
             return maximumResolution;
         }
     }
 
-    function isResolutionAnOption(resolution) {
+    function isPhotoResolutionAnOption(resolution) {
         for (var i=0; i<photoResolutionOptionsModel.count; i++) {
             var option = photoResolutionOptionsModel.get(i);
             if (option.value == resolution) {
@@ -272,16 +335,10 @@ Item {
         return false;
     }
 
-    function updateResolutionOptions() {
-        updateVideoResolutionOptions();
-        updatePhotoResolutionOptions();
-        // FIXME: see workaround setting camera.viewfinder.resolution above
-        camera.viewfinder.resolution = camera.advanced.resolution;
-    }
-
     Connections {
         target: camera.advanced
         onVideoSupportedResolutionsChanged: updateVideoResolutionOptions();
+        onImageSupportedResolutionsChanged: updatePhotoResolutionOptions();
         onFittingResolutionChanged: updatePhotoResolutionOptions();
         onMaximumResolutionChanged: updatePhotoResolutionOptions();
     }
@@ -289,17 +346,9 @@ Item {
     Connections {
         target: camera
         onDeviceIdChanged: {
-            var hasPhotoResolutionSetting = (settings.photoResolutions[camera.deviceId] != "")
-            // FIXME: use camera.advanced.imageCaptureResolution instead of camera.imageCapture.resolution
-            // because the latter is not updated when the backend changes the resolution
-            setPhotoResolution(sizeToString(camera.advanced.imageCaptureResolution));
-            settings.videoResolution = sizeToString(camera.advanced.videoRecorderResolution);
-            updateResolutionOptions();
-
-            // If no resolution has ever been chosen, select one automatically
-            if (!hasPhotoResolutionSetting) {
-                setPhotoResolution(getAutomaticResolution());
-            }
+            // Clear viewfinder resolution settings as it might not be supported
+            // by the new device.
+            camera.viewfinder.resolution = Qt.size(-1, -1);
         }
     }
 
@@ -558,11 +607,15 @@ Item {
                 ListModel {
                     id: videoResolutionOptionsModel
 
-                    property string settingsProperty: "videoResolution"
+                    function setSettingProperty(value) {
+                        setVideoResolution(value);
+                    }
+
                     property string icon: ""
                     property string label: "HD"
                     property bool isToggle: false
-                    property int selectedIndex: bottomEdge.indexForValue(videoResolutionOptionsModel, settings.videoResolution)
+                    property int selectedIndex: bottomEdge.indexForValue(videoResolutionOptionsModel,
+                                                    settings.videoResolutions[camera.deviceId])
                     property bool available: true
                     property bool visible: camera.captureMode == Camera.CaptureVideo
                     property bool showInIndicators: false

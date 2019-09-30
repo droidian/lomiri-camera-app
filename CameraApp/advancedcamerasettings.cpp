@@ -206,14 +206,14 @@ void AdvancedCameraSettings::setCamera(QObject *cameraObject)
         m_cameraObject = cameraObject;
 
         if (m_camera != 0) {
-            this->disconnect(m_camera, SIGNAL(stateChanged(QCamera::State)));
+            this->disconnect(m_camera, SIGNAL(statusChanged(QCamera::Status)));
         }
         QCamera* camera = cameraFromCameraObject(cameraObject);
         m_camera = camera;
         if (m_camera != 0) {
-            this->connect(m_camera, SIGNAL(stateChanged(QCamera::State)),
-                          SLOT(onCameraStateChanged()));
-            onCameraStateChanged();
+            this->connect(m_camera, SIGNAL(statusChanged(QCamera::Status)),
+                          SLOT(onCameraStatusChanged(QCamera::Status)));
+            onCameraStatusChanged(m_camera->status());
 
             QVideoDeviceSelectorControl* selector = selectorFromCamera(m_camera);
             m_deviceSelector = selector;
@@ -237,6 +237,7 @@ void AdvancedCameraSettings::onSelectedDeviceChanged(int index)
     Q_EMIT fittingResolutionChanged();
     Q_EMIT hasFlashChanged();
     Q_EMIT videoSupportedResolutionsChanged();
+    Q_EMIT imageSupportedResolutionsChanged();
 }
 
 void AdvancedCameraSettings::readCapabilities()
@@ -281,11 +282,12 @@ void AdvancedCameraSettings::readCapabilities()
     Q_EMIT hdrEnabledChanged();
     Q_EMIT encodingQualityChanged();
     Q_EMIT videoSupportedResolutionsChanged();
+    Q_EMIT imageSupportedResolutionsChanged();
 }
 
-void AdvancedCameraSettings::onCameraStateChanged()
+void AdvancedCameraSettings::onCameraStatusChanged(QCamera::Status status)
 {
-    if (m_camera->state() == QCamera::LoadedState || m_camera->state() == QCamera::ActiveState) {
+    if (status == QCamera::LoadedStatus || status == QCamera::ActiveStatus) {
         readCapabilities();
     }
 }
@@ -439,8 +441,16 @@ QStringList AdvancedCameraSettings::videoSupportedResolutions()
         if (m_videoSupportedResolutions.isEmpty()) {
             QString currentDeviceName = m_deviceSelector->deviceName(m_deviceSelector->selectedDevice());
             QCamera::Position cameraPosition = m_cameraInfoControl->cameraPosition(currentDeviceName);
+
+            bool continuous = false;
             QList<QSize> sizes = m_videoEncoderControl->supportedResolutions(
-                                                m_videoEncoderControl->videoSettings());
+                                                m_videoEncoderControl->videoSettings(),
+                                                &continuous);
+
+            if (continuous && m_camera->status() != QCamera::ActiveStatus)
+                // Some backend can return bogus values while the camera isn't active yet.
+                return QStringList();
+
             Q_FOREACH(QSize size, sizes) {
                 // Workaround for bug https://bugs.launchpad.net/ubuntu/+source/libhybris/+bug/1408650
                 // When using the front camera on krillin, using resolution 640x480 does

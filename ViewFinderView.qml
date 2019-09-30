@@ -49,8 +49,6 @@ FocusScope {
 
     function decideCameraState() {
         if (viewFinderOverlay.status == Loader.Ready) {
-            camera.cameraState = Camera.LoadedState;
-            viewFinderOverlay.updateResolutionOptions();
             camera.cameraState = Camera.ActiveState;
         }
     }
