@@ -247,23 +247,31 @@ Item {
         var supported = camera.advanced.videoSupportedResolutions;
         var wellKnown = ["1920x1080", "1280x720", "640x480"];
 
-        supported = supported.slice().sort(function(a, b) {
+        var supportedFiltered = supported.filter(function (resolution) {
+            return wellKnown.indexOf(resolution) !== -1;
+        });
+
+        if (supportedFiltered.length === 0)
+            supportedFiltered = supported.slice();
+
+        // Sort resolutions from low to high, but then insert them into model
+        // in reverse order (so that highest resolution appear first).
+        supportedFiltered.sort(function(a, b) {
             return a.split("x")[0] - b.split("x")[0];
         });
 
-        for (var i=0; i<supported.length; i++) {
-            var resolution = supported[i];
-            if (wellKnown.indexOf(resolution) !== -1) {
-                var option = {"icon": "",
-                              "label": resolutionToLabel(resolution),
-                              "value": resolution};
-                videoResolutionOptionsModel.insert(0, option);
-            }
+        for (var i=0; i<supportedFiltered.length; i++) {
+            var resolution = supportedFiltered[i];
+            var option = {"icon": "",
+                          "label": resolutionToLabel(resolution),
+                          "value": resolution};
+            videoResolutionOptionsModel.insert(0, option);
         }
 
         // If resolution setting chosen is not supported select the highest available resolution
-        if (supported.length > 0 && supported.indexOf(settings.videoResolution) == -1) {
-            settings.videoResolution = supported[supported.length - 1];
+        if (supportedFiltered.length > 0
+                && supportedFiltered.indexOf(settings.videoResolutions[camera.deviceId]) === -1) {
+            setVideoResolution(supportedFiltered[supportedFiltered.length - 1]);
         }
     }
 
