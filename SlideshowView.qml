@@ -261,7 +261,7 @@ FocusScope {
                         height: flickable.height * flickable.sizeScale
 
                         property bool isVideo: MimeTypeMapper.mimeTypeToContentType(fileType) === ContentType.Videos
-                        property string photoUrl: editingAvailable ? "image://photo/%1".arg(fileURL.toString()) : fileURL.toString().replace("file://", "")
+                        property string photoUrl: editingAvailable ? "image://photo/%1".arg(fileURL.toString()) : fileURL.toString()
                         property string url: fileURL.toString().replace("file://", "");
                         Image {
                             id: image

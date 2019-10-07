@@ -138,7 +138,10 @@ FocusScope {
             onRecorderStateChanged: {
                 if (videoRecorder.recorderState === CameraRecorder.StoppedState) {
                     metricVideos.increment()
-                    viewFinderView.videoShot(videoRecorder.actualLocation);
+                    // "actualLocation" is a URL string. Get only path from it
+                    // before passing on.
+                    var videoPath = videoRecorder.actualLocation.replace("file://", "");
+                    viewFinderView.videoShot(videoPath);
                     if (main.contentExportMode) {
                         viewFinderExportConfirmation.mediaPath = videoRecorder.actualLocation
                     } else if (photoRollHint.necessary) {
