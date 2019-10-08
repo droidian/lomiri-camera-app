@@ -71,10 +71,14 @@ FocusScope {
                 focus.focusMode = Camera.FocusAuto;
                 focus.customFocusPoint = normalizedPoint;
                 focus.focusPointMode = Camera.FocusPointCustom;
+
+                searchAndLock();
             }
         }
 
         function autoFocus() {
+            unlock();
+
             focus.focusMode = Camera.FocusContinuous;
             focus.focusPointMode = Camera.FocusPointAuto;
         }
