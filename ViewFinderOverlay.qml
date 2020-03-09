@@ -811,6 +811,11 @@ Item {
                 }
             }
 
+            if (camera.position === Camera.FrontFace) {
+                // Clockwise device becomes counter-clockwise camera
+                orientation = 360 - orientation;
+            }
+
             // account for the orientation of the sensor
             orientation += viewFinderOverlay.sensorOrientation;
 
