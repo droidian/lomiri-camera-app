@@ -18,7 +18,7 @@ import QtQuick 2.4
 import QtQuick.Window 2.2
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
-import QtMultimedia 5.0
+import QtMultimedia 5.9
 import QtPositioning 5.2
 import QtSensors 5.0
 import CameraApp 0.1
@@ -35,6 +35,8 @@ Item {
     property var settings: settings
     property bool readyForCapture
     property int sensorOrientation
+    // Sometimes the value is FlashVideoLight, sometimes it's FlashTorch
+    property int videoFlashOnValue: Camera.FlashVideoLight
 
     function showFocusRing(x, y) {
         focusRing.center = Qt.point(x, y);
@@ -47,7 +49,9 @@ Item {
         property int flashMode: Camera.FlashAuto
         property bool gpsEnabled: false
         property bool hdrEnabled: false
-        property int videoFlashMode: Camera.FlashOff
+        property bool videoFlashOn: false
+        // Left for compatibility
+        property int videoFlashMode: -1
         property int selfTimerDelay: 0
         property int encodingQuality: 2 // QMultimedia.NormalQuality
         property bool gridEnabled: false
@@ -66,11 +70,17 @@ Item {
 
         Component.onCompleted: {
             if (!photoResolutions) photoResolutions = {}
+
             if (!videoResolutions) {
                 videoResolutions = {}
                 if (videoResolution)
                     // Migrate old value into default camera
                     setVideoResolution(videoResolution);
+            }
+
+            if (videoFlashMode != -1) {
+                videoFlashOn = (videoFlashMode != Camera.FlashOff);
+                videoFlashMode = -1;
             }
         }
 
@@ -91,7 +101,7 @@ Item {
     Binding {
         target: camera.flash
         property: "mode"
-        value: viewFinderView.inView ?  settings.videoFlashMode : Camera.FlashOff
+        value: settings.videoFlashOn && viewFinderView.inView ? videoFlashOnValue : Camera.FlashOff
         when: camera.captureMode == Camera.CaptureVideo
     }
 
@@ -171,6 +181,22 @@ Item {
                 Qt.size(selectedResolution.width, selectedResolution.height);
     }
 
+    function updateVideoFlashOnValue() {
+        if (camera.captureMode != Camera.CaptureVideo) {
+            // The value can be probed only in video mode.
+            return;
+        }
+
+        var supportedModes = camera.flash.supportedModes;
+        for (var i = 0; i < supportedModes.length; i++) {
+            if (supportedModes[i] === Camera.FlashVideoLight ||
+                    supportedModes[i] === Camera.FlashTorch) {
+                videoFlashOnValue = supportedModes[i];
+                return;
+            }
+        }
+    }
+
     Connections {
         target: camera.imageCapture
         onImageCaptured: {
@@ -178,6 +204,11 @@ Item {
                Haptics.play({intensity:0.25,duration:UbuntuAnimation.SnapDuration/3});
            }
         }
+    }
+
+    Connections {
+        target: camera.flash
+        onSupportedModesChanged: { updateVideoFlashOnValue(); }
     }
 
     Connections {
@@ -461,11 +492,11 @@ Item {
                 ListModel {
                     id: videoFlashOptionsModel
 
-                    property string settingsProperty: "videoFlashMode"
+                    property string settingsProperty: "videoFlashOn"
                     property string icon: ""
                     property string label: ""
                     property bool isToggle: false
-                    property int selectedIndex: bottomEdge.indexForValue(videoFlashOptionsModel, settings.videoFlashMode)
+                    property int selectedIndex: bottomEdge.indexForValue(videoFlashOptionsModel, settings.videoFlashOn)
                     property bool available: camera.advanced.hasFlash
                     property bool visible: camera.captureMode == Camera.CaptureVideo
                     property bool showInIndicators: true
@@ -473,12 +504,12 @@ Item {
                     ListElement {
                         icon: "torch-on"
                         label: QT_TR_NOOP("On")
-                        value: Camera.FlashVideoLight
+                        value: true
                     }
                     ListElement {
                         icon: "torch-off"
                         label: QT_TR_NOOP("Off")
-                        value: Camera.FlashOff
+                        value: false
                     }
                 },
                 ListModel {

@@ -18,7 +18,7 @@ import QtQuick 2.4
 import QtQuick.Window 2.2
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
-import QtMultimedia 5.0
+import QtMultimedia 5.9
 import CameraApp 0.1
 //import QtGraphicalEffects 1.0
 import Ubuntu.Content 1.3
