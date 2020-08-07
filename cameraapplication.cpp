@@ -64,11 +64,21 @@ CameraApplication::~CameraApplication()
 
 bool CameraApplication::isDesktopMode() const
 {
+  // Platform is not a good way to determine this. Mainline devices currently
+  // uses Wayland platform and it's expected that Hybris devices will follow
+  // suite sometime in the future.
+  // The best way would be calling to libdeviceinfo. However, currently
+  // libdeviceinfo doesn't work for Click packages. So, for now, this.
+#ifdef CLICK_MODE
+  // Assumes that desktop users won't be able to install Click packages.
+  return false;
+#else
   // Assume that platformName (QtUbuntu) with ubuntu
   // in name means it's running on device
   // TODO: replace this check with SDK call for formfactor
   QString platform = QGuiApplication::platformName();
   return !((platform == "ubuntu") || (platform == "ubuntumirclient"));
+#endif
 }
 
 
