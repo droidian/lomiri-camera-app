@@ -226,6 +226,20 @@ Item {
             }
         }
     }
+    
+    function shoot() {
+        if (shootButton.enabled) {
+            if (camera.captureMode == Camera.CaptureVideo && camera.videoRecorder.recorderState == CameraRecorder.RecordingState) {
+                camera.videoRecorder.stop();
+            } else {
+                if (settings.selfTimerDelay > 0) {
+                    controls.timedShoot(settings.selfTimerDelay);
+                } else {
+                    controls.shoot();
+                }
+            }
+        }
+    }
 
     function resolutionToLabel(resolution) {
         // takes in a resolution string (e.g. "1920x1080") and returns a nicer
@@ -1015,15 +1029,7 @@ Item {
                    ((camera.videoRecorder.recorderState == CameraRecorder.StoppedState) ? "record_off" : "record_on") :
                    "camera"
             onClicked: {
-                if (camera.captureMode == Camera.CaptureVideo && camera.videoRecorder.recorderState == CameraRecorder.RecordingState) {
-                    camera.videoRecorder.stop();
-                } else {
-                    if (settings.selfTimerDelay > 0) {
-                        controls.timedShoot(settings.selfTimerDelay);
-                    } else {
-                        controls.shoot();
-                    }
-                }
+                viewFinderOverlay.shoot();
             }
             rotation: Screen.angleBetween(Screen.primaryOrientation, Screen.orientation)
             Behavior on rotation {
