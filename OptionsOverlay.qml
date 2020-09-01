@@ -49,6 +49,7 @@ Item {
                 enabled: model.available && (!optionValueSelector.caller || optionValueSelector.caller == optionButton)
                 opacity: enabled ? 1.0 : 0.05
                 Behavior on opacity {LomiriNumberAnimation {duration: LomiriAnimation.FastDuration}}
+                customRotation: main.orientedRotationAngle
             }
         }
     }
@@ -62,6 +63,15 @@ Item {
         interactive: true
         flickableDirection: Flickable.VerticalFlick
         boundsBehavior: Flickable.DragAndOvershootBounds
+        rotation: main.orientedRotationAngle
+            
+        Behavior on rotation {
+            RotationAnimator {
+                duration: UbuntuAnimation.BriskDuration
+                easing: UbuntuAnimation.StandardEasing
+                direction: RotationAnimator.Shortest
+            }
+        }
 
         property OptionButton caller
         property int screenHeight: ( (Screen.orientation == Qt.PortraitOrientation || Screen.orientation == Qt.InvertedPortraitOrientation)

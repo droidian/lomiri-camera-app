@@ -80,6 +80,15 @@ Item {
                 width: units.gu(2)
                 visible: modelData.showInIndicators && modelData.available && modelData.visible ? (modelData.isToggle ? modelData.get(model.selectedIndex).value : true) : false
                 opacity: 0.5
+                rotation: main.orientedRotationAngle
+                
+                Behavior on rotation {
+                    RotationAnimator {
+                        duration: UbuntuAnimation.BriskDuration
+                        easing: UbuntuAnimation.StandardEasing
+                        direction: RotationAnimator.Shortest
+                    }
+                }
 
                 Icon {
                     id: indicatorIcon

@@ -26,6 +26,7 @@ AbstractButton {
     property bool on: true
     property string label: ""
     property bool automaticOrientation: true
+    property real customRotation: 0
 
     width: units.gu(5)
     height: width
@@ -50,7 +51,7 @@ AbstractButton {
         color: "white"
         opacity: button.on ? (button.enabled ? 1.0 : 0.3): 0.5
         visible: label === ""
-        rotation: automaticOrientation ? Screen.angleBetween(Screen.primaryOrientation, Screen.orientation) : 0
+        rotation: automaticOrientation ? Screen.angleBetween(Screen.primaryOrientation, Screen.orientation) : customRotation
         Behavior on rotation {
             RotationAnimator {
                 duration: LomiriAnimation.BriskDuration
@@ -71,7 +72,7 @@ AbstractButton {
         text: label
         opacity: button.on ? (button.enabled ? 1.0 : 0.3): 0.5
         visible: label !== ""
-        rotation: automaticOrientation ? Screen.angleBetween(Screen.primaryOrientation, Screen.orientation) : 0
+        rotation: automaticOrientation ? Screen.angleBetween(Screen.primaryOrientation, Screen.orientation) : customRotation
         Behavior on rotation {
             RotationAnimator {
                 duration: LomiriAnimation.BriskDuration

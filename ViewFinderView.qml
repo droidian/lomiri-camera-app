@@ -313,6 +313,8 @@ FocusScope {
         TimedShootFeedback {
             id: timedShootFeedback
             anchors.fill: parent
+            automaticOrientation: false
+            customRotation: main.staticRotationAngle
         }
 
         ShootFeedback {

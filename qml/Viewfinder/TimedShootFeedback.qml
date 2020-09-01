@@ -21,6 +21,8 @@ import Lomiri.Components 1.3
 
 OrientationHelper {
 	id: timedShootFeedback
+    property real customRotation: 0
+    
 	anchors.fill: parent
 
 	function start() {
@@ -57,6 +59,15 @@ OrientationHelper {
 			duration: 750
 			easing: LomiriAnimation.StandardEasing
 		}
+        
+        rotation: timedShootFeedback.automaticOrientation ? 0 : timedShootFeedback.customRotation
+        Behavior on rotation {
+            RotationAnimator {
+                duration: UbuntuAnimation.BriskDuration
+                easing: UbuntuAnimation.StandardEasing
+                direction: RotationAnimator.Shortest
+            }
+        }
 	}
 
 	// tapping anywhere on the screen while a timed shoot is ongoing cancels it
