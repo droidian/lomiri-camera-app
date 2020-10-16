@@ -227,7 +227,7 @@ Item {
         }
     }
     
-    function shoot() {
+    function triggerShoot() {
         if (shootButton.enabled) {
             if (camera.captureMode == Camera.CaptureVideo && camera.videoRecorder.recorderState == CameraRecorder.RecordingState) {
                 camera.videoRecorder.stop();
@@ -1029,7 +1029,7 @@ Item {
                    ((camera.videoRecorder.recorderState == CameraRecorder.StoppedState) ? "record_off" : "record_on") :
                    "camera"
             onClicked: {
-                viewFinderOverlay.shoot();
+                viewFinderOverlay.triggerShoot();
             }
             rotation: Screen.angleBetween(Screen.primaryOrientation, Screen.orientation)
             Behavior on rotation {
