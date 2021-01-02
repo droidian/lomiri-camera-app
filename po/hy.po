@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-07-03 21:42+0000\n"
-"Last-Translator: Tigran Khachatryan <tigrankhachatryan2008@gmail.com>\n"
+"PO-Revision-Date: 2020-12-27 08:16+0000\n"
+"Last-Translator: TigranKhachatryan0 <tigrank2008@gmail.com>\n"
 "Language-Team: Armenian <https://translate.ubports.com/projects/ubports/"
 "camera-app/hy/>\n"
 "Language: hy\n"
@@ -160,7 +160,7 @@ msgstr ""
 
 #: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
 msgid "Delete"
-msgstr ""
+msgstr "Ջնջել"
 
 #: ../DeleteDialog.qml:40 ../ViewFinderOverlay.qml:1122
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
@@ -178,7 +178,7 @@ msgstr ""
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
-msgstr ""
+msgstr "Ընտրել"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
