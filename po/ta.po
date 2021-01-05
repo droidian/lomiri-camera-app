@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2021-01-02 18:40+0000\n"
+"PO-Revision-Date: 2021-01-05 01:43+0000\n"
 "Last-Translator: GK <miscgk@pm.me>\n"
 "Language-Team: Tamil <https://translate.ubports.com/projects/ubports/"
 "camera-app/ta/>\n"
@@ -26,114 +26,118 @@ msgstr "அமைவுகள்"
 
 #: ../AdvancedOptions.qml:48
 msgid "Add date stamp on captured images"
-msgstr ""
+msgstr "படம்பிடித்த நிழற்படங்களில் தேதி முத்திரையைச் சேர்க்க"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:70
 msgid "Format"
-msgstr ""
+msgstr "சீரமை"
 
 #: ../AdvancedOptions.qml:122
 msgid "Date formatting keywords"
-msgstr ""
+msgstr "தேதியைச் சீரமைக்கும் சிறப்புச்சொற்கள்"
 
 #: ../AdvancedOptions.qml:127
 msgid "the day as number without a leading zero (1 to 31)"
-msgstr ""
+msgstr "நாளின் எண் - முன்னனி சுழியமில்லாமல் (1 to 31)"
 
 #: ../AdvancedOptions.qml:128
 msgid "the day as number with a leading zero (01 to 31)"
-msgstr ""
+msgstr "நாளின் எண் - முன்னனி சுழியத்துடன் (01 to 31)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr ""
+msgstr "நாளின் குறுக்கிய பெயர் (எ.கா. 'திங்.' முதல் 'ஞாயி.')."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
-msgstr ""
+msgstr "நாளின் முழுப்பெயர் (எ.கா. 'திங்கள்' முதல் 'ஞாயிறு')."
 
 #: ../AdvancedOptions.qml:131
 msgid "the month as number without a leading zero (1 to 12)"
-msgstr ""
+msgstr "மாதத்தின் எண் - முன்னனி சுழியமில்லாமல் (1 to 12)"
 
 #: ../AdvancedOptions.qml:132
 msgid "the month as number with a leading zero (01 to 12)"
-msgstr ""
+msgstr "மாதத்தின் எண் - முன்னனி சுழியத்துடன் (01 to 12)"
 
 #: ../AdvancedOptions.qml:133
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr ""
+msgstr "ஆங்கில மாதத்தின் குறுக்கிய பெயர் (எ.கா. 'சன.' முதல் 'டிசெ.')."
 
 #: ../AdvancedOptions.qml:134
 msgid "the long localized month name (e.g. 'January' to 'December')."
-msgstr ""
+msgstr "ஆங்கில மாத்தின் முழுப்பெயர் (எ.கா. 'சனவரி' முதல் 'டிசம்பர்')."
 
 #: ../AdvancedOptions.qml:135
 msgid "the year as two digit number (00 to 99)"
-msgstr ""
+msgstr "ஆண்டு - கடைசி இரு எண்களாக (00 முதல் 99)"
 
 #: ../AdvancedOptions.qml:136
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
-msgstr ""
+msgstr "ஆண்டு - நான்கு எண்களாக."
 
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
 msgstr ""
+"மணி - முன்னனி சுழியமில்லாமல் (0 முதல் 23 அல்லது கா./மா. காட்சிமுறைக்கு 1 "
+"முதல் 12)"
 
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
 msgstr ""
+"மணி - முன்னனி சுழியத்துடன் (00 முதல் 23 அல்லது கா./மா. காட்சிமுறைக்கு 1 முதல்"
+" 12)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "மணி - முன்னனி சுழியமில்லாமல் (0 முதல் 23, கா./மா. காட்சிமுறையென்றாலும்)"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "மணி - முன்னனி சுழியத்துடன் (00 முதல் 23, கா./மா. காட்சிமுறையென்றாலும்)"
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
-msgstr ""
+msgstr "நிமிடம் - முன்னனி சுழியமில்லாமல் (0 முதல் 59)"
 
 #: ../AdvancedOptions.qml:142
 msgid "the minute with a leading zero (00 to 59)"
-msgstr ""
+msgstr "நிமிடம் - முன்னனி சுழியத்துடன் (00 முதல் 59)"
 
 #: ../AdvancedOptions.qml:143
 msgid "the second without a leading zero (0 to 59)"
-msgstr ""
+msgstr "விநாடி - முன்னனி சுழியமில்லாமல் (0 முதல் 59)"
 
 #: ../AdvancedOptions.qml:144
 msgid "the second with a leading zero (00 to 59)"
-msgstr ""
+msgstr "விநாடி - முன்னனி சுழியத்துடன் (00 முதல் 59)"
 
 #: ../AdvancedOptions.qml:145
 msgid "the milliseconds without leading zeroes (0 to 999)"
-msgstr ""
+msgstr "மி.விநாடி - முன்னனி சுழியமில்லாமல் (0 முதல் 999)"
 
 #: ../AdvancedOptions.qml:146
 msgid "the milliseconds with leading zeroes (000 to 999)"
-msgstr ""
+msgstr "மி.விநாடி - முன்னனி சுழியத்துடன் (000 முதல் 999)"
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr ""
+msgstr "கா./மா. காட்சிமுறையைப் பயன்படுத்துக."
 
 #: ../AdvancedOptions.qml:148
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr ""
+msgstr "கா./மா. காட்சிமுறையைப் பயன்படுத்துக."
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
-msgstr ""
+msgstr "நேர மண்டலம் (எ.கா. 'CEST')"
 
 #: ../AdvancedOptions.qml:158
 msgid "Add to Format"
-msgstr ""
+msgstr "சீரமைப்புகளில் சேர்க்க"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
@@ -143,16 +147,16 @@ msgstr "நிறம்"
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
 msgid "Alignment"
-msgstr ""
+msgstr "ஒதுக்கீடு"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "ஒளி மழுங்கள்"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
-msgstr ""
+msgstr "ஊடகத்தை நீக்கவா?"
 
 #: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
 msgid "Delete"
@@ -162,15 +166,15 @@ msgstr "நீக்குக"
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
 #: ../ViewFinderView.qml:494
 msgid "Cancel"
-msgstr "ரத்துசெய்"
+msgstr "தவிர்க்க"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
-msgstr ""
+msgstr "ஊடகம் எதுவுமில்லை."
 
 #: ../GalleryView.qml:235
 msgid "Scanning for content..."
-msgstr ""
+msgstr "உள்ளடக்கத்திற்காக அய்வுசெய்கிறேன்…"
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
@@ -178,63 +182,63 @@ msgstr "தேர்ந்தெடு"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
-msgstr "நிழற்படத்தைத் திருத்து"
+msgstr "நிழற்படத்தைத் திருத்துக"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Photo Roll"
-msgstr ""
+msgstr "நிழற்படச் சுருள்"
 
 #: ../Information.qml:20
 msgid "About"
-msgstr ""
+msgstr "குறித்து"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr ""
+msgstr "மூலத்தைப் பெறு"
 
 #: ../Information.qml:83
 msgid "Report issues"
-msgstr ""
+msgstr "சிக்கலைப் புகாரளி"
 
 #: ../Information.qml:84
 msgid "Help translate"
-msgstr ""
+msgstr "மொழிமாற்றத்திற்கு உதவிசெய்க"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
-msgstr ""
+msgstr "ஊடகத்தின் தகவல்"
 
 #: ../MediaInfoPopover.qml:30
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "பெயர் : %1"
 
 #: ../MediaInfoPopover.qml:33
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "வகை : %1"
 
 #: ../MediaInfoPopover.qml:37
 #, qt-format
 msgid "Width : %1"
-msgstr ""
+msgstr "அகலம் : %1"
 
 #: ../MediaInfoPopover.qml:41
 #, qt-format
 msgid "Height : %1"
-msgstr ""
+msgstr "உயரம் : %1"
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
-msgstr ""
+msgstr "சாதனத்தில் இடமில்லை, தொடர சில இடத்தை விடுவிக்கவும்."
 
 #: ../PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
-msgstr ""
+msgstr "நிழற்பட சுருளைக் காண இடதுபுறமாகத் தேய்க்க"
 
 #: ../PhotogridView.qml:42 ../SlideshowView.qml:60
 msgid "Share"
-msgstr "பகிர்"
+msgstr "பகிர்க"
 
 #: ../PhotogridView.qml:69 ../SlideshowView.qml:53
 msgid "Gallery"
@@ -242,15 +246,15 @@ msgstr "படத்தொகுப்பு"
 
 #: ../SlideshowView.qml:68
 msgid "Image Info"
-msgstr ""
+msgstr "படிமத்தின் தகவல்"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
-msgstr "திருத்து"
+msgstr "திருத்துக"
 
 #: ../SlideshowView.qml:441
 msgid "Back to Photo roll"
-msgstr ""
+msgstr "நிழற்படச் சுருளுக்குப் பின் செல்க"
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
@@ -271,7 +275,7 @@ msgstr "சரி"
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:65
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:86
 msgid "On"
-msgstr ""
+msgstr "இயக்கு"
 
 #: ../ViewFinderOverlay.qml:372 ../ViewFinderOverlay.qml:400
 #: ../ViewFinderOverlay.qml:423 ../ViewFinderOverlay.qml:446
@@ -281,70 +285,70 @@ msgstr ""
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:70
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:91
 msgid "Off"
-msgstr ""
+msgstr "அணை"
 
 #: ../ViewFinderOverlay.qml:395
 msgid "Auto"
-msgstr ""
+msgstr "தானியக்கம்"
 
 #: ../ViewFinderOverlay.qml:432
 msgid "HDR"
-msgstr ""
+msgstr "HDR"
 
 #: ../ViewFinderOverlay.qml:470
 msgid "5 seconds"
-msgstr ""
+msgstr "5 நிமிடங்கள்"
 
 #: ../ViewFinderOverlay.qml:475
 msgid "15 seconds"
-msgstr ""
+msgstr "15 நிமிடங்கள்"
 
 #: ../ViewFinderOverlay.qml:493
 msgid "Fine Quality"
-msgstr ""
+msgstr "சிறந்த தரம்"
 
 #: ../ViewFinderOverlay.qml:498
 msgid "High Quality"
-msgstr ""
+msgstr "உயர்ந்த தரம்"
 
 #: ../ViewFinderOverlay.qml:503
 msgid "Normal Quality"
-msgstr ""
+msgstr "நடுநிலையான தரம்"
 
 #: ../ViewFinderOverlay.qml:508
 msgid "Basic Quality"
-msgstr ""
+msgstr "அடிப்படைத் தரம்"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
 #: ../ViewFinderOverlay.qml:541
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 #: ../ViewFinderOverlay.qml:549
 msgid "Save to SD Card"
-msgstr ""
+msgstr "SD அட்டையில் சேமிக்க"
 
 #: ../ViewFinderOverlay.qml:554
 msgid "Save internally"
-msgstr ""
+msgstr "உள்ளிடத்தில் சேமிக்க"
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
-msgstr ""
+msgstr "அதிர்வுறு"
 
 #: ../ViewFinderOverlay.qml:1119
 msgid "Low storage space"
-msgstr ""
+msgstr "குறைந்த செமிப்பிடம்"
 
 #: ../ViewFinderOverlay.qml:1120
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
-msgstr ""
+msgstr "சேமிப்பிடம் குறைவாக உள்ளது. தடங்களின்றி தொடர, சிறிது இடத்தை விடுவிக்க."
 
 #: ../ViewFinderOverlay.qml:1133
 msgid "External storage not writeable"
-msgstr ""
+msgstr "வெளிப்புறச் சேமிப்பிடம் எழுதுவதற்கேற்தல்ல"
 
 #: ../ViewFinderOverlay.qml:1134
 msgid ""
@@ -352,10 +356,12 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
+"வெளிப்புறச் சேமிப்பிடத்தில் எழுத முடியவில்லை. அதைக் கழற்றி, மீண்டும் செருகி "
+"முயற்சிக்கவும் இல்லையேல் அதை சீரமைக்கவும்."
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
-msgstr ""
+msgstr "நிழற்படக்கருவியை அனுக இயலவில்லை"
 
 #: ../ViewFinderOverlay.qml:1173
 msgid ""
@@ -364,24 +370,30 @@ msgid ""
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
+"நிழற்பட வன்பொருளை அனுக செயலிக்கு அனுமதியில்லை அல்லது வேறெதோ சிக்கல் "
+"ஏற்பட்டுவிட்டது.\n"
+"\n"
+"அனுமிதியளிப்பது இதைச் சரிசெய்யவில்லையெனில், சாதனத்தை மீள்துவக்குக."
 
 #: ../ViewFinderOverlay.qml:1182
 msgid "Edit Permissions"
-msgstr ""
+msgstr "அனுமதிகளைத் திருத்துக"
 
 #: ../ViewFinderView.qml:485
 msgid "Capture failed"
-msgstr ""
+msgstr "நிழற்படப்பிடிப்பு தோல்வியுற்றது"
 
 #: ../ViewFinderView.qml:490
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
 msgstr ""
+"வெளிப்புற ஊடகத்தை மாற்றுவதோ, சீரமைப்பதோ அல்லது சாதனத்தை மீள்துவக்குவதோ "
+"சிக்கலை சரிசெய்யலாம்."
 
 #: ../ViewFinderView.qml:491
 msgid "Restarting your device might fix the problem."
-msgstr ""
+msgstr "சாதனத்தை மீள்துவக்குவது சிக்கலை சரி செய்யலாம்."
 
 #: ../camera-app.qml:57
 msgid "Flash"
@@ -389,11 +401,11 @@ msgstr "மின்ஒளி"
 
 #: ../camera-app.qml:58
 msgid "Light;Dark"
-msgstr "லேசானா; இருண்ட"
+msgstr "வெளிச்சம்; இருட்டு"
 
 #: ../camera-app.qml:61
 msgid "Flip Camera"
-msgstr "புகைப்பட கருவியை திருப்பு"
+msgstr "நிழற்பட கருவியை புரட்டு"
 
 #: ../camera-app.qml:62
 msgid "Front Facing;Back Facing"
@@ -405,41 +417,41 @@ msgstr "திரை"
 
 #: ../camera-app.qml:66
 msgid "Take a Photo;Snap;Record"
-msgstr "படம் பிடி;படம் எடு; பட பதிவுசெய்"
+msgstr "படம் பிடி;படமெடு; படப்பதிவுசெய்"
 
 #: ../camera-app.qml:69
 msgid "Mode"
-msgstr "பாங்கு"
+msgstr "வகை"
 
 #: ../camera-app.qml:70
 msgid "Stills;Video"
-msgstr "புகைப்படங்கள்; வீடியோ"
+msgstr "நிழற்படங்கள்; வீடியோ"
 
 #: ../camera-app.qml:74
 msgid "White Balance"
-msgstr "வெள்ளை சமன்"
+msgstr "வெள்ளைச் சமன்"
 
 #: ../camera-app.qml:75
 msgid "Lighting Condition;Day;Cloudy;Inside"
-msgstr "வெளிச்ச நிலை; பகல் நேர; மேகமூட்ட; உள்ளே"
+msgstr "வெளிச்ச நிலை; பகல்; மேகமூட்டம்; கட்டித்தினுள்"
 
 #: ../camera-app.qml:380
 #, qt-format
 msgid "<b>%1</b> photos taken today"
-msgstr ""
+msgstr "இன்று <b>%1</b> நிழற்படங்கள் எடுக்கப்பட்டது"
 
 #: ../camera-app.qml:381
 msgid "No photos taken today"
-msgstr ""
+msgstr "இன்று நிழற்படங்கள் எதுவும் எடுக்கப்படவில்லை"
 
 #: ../camera-app.qml:391
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
-msgstr ""
+msgstr "இன்று <b>%1</b> ஒளித்தோற்றங்கள் பதிவுசெய்யப்பட்டன"
 
 #: ../camera-app.qml:392
 msgid "No videos recorded today"
-msgstr ""
+msgstr "இன்று ஒளித்தோற்றங்கள் எதுவும் பதிவுசெய்யப்படவில்லை"
 
 #: camera-app.desktop.in.in.h:1
 msgid "Camera"
@@ -447,8 +459,8 @@ msgstr "நிழற்படக் கருவி"
 
 #: camera-app.desktop.in.in.h:2
 msgid "Camera application"
-msgstr "புகைப்பட கருவி பயன்பாடு"
+msgstr "நிழற்படக்கருவிப் பயன்பாடு"
 
 #: camera-app.desktop.in.in.h:3
 msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
-msgstr ""
+msgstr "நிழற்படங்கள்;ஒளித்தோற்றங்கள்;படம்பிடி;படமெடு;பதிவுசெய்"
