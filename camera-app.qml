@@ -103,7 +103,7 @@ Window {
                 main.toggleFullScreen();
                 event.accepted = true;
             } else if (event.nativeScanCode == 528 || event.key == Qt.Key_Camera) { // 528 = Xperia X camera button
-                viewFinderView.finderOverlay.item.shoot();
+                viewFinderView.finderOverlay.item.triggerShoot();
                 event.accepted = true;
             }
         }
