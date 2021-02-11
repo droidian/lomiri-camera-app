@@ -18,7 +18,7 @@ import QtQuick 2.4
 import QtQuick.Window 2.2
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
-import QtMultimedia 5.0
+import QtMultimedia 5.9
 import CameraApp 0.1
 //import QtGraphicalEffects 1.0
 import Ubuntu.Content 1.3
@@ -49,8 +49,6 @@ FocusScope {
 
     function decideCameraState() {
         if (viewFinderOverlay.status == Loader.Ready) {
-            camera.cameraState = Camera.LoadedState;
-            viewFinderOverlay.updateResolutionOptions();
             camera.cameraState = Camera.ActiveState;
         }
     }
@@ -71,10 +69,14 @@ FocusScope {
                 focus.focusMode = Camera.FocusAuto;
                 focus.customFocusPoint = normalizedPoint;
                 focus.focusPointMode = Camera.FocusPointCustom;
+
+                searchAndLock();
             }
         }
 
         function autoFocus() {
+            unlock();
+
             focus.focusMode = Camera.FocusContinuous;
             focus.focusPointMode = Camera.FocusPointAuto;
         }
@@ -138,7 +140,10 @@ FocusScope {
             onRecorderStateChanged: {
                 if (videoRecorder.recorderState === CameraRecorder.StoppedState) {
                     metricVideos.increment()
-                    viewFinderView.videoShot(videoRecorder.actualLocation);
+                    // "actualLocation" is a URL string. Get only path from it
+                    // before passing on.
+                    var videoPath = videoRecorder.actualLocation.replace("file://", "");
+                    viewFinderView.videoShot(videoPath);
                     if (main.contentExportMode) {
                         viewFinderExportConfirmation.mediaPath = videoRecorder.actualLocation
                     } else if (photoRollHint.necessary) {
@@ -260,7 +265,6 @@ FocusScope {
                 } else {
                     return camera.orientation;
                 }
-                
             }
 
             transform: Rotation {
@@ -333,6 +337,7 @@ FocusScope {
         anchors.fill: parent
         asynchronous: true
         camera: camera
+        sensorOrientation: camera.orientation
         opacity: status == Loader.Ready && overlayVisible && !photoRollHint.enabled ? 1.0 : 0.0
         readyForCapture: main.contentExportMode &&
                          viewFinderExportConfirmation.waitingForPictureCapture ? false : camera.imageCapture.ready

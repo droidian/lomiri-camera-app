@@ -83,7 +83,7 @@ Q_SIGNALS:
     void imageSupportedResolutionsChanged();
 
 private Q_SLOTS:
-    void onCameraStateChanged();
+    void onCameraStatusChanged(QCamera::Status status);
     void onExposureValueChanged(int parameter);
     void onSelectedDeviceChanged(int index);
 
