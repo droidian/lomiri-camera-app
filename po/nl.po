@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-11-07 13:28+0000\n"
+"PO-Revision-Date: 2021-02-11 13:32+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
 "camera-app/nl/>\n"
@@ -253,7 +253,7 @@ msgstr "Afbeeldingsinformatie"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
-msgstr "Aanpassen"
+msgstr "Bewerken"
 
 #: ../SlideshowView.qml:441
 msgid "Back to Photo roll"
