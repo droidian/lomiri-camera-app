@@ -318,6 +318,8 @@ FocusScope {
                     }
 
                     MouseArea {
+                        // Work around being parented under flickable.contentItem
+                        parent: flickable
                         anchors.fill: parent
                         onClicked: {
                             slideshowView.toggleHeader();
@@ -346,6 +348,8 @@ FocusScope {
                     }
 
                     MouseArea {
+                        // Work around being parented under flickable.contentItem
+                        parent: flickable
                         anchors.centerIn: parent
                         width: units.gu(10)
                         height: units.gu(10)
