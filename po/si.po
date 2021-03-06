@@ -1,32 +1,31 @@
-# Armenian translation for camera-app
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the camera-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: camera-app\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2021-03-06 20:29+0000\n"
-"Last-Translator: TigranKhachatryan0 <tigrank2008@gmail.com>\n"
-"Language-Team: Armenian <https://translate.ubports.com/projects/ubports/"
-"camera-app/hy/>\n"
-"Language: hy\n"
+"PO-Revision-Date: 2021-03-04 00:27+0000\n"
+"Last-Translator: helabasa <R45XvezA@pm.me>\n"
+"Language-Team: Sinhala <https://translate.ubports.com/projects/ubports/"
+"camera-app/si/>\n"
+"Language: si\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.11.3\n"
-"X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
 msgid "Settings"
-msgstr "Կարգավորումներ"
+msgstr "සැකසුම්"
 
 #: ../AdvancedOptions.qml:48
 msgid "Add date stamp on captured images"
-msgstr "Ավելացնել ժամադրոշմ նկարված նկարների վրա"
+msgstr ""
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:70
@@ -35,65 +34,61 @@ msgstr ""
 
 #: ../AdvancedOptions.qml:122
 msgid "Date formatting keywords"
-msgstr "Ժամադրոշմի ձևաչափման հիմնաբառեր"
+msgstr ""
 
 #: ../AdvancedOptions.qml:127
 msgid "the day as number without a leading zero (1 to 31)"
-msgstr "անսաթիվը առանց սկզբի 0-ի (1-ից 31)"
+msgstr ""
 
 #: ../AdvancedOptions.qml:128
 msgid "the day as number with a leading zero (01 to 31)"
-msgstr "ամսաթիվը սկզբի 0-ով (01-ից 31)"
+msgstr ""
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr "կրճատած շաբաթվա օր (օրինակ \"Երկ\"-ից \"Ուրբ\")։"
+msgstr ""
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
-msgstr "շաբաթվա օր (օրինակ «Երկուշաբթի»-ից «Կիրակի»)։"
+msgstr ""
 
 #: ../AdvancedOptions.qml:131
 msgid "the month as number without a leading zero (1 to 12)"
-msgstr "ամիսը առանց 0-ի (1-ից 12)"
+msgstr ""
 
 #: ../AdvancedOptions.qml:132
 msgid "the month as number with a leading zero (01 to 12)"
-msgstr "ամիսը 0-ով (01-ից 12)"
+msgstr ""
 
 #: ../AdvancedOptions.qml:133
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr "ամսվա կրճատ անվանումը (օրինակ՝ \"Հնվ\"-ից \"Դեկ\"):"
+msgstr ""
 
 #: ../AdvancedOptions.qml:134
 msgid "the long localized month name (e.g. 'January' to 'December')."
-msgstr "ամսվա անվանումը (օրինակ՝ «Հունվար»-ից «Փետրվար»)։"
+msgstr ""
 
 #: ../AdvancedOptions.qml:135
 msgid "the year as two digit number (00 to 99)"
-msgstr "տարեթիվը կրճատ (00-ից 99)"
+msgstr ""
 
 #: ../AdvancedOptions.qml:136
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
-msgstr "տարեթիվ։ Եթե տարին բացասական է, սկզմում ավելանում է մինուս նշանը։"
+msgstr ""
 
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
 msgstr ""
-"ժամ առանց սկզբի զրոյի (0-ից 23 կամ 1-ից 12 եթե AM/PM-ով է ժամանակը "
-"ներկայացված)"
 
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
 msgstr ""
-"ժամ սկզբի զրոյով (00-ից 23 կամ 01-ից 12 եթե AM/PM-ով է ժամանակը ներկայացված)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
 msgstr ""
-"ժամը առանց սկզբի 0-ով (0-ից 23, նույնիսկ երբժամը ներկայացված է AM/PM-ով)"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
@@ -142,7 +137,7 @@ msgstr ""
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
 msgid "Color"
-msgstr ""
+msgstr "වර්ණය"
 
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
@@ -160,13 +155,13 @@ msgstr ""
 
 #: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
 msgid "Delete"
-msgstr "Ջնջել"
+msgstr ""
 
 #: ../DeleteDialog.qml:40 ../ViewFinderOverlay.qml:1122
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
 #: ../ViewFinderView.qml:494
 msgid "Cancel"
-msgstr "Չեղարկել"
+msgstr "අවලංගු"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
@@ -178,7 +173,7 @@ msgstr ""
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
-msgstr "Ընտրել"
+msgstr ""
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
@@ -190,7 +185,7 @@ msgstr ""
 
 #: ../Information.qml:20
 msgid "About"
-msgstr "Ծրագրի մասին"
+msgstr "පිළිබඳව"
 
 #: ../Information.qml:82
 msgid "Get the source"
@@ -238,7 +233,7 @@ msgstr ""
 
 #: ../PhotogridView.qml:42 ../SlideshowView.qml:60
 msgid "Share"
-msgstr "Կիսվել"
+msgstr ""
 
 #: ../PhotogridView.qml:69 ../SlideshowView.qml:53
 msgid "Gallery"
@@ -250,7 +245,7 @@ msgstr ""
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
-msgstr "Փոփոխել"
+msgstr ""
 
 #: ../SlideshowView.qml:441
 msgid "Back to Photo roll"
@@ -389,43 +384,43 @@ msgstr ""
 
 #: ../camera-app.qml:57
 msgid "Flash"
-msgstr "Flash"
+msgstr ""
 
 #: ../camera-app.qml:58
 msgid "Light;Dark"
-msgstr "Լույս;Մութ"
+msgstr ""
 
 #: ../camera-app.qml:61
 msgid "Flip Camera"
-msgstr "Flip Camera"
+msgstr ""
 
 #: ../camera-app.qml:62
 msgid "Front Facing;Back Facing"
-msgstr "Front Facing;Back Facing"
+msgstr ""
 
 #: ../camera-app.qml:65
 msgid "Shutter"
-msgstr "Խուփ"
+msgstr ""
 
 #: ../camera-app.qml:66
 msgid "Take a Photo;Snap;Record"
-msgstr "Նկարել;Snap;Ձայնագրել"
+msgstr ""
 
 #: ../camera-app.qml:69
 msgid "Mode"
-msgstr "Ռեժիմ"
+msgstr ""
 
 #: ../camera-app.qml:70
 msgid "Stills;Video"
-msgstr "Stills;Վիդեո"
+msgstr ""
 
 #: ../camera-app.qml:74
 msgid "White Balance"
-msgstr "Սպիտակի բալանս"
+msgstr ""
 
 #: ../camera-app.qml:75
 msgid "Lighting Condition;Day;Cloudy;Inside"
-msgstr "Լուսավորություն;Օր;Ամպամած;Ներսում"
+msgstr ""
 
 #: ../camera-app.qml:380
 #, qt-format
@@ -447,11 +442,11 @@ msgstr ""
 
 #: camera-app.desktop.in.in.h:1
 msgid "Camera"
-msgstr "Տեսախցիկ"
+msgstr ""
 
 #: camera-app.desktop.in.in.h:2
 msgid "Camera application"
-msgstr "Կամերա ծրագիր"
+msgstr ""
 
 #: camera-app.desktop.in.in.h:3
 msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
