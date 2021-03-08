@@ -318,10 +318,23 @@ FocusScope {
                     }
 
                     MouseArea {
+                        // Work around being parented under flickable.contentItem
+                        parent: flickable
                         anchors.fill: parent
                         onClicked: {
-                            slideshowView.toggleHeader();
-                            mouse.accepted = false;
+                            // For videos, we check for a tap in the center
+                            // on the play button icon
+                            if (media.isVideo
+                                && mouse.x > width / 2 - units.gu(5)
+                                && mouse.x < width / 2 + units.gu(5)
+                                && mouse.y > height / 2 - units.gu(5)
+                                && mouse.y < height / 2 + units.gu(5)) {
+                                var url = mediaSource.path.toString().replace("file://", "video://");
+                                Qt.openUrlExternally(url);
+                            } else {
+                                slideshowView.toggleHeader();
+                                mouse.accepted = false;
+                            }
                         }
                         onDoubleClicked: {
                             if (listView.moving) {
@@ -341,19 +354,6 @@ FocusScope {
                                 zoomIn(mouse.x, mouse.y, zoomPinchArea.maximumZoom);
                             } else {
                                 zoomOut();
-                            }
-                        }
-                    }
-
-                    MouseArea {
-                        anchors.centerIn: parent
-                        width: units.gu(10)
-                        height: units.gu(10)
-                        enabled: media.isVideo
-                        onClicked: {
-                            if (media.isVideo) {
-                                var url = fileURL.toString().replace("file://", "video://");
-                                Qt.openUrlExternally(url);
                             }
                         }
                     }
