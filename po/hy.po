@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2021-03-06 20:29+0000\n"
+"PO-Revision-Date: 2021-03-08 21:01+0000\n"
 "Last-Translator: TigranKhachatryan0 <tigrank2008@gmail.com>\n"
 "Language-Team: Armenian <https://translate.ubports.com/projects/ubports/"
 "camera-app/hy/>\n"
@@ -26,7 +26,7 @@ msgstr "Կարգավորումներ"
 
 #: ../AdvancedOptions.qml:48
 msgid "Add date stamp on captured images"
-msgstr "Ավելացնել ժամադրոշմ նկարված նկարների վրա"
+msgstr "Ավելացնել ժամադրոշմ նկարների վրա"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:70
@@ -142,7 +142,7 @@ msgstr ""
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
 msgid "Color"
-msgstr ""
+msgstr "Գույն"
 
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
@@ -152,7 +152,7 @@ msgstr ""
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "Անթափանցիկություն"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
@@ -182,7 +182,7 @@ msgstr "Ընտրել"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
-msgstr ""
+msgstr "Խմբագրել Նկարը"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Photo Roll"
@@ -190,19 +190,19 @@ msgstr ""
 
 #: ../Information.qml:20
 msgid "About"
-msgstr "Ծրագրի մասին"
+msgstr "Հավելվածի մասին"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr ""
+msgstr "Ստանալ ելակետային կոդը"
 
 #: ../Information.qml:83
 msgid "Report issues"
-msgstr ""
+msgstr "Զեկուցել խնդրի մասին"
 
 #: ../Information.qml:84
 msgid "Help translate"
-msgstr ""
+msgstr "Օգնել թարգմանել"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
@@ -211,22 +211,22 @@ msgstr ""
 #: ../MediaInfoPopover.qml:30
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "Անվանում : %1"
 
 #: ../MediaInfoPopover.qml:33
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "Տիպ : %1"
 
 #: ../MediaInfoPopover.qml:37
 #, qt-format
 msgid "Width : %1"
-msgstr ""
+msgstr "Լայնություն : %1"
 
 #: ../MediaInfoPopover.qml:41
 #, qt-format
 msgid "Height : %1"
-msgstr ""
+msgstr "Բարձրություն : %1"
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
@@ -246,11 +246,11 @@ msgstr ""
 
 #: ../SlideshowView.qml:68
 msgid "Image Info"
-msgstr ""
+msgstr "Տվյալներ նկարի մասին"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
-msgstr "Փոփոխել"
+msgstr "Ուղղել"
 
 #: ../SlideshowView.qml:441
 msgid "Back to Photo roll"
@@ -258,15 +258,15 @@ msgstr ""
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr ""
+msgstr "Չհաջողվեց կիսվել"
 
 #: ../UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
-msgstr ""
+msgstr "Հնարավոր չէ միաժամանակ կիսվել նկարներով և տեսանյութերով"
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
-msgstr ""
+msgstr "Լավ"
 
 #: ../ViewFinderOverlay.qml:367 ../ViewFinderOverlay.qml:390
 #: ../ViewFinderOverlay.qml:418 ../ViewFinderOverlay.qml:441
@@ -297,11 +297,11 @@ msgstr ""
 
 #: ../ViewFinderOverlay.qml:470
 msgid "5 seconds"
-msgstr ""
+msgstr "5 վայրկյան"
 
 #: ../ViewFinderOverlay.qml:475
 msgid "15 seconds"
-msgstr ""
+msgstr "15 վայրկյան"
 
 #: ../ViewFinderOverlay.qml:493
 msgid "Fine Quality"
@@ -309,24 +309,24 @@ msgstr ""
 
 #: ../ViewFinderOverlay.qml:498
 msgid "High Quality"
-msgstr ""
+msgstr "Բարձր Որակ"
 
 #: ../ViewFinderOverlay.qml:503
 msgid "Normal Quality"
-msgstr ""
+msgstr "Միջին Որակ"
 
 #: ../ViewFinderOverlay.qml:508
 msgid "Basic Quality"
-msgstr ""
+msgstr "Հասարակ Որակ"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
 #: ../ViewFinderOverlay.qml:541
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 #: ../ViewFinderOverlay.qml:549
 msgid "Save to SD Card"
-msgstr ""
+msgstr "Պահպանել SD քարտի մեջ"
 
 #: ../ViewFinderOverlay.qml:554
 msgid "Save internally"
@@ -334,11 +334,11 @@ msgstr ""
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
-msgstr ""
+msgstr "Թռթռալ"
 
 #: ../ViewFinderOverlay.qml:1119
 msgid "Low storage space"
-msgstr ""
+msgstr "Ազատ տեղը քիչ է"
 
 #: ../ViewFinderOverlay.qml:1120
 msgid ""
@@ -348,7 +348,7 @@ msgstr ""
 
 #: ../ViewFinderOverlay.qml:1133
 msgid "External storage not writeable"
-msgstr ""
+msgstr "Արտաքին հիշողությունից հնարավոր չէ օգտվել"
 
 #: ../ViewFinderOverlay.qml:1134
 msgid ""
@@ -356,10 +356,13 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
+"Չհաջողվեց օգտվել արտաքին հիշողությունից։ Հնարավոր է, որ եթե այն հանեք և "
+"նորից մտցնեք, ապա խնդիրը կլուծվի։ Եթե խնդիրը չլուծվի, ապա պետք է սարքը "
+"զրոյացնեք։"
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
-msgstr ""
+msgstr "Չհաջողվեց օգտվել տեսախցիկից"
 
 #: ../ViewFinderOverlay.qml:1173
 msgid ""
@@ -368,14 +371,18 @@ msgid ""
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
+"Տեսախցիկի հավելվածը չունի տեսախցիկից օգտվելու թույլտվություն կամ առաջացել է "
+"այլ սխալ։\n"
+"\n"
+"Եթե թույլտվությունը տալը չի լուծում խնդիրը, ապա վերաբեռնեք Ձեր սարքը։"
 
 #: ../ViewFinderOverlay.qml:1182
 msgid "Edit Permissions"
-msgstr ""
+msgstr "Փոփոխել թույլտվությունները"
 
 #: ../ViewFinderView.qml:485
 msgid "Capture failed"
-msgstr ""
+msgstr "Չհաջողվեց նկարել"
 
 #: ../ViewFinderView.qml:490
 msgid ""
@@ -385,7 +392,7 @@ msgstr ""
 
 #: ../ViewFinderView.qml:491
 msgid "Restarting your device might fix the problem."
-msgstr ""
+msgstr "Հնարավոր է, որ սարքի վերաբեռնումից հետո խնդիրը կլուծվի։"
 
 #: ../camera-app.qml:57
 msgid "Flash"
@@ -393,19 +400,19 @@ msgstr "Flash"
 
 #: ../camera-app.qml:58
 msgid "Light;Dark"
-msgstr "Լույս;Մութ"
+msgstr "Վառ;Մութ"
 
 #: ../camera-app.qml:61
 msgid "Flip Camera"
-msgstr "Flip Camera"
+msgstr "Շրջել տեսախցիկը"
 
 #: ../camera-app.qml:62
 msgid "Front Facing;Back Facing"
-msgstr "Front Facing;Back Facing"
+msgstr "Դիմացի;Հետևի"
 
 #: ../camera-app.qml:65
 msgid "Shutter"
-msgstr "Խուփ"
+msgstr "Նկարել"
 
 #: ../camera-app.qml:66
 msgid "Take a Photo;Snap;Record"
@@ -417,7 +424,7 @@ msgstr "Ռեժիմ"
 
 #: ../camera-app.qml:70
 msgid "Stills;Video"
-msgstr "Stills;Վիդեո"
+msgstr "Stills;Տեսանյութ"
 
 #: ../camera-app.qml:74
 msgid "White Balance"
@@ -451,7 +458,7 @@ msgstr "Տեսախցիկ"
 
 #: camera-app.desktop.in.in.h:2
 msgid "Camera application"
-msgstr "Կամերա ծրագիր"
+msgstr "Տեսախցիկի հավելված"
 
 #: camera-app.desktop.in.in.h:3
 msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
