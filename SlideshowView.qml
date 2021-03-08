@@ -329,7 +329,7 @@ FocusScope {
                                 && mouse.x < width / 2 + units.gu(5)
                                 && mouse.y > height / 2 - units.gu(5)
                                 && mouse.y < height / 2 + units.gu(5)) {
-                                var url = mediaSource.path.toString().replace("file://", "video://");
+                                var url = fileURL.toString().replace("file://", "video://");
                                 Qt.openUrlExternally(url);
                             } else {
                                 slideshowView.toggleHeader();
