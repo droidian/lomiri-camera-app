@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-08-26 00:00+0000\n"
-"Last-Translator: Arvid Brodin <arvidb@fripost.org>\n"
+"PO-Revision-Date: 2021-06-04 23:45+0000\n"
+"Last-Translator: Marcus Fredlund <marcus.karlson@gmail.com>\n"
 "Language-Team: Swedish <https://translate.ubports.com/projects/ubports/"
 "camera-app/sv/>\n"
 "Language: sv\n"
@@ -47,7 +47,7 @@ msgstr "ange dagen som ett nummer med en nolla i början (01 till 31)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr "Begränsat lokaliserat namn på dagen (t. ex. 'Mån' till 'Sön')."
+msgstr "förkortningen för dagens namn (\"mån\" till \"sön\")."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
@@ -195,7 +195,7 @@ msgstr "Om"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr ""
+msgstr "Hämta källan"
 
 #: ../Information.qml:83
 msgid "Report issues"
@@ -207,31 +207,31 @@ msgstr "Hjälp till med översättning"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
-msgstr ""
+msgstr "Media Information"
 
 #: ../MediaInfoPopover.qml:30
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "Namn: %1"
 
 #: ../MediaInfoPopover.qml:33
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "Typ: %1"
 
 #: ../MediaInfoPopover.qml:37
 #, qt-format
 msgid "Width : %1"
-msgstr ""
+msgstr "Bredd: %1"
 
 #: ../MediaInfoPopover.qml:41
 #, qt-format
 msgid "Height : %1"
-msgstr ""
+msgstr "Höjd: %1"
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
-msgstr "Inget utrymme kvar på enhet, frigör utrymme för att fortsätta."
+msgstr "Enheten full, frigör utrymme för att fortsätta."
 
 #: ../PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
@@ -247,16 +247,15 @@ msgstr "Galleri"
 
 #: ../SlideshowView.qml:68
 msgid "Image Info"
-msgstr ""
+msgstr "Bildinfo"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
 msgstr "Redigera"
 
 #: ../SlideshowView.qml:441
-#, fuzzy
 msgid "Back to Photo roll"
-msgstr "Fotovisare"
+msgstr "Återgå till bildspel"
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
@@ -310,9 +309,8 @@ msgid "Fine Quality"
 msgstr "Bra kvalitet"
 
 #: ../ViewFinderOverlay.qml:498
-#, fuzzy
 msgid "High Quality"
-msgstr "Bra kvalitet"
+msgstr "Hög kvalitet"
 
 #: ../ViewFinderOverlay.qml:503
 msgid "Normal Quality"
@@ -337,7 +335,7 @@ msgstr "Spara internt"
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
-msgstr ""
+msgstr "Vibrera"
 
 #: ../ViewFinderOverlay.qml:1119
 msgid "Low storage space"
@@ -353,7 +351,7 @@ msgstr ""
 
 #: ../ViewFinderOverlay.qml:1133
 msgid "External storage not writeable"
-msgstr ""
+msgstr "Externt lagringsmedia ej skrivbart"
 
 #: ../ViewFinderOverlay.qml:1134
 msgid ""
@@ -361,23 +359,25 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
+"Det verkar inte gå att skriva till ditt externa lagringsmedia. Att ta ut och "
+"sätta in det igen kan kanske lösa problemet, eller så kan det behöva "
+"formateras om."
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
 msgstr "Kan inte komma åt kamera"
 
 #: ../ViewFinderOverlay.qml:1173
-#, fuzzy
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
-"Kameraprogrammet har inte tillstånd till att komma åt kamerahårdvaran eller "
-"ett annat fel uppstod.\n"
+"Kameraprogrammet har inte behörighet att komma åt kamerahårdvaran, eller ett "
+"annat fel uppstod.\n"
 "\n"
-"Om att ge behörighet inte löser problemet, starta om din telefon."
+"Om det inte löser problemet att ge behörighet, starta om din telefon."
 
 #: ../ViewFinderOverlay.qml:1182
 msgid "Edit Permissions"
@@ -385,17 +385,19 @@ msgstr "Redigera behörigheter"
 
 #: ../ViewFinderView.qml:485
 msgid "Capture failed"
-msgstr ""
+msgstr "Det gick inte att ta bilden"
 
 #: ../ViewFinderView.qml:490
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
 msgstr ""
+"Att byta ut ditt externa media, formatera det eller starta om enheten kanske "
+"löser problemet."
 
 #: ../ViewFinderView.qml:491
 msgid "Restarting your device might fix the problem."
-msgstr ""
+msgstr "Försök starta om din enhet för att lösa problemet."
 
 #: ../camera-app.qml:57
 msgid "Flash"
