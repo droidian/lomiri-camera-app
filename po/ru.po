@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2021-01-15 07:25+0000\n"
-"Last-Translator: ierihon <idekovets@mail.ru>\n"
+"PO-Revision-Date: 2021-06-29 20:28+0000\n"
+"Last-Translator: Herman <GermanAizek@yandex.ru>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/ubports/"
 "camera-app/ru/>\n"
 "Language: ru\n"
@@ -183,7 +183,7 @@ msgstr "Поиск содержимого..."
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
-msgstr "Выбрать"
+msgstr "Выделить"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
