@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-11-28 09:25+0000\n"
+"PO-Revision-Date: 2021-07-08 16:43+0000\n"
 "Last-Translator: M.Sugahara <equaaqua@hotmail.com>\n"
 "Language-Team: Japanese <https://translate.ubports.com/projects/ubports/"
 "camera-app/ja/>\n"
@@ -207,7 +207,7 @@ msgstr "メディア情報"
 #: ../MediaInfoPopover.qml:30
 #, qt-format
 msgid "Name : %1"
-msgstr "名前: ％1"
+msgstr "名前: %1"
 
 #: ../MediaInfoPopover.qml:33
 #, qt-format
@@ -217,7 +217,7 @@ msgstr "タイプ :%1"
 #: ../MediaInfoPopover.qml:37
 #, qt-format
 msgid "Width : %1"
-msgstr "幅: ％1"
+msgstr "幅: %1"
 
 #: ../MediaInfoPopover.qml:41
 #, qt-format
@@ -230,7 +230,7 @@ msgstr "デバイスに空き容量がありません。続行するには空き
 
 #: ../PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
-msgstr ""
+msgstr "左にスワイプしてフォトロールを表示"
 
 #: ../PhotogridView.qml:42 ../SlideshowView.qml:60
 msgid "Share"
@@ -249,13 +249,12 @@ msgid "Edit"
 msgstr "編集"
 
 #: ../SlideshowView.qml:441
-#, fuzzy
 msgid "Back to Photo roll"
-msgstr "フォトロール"
+msgstr "フォトロールに戻る"
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr ""
+msgstr "共有できません"
 
 #: ../UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
