@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-06-29 14:52+0000\n"
+"PO-Revision-Date: 2021-07-16 19:12+0000\n"
 "Last-Translator: PPNplus <ppnplus@protonmail.com>\n"
 "Language-Team: Thai <https://translate.ubports.com/projects/ubports/"
 "camera-app/th/>\n"
@@ -147,7 +147,7 @@ msgstr "การจัดวาง"
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "ความโปร่งแสง"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
@@ -253,11 +253,11 @@ msgstr ""
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr ""
+msgstr "ไม่สามารถแชร์"
 
 #: ../UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
-msgstr ""
+msgstr "ไม่สามารถแชร์รูปภาพและวิดีโอในเวลาเดียวกัน"
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
@@ -354,7 +354,7 @@ msgstr ""
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
-msgstr ""
+msgstr "ไม่สามารถเข้าถึงกล้อง"
 
 #: ../ViewFinderOverlay.qml:1173
 msgid ""
@@ -363,6 +363,9 @@ msgid ""
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
+"แอปกล้องไม่ได้รับอนุญาตให้เข้าถึงฮาร์ดแวร์กล้อง หรือเกิดข้อผิดพลาดอื่น\n"
+"\n"
+"ถ้าให้สิทธิ์เข้าถึงแล้วยังมีปัญหา ให้ปิดและเปิดเครื่องใหม่"
 
 #: ../ViewFinderOverlay.qml:1182
 msgid "Edit Permissions"
@@ -370,37 +373,38 @@ msgstr ""
 
 #: ../ViewFinderView.qml:485
 msgid "Capture failed"
-msgstr ""
+msgstr "ไม่สามารถถ่ายภาพ"
 
 #: ../ViewFinderView.qml:490
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
 msgstr ""
+"การเปลี่ยนหรือฟอร์แมตหน่วยความจำภายนอก หรือรีสตาร์ทเครื่อง อาจแก้ปัญหาได้"
 
 #: ../ViewFinderView.qml:491
 msgid "Restarting your device might fix the problem."
-msgstr ""
+msgstr "การรีสตาร์ทเครื่องอาจแก้ปัญหาได้"
 
 #: ../camera-app.qml:57
 msgid "Flash"
-msgstr ""
+msgstr "แฟลช"
 
 #: ../camera-app.qml:58
 msgid "Light;Dark"
-msgstr ""
+msgstr "สว่าง;มืด"
 
 #: ../camera-app.qml:61
 msgid "Flip Camera"
-msgstr ""
+msgstr "สลับกล้อง"
 
 #: ../camera-app.qml:62
 msgid "Front Facing;Back Facing"
-msgstr ""
+msgstr "กล้องหน้า;กล้องหลัง"
 
 #: ../camera-app.qml:65
 msgid "Shutter"
-msgstr ""
+msgstr "ชัตเตอร์"
 
 #: ../camera-app.qml:66
 msgid "Take a Photo;Snap;Record"
@@ -408,11 +412,11 @@ msgstr ""
 
 #: ../camera-app.qml:69
 msgid "Mode"
-msgstr ""
+msgstr "โหมด"
 
 #: ../camera-app.qml:70
 msgid "Stills;Video"
-msgstr ""
+msgstr "ภาพนิ่ง;วิดีโอ"
 
 #: ../camera-app.qml:74
 msgid "White Balance"
@@ -425,28 +429,28 @@ msgstr ""
 #: ../camera-app.qml:380
 #, qt-format
 msgid "<b>%1</b> photos taken today"
-msgstr ""
+msgstr "<b>%1</b> รูปภาพที่ถ่ายวันนี้"
 
 #: ../camera-app.qml:381
 msgid "No photos taken today"
-msgstr ""
+msgstr "ไม่มีรูปภาพที่ถ่ายวันนี้"
 
 #: ../camera-app.qml:391
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
-msgstr ""
+msgstr "<b>%1</b> วิดีโอที่บันทึกวันนี้"
 
 #: ../camera-app.qml:392
 msgid "No videos recorded today"
-msgstr ""
+msgstr "ไม่มีวิดีโอที่บันทึกวันนี้"
 
 #: camera-app.desktop.in.in.h:1
 msgid "Camera"
-msgstr ""
+msgstr "กล้อง"
 
 #: camera-app.desktop.in.in.h:2
 msgid "Camera application"
-msgstr ""
+msgstr "แอปพลิเคชันกล้อง"
 
 #: camera-app.desktop.in.in.h:3
 msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
