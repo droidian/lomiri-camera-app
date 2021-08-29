@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-12-08 00:42+0000\n"
-"Last-Translator: abidin <abidin24@tutanota.com>\n"
+"PO-Revision-Date: 2021-08-29 20:18+0000\n"
+"Last-Translator: HEROBRINE7GAMER <tapermeerkat77@gmail.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
 "camera-app/ar/>\n"
 "Language: ar\n"
@@ -48,7 +48,7 @@ msgstr "الأيام كأرقام بالأصفار البادئة (من 01 حت�
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr "اختصارات أسماء الأيام (مثل 'سبت' حتى 'جمع')."
+msgstr "أسماء الأيام المختصرة(مثل 'أحد' إلى 'إثن'."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
@@ -78,23 +78,23 @@ msgstr "السنة كرقمين (00 حتى 99)"
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
-msgstr ""
+msgstr "السنة كأربع أرقام. إذا كانت السنة سالبة، تضاف إشارة سالب."
 
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
-msgstr ""
+msgstr "الساعة بدون صفر(0 إلى 23 أو واحد إلى 12 في عرض الصباح أو المساء)"
 
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
-msgstr ""
+msgstr "الساعة بدون صفر(00 إلى 23 أو 01 إلى 12 في عرض الصباح أو المساء)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "الساعة بدون صفر(0 إلى 23، حتى مع عرض الصباح أو المساء)"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "الساعة مع صفر(00 إلى 23، حتى مع عرض الصباح أو المساء)"
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
@@ -250,9 +250,8 @@ msgid "Edit"
 msgstr "حرر"
 
 #: ../SlideshowView.qml:441
-#, fuzzy
 msgid "Back to Photo roll"
-msgstr "لف الصورة"
+msgstr "العودة إلى لف الصورة"
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
