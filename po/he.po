@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-12-24 08:57+0000\n"
+"PO-Revision-Date: 2021-10-04 00:37+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/"
 "camera-app/he/>\n"
@@ -187,7 +187,7 @@ msgstr "סרט צילום"
 
 #: ../Information.qml:20
 msgid "About"
-msgstr "אודות"
+msgstr "על אודות"
 
 #: ../Information.qml:82
 msgid "Get the source"
