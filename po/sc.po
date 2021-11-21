@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2021-11-15 04:59+0000\n"
+"PO-Revision-Date: 2021-11-21 15:09+0000\n"
 "Last-Translator: Adria <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports/"
 "camera-app/sc/>\n"
@@ -168,7 +168,7 @@ msgstr "Annulla"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
-msgstr "Perunu elementu a disponimentu."
+msgstr "Nissunu elementu a disponimentu."
 
 #: ../GalleryView.qml:235
 msgid "Scanning for content..."
@@ -444,7 +444,7 @@ msgstr "Fotografias fatas oe: <b>%1</b>"
 
 #: ../camera-app.qml:381
 msgid "No photos taken today"
-msgstr "Oe no as fatu peruna fotografia"
+msgstr "Oe no as fatu nissuna fotografia"
 
 #: ../camera-app.qml:391
 #, qt-format
@@ -453,7 +453,7 @@ msgstr "Vìdeos registrados oe: <b>%1</b>"
 
 #: ../camera-app.qml:392
 msgid "No videos recorded today"
-msgstr "Oe no as registradu perunu vìdeu"
+msgstr "Oe no as registradu nissunu vìdeu"
 
 #: camera-app.desktop.in.in.h:1
 msgid "Camera"
