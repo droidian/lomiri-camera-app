@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2022-02-05 22:01+0000\n"
+"PO-Revision-Date: 2022-02-28 01:52+0000\n"
 "Last-Translator: Lundrin <berenyi.vilmos@tutanota.com>\n"
 "Language-Team: Hungarian <https://translate.ubports.com/projects/ubports/"
 "camera-app/hu/>\n"
@@ -74,7 +74,6 @@ msgid "the year as two digit number (00 to 99)"
 msgstr "év két számjegyű számként jelölve (00-99)"
 
 #: ../AdvancedOptions.qml:136
-#, fuzzy
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
@@ -127,23 +126,20 @@ msgid "the milliseconds with leading zeroes (000 to 999)"
 msgstr "ezredmásodperc tizedes helyiértéken nulla (000-999)"
 
 #: ../AdvancedOptions.qml:147
-#, fuzzy
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
 msgstr ""
-"AM/PM megjelenítés használata. AP le lesz cserélve vagy 'AM'-re vagy 'PM'-re"
+"AM/PM megjelenítés használata. AP le lesz cserélve vagy 'AM'-re vagy 'PM'-re."
 
 #: ../AdvancedOptions.qml:148
-#, fuzzy
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
 msgstr ""
-"am/pm megjelenítés használata. ap le lesz cserélve vagy 'am'-re vagy 'pm'-re"
+"am/pm megjelenítés használata. ap le lesz cserélve vagy 'am'-re vagy 'pm'-re."
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
 msgstr "Időzóna (Pl.: 'CEST')"
 
 #: ../AdvancedOptions.qml:158
-#, fuzzy
 msgid "Add to Format"
 msgstr "Hozzáadás Formátumhoz"
 
@@ -253,9 +249,8 @@ msgid "Gallery"
 msgstr "Galéria"
 
 #: ../SlideshowView.qml:68
-#, fuzzy
 msgid "Image Info"
-msgstr "Kép Információ"
+msgstr "Kép Infó"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
