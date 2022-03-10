@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-02-16 01:21+0000\n"
-"Last-Translator: HSN80 <hosseinabbasi80@outlook.com>\n"
+"PO-Revision-Date: 2022-03-10 09:21+0000\n"
+"Last-Translator: Behzad <behzadasbahi@gmail.com>\n"
 "Language-Team: Persian <https://translate.ubports.com/projects/ubports/"
 "camera-app/fa/>\n"
 "Language: fa\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -165,7 +165,7 @@ msgstr "حذف"
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
 #: ../ViewFinderView.qml:494
 msgid "Cancel"
-msgstr "انصراف"
+msgstr "لغو"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
