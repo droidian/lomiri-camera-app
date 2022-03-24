@@ -8,19 +8,21 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2014-07-22 02:39+0000\n"
-"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
-"Language-Team: Khmer <km@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2022-03-17 09:37+0000\n"
+"Last-Translator: ប៉ុកណូ រ៉ូយ៉ាល់ <poknoroyal@outlook.com>\n"
+"Language-Team: Central Khmer <https://translate.ubports.com/projects/ubports/"
+"camera-app/km/>\n"
+"Language: km\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
 
 #: ../AdvancedOptions.qml:16
 msgid "Settings"
-msgstr ""
+msgstr "ការកំណត់"
 
 #: ../AdvancedOptions.qml:48
 msgid "Add date stamp on captured images"
@@ -136,7 +138,7 @@ msgstr ""
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
 msgid "Color"
-msgstr ""
+msgstr "ពណ៌"
 
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
@@ -160,7 +162,7 @@ msgstr "លុប"
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
 #: ../ViewFinderView.qml:494
 msgid "Cancel"
-msgstr "បោះ​បង់"
+msgstr "បោះបង់"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
@@ -172,11 +174,11 @@ msgstr ""
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
-msgstr ""
+msgstr "ជ្រើស"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
-msgstr ""
+msgstr "កែរូបថត"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Photo Roll"
@@ -184,19 +186,19 @@ msgstr "បណ្ដុំ​រូបថត"
 
 #: ../Information.qml:20
 msgid "About"
-msgstr ""
+msgstr "អំពី"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr ""
+msgstr "ទៅយកប្រភព"
 
 #: ../Information.qml:83
 msgid "Report issues"
-msgstr ""
+msgstr "រាយការណ៍បញ្ហា"
 
 #: ../Information.qml:84
 msgid "Help translate"
-msgstr ""
+msgstr "ជួយបកប្រែ"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
@@ -232,7 +234,7 @@ msgstr ""
 
 #: ../PhotogridView.qml:42 ../SlideshowView.qml:60
 msgid "Share"
-msgstr "ចែក​រំលែក"
+msgstr "ចែករំលែក"
 
 #: ../PhotogridView.qml:69 ../SlideshowView.qml:53
 msgid "Gallery"
@@ -244,7 +246,7 @@ msgstr ""
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
-msgstr ""
+msgstr "កែសម្រួល"
 
 #: ../SlideshowView.qml:441
 #, fuzzy
@@ -253,15 +255,15 @@ msgstr "បណ្ដុំ​រូបថត"
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr ""
+msgstr "ពុំអាចចែករំលែក"
 
 #: ../UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
-msgstr ""
+msgstr "ពុំអាចចែករំលែករូបថត និងវីដេអូក្នុងពេលតែមួយបានទេ"
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
-msgstr ""
+msgstr "យល់ព្រម"
 
 #: ../ViewFinderOverlay.qml:367 ../ViewFinderOverlay.qml:390
 #: ../ViewFinderOverlay.qml:418 ../ViewFinderOverlay.qml:441
