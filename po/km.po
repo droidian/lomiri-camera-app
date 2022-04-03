@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2022-04-01 06:36+0000\n"
+"PO-Revision-Date: 2022-04-03 18:17+0000\n"
 "Last-Translator: ប៉ុកណូ រ៉ូយ៉ាល់ <poknoroyal@outlook.com>\n"
 "Language-Team: Central Khmer <https://translate.ubports.com/projects/ubports/"
 "camera-app/km/>\n"
@@ -26,52 +26,52 @@ msgstr "ការកំណត់"
 
 #: ../AdvancedOptions.qml:48
 msgid "Add date stamp on captured images"
-msgstr ""
+msgstr "បន្ថែមត្រាកាលបរិច្ឆេទលើរូបថតដែលបានថត"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:70
 msgid "Format"
-msgstr ""
+msgstr "ហ្វ័រម៉ាត"
 
 #: ../AdvancedOptions.qml:122
 msgid "Date formatting keywords"
-msgstr ""
+msgstr "ពាក្យគន្លឹះដែលបានហ្វ័រម៉ាតកាលបរិច្ឆេទ"
 
 #: ../AdvancedOptions.qml:127
 msgid "the day as number without a leading zero (1 to 31)"
-msgstr ""
+msgstr "ថ្ងៃ ដែលជាលេខដោយគ្មានសូន្យនាំមុខ (១ ដល់ ៣១)"
 
 #: ../AdvancedOptions.qml:128
 msgid "the day as number with a leading zero (01 to 31)"
-msgstr ""
+msgstr "ថ្ងៃ ដែលជាលេខដោយមានសូន្យនាំមុខ (០១ ដល់ ៣១)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr ""
+msgstr "ឈ្មោះថ្ងៃ ដែលជាអក្សរកាត់ (ឧ. ‘ច.’ ដល់ ‘អា.’)។"
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
-msgstr ""
+msgstr "ឈ្មោះថ្ងៃ ដែលជាអក្សរពេញ (ឧ. ‘ចន្ទ’ ដល់ ‘អាទិត្យ’)។"
 
 #: ../AdvancedOptions.qml:131
 msgid "the month as number without a leading zero (1 to 12)"
-msgstr ""
+msgstr "ខែជាលេខដោយគ្មានលេខសូន្យនាំមុខ (១ ដល់ ១២)"
 
 #: ../AdvancedOptions.qml:132
 msgid "the month as number with a leading zero (01 to 12)"
-msgstr ""
+msgstr "ខែជាលេខដោយមានលេខសូន្យនាំមុខ (០១ ដល់ ១២)"
 
 #: ../AdvancedOptions.qml:133
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr ""
+msgstr "ឈ្មោះអក្សរកាត់នៃខែ (ឧ. ‘ម.ក.’ ដល់ ‘ធ.’)។"
 
 #: ../AdvancedOptions.qml:134
 msgid "the long localized month name (e.g. 'January' to 'December')."
-msgstr ""
+msgstr "ឈ្មោះពេញនៃខែ (ឧ. ‘មករា’ ដល់ ‘ធ្នូ’)។"
 
 #: ../AdvancedOptions.qml:135
 msgid "the year as two digit number (00 to 99)"
-msgstr ""
+msgstr "ឆ្នាំ ដែលជាលេខពីរខ្ទង់ (០០ ដល់ ៩៩)"
 
 #: ../AdvancedOptions.qml:136
 msgid ""
