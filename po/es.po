@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2022-03-09 20:46+0000\n"
-"Last-Translator: Marcos Sánchez Provencio <raptopassion@gmail.com>\n"
+"PO-Revision-Date: 2022-06-01 16:59+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://translate.ubports.com/projects/ubports/"
 "camera-app/es/>\n"
 "Language: es\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../AdvancedOptions.qml:16
 msgid "Settings"
-msgstr "Ajustes"
+msgstr "Configuración"
 
 #: ../AdvancedOptions.qml:48
 msgid "Add date stamp on captured images"
@@ -285,7 +285,7 @@ msgstr "Activo"
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:70
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:91
 msgid "Off"
-msgstr "Apagado"
+msgstr "Desactivado"
 
 #: ../ViewFinderOverlay.qml:395
 msgid "Auto"
