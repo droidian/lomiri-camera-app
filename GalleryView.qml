@@ -15,9 +15,9 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Content 1.3
-import Ubuntu.Thumbnailer 0.1
+import Lomiri.Components 1.3
+import Lomiri.Content 1.3
+import Lomiri.Thumbnailer 0.1
 
 import CameraApp 0.1
 import "MimeTypeMapper.js" as MimeTypeMapper
@@ -365,7 +365,7 @@ Item {
         Transition {
             id:galleryViewTransition
             to: "*"
-            UbuntuNumberAnimation { properties: "scale,opacity"; duration: UbuntuAnimation.BriskDuration }
+            LomiriNumberAnimation { properties: "scale,opacity"; duration: LomiriAnimation.BriskDuration }
             onRunningChanged: {
                 inTransition = running;
             }

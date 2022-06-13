@@ -16,7 +16,7 @@
 
 import QtQuick 2.4
 import QtQuick.Window 2.2
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 AbstractButton {
     id: button
@@ -53,8 +53,8 @@ AbstractButton {
         rotation: automaticOrientation ? Screen.angleBetween(Screen.primaryOrientation, Screen.orientation) : 0
         Behavior on rotation {
             RotationAnimator {
-                duration: UbuntuAnimation.BriskDuration
-                easing: UbuntuAnimation.StandardEasing
+                duration: LomiriAnimation.BriskDuration
+                easing: LomiriAnimation.StandardEasing
                 direction: RotationAnimator.Shortest
             }
         }
@@ -74,8 +74,8 @@ AbstractButton {
         rotation: automaticOrientation ? Screen.angleBetween(Screen.primaryOrientation, Screen.orientation) : 0
         Behavior on rotation {
             RotationAnimator {
-                duration: UbuntuAnimation.BriskDuration
-                easing: UbuntuAnimation.StandardEasing
+                duration: LomiriAnimation.BriskDuration
+                easing: LomiriAnimation.StandardEasing
                 direction: RotationAnimator.Shortest
             }
         }

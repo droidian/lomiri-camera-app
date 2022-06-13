@@ -16,12 +16,12 @@
 
 import QtQuick 2.4
 import QtQuick.Window 2.2
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import QtMultimedia 5.9
 import CameraApp 0.1
 //import QtGraphicalEffects 1.0
-import Ubuntu.Content 1.3
+import Lomiri.Content 1.3
 
 import "qml/Viewfinder"
 
@@ -212,14 +212,14 @@ FocusScope {
 
             SequentialAnimation {
                 ParallelAnimation {
-                    UbuntuNumberAnimation {target: viewFinderSwitcherScale; property: "xScale"; from: 1.0; to: 0.8; duration: UbuntuAnimation.BriskDuration ; easing: UbuntuAnimation.StandardEasing}
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {target: viewFinderSwitcherScale; property: "xScale"; from: 1.0; to: 0.8; duration: LomiriAnimation.BriskDuration ; easing: LomiriAnimation.StandardEasing}
+                    LomiriNumberAnimation {
                         target: viewFinderSwitcherRotation
                         property: "angle"
                         from: 180
                         to: 90
-                        duration: UbuntuAnimation.BriskDuration
-                        easing: UbuntuAnimation.StandardEasing
+                        duration: LomiriAnimation.BriskDuration
+                        easing: LomiriAnimation.StandardEasing
                     }
                 }
                 ScriptAction {
@@ -230,14 +230,14 @@ FocusScope {
                 }
                 PropertyAction { target: viewFinderGrab; property: "visible"; value: false }
                 ParallelAnimation {
-                    UbuntuNumberAnimation {target: viewFinderSwitcherScale; property: "xScale"; from: 0.8; to: 1.0; duration: UbuntuAnimation.BriskDuration; easing: UbuntuAnimation.StandardEasingReverse}
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {target: viewFinderSwitcherScale; property: "xScale"; from: 0.8; to: 1.0; duration: LomiriAnimation.BriskDuration; easing: LomiriAnimation.StandardEasingReverse}
+                    LomiriNumberAnimation {
                         target: viewFinderSwitcherRotation
                         property: "angle"
                         from: 90
                         to: 0
-                        duration: UbuntuAnimation.BriskDuration
-                        easing: UbuntuAnimation.StandardEasingReverse
+                        duration: LomiriAnimation.BriskDuration
+                        easing: LomiriAnimation.StandardEasingReverse
                     }
                 }
             }
@@ -256,7 +256,7 @@ FocusScope {
                       ? 0.1 : 1.0
 
             orientation: {
-                // Camera-app uses X-Ubuntu-Rotates-Window-Contents, which means we're always in
+                // Camera-app uses X-Lomiri-Rotates-Window-Contents, which means we're always in
                 // native orientation. Thus, Screen.orientation isn't used here.
 
                 if (camera.position === Camera.FrontFace) {
@@ -344,7 +344,7 @@ FocusScope {
 
         Behavior on opacity {
             enabled: !photoRollHint.enabled
-            UbuntuNumberAnimation {duration: UbuntuAnimation.SnapDuration}
+            LomiriNumberAnimation {duration: LomiriAnimation.SnapDuration}
         }
 
         // Tapping anywhere on the screen should not trigger any camera

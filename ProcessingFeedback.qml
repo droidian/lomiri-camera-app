@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: processingFeedback
@@ -35,8 +35,8 @@ Item {
         opacity: running ? 1.0 : 0.0
         Behavior on opacity {
             OpacityAnimator {
-                duration: UbuntuAnimation.SnapDuration
-                easing: UbuntuAnimation.StandardEasing
+                duration: LomiriAnimation.SnapDuration
+                easing: LomiriAnimation.StandardEasing
             }
         }
     }

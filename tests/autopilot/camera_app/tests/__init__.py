@@ -11,7 +11,7 @@ import os
 import shutil
 from pkg_resources import resource_filename
 
-import ubuntuuitoolkit
+import lomiriuitoolkit
 from autopilot.input import Mouse, Touch, Pointer
 from autopilot.platform import model
 from autopilot.testcase import AutopilotTestCase
@@ -21,7 +21,7 @@ from camera_app.ubuntu_system_tests.helpers.camera.fixture_setup import (
     SetCameraAccessRequests)
 
 
-CUSTOM_PROXY_OBJECT_BASE = ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase
+CUSTOM_PROXY_OBJECT_BASE = lomiriuitoolkit.LomiriUIToolkitCustomProxyObjectBase
 
 
 class CameraAppTestCase(AutopilotTestCase):

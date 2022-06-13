@@ -1,5 +1,5 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtQuick.Window 2.2
 import QtSensors 5.4
 
@@ -32,7 +32,7 @@ Page {
 
     transitions: [
         Transition {
-            NumberAnimation { properties: "width,height,x,y"; duration: UbuntuAnimation.FastDuration}
+            NumberAnimation { properties: "width,height,x,y"; duration: LomiriAnimation.FastDuration}
         }
     ]
 
@@ -92,7 +92,7 @@ Page {
             width:height
             name:"camera-app"
             layer.enabled: true
-            layer.effect: UbuntuShapeOverlay {
+            layer.effect: LomiriShapeOverlay {
                 relativeRadius: 0.75
             }
         }
@@ -115,7 +115,7 @@ Page {
 
     }
 
-    UbuntuListView {
+    LomiriListView {
         id:infoLinksList
         height:units.gu(35)
         anchors {

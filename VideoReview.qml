@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     property string videoPath
@@ -31,7 +31,7 @@ Item {
 
         source: videoPath ? "image://thumbnailer/%1".arg(videoPath) : ""
         opacity: status == Image.Ready ? 1.0 : 0.0
-        Behavior on opacity { UbuntuNumberAnimation { duration: UbuntuAnimation.FastDuration } }
+        Behavior on opacity { LomiriNumberAnimation { duration: LomiriAnimation.FastDuration } }
     }
 
     Item {

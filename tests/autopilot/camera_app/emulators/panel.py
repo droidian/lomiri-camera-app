@@ -7,14 +7,14 @@
 
 import logging
 
-import ubuntuuitoolkit
+import lomiriuitoolkit
 from autopilot import logging as autopilot_logging
 
 
 logger = logging.getLogger(__name__)
 
 
-class Panel(ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase):
+class Panel(lomiriuitoolkit.LomiriUIToolkitCustomProxyObjectBase):
     """Panel Autopilot emulator."""
 
     @autopilot_logging.log_action(logger.info)

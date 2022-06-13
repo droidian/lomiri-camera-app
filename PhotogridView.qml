@@ -15,10 +15,10 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Thumbnailer 0.1
-import Ubuntu.Content 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
+import Lomiri.Thumbnailer 0.1
+import Lomiri.Content 1.3
 import Qt.labs.settings 1.0
 import CameraApp 0.1
 import "MimeTypeMapper.js" as MimeTypeMapper
@@ -173,8 +173,8 @@ FocusScope {
                 width: gridView.cellWidth
                 height: gridView.cellHeight
 
-                Behavior on height { UbuntuNumberAnimation {} }
-                Behavior on width { UbuntuNumberAnimation {} }
+                Behavior on height { LomiriNumberAnimation {} }
+                Behavior on width { LomiriNumberAnimation {} }
 
                 property bool isVideo: MimeTypeMapper.mimeTypeToContentType(fileType) === ContentType.Videos
 
@@ -203,7 +203,7 @@ FocusScope {
                     }
                     fillMode: Image.PreserveAspectCrop
                     opacity: status == Image.Ready ? 1.0 : 0.0
-                    Behavior on opacity { UbuntuNumberAnimation {duration: UbuntuAnimation.FastDuration} }
+                    Behavior on opacity { LomiriNumberAnimation {duration: LomiriAnimation.FastDuration} }
                 }
 
                 Icon {
@@ -243,7 +243,7 @@ FocusScope {
                     }
                     width: units.gu(4)
                     height: units.gu(4)
-                    color: selected ? theme.palette.normal.positive : UbuntuColors.inkstone
+                    color: selected ? theme.palette.normal.positive : LomiriColors.inkstone
                     radius: 10
                     opacity: selected ? 0.8 : 0.6
                     visible: inSelectionMode
