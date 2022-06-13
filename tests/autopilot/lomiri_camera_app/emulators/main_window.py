@@ -164,7 +164,7 @@ class MainWindow(object):
         """Returns the dialog informing of low disk space"""
         try:
             return self.app.wait_select_single(objectName="lowSpaceDialog")
-        except:
+        except:  # noqa: E722
             return None
 
     def open_actions_drawer(self, gallery):

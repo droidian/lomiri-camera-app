@@ -39,7 +39,7 @@ class TestCameraPhotoEditorWithPhoto(CameraAppTestCase):
         # case.
         try:
             edit = gallery.wait_select_single(objectName="actionButtonEdit")
-        except:
+        except:  # noqa: E722
             return
 
         self.assertThat(edit.enabled, Eventually(Equals(True)))
@@ -87,7 +87,7 @@ class TestCameraPhotoEditorWithVideo(CameraAppTestCase):
         # case.
         try:
             edit = gallery.wait_select_single(objectName="actionButtonEdit")
-        except:
+        except:  # noqa: E722
             return
 
         self.assertThat(edit.enabled, Equals(False))
