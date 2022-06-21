@@ -115,7 +115,7 @@ Item {
             }
             iconName: "gallery-app-symbolic"
 			iconColor: theme.palette.normal.backgroundText
-            onClicked:  { Qt.openUrlExternally("appid://com.ubuntu.gallery/gallery/current-user-version") }
+            onClicked:  { Qt.openUrlExternally("appid://gallery.ubports/gallery/current-user-version") }
             visible: !main.contentExportMode && !userSelectionMode && !editMode
         }
         //------------------------------------------------------------------------- 
