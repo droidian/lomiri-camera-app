@@ -15,7 +15,7 @@
  *
  */
 
-import QtQuick 2.4
+import QtQuick 2.12
 import QtTest 1.0
 import "../../"
 import "../../.." //Needed for out of source build
@@ -104,7 +104,7 @@ TestCase {
 
     function test_options(data) {
         try {
-            Qt.createQmlObject("import QtQuick 2.4; Item {}", indicators);
+            Qt.createQmlObject("import QtQuick 2.12; Item {}", indicators);
         } catch (e) {
             skip("This test requires Qt 5.4");
         }

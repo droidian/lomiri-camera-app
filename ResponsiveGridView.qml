@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.3
+import QtQuick 2.12
 import Lomiri.Components 0.1
 
 // FIXME: this is a copy of Unity8's ResponsiveGridView
