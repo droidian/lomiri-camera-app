@@ -34,6 +34,7 @@ Item {
         anchors.centerIn: parent
         anchors.verticalCenterOffset: -geometry.y
 
+        autoTransform: true
         asynchronous: true
         cache: false
         fillMode: Image.PreserveAspectFit
