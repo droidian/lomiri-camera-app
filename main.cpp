@@ -35,6 +35,10 @@ int main(int argc, char** argv)
     // Necessary for Qt.labs.settings to work
     // Ref.: https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1354321
     QCoreApplication::setOrganizationDomain(QGuiApplication::applicationName());
+
+    //Inject versioning strings from CI
+    QCoreApplication::setApplicationVersion(QStringLiteral(BUILD_VERSION));
+
     CameraApplication application(argc, argv);
 
     if (!application.setup()) {
