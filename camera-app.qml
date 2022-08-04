@@ -43,15 +43,16 @@ Window {
       }
 
     function toggleFullScreen() {
-        if (main.visibility != Window.FullScreen) {
-            setFullscreen(main.visibility = Window.FullScreen)
+        if (main.visibility !== Window.FullScreen) {
+            main.visibility = Window.FullScreen;
+            setFullscreen(true);
         } else {
-            main.visibility = Window.Windowed
+            main.visibility = Window.Windowed;
         }
     }
 
     function exitFullScreen() {
-        main.visibility = Window.Windowed
+        main.visibility = Window.Windowed;
     }
 
     LomiriActions.ActionManager {
