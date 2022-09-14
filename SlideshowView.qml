@@ -126,6 +126,7 @@ FocusScope {
         if (listView.currentItem) {
             listView.currentItem.zoomOut();
         }
+        showPhotoAtIndex(0);
     }
 
     ListView {
