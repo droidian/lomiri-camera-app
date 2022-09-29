@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=Application
-_Name=Camera
-_Comment=Camera application
-_GenericName=Camera
-_Keywords=Photos;Videos;Capture;Shoot;Snapshot;Record
+Name=Camera
+Comment=Camera application
+GenericName=Camera
+Keywords=Photos;Videos;Capture;Shoot;Snapshot;Record
 Exec=@DESKTOP_EXEC@ %u
 Terminal=false
 Icon=@CAMERA_ICON@

@@ -18,8 +18,11 @@ find_package(Qt5Quick)
 find_package(Qt5Multimedia)
 find_package(Qt5Gui)
 
-find_program(INTLTOOL_MERGE intltool-merge)
-find_program(INTLTOOL_EXTRACT intltool-extract)
+
+include(FindGettext)
+if(NOT GETTEXT_FOUND)
+  message(FATAL_ERROR "Could not find gettext")
+endif(NOT GETTEXT_FOUND)
 
 option(INSTALL_TESTS "Install the tests on make install" off)
 option(CLICK_MODE "Installs to a contained location" on)
@@ -132,9 +135,12 @@ install(DIRECTORY ${THEME_DIR}
 
 configure_file(${DESKTOP_FILE}.in.in ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE}.in)
 add_custom_target(${DESKTOP_FILE} ALL
-         COMMENT "Merging translations into ${DESKTOP_FILE}"
-         COMMAND ${INTLTOOL_MERGE} -d -u ${CMAKE_SOURCE_DIR}/po ${DESKTOP_FILE}.in ${DESKTOP_FILE}
-        )
+    COMMENT "Merging translations into ${DESKTOP_FILE}"
+    COMMAND ${GETTEXT_MSGFMT_EXECUTABLE}
+            --desktop --template=${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE}.in
+            -o ${DESKTOP_FILE}
+            -d ${CMAKE_SOURCE_DIR}/po
+    )
 
 # make non compiled files visible in qtcreator
 file(GLOB_RECURSE NON_COMPILED_FILES *.qml *.js *.py *.svg *.png *.in *.json *.desktop *.pot *.apparmor qmldir)
@@ -166,12 +172,6 @@ endif(CLICK_MODE)
 
 add_subdirectory(CameraApp)
 add_subdirectory(desktop)
-
-file(GLOB_RECURSE I18N_SRC_FILES
-     RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po
-     **.qml)
-list(APPEND I18N_SRC_FILES ${DESKTOP_FILE}.in.in.h)
-list(SORT I18N_SRC_FILES)
 
 # for dh_translations to extract the domain
 # (regarding syntax consistency, see http://pad.lv/1181187)
