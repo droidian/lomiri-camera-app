@@ -4,4 +4,4 @@ border.left: 50
 border.right: 50
 horizontalTileMode: BorderImage.Stretch
 verticalTileMode: BorderImage.Stretch
-source: "ubuntu_shape@27.png"
+source: "lomiri_shape@27.png"

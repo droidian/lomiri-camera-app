@@ -1,4 +1,4 @@
-project(camera-app-translations)
+project(lomiri-camera-app-translations)
 
 include(FindGettext)
 find_program(GETTEXT_XGETTEXT_EXECUTABLE xgettext)
@@ -22,7 +22,7 @@ add_custom_target(${POT_FILE} ALL
                           --keyword=tr:1,2
                           --keyword=QT_TR_NOOP 
                           --keyword=tag
-                          --package-name=camera-app
+                          --package-name=lomiri-camera-app
                           --copyright-holder='Canonical Ltd.'
                           ${I18N_SRC_FILES})
 

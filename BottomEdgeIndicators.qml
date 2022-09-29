@@ -32,7 +32,7 @@ Item {
         }
         height: parent.height * 2
         opacity: 0.3
-        source: "assets/ubuntu_shape.svg"
+        source: "assets/lomiri_shape.svg"
         sourceSize.width: width
         sourceSize.height: height
         cache: false

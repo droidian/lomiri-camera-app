@@ -16,9 +16,10 @@ from autopilot.input import Mouse, Touch, Pointer
 from autopilot.platform import model
 from autopilot.testcase import AutopilotTestCase
 
-from camera_app.emulators.main_window import MainWindow
-from camera_app.ubuntu_system_tests.helpers.camera.fixture_setup import (
-    SetCameraAccessRequests)
+from lomiri_camera_app.emulators.main_window import MainWindow
+from lomiri_camera_app.lomiri_system_tests.helpers.camera.fixture_setup import (  # noqa: E501
+    SetCameraAccessRequests
+)
 
 
 CUSTOM_PROXY_OBJECT_BASE = lomiriuitoolkit.LomiriUIToolkitCustomProxyObjectBase
@@ -27,7 +28,7 @@ CUSTOM_PROXY_OBJECT_BASE = lomiriuitoolkit.LomiriUIToolkitCustomProxyObjectBase
 class CameraAppTestCase(AutopilotTestCase):
 
     """A common test case class that provides several useful methods
-    for camera-app tests.
+    for lomiri-camera-app tests.
 
     """
     if model() == 'Desktop':
@@ -35,18 +36,18 @@ class CameraAppTestCase(AutopilotTestCase):
     else:
         scenarios = [('with touch', dict(input_device_class=Touch))]
 
-    local_location = "../../camera-app"
-    deb_location = '/usr/bin/camera-app'
+    local_location = "../../lomiri-camera-app"
+    deb_location = '/usr/bin/lomiri-camera-app'
 
-    pictures_dir = os.path.expanduser("~/Pictures/com.ubuntu.camera")
-    videos_dir = os.path.expanduser("~/Videos/com.ubuntu.camera")
-    sample_dir = resource_filename('camera_app', 'data')
+    pictures_dir = os.path.expanduser("~/Pictures/camera.ubports")
+    videos_dir = os.path.expanduser("~/Videos/camera.ubports")
+    sample_dir = resource_filename('lomiri_camera_app', 'data')
 
     def setUp(self):
         self.useFixture(SetCameraAccessRequests())
         # Remove configuration file
         config_file = os.path.expanduser(
-            "~/.config/com.ubuntu.camera/com.ubuntu.camera.conf")
+            "~/.config/camera.ubports/camera.ubports.conf")
         if os.path.exists(config_file):
             os.remove(config_file)
 
@@ -69,20 +70,20 @@ class CameraAppTestCase(AutopilotTestCase):
     def launch_test_installed(self):
         if model() == 'Desktop':
             self.app = self.launch_test_application(
-                "camera-app",
+                "lomiri-camera-app",
                 emulator_base=CUSTOM_PROXY_OBJECT_BASE)
         else:
             self.app = self.launch_test_application(
-                "camera-app",
+                "lomiri-camera-app",
                 "--fullscreen",
                 "--desktop_file_hint="
-                "/usr/share/applications/camera-app.desktop",
+                "/usr/share/applications/lomiri-camera-app.desktop",
                 app_type='qt',
                 emulator_base=CUSTOM_PROXY_OBJECT_BASE)
 
     def launch_click_installed(self):
         self.app = self.launch_click_package(
-            "com.ubuntu.camera",
+            "camera.ubports",
             emulator_base=CUSTOM_PROXY_OBJECT_BASE)
 
     def get_center(self, object_proxy):

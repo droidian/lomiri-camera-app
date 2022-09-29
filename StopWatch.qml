@@ -38,7 +38,7 @@ Item {
         id: background
 
         anchors.fill: parent
-        source: "assets/ubuntu_shape.sci"
+        source: "assets/lomiri_shape.sci"
         opacity: 0.3
         asynchronous: true
         cache: false

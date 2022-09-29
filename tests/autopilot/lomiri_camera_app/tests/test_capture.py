@@ -12,7 +12,7 @@ from testtools.matchers import Equals, NotEquals
 from wand.image import Image
 from MediaInfoDLL3 import MediaInfo, Stream
 
-from camera_app.tests import CameraAppTestCase
+from lomiri_camera_app.tests import CameraAppTestCase
 
 import unittest
 import time
@@ -27,8 +27,8 @@ class TestCapture(CameraAppTestCase):
         In the testfarm, the application may take some time to show up."""
     def setUp(self):
         super(TestCapture, self).setUp()
-        self.pictures_dir = os.path.expanduser("~/Pictures/com.ubuntu.camera")
-        self.videos_dir = os.path.expanduser("~/Videos/com.ubuntu.camera")
+        self.pictures_dir = os.path.expanduser("~/Pictures/camera.ubports")
+        self.videos_dir = os.path.expanduser("~/Videos/camera.ubports")
 
     """Test taking a picture"""
     def test_take_picture(self):

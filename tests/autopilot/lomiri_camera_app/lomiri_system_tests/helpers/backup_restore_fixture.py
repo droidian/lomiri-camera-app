@@ -1,6 +1,6 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 #
-# Ubuntu System Tests
+# Lomiri System Tests
 # Copyright (C) 2015 Canonical
 #
 # This program is free software: you can redistribute it and/or modify
@@ -22,8 +22,8 @@ import os
 import shutil
 import time
 
-from camera_app.ubuntu_system_tests.helpers import file_system as fs
-from camera_app.ubuntu_system_tests.helpers import sqlite
+from lomiri_camera_app.lomiri_system_tests.helpers import file_system as fs
+from lomiri_camera_app.lomiri_system_tests.helpers import sqlite
 
 DEFAULT_STORE_ROOT = os.path.expanduser('~/.tmp_backup')
 

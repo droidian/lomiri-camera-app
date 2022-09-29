@@ -2,7 +2,7 @@
 
 Camera is a simple and easy to use camera for [Ubuntu Touch](https://ubuntu-touch.io/). Main focus in this app is intuative and simple UI and reliable operation to allow taking good pictures easily or in other words: simple by default expansive when needed.
 
-[![OpenStore](https://open-store.io/badges/en_US.png)](https://open-store.io/app/com.ubuntu.camera)
+[![OpenStore](https://open-store.io/badges/en_US.png)](https://open-store.io/app/camera.ubports)
 
 <img src="screenshot.png" alt="screenshot" width="200"/>
 
@@ -14,7 +14,7 @@ We believe that everyone is free to use, study, share and improve all software w
 
 ## Reporting Bugs and Requesting Features
 
-Bugs and feature requests can be reported via our [bug tracker](https://gitlab.com/ubports/apps/camera-app/issues).
+Bugs and feature requests can be reported via our [bug tracker](https://gitlab.com/ubports/development/apps/lomiri-camera-app/issues).
 
 ## Translating
 
@@ -35,7 +35,7 @@ Please note we have a [code of conduct](https://ubports.com/foundation/ubports-f
 
 This Ubuntu Touch core app is being maintained by the Ubuntu Touch team.
 
-See also the list of [contributors](https://gitlab.com/ubports/apps/camera-app/-/graphs/master) who participated in this project.
+See also the list of [contributors](https://gitlab.com/ubports/development/apps/lomiri-camera-app/-/graphs/master) who participated in this project.
 
 ### Releasing
 

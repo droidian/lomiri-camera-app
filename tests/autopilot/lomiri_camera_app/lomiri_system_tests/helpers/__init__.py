@@ -1,7 +1,7 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 
 #
-# Ubuntu System Tests
+# Lomiri System Tests
 # Copyright (C) 2015 Canonical
 #
 # This program is free software: you can redistribute it and/or modify

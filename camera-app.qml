@@ -90,7 +90,7 @@ Window {
     }
 
     Component.onCompleted: {
-        i18n.domain = "camera-app";
+        i18n.domain = "lomiri-camera-app";
         main.show();
     }
 
@@ -386,7 +386,7 @@ Window {
         // It will be translated by dtr (or dgettext) to allows plural forms
         format: i18n.tag("<b>%1</b> photos taken today")
         emptyFormat: i18n.tag("No photos taken today")
-        domain: "camera-app"
+        domain: "lomiri-camera-app"
         minimum: 0.0
     }
 
@@ -397,7 +397,7 @@ Window {
         // It will be translated by dtr (or dgettext) to allows plural forms
         format: i18n.tag("<b>%1</b> videos recorded today")
         emptyFormat: i18n.tag("No videos recorded today")
-        domain: "camera-app"
+        domain: "lomiri-camera-app"
         minimum: 0.0
     }
 }

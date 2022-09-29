@@ -10,7 +10,7 @@
 from testtools.matchers import Equals, NotEquals
 from autopilot.matchers import Eventually
 
-from camera_app.tests import CameraAppTestCase
+from lomiri_camera_app.tests import CameraAppTestCase
 
 from time import sleep
 

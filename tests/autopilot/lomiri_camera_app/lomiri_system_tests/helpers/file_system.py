@@ -1,7 +1,7 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 
 #
-# Ubuntu System Tests
+# Lomiri System Tests
 # Copyright (C) 2015 Canonical
 #
 # This program is free software: you can redistribute it and/or modify
@@ -44,7 +44,7 @@ DIR_DOWNLOADS = 'Downloads'
 DIR_CONFIG = '.config'
 DIR_CACHE = '.cache'
 DIR_LOCAL = '.local'
-DIR_CAMERA_PICTURES = 'com.ubuntu.camera'
+DIR_CAMERA_PICTURES = 'camera.ubports'
 DIR_MUSIC_CONFIG = 'com.ubuntu.music'
 DIR_GALLERY = 'com.ubuntu.gallery'
 DIR_WEBBROWSER = 'webbrowser-app'

@@ -10,7 +10,7 @@
 from testtools.matchers import Equals, NotEquals, GreaterThan, LessThan
 from autopilot.matchers import Eventually
 
-from camera_app.tests import CameraAppTestCase
+from lomiri_camera_app.tests import CameraAppTestCase
 
 import os.path
 import os

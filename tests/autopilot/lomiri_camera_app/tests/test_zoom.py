@@ -11,7 +11,7 @@ from testtools.matchers import Equals
 from autopilot.matchers import Eventually
 from autopilot.gestures import pinch
 
-from camera_app.tests import CameraAppTestCase
+from lomiri_camera_app.tests import CameraAppTestCase
 
 import unittest
 

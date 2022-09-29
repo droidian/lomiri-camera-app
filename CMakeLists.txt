@@ -1,4 +1,4 @@
-project(camera-app)
+project(lomiri-camera-app)
 cmake_minimum_required(VERSION 3.1.0)
 set (CMAKE_CXX_STANDARD 11)
 
@@ -24,9 +24,9 @@ find_program(INTLTOOL_EXTRACT intltool-extract)
 option(INSTALL_TESTS "Install the tests on make install" off)
 option(CLICK_MODE "Installs to a contained location" on)
 
-set(CAMERA_APP camera-app)
-set(AUTOPILOT_DIR camera_app)
-set(DESKTOP_FILE camera-app.desktop)
+set(CAMERA_APP lomiri-camera-app)
+set(AUTOPILOT_DIR lomiri_camera_app)
+set(DESKTOP_FILE lomiri-camera-app.desktop)
 set(UBUNTU_MANIFEST_PATH "manifest.json.in" CACHE INTERNAL "Tells QtCreator location and name of the manifest file")
 
 if(CLICK_MODE)
@@ -37,10 +37,10 @@ if(CLICK_MODE)
     set(PLUGIN_BASE lib/${CMAKE_LIBRARY_ARCHITECTURE})
     set(PLUGIN_DIR ${PLUGIN_BASE}/CameraApp)
     set(DESKTOP_EXEC "./${CAMERA_APP}")
-  	set(CAMERA_ICON "${CMAKE_INSTALL_DATADIR}/icons/camera-app.svg")
-    set(CAMERA_SPLASH "${CMAKE_INSTALL_DATADIR}/icons/camera-app-splash.svg")
-  	install(FILES assets/camera-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
-  	install(FILES assets/camera-app-splash.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+  	set(CAMERA_ICON "${CMAKE_INSTALL_DATADIR}/icons/lomiri-camera-app.svg")
+    set(CAMERA_SPLASH "${CMAKE_INSTALL_DATADIR}/icons/lomiri-camera-app-splash.svg")
+  	install(FILES assets/lomiri-camera-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+  	install(FILES assets/lomiri-camera-app-splash.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
     add_definitions("-DCLICK_MODE=1")
 
     if(NOT SOURCE)
@@ -64,8 +64,8 @@ if(CLICK_MODE)
 
 else(CLICK_MODE)
     set(CAMERA_APP_DIR ${CMAKE_INSTALL_DATADIR}/${CAMERA_APP})
-    set(CAMERA_ICON ${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/camera-app.png)
-    set(CAMERA_SPLASH ${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/camera-app-splash.svg)
+    set(CAMERA_ICON ${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/lomiri-camera-app.png)
+    set(CAMERA_SPLASH ${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/lomiri-camera-app-splash.svg)
     set(PLUGIN_BASE ${CMAKE_INSTALL_LIBDIR}/${CAMERA_APP})
     set(PLUGIN_DIR ${PLUGIN_BASE}/CameraApp)
     set(DESKTOP_EXEC ${CAMERA_APP})
@@ -175,7 +175,7 @@ list(SORT I18N_SRC_FILES)
 
 # for dh_translations to extract the domain
 # (regarding syntax consistency, see http://pad.lv/1181187)
-set (GETTEXT_PACKAGE "camera-app")
+set (GETTEXT_PACKAGE "lomiri-camera-app")
 
 add_subdirectory(po)
 

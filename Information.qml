@@ -73,9 +73,9 @@ Page {
     }
 
     Component.onCompleted: {
-        infoModel.append({ name: i18n.tr("Get the source"), url: "https://github.com/ubports/camera-app" })
-        infoModel.append({ name: i18n.tr("Report issues"), url: "https://github.com/ubports/camera-app/issues/" })
-        infoModel.append({ name: i18n.tr("Help translate"), url: "https://translate.ubports.com/projects/ubports/camera-app/" })
+        infoModel.append({ name: i18n.tr("Get the source"), url: "https://gitlab.com/ubports/development/apps/lomiri-camera-app" })
+        infoModel.append({ name: i18n.tr("Report issues"), url: "https://gitlab.com/ubports/development/apps/lomiri-camera-app/issues" })
+        infoModel.append({ name: i18n.tr("Help translate"), url: "https://translate.ubports.com/projects/ubports/lomiri-camera-app/" })
     }
 
     Column {
@@ -90,7 +90,7 @@ Page {
             anchors.horizontalCenter: parent.horizontalCenter
             height: Math.min(parent.width/2, parent.height/2)
             width:height
-            name:"camera-app"
+            name:"lomiri-camera-app"
             layer.enabled: true
             layer.effect: LomiriShapeOverlay {
                 relativeRadius: 0.75

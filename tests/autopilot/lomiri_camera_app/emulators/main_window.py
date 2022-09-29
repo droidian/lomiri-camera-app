@@ -5,13 +5,14 @@
 # under the terms of the GNU General Public License version 3, as published
 # by the Free Software Foundation.
 
-from camera_app.emulators.panel import Panel
+from lomiri_camera_app.emulators.panel import Panel
 from autopilot.matchers import Eventually
 from testtools.matchers import Equals, NotEquals
 
 
 class MainWindow(object):
-    """An emulator class that makes it easy to interact with the camera-app."""
+    """An emulator class that makes it easy to interact with the
+       lomiri-camera-app."""
 
     def __init__(self, app):
         self.app = app

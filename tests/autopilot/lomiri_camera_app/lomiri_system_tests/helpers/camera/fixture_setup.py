@@ -1,7 +1,7 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 
 #
-# Ubuntu System Tests
+# Lomiri System Tests
 # Copyright (C) 2015 Canonical
 #
 # This program is free software: you can redistribute it and/or modify
@@ -21,16 +21,17 @@
 import fixtures
 import os
 
-from camera_app.ubuntu_system_tests.helpers import file_system as fs
-from camera_app.ubuntu_system_tests.helpers.backup_restore_fixture import (
-    BackupRestoreRequestAccessFixture)
+from lomiri_camera_app.lomiri_system_tests.helpers import file_system as fs
+from lomiri_camera_app.lomiri_system_tests.helpers.backup_restore_fixture import (  # noqa: E501
+    BackupRestoreRequestAccessFixture
+)
 
 SERVICE_DB = os.path.join(fs.DIR_HOME_LOCAL, 'share', 'CameraService',
                           'trust.db')
 AUDIO_DB = os.path.join(fs.DIR_HOME_LOCAL, 'share', 'PulseAudio', 'trust.db')
 
 FEATURE = 0
-APP_ID = 'com.ubuntu.camera_camera'
+APP_ID = 'camera.ubports_camera'
 
 
 class SetCameraAccessRequests(fixtures.Fixture):

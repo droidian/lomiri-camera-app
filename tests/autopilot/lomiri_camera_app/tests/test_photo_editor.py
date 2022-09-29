@@ -11,7 +11,7 @@ from testtools.matchers import Equals
 from autopilot.matchers import Eventually
 from autopilot.exceptions import StateNotFoundError
 
-from camera_app.tests import CameraAppTestCase
+from lomiri_camera_app.tests import CameraAppTestCase
 
 
 class TestCameraPhotoEditorWithPhoto(CameraAppTestCase):
