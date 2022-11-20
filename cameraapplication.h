@@ -24,6 +24,7 @@
 #include <QGuiApplication>
 
 class QDate;
+enum CameraMode : unsigned short;
 
 class CameraApplication : public QGuiApplication
 {
@@ -40,6 +41,7 @@ Q_SIGNALS:
 
 private:
     QScopedPointer<QQmlApplicationEngine> m_engine;
+    CameraMode m_mode;
 };
 
 #endif // CAMERAAPPLICATION_H

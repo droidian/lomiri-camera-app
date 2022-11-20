@@ -25,6 +25,7 @@
 #include <QQmlEngine>
 #include <QScreen>
 #include <QtGui/QGuiApplication>
+#include <QZXing.h>
 
 #include "config.h"
 
@@ -55,6 +56,9 @@ CameraApplication::CameraApplication(int &argc, char **argv)
         } else {
             qCritical("Library qttestability load failed!");
         }
+    }
+    if (arguments().contains(QLatin1String("--mode=reader"))) {
+        m_mode = CameraMode::READER;
     }
 }
 
@@ -89,13 +93,15 @@ bool CameraApplication::setup()
                 Qt::InvertedPortraitOrientation |
                 Qt::InvertedLandscapeOrientation);
 
+    QZXing::registerQMLTypes();
+
     m_engine.reset(new QQmlApplicationEngine());
     m_engine->rootContext()->setContextProperty("application", this);
     m_engine->setBaseUrl(QUrl::fromLocalFile(cameraAppDirectory()));
     m_engine->addImportPath(cameraAppImportDirectory());
     qDebug() << "Import path added" << cameraAppImportDirectory();
     qDebug() << "Camera app directory" << cameraAppDirectory();
-    m_engine->load(QUrl::fromLocalFile(sourceQml()));
+    m_engine->load(QUrl::fromLocalFile(sourceQml(m_mode)));
 
     return true;
 }
