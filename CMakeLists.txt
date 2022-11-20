@@ -30,7 +30,10 @@ option(CLICK_MODE "Installs to a contained location" on)
 set(CAMERA_APP lomiri-camera-app)
 set(AUTOPILOT_DIR lomiri_camera_app)
 set(DESKTOP_FILE lomiri-camera-app.desktop)
+set(READER_APP lomiri-reader-app)
+set(DESKTOP_FILE_READER lomiri-reader-app.desktop)
 set(UBUNTU_MANIFEST_PATH "manifest.json.in" CACHE INTERNAL "Tells QtCreator location and name of the manifest file")
+set(CMAKE_VERBOSE_MAKEFILE ON)
 
 if(CLICK_MODE)
 
@@ -40,10 +43,16 @@ if(CLICK_MODE)
     set(PLUGIN_BASE lib/${CMAKE_LIBRARY_ARCHITECTURE})
     set(PLUGIN_DIR ${PLUGIN_BASE}/CameraApp)
     set(DESKTOP_EXEC "./${CAMERA_APP}")
-  	set(CAMERA_ICON "${CMAKE_INSTALL_DATADIR}/icons/lomiri-camera-app.svg")
+    set(CAMERA_ICON "${CMAKE_INSTALL_DATADIR}/icons/lomiri-camera-app.svg")
     set(CAMERA_SPLASH "${CMAKE_INSTALL_DATADIR}/icons/lomiri-camera-app-splash.svg")
   	install(FILES assets/lomiri-camera-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
   	install(FILES assets/lomiri-camera-app-splash.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+    set(READER_ICON "${CMAKE_INSTALL_DATADIR}/icons/reader-app.png")
+    set(READER_SPLASH "${CMAKE_INSTALL_DATADIR}/icons/reader-app-splash.png")
+    install(FILES assets/camera-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+    install(FILES assets/camera-app-splash.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+    install(FILES assets/reader-app.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+    install(FILES assets/reader-app-splash.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
     add_definitions("-DCLICK_MODE=1")
 
     if(NOT SOURCE)
@@ -74,6 +83,21 @@ else(CLICK_MODE)
     set(DESKTOP_EXEC ${CAMERA_APP})
 endif(CLICK_MODE)
 
+# QR scanner
+set(QZXING_MULTIMEDIA ON)
+add_definitions(
+    -DENABLE_ENCODER_GENERIC
+    -DQZXING_QML
+    -DQZXING_MULTIMEDIA
+    -DQZXING_LIBRARY
+    -DZXING_ICONV_CONST
+    -DDISABLE_LIBRARY_FEATURES
+    -DENABLE_DECODER_QR_CODE
+    -DQ_OS_UBUNTUTOUCH
+)
+add_subdirectory(qzxing/src)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/qzxing/src)
+
 configure_file(config.h.in ${CMAKE_CURRENT_BINARY_DIR}/config.h @ONLY)
 
 include_directories(
@@ -103,6 +127,7 @@ target_link_libraries(${CAMERA_APP}
     ${Qt5Multimedia_LIBRARIES}
     ${Qt5Gui_LIBRARIES}
     stdc++
+    qzxing
     )
 
 install(TARGETS ${CAMERA_APP}
@@ -142,6 +167,12 @@ add_custom_target(${DESKTOP_FILE} ALL
             -d ${CMAKE_SOURCE_DIR}/po
     )
 
+configure_file(${DESKTOP_FILE_READER}.in.in ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_READER}.in)
+add_custom_target(${DESKTOP_FILE_READER} ALL
+         COMMENT "Merging translations into ${DESKTOP_FILE_READER}"
+         COMMAND ${INTLTOOL_MERGE} -d -u ${CMAKE_SOURCE_DIR}/po ${DESKTOP_FILE_READER}.in ${DESKTOP_FILE_READER}
+        )
+
 # make non compiled files visible in qtcreator
 file(GLOB_RECURSE NON_COMPILED_FILES *.qml *.js *.py *.svg *.png *.in *.json *.desktop *.pot *.apparmor qmldir)
 add_custom_target(NON_COMPILED_TARGET ALL SOURCES ${NON_COMPILED_FILES})
@@ -149,6 +180,8 @@ add_custom_target(NON_COMPILED_TARGET ALL SOURCES ${NON_COMPILED_FILES})
 if(CLICK_MODE)
 
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE}
+        DESTINATION ${CMAKE_INSTALL_PREFIX})
+    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_READER}
         DESTINATION ${CMAKE_INSTALL_PREFIX})
 
     execute_process(
@@ -163,6 +196,8 @@ if(CLICK_MODE)
     install(FILES camera.apparmor
             DESTINATION ${CMAKE_INSTALL_PREFIX})
     install(FILES camera-contenthub.json
+            DESTINATION ${CMAKE_INSTALL_PREFIX})
+    install(FILES reader.apparmor
             DESTINATION ${CMAKE_INSTALL_PREFIX})
 
 else(CLICK_MODE)

@@ -6,3 +6,4 @@ framework: ubuntu-sdk-20.04
 
 dependencies_target:
 - libexiv2-dev
+- libqzxing-dev

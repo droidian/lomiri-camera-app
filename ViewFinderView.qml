@@ -35,6 +35,9 @@ FocusScope {
     property alias captureMode: camera.captureMode
     property alias finderOverlay: viewFinderOverlay
     property real aspectRatio: viewFinder.sourceRect.height != 0 ? viewFinder.sourceRect.width / viewFinder.sourceRect.height : 1.0
+    property bool readOnly : false
+    property var cameraFilters : []
+    property string recentlyScannedTag: ""
     signal photoTaken(string filePath)
     signal videoShot(string filePath)
 
@@ -251,6 +254,7 @@ FocusScope {
             width: parent.width
             height: parent.height
             source: camera
+            filters: cameraFilters
             opacity: ((main.contentExportMode && viewFinderExportConfirmation.waitingForPictureCapture) ||
                       (!main.contentExportMode && camera.photoCaptureInProgress && !camera.imageCapture.ready))
                       ? 0.1 : 1.0
@@ -337,6 +341,7 @@ FocusScope {
         anchors.fill: parent
         asynchronous: true
         camera: camera
+        readOnly: viewFinderView.readOnly
         sensorOrientation: camera.orientation
         opacity: status == Loader.Ready && overlayVisible && !photoRollHint.enabled ? 1.0 : 0.0
         readyForCapture: main.contentExportMode &&
