@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 OrientationHelper {
 	id: timedShootFeedback
@@ -55,7 +55,7 @@ OrientationHelper {
 			from: 1.0
 			to: 0.0
 			duration: 750
-			easing: UbuntuAnimation.StandardEasing
+			easing: LomiriAnimation.StandardEasing
 		}
 	}
 

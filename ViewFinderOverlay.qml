@@ -16,8 +16,8 @@
 
 import QtQuick 2.4
 import QtQuick.Window 2.2
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import QtMultimedia 5.9
 import QtPositioning 5.2
 import QtSensors 5.0
@@ -64,7 +64,7 @@ Item {
         property string videoResolution: ""
         property bool dateStampImages: false
         property string dateStampFormat: Qt.locale().dateFormat(Locale.ShortFormat)
-        property color dateStampColor: UbuntuColors.orange;
+        property color dateStampColor: LomiriColors.orange;
         property real dateStampOpacity: 1.0;
         property int dateStampAlign :  Qt.AlignBottom | Qt.AlignRight;
 
@@ -201,7 +201,7 @@ Item {
         target: camera.imageCapture
         onImageCaptured: {
            if(settings.shutterVibration) {
-               Haptics.play({intensity:0.25,duration:UbuntuAnimation.SnapDuration/3});
+               Haptics.play({intensity:0.25,duration:LomiriAnimation.SnapDuration/3});
            }
         }
     }
@@ -738,7 +738,7 @@ Item {
                     bottom: parent.top
                 }
                 opacity: bottomEdge.pressed || bottomEdge.opened ? 0.0 : 1.0
-                Behavior on opacity { UbuntuNumberAnimation {} }
+                Behavior on opacity { LomiriNumberAnimation {} }
             }
 
             Loader {
@@ -794,7 +794,7 @@ Item {
         visible: opacity != 0.0
         enabled: !bottomEdge.progress
 
-        Behavior on opacity { UbuntuNumberAnimation { duration: UbuntuAnimation.FastDuration}}
+        Behavior on opacity { LomiriNumberAnimation { duration: LomiriAnimation.FastDuration}}
 
         function timedShoot(secs) {
             camera.timedCaptureInProgress = true;
@@ -1028,8 +1028,8 @@ Item {
             rotation: Screen.angleBetween(Screen.primaryOrientation, Screen.orientation)
             Behavior on rotation {
                 RotationAnimator {
-                    duration: UbuntuAnimation.BriskDuration
-                    easing: UbuntuAnimation.StandardEasing
+                    duration: LomiriAnimation.BriskDuration
+                    easing: LomiriAnimation.StandardEasing
                     direction: RotationAnimator.Shortest
                 }
             }
@@ -1128,7 +1128,7 @@ Item {
                 horizontalCenter: parent.horizontalCenter
             }
             opacity: camera.videoRecorder.recorderState == CameraRecorder.StoppedState ? 0.0 : 1.0
-            Behavior on opacity { UbuntuNumberAnimation {} }
+            Behavior on opacity { LomiriNumberAnimation {} }
             visible: opacity != 0
             time: camera.videoRecorder.duration / 1000
         }
@@ -1276,7 +1276,7 @@ Item {
         z:-1
         visible:  appSettings.blurEffects && radius !== 0
         transparentBorder:false
-        Behavior on radius { UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration} }
+        Behavior on radius { LomiriNumberAnimation { duration: LomiriAnimation.SnapDuration} }
     }
 
     Rectangle {
@@ -1286,7 +1286,7 @@ Item {
         property real tintOpacity : viewFinderOverlay.revealProgress * finalOpacity
         visible: viewFinderOverlay.revealProgress > 0
         opacity:tintOpacity
-        color: UbuntuColors.jet
+        color: LomiriColors.jet
         z:-1
     }
 }

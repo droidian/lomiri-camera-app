@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Rectangle {
 	id: shootFeedback
@@ -36,7 +36,7 @@ Rectangle {
 		target: shootFeedback
 		from: 1.0
 		to: 0.0
-		duration: UbuntuAnimation.SnapDuration
-		easing: UbuntuAnimation.StandardEasing
+		duration: LomiriAnimation.SnapDuration
+		easing: LomiriAnimation.StandardEasing
 	}
 }

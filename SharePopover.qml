@@ -15,9 +15,9 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Content 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
+import Lomiri.Content 1.3
 
 PopupBase {
     property var transferContentType 
@@ -25,7 +25,7 @@ PopupBase {
 
     signal contentPeerSelected()
 
-    fadingAnimation: UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration }
+    fadingAnimation: LomiriNumberAnimation { duration: LomiriAnimation.SnapDuration }
 
     Component.onCompleted: {
         contentPeerPicker.peerSelected.connect(contentPeerSelected);

@@ -1,7 +1,7 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import Qt.labs.settings 1.0
-import Ubuntu.Components.ListItems 1.3 as ListItems
+import Lomiri.Components.ListItems 1.3 as ListItems
 
 import "qml/components"
 
@@ -124,7 +124,7 @@ Page {
                             left:parent.left
                         }
                         height:dateStampFormatExpand.expandedHeight
-                        UbuntuShapeOverlay {
+                        LomiriShapeOverlay {
                             width:dateStampFormatExpandList.width
                             height:dateStampFormatExpandList.height
                             backgroundColor: "white"
@@ -221,7 +221,7 @@ Page {
                             interactive: true
                             snapMode: ListView.SnapToItem
                             highlightFollowsCurrentItem: true
-                            highlightMoveDuration: UbuntuAnimation.SnapDuration
+                            highlightMoveDuration: LomiriAnimation.SnapDuration
                             clip:true
 
                             function getItemIdx(item) {
@@ -236,10 +236,10 @@ Page {
                             Component.onCompleted: {
                                 var newColors = [];
                                 var existingColors = {};
-                                for(var i in UbuntuColors) {
-                                    if( typeof(UbuntuColors[i]) == "object" && !(UbuntuColors[i].stops) && !existingColors[UbuntuColors[i].toString()] ) {
-                                        newColors.push(UbuntuColors[i]);
-                                        existingColors[UbuntuColors[i].toString()] = true;
+                                for(var i in LomiriColors) {
+                                    if( typeof(LomiriColors[i]) == "object" && !(LomiriColors[i].stops) && !existingColors[LomiriColors[i].toString()] ) {
+                                        newColors.push(LomiriColors[i]);
+                                        existingColors[LomiriColors[i].toString()] = true;
                                     }
                                 }
                                 model = newColors;

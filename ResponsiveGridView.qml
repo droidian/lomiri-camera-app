@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.3
-import Ubuntu.Components 0.1
+import Lomiri.Components 0.1
 
 // FIXME: this is a copy of Unity8's ResponsiveGridView
 

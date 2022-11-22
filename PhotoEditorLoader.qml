@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components.Extras 0.2
+import Lomiri.Components.Extras 0.2
 
 PhotoEditor {
     id: photoEditor

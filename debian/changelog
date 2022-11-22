@@ -1,3 +1,8 @@
+lomiri-camera-app (3.2.3) UNRELEASED; urgency=medium
+
+  * Port to focal
+
+ -- Guido Berhoerster <guido+gitlab.com@berhoerster.name>  Mon, 13 Jun 2022 11:37:27 +0200
 
 camera-app (3.0.1+ubports) vivid; urgency=medium
 

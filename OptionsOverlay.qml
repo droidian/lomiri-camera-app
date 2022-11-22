@@ -16,7 +16,7 @@
 
 import QtQuick 2.4
 import QtQuick.Window 2.2
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: optionsOverlay
@@ -48,7 +48,7 @@ Item {
                 onClicked: optionValueSelector.toggle(model, optionButton)
                 enabled: model.available && (!optionValueSelector.caller || optionValueSelector.caller == optionButton)
                 opacity: enabled ? 1.0 : 0.05
-                Behavior on opacity {UbuntuNumberAnimation {duration: UbuntuAnimation.FastDuration}}
+                Behavior on opacity {LomiriNumberAnimation {duration: LomiriAnimation.FastDuration}}
             }
         }
     }
@@ -117,7 +117,7 @@ Item {
         visible: opacity !== 0.0
         onVisibleChanged: if (!visible) model = null;
         opacity: optionValueSelectorVisible ? 1.0 : 0.0
-        Behavior on opacity {UbuntuNumberAnimation {duration: UbuntuAnimation.FastDuration}}
+        Behavior on opacity {LomiriNumberAnimation {duration: LomiriAnimation.FastDuration}}
 
         Connections {
             target: parent

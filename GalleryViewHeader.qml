@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 
@@ -28,9 +28,9 @@ Item {
         right: parent.right
     }
     y: shown ? 0 : -height
-    Behavior on y { UbuntuNumberAnimation {} }
+    Behavior on y { LomiriNumberAnimation {} }
     opacity: shown ? 1.0 : 0.0
-    Behavior on opacity { UbuntuNumberAnimation {} }
+    Behavior on opacity { LomiriNumberAnimation {} }
 
     height: units.gu(7)
 
@@ -115,7 +115,7 @@ Item {
             }
             iconName: "gallery-app-symbolic"
 			iconColor: theme.palette.normal.backgroundText
-            onClicked:  { Qt.openUrlExternally("appid://com.ubuntu.gallery/gallery/current-user-version") }
+            onClicked:  { Qt.openUrlExternally("appid://gallery.ubports/gallery/current-user-version") }
             visible: !main.contentExportMode && !userSelectionMode && !editMode
         }
         //------------------------------------------------------------------------- 
@@ -224,7 +224,7 @@ Item {
                 right: parent.right
             }
             y: actionsDrawer.opened ? 0 : -height
-            Behavior on y { UbuntuNumberAnimation {} }
+            Behavior on y { LomiriNumberAnimation {} }
 
             onYChanged: {
                 if (y == -height)

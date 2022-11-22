@@ -15,11 +15,11 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 1.3 as ListItems
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Content 1.3
-import Ubuntu.Thumbnailer 0.1
+import Lomiri.Components 1.3
+import Lomiri.Components.ListItems 1.3 as ListItems
+import Lomiri.Components.Popups 1.3
+import Lomiri.Content 1.3
+import Lomiri.Thumbnailer 0.1
 import QtGraphicalEffects 1.0
 
 import CameraApp 0.1
@@ -102,9 +102,9 @@ FocusScope {
     }
 
     Component.onCompleted: {
-        // The PhotoEditor is only available in Ubuntu.Components.Extras 0.2
+        // The PhotoEditor is only available in Lomiri.Components.Extras 0.2
         // If we succeed here we add the edit button to the list of actions.
-        try { Qt.createQmlObject('import QtQuick 2.4; import Ubuntu.Components.Extras 0.2; Item {}', slideshowView) }
+        try { Qt.createQmlObject('import QtQuick 2.4; import Lomiri.Components.Extras 0.2; Item {}', slideshowView) }
         catch (e) { return; }
 
         editingAvailable = true;
@@ -145,7 +145,7 @@ FocusScope {
         boundsBehavior: Flickable.StopAtBounds
         cacheBuffer: width
         highlightRangeMode: ListView.StrictlyEnforceRange
-        highlightMoveDuration: UbuntuAnimation.FastDuration
+        highlightMoveDuration: LomiriAnimation.FastDuration
         snapMode: ListView.SnapOneItem
         onCountChanged: {
             // currentIndex is -1 by default and stays so until manually set to something else
@@ -158,11 +158,11 @@ FocusScope {
         property real maxDimension: Math.max(width, height)
 
         removeDisplaced: Transition {
-            UbuntuNumberAnimation { property: "x" }
+            LomiriNumberAnimation { property: "x" }
         }
         remove: Transition {
             ParallelAnimation {
-                UbuntuNumberAnimation { property: "opacity"; to: 0 }
+                LomiriNumberAnimation { property: "opacity"; to: 0 }
             }
         }
         delegate: Item {
@@ -245,13 +245,13 @@ FocusScope {
                     property real scaleCenterY: 0.0
                     Behavior on sizeScale {
                         enabled: !delegate.pinchInProgress
-                        UbuntuNumberAnimation {duration: UbuntuAnimation.FastDuration}
+                        LomiriNumberAnimation {duration: LomiriAnimation.FastDuration}
                     }
                     Behavior on scaleCenterX {
-                        UbuntuNumberAnimation {duration: UbuntuAnimation.FastDuration}
+                        LomiriNumberAnimation {duration: LomiriAnimation.FastDuration}
                     }
                     Behavior on scaleCenterY {
-                        UbuntuNumberAnimation {duration: UbuntuAnimation.FastDuration}
+                        LomiriNumberAnimation {duration: LomiriAnimation.FastDuration}
                     }
 
                     Item {
@@ -276,7 +276,7 @@ FocusScope {
                             }
                             fillMode: Image.PreserveAspectFit
                             opacity: status == Image.Ready ? 1.0 : 0.0
-                            Behavior on opacity { UbuntuNumberAnimation {duration: UbuntuAnimation.FastDuration} }
+                            Behavior on opacity { LomiriNumberAnimation {duration: LomiriAnimation.FastDuration} }
                         }
 
                         Image {
@@ -460,7 +460,7 @@ FocusScope {
         transform: Translate {
             id:beTransalte
             y: photoBottomEdge.height - (photoBottomEdge.height*photoBottomEdge.dragProgress)
-            Behavior on y { UbuntuNumberAnimation {duration:UbuntuAnimation.FastDuration}}
+            Behavior on y { LomiriNumberAnimation {duration:LomiriAnimation.FastDuration}}
         }
 
         blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly

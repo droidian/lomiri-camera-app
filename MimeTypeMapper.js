@@ -17,7 +17,7 @@
 */
 
 .pragma library
-.import Ubuntu.Content 1.3 as UbuntuContent
+.import Lomiri.Content 1.3 as LomiriContent
 
 function startsWith(string, prefix) {
     return string.indexOf(prefix) === 0;
@@ -25,24 +25,24 @@ function startsWith(string, prefix) {
 
 function mimeTypeToContentType(mimeType) {
     if(startsWith(mimeType, "image")) {
-        return UbuntuContent.ContentType.Pictures;
+        return LomiriContent.ContentType.Pictures;
     } else if(startsWith(mimeType, "audio")) {
-        return UbuntuContent.ContentType.Music;
+        return LomiriContent.ContentType.Music;
     } else if(startsWith(mimeType, "video")) {
-        return UbuntuContent.ContentType.Videos;
+        return LomiriContent.ContentType.Videos;
     } else if(startsWith(mimeType, "text/x-vcard")) {
-        return UbuntuContent.ContentType.Contacts;
+        return LomiriContent.ContentType.Contacts;
     } else if(startsWith(mimeType, "text")) {
-        return UbuntuContent.ContentType.Documents;
+        return LomiriContent.ContentType.Documents;
     } else {
-        return UbuntuContent.ContentType.Unknown;
+        return LomiriContent.ContentType.Unknown;
     }
 }
 
 function contentTypeToMimeType(contentType) {
-    if (contentType === UbuntuContent.ContentType.Pictures) {
+    if (contentType === LomiriContent.ContentType.Pictures) {
         return "image";
-    } else if (contentType === UbuntuContent.ContentType.Videos) {
+    } else if (contentType === LomiriContent.ContentType.Videos) {
         return "video";
     }
 }

@@ -489,9 +489,8 @@ bool AdvancedCameraSettings::hasHdr() const
             QVariantList range = m_cameraExposureControl->supportedParameterRange(QCameraExposureControl::ExposureMode, &continuous);
             return range.contains(QVariant::fromValue(ExposureHdr));
         }
-    } else {
-        return false;
     }
+    return false;
 }
 
 bool AdvancedCameraSettings::hdrEnabled() const

@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: zoomControl
@@ -32,7 +32,7 @@ Item {
     visible: opacity != 0.0
     opacity: shown ? 1.0 : 0.0
     layer.enabled: fadeAnimation.running
-    Behavior on opacity { UbuntuNumberAnimation {id: fadeAnimation} }
+    Behavior on opacity { LomiriNumberAnimation {id: fadeAnimation} }
 
     Timer {
         id: zoomAutoHide

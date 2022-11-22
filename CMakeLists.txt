@@ -1,4 +1,4 @@
-project(camera-app)
+project(lomiri-camera-app)
 cmake_minimum_required(VERSION 3.1.0)
 set (CMAKE_CXX_STANDARD 11)
 
@@ -18,15 +18,18 @@ find_package(Qt5Quick)
 find_package(Qt5Multimedia)
 find_package(Qt5Gui)
 
-find_program(INTLTOOL_MERGE intltool-merge)
-find_program(INTLTOOL_EXTRACT intltool-extract)
+
+include(FindGettext)
+if(NOT GETTEXT_FOUND)
+  message(FATAL_ERROR "Could not find gettext")
+endif(NOT GETTEXT_FOUND)
 
 option(INSTALL_TESTS "Install the tests on make install" off)
 option(CLICK_MODE "Installs to a contained location" on)
 
-set(CAMERA_APP camera-app)
-set(AUTOPILOT_DIR camera_app)
-set(DESKTOP_FILE camera-app.desktop)
+set(CAMERA_APP lomiri-camera-app)
+set(AUTOPILOT_DIR lomiri_camera_app)
+set(DESKTOP_FILE lomiri-camera-app.desktop)
 set(UBUNTU_MANIFEST_PATH "manifest.json.in" CACHE INTERNAL "Tells QtCreator location and name of the manifest file")
 
 if(CLICK_MODE)
@@ -37,10 +40,10 @@ if(CLICK_MODE)
     set(PLUGIN_BASE lib/${CMAKE_LIBRARY_ARCHITECTURE})
     set(PLUGIN_DIR ${PLUGIN_BASE}/CameraApp)
     set(DESKTOP_EXEC "./${CAMERA_APP}")
-  	set(CAMERA_ICON "${CMAKE_INSTALL_DATADIR}/icons/camera-app.svg")
-    set(CAMERA_SPLASH "${CMAKE_INSTALL_DATADIR}/icons/camera-app-splash.svg")
-  	install(FILES assets/camera-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
-  	install(FILES assets/camera-app-splash.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+  	set(CAMERA_ICON "${CMAKE_INSTALL_DATADIR}/icons/lomiri-camera-app.svg")
+    set(CAMERA_SPLASH "${CMAKE_INSTALL_DATADIR}/icons/lomiri-camera-app-splash.svg")
+  	install(FILES assets/lomiri-camera-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+  	install(FILES assets/lomiri-camera-app-splash.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
     add_definitions("-DCLICK_MODE=1")
 
     if(NOT SOURCE)
@@ -64,8 +67,8 @@ if(CLICK_MODE)
 
 else(CLICK_MODE)
     set(CAMERA_APP_DIR ${CMAKE_INSTALL_DATADIR}/${CAMERA_APP})
-    set(CAMERA_ICON ${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/camera-app.png)
-    set(CAMERA_SPLASH ${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/camera-app-splash.svg)
+    set(CAMERA_ICON ${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/lomiri-camera-app.png)
+    set(CAMERA_SPLASH ${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/lomiri-camera-app-splash.svg)
     set(PLUGIN_BASE ${CMAKE_INSTALL_LIBDIR}/${CAMERA_APP})
     set(PLUGIN_DIR ${PLUGIN_BASE}/CameraApp)
     set(DESKTOP_EXEC ${CAMERA_APP})
@@ -132,9 +135,12 @@ install(DIRECTORY ${THEME_DIR}
 
 configure_file(${DESKTOP_FILE}.in.in ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE}.in)
 add_custom_target(${DESKTOP_FILE} ALL
-         COMMENT "Merging translations into ${DESKTOP_FILE}"
-         COMMAND ${INTLTOOL_MERGE} -d -u ${CMAKE_SOURCE_DIR}/po ${DESKTOP_FILE}.in ${DESKTOP_FILE}
-        )
+    COMMENT "Merging translations into ${DESKTOP_FILE}"
+    COMMAND ${GETTEXT_MSGFMT_EXECUTABLE}
+            --desktop --template=${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE}.in
+            -o ${DESKTOP_FILE}
+            -d ${CMAKE_SOURCE_DIR}/po
+    )
 
 # make non compiled files visible in qtcreator
 file(GLOB_RECURSE NON_COMPILED_FILES *.qml *.js *.py *.svg *.png *.in *.json *.desktop *.pot *.apparmor qmldir)
@@ -167,15 +173,9 @@ endif(CLICK_MODE)
 add_subdirectory(CameraApp)
 add_subdirectory(desktop)
 
-file(GLOB_RECURSE I18N_SRC_FILES
-     RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po
-     **.qml)
-list(APPEND I18N_SRC_FILES ${DESKTOP_FILE}.in.in.h)
-list(SORT I18N_SRC_FILES)
-
 # for dh_translations to extract the domain
 # (regarding syntax consistency, see http://pad.lv/1181187)
-set (GETTEXT_PACKAGE "camera-app")
+set (GETTEXT_PACKAGE "lomiri-camera-app")
 
 add_subdirectory(po)
 
