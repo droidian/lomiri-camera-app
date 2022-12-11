@@ -17,7 +17,8 @@ find_package(Qt5Qml)
 find_package(Qt5Quick)
 find_package(Qt5Multimedia)
 find_package(Qt5Gui)
-
+find_package(Qt5Svg)
+find_package(Qt5QuickControls2)
 
 include(FindGettext)
 if(NOT GETTEXT_FOUND)
@@ -45,14 +46,16 @@ if(CLICK_MODE)
     set(DESKTOP_EXEC "./${CAMERA_APP}")
     set(CAMERA_ICON "${CMAKE_INSTALL_DATADIR}/icons/lomiri-camera-app.svg")
     set(CAMERA_SPLASH "${CMAKE_INSTALL_DATADIR}/icons/lomiri-camera-app-splash.svg")
-  	install(FILES assets/lomiri-camera-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
-  	install(FILES assets/lomiri-camera-app-splash.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+    install(FILES assets/lomiri-camera-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+    install(FILES assets/lomiri-camera-app-splash.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+
     set(READER_ICON "${CMAKE_INSTALL_DATADIR}/icons/reader-app.png")
     set(READER_SPLASH "${CMAKE_INSTALL_DATADIR}/icons/reader-app-splash.png")
-    install(FILES assets/camera-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
-    install(FILES assets/camera-app-splash.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+    install(FILES assets/lomiri-camera-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+    install(FILES assets/lomiri-camera-app-splash.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
     install(FILES assets/reader-app.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
     install(FILES assets/reader-app-splash.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+
     add_definitions("-DCLICK_MODE=1")
 
     if(NOT SOURCE)
@@ -95,8 +98,6 @@ add_definitions(
     -DENABLE_DECODER_QR_CODE
     -DQ_OS_UBUNTUTOUCH
 )
-add_subdirectory(qzxing/src)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/qzxing/src)
 
 configure_file(config.h.in ${CMAKE_CURRENT_BINARY_DIR}/config.h @ONLY)
 
@@ -169,8 +170,11 @@ add_custom_target(${DESKTOP_FILE} ALL
 
 configure_file(${DESKTOP_FILE_READER}.in.in ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_READER}.in)
 add_custom_target(${DESKTOP_FILE_READER} ALL
-         COMMENT "Merging translations into ${DESKTOP_FILE_READER}"
-         COMMAND ${INTLTOOL_MERGE} -d -u ${CMAKE_SOURCE_DIR}/po ${DESKTOP_FILE_READER}.in ${DESKTOP_FILE_READER}
+    COMMENT "Merging translations into ${DESKTOP_FILE_READER}"
+    COMMAND ${GETTEXT_MSGFMT_EXECUTABLE}
+            --desktop --template=${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_READER}.in
+            -o ${DESKTOP_FILE_READER}
+            -d ${CMAKE_SOURCE_DIR}/po
         )
 
 # make non compiled files visible in qtcreator

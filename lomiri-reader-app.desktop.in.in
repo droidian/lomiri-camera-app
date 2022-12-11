@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=Application
-_Name=Reader
-_Comment=Reader application
-_GenericName=Reader
-_Keywords=QR;Code;Reader
+Name=Reader
+Comment=Reader application
+GenericName=Reader
+Keywords=QR;Code;Reader
 Exec=@DESKTOP_EXEC@ --mode=reader %u
 Terminal=false
 Icon=@READER_ICON@

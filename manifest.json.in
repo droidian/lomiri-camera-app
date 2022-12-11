@@ -7,13 +7,17 @@
             "apparmor": "camera.apparmor",
             "desktop": "@DESKTOP_FILE@",
             "content-hub": "camera-contenthub.json"
+        },
+        "reader": {
+            "apparmor": "reader.apparmor",
+            "desktop": "@DESKTOP_FILE_READER@"
         }
     },
     "icon": "@CAMERA_ICON@",
     "maintainer": "UBports <dev@ubports.com>",
     "name": "camera.ubports",
     "title": "Camera",
-    "version": "3.2.3",
+    "version": "3.2.4",
     "x-test": {
         "autopilot": {
             "autopilot_module": "@AUTOPILOT_DIR@",
