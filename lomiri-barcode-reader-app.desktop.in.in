@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Name=Barcode Reader
+Comment=Barcode Reader application
+GenericName=Barcode Reader
+Keywords=QR;Code;Reader
+Exec=@DESKTOP_EXEC@ --mode=barcode-reader %u
+Terminal=false
+Icon=@READER_ICON@
+X-Lomiri-Touch=true
+X-Lomiri-Single-Instance=true
+X-Lomiri-Default-Department-ID=accessories
+X-Lomiri-Rotates-Window-Contents=true
+X-Lomiri-Splash-Image=@READER_SPLASH@
+X-Lomiri-Splash-Color=#454545
