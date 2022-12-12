@@ -7,9 +7,9 @@ Keywords=QR;Code;Reader
 Exec=@DESKTOP_EXEC@ --mode=reader %u
 Terminal=false
 Icon=@READER_ICON@
-X-Ubuntu-Touch=true
-X-Ubuntu-Single-Instance=true
-X-Ubuntu-Default-Department-ID=accessories
-X-Ubuntu-Rotates-Window-Contents=true
-X-Ubuntu-Splash-Image=@READER_SPLASH@
-X-Ubuntu-Splash-Color=#454545
+X-Lomiri-Touch=true
+X-Lomiri-Single-Instance=true
+X-Lomiri-Default-Department-ID=accessories
+X-Lomiri-Rotates-Window-Contents=true
+X-Lomiri-Splash-Image=@READER_SPLASH@
+X-Lomiri-Splash-Color=#454545
