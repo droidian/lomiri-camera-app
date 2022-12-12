@@ -31,8 +31,8 @@ option(CLICK_MODE "Installs to a contained location" on)
 set(CAMERA_APP lomiri-camera-app)
 set(AUTOPILOT_DIR lomiri_camera_app)
 set(DESKTOP_FILE lomiri-camera-app.desktop)
-set(READER_APP lomiri-reader-app)
-set(DESKTOP_FILE_READER lomiri-reader-app.desktop)
+set(READER_APP lomiri-barcode-reader-app)
+set(DESKTOP_FILE_READER lomiri-barcode-reader-app.desktop)
 set(UBUNTU_MANIFEST_PATH "manifest.json.in" CACHE INTERNAL "Tells QtCreator location and name of the manifest file")
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
@@ -49,12 +49,12 @@ if(CLICK_MODE)
     install(FILES assets/lomiri-camera-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
     install(FILES assets/lomiri-camera-app-splash.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
 
-    set(READER_ICON "${CMAKE_INSTALL_DATADIR}/icons/reader-app.png")
-    set(READER_SPLASH "${CMAKE_INSTALL_DATADIR}/icons/reader-app-splash.png")
+    set(READER_ICON "${CMAKE_INSTALL_DATADIR}/icons/lomiri-barcode-reader-app.png")
+    set(READER_SPLASH "${CMAKE_INSTALL_DATADIR}/icons/lomiri-barcode-reader-app-splash.png")
     install(FILES assets/lomiri-camera-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
     install(FILES assets/lomiri-camera-app-splash.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
-    install(FILES assets/reader-app.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
-    install(FILES assets/reader-app-splash.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+    install(FILES assets/lomiri-barcode-reader-app.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+    install(FILES assets/lomiri-barcode-reader-app-splash.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
 
     add_definitions("-DCLICK_MODE=1")
 
@@ -82,8 +82,8 @@ else(CLICK_MODE)
     set(CAMERA_ICON lomiri-camera-app)
     set(CAMERA_SPLASH ${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/lomiri-camera-app-splash.svg)
 
-    set(READER_ICON "reader-app")
-    set(READER_SPLASH "${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/reader-app-splash.png")
+    set(READER_ICON "lomiri-barcode-reader-app")
+    set(READER_SPLASH "${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/lomiri-barcode-reader-app-splash.png")
     set(PLUGIN_BASE ${CMAKE_INSTALL_LIBDIR}/${CAMERA_APP})
     set(PLUGIN_DIR ${PLUGIN_BASE}/CameraApp)
     set(DESKTOP_EXEC ${CAMERA_APP})
@@ -204,7 +204,7 @@ if(CLICK_MODE)
             DESTINATION ${CMAKE_INSTALL_PREFIX})
     install(FILES camera-contenthub.json
             DESTINATION ${CMAKE_INSTALL_PREFIX})
-    install(FILES reader.apparmor
+    install(FILES barcode-reader.apparmor
             DESTINATION ${CMAKE_INSTALL_PREFIX})
 
 else(CLICK_MODE)

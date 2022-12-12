@@ -33,7 +33,7 @@ Loader {
     }
 
     Component.onCompleted: {
-        var overlayType = !readOnly ? "ViewFinderOverlay.qml" : "ReaderOverlay.qml"
+        var overlayType = !readOnly ? "ViewFinderOverlay.qml" : "BarcodeReaderOverlay.qml"
         loader.setSource(overlayType, { "camera": loader.camera
                                                   });
     }

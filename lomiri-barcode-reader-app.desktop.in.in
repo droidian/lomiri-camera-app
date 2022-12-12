@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
-Name=Reader
-Comment=Reader application
-GenericName=Reader
+Name=Barcode Reader
+Comment=Barcode Reader application
+GenericName=Barcode Reader
 Keywords=QR;Code;Reader
-Exec=@DESKTOP_EXEC@ --mode=reader %u
+Exec=@DESKTOP_EXEC@ --mode=barcode-reader %u
 Terminal=false
 Icon=@READER_ICON@
 X-Lomiri-Touch=true

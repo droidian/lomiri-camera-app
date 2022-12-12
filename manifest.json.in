@@ -8,8 +8,8 @@
             "desktop": "@DESKTOP_FILE@",
             "content-hub": "camera-contenthub.json"
         },
-        "reader": {
-            "apparmor": "reader.apparmor",
+        "barcode-reader": {
+            "apparmor": "barcode-reader.apparmor",
             "desktop": "@DESKTOP_FILE_READER@"
         }
     },

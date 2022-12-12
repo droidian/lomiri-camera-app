@@ -57,8 +57,8 @@ CameraApplication::CameraApplication(int &argc, char **argv)
             qCritical("Library qttestability load failed!");
         }
     }
-    if (arguments().contains(QLatin1String("--mode=reader"))) {
-        m_mode = CameraMode::READER;
+    if (arguments().contains(QLatin1String("--mode=barcode-reader"))) {
+        m_mode = CameraMode::BARCODE_READER;
     }
 }
 

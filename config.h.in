@@ -31,7 +31,7 @@ inline bool isClick() {
 
 enum CameraMode : unsigned short {
     NORMAL = 0,
-    READER
+    BARCODE_READER
 };
 
 static QString SNAP_ENV = qgetenv("SNAP");
@@ -66,8 +66,8 @@ inline QString cameraAppImportDirectory() {
 
 inline QString sourceQml(const CameraMode& mode) {
     static QString qmlFile("camera-app.qml");
-    if (mode == CameraMode::READER) {
-        qmlFile = QString("reader-app.qml");
+    if (mode == CameraMode::BARCODE_READER) {
+        qmlFile = QString("barcode-reader-app.qml");
     }
     if (isClick()) {
         return QDir::currentPath() + "/" + qmlFile;
