@@ -19,7 +19,7 @@ import QtQuick.Window 2.2
 import QtMultimedia 5.0
 import Lomiri.Components 1.3
 import UserMetrics 0.1
-import Ubuntu.Content 1.3
+import Lomiri.Content 1.3
 import CameraApp 0.1
 import Qt.labs.settings 1.0
 import QZXing 3.3

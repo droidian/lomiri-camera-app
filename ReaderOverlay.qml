@@ -16,9 +16,9 @@
 
 import QtQuick 2.4
 import QtQuick.Window 2.2
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Content 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
+import Lomiri.Content 1.3
 import QtMultimedia 5.9
 import QtPositioning 5.2
 import QtSensors 5.0
@@ -65,7 +65,7 @@ Item {
         property string videoResolution: ""
         property bool dateStampImages: false
         property string dateStampFormat: Qt.locale().dateFormat(Locale.ShortFormat)
-        property color dateStampColor: UbuntuColors.orange;
+        property color dateStampColor: LomiriColors.orange;
         property real dateStampOpacity: 1.0;
         property int dateStampAlign :  Qt.AlignBottom | Qt.AlignRight;
 
@@ -202,7 +202,7 @@ Item {
         target: camera.imageCapture
         onImageCaptured: {
            if(settings.shutterVibration) {
-               Haptics.play({intensity:0.25,duration:UbuntuAnimation.SnapDuration/3});
+               Haptics.play({intensity:0.25,duration:LomiriAnimation.SnapDuration/3});
            }
         }
     }
@@ -409,7 +409,7 @@ Item {
         visible: opacity != 0.0
         enabled: !tagDetailsOverlay.open
 
-        Behavior on opacity { UbuntuNumberAnimation { duration: UbuntuAnimation.FastDuration}}
+        Behavior on opacity { LomiriNumberAnimation { duration: LomiriAnimation.FastDuration}}
 
         Connections {
             target: Qt.application
@@ -469,7 +469,7 @@ Item {
             height: tagDetailsButton.height
 
             opacity: (viewFinderView.recentlyScannedTag == "") ? 1.0 : 0.0
-            Behavior on opacity { UbuntuNumberAnimation { duration: UbuntuAnimation.FastDuration}}
+            Behavior on opacity { LomiriNumberAnimation { duration: LomiriAnimation.FastDuration}}
             visible: opacity != 0.0
             enabled: opacity == 1.0 && !tagDetailsOverlay.open && !tagDetailsOverlay.visible
 
@@ -503,7 +503,7 @@ Item {
             width: height
 
             opacity: (viewFinderView.recentlyScannedTag != "") ? 1.0 : 0.0
-            Behavior on opacity { UbuntuNumberAnimation { duration: UbuntuAnimation.FastDuration} }
+            Behavior on opacity { LomiriNumberAnimation { duration: LomiriAnimation.FastDuration} }
             visible: opacity != 0.0
             enabled: visible
             iconSource: !tagDetailsOverlay.open ? "assets/qr.png" : ""
@@ -558,7 +558,7 @@ Item {
         }
     }
 
-    UbuntuShapeOverlay {
+    LomiriShapeOverlay {
         id: tagDetailsOverlay
         backgroundColor: "black"
 
@@ -575,8 +575,8 @@ Item {
         rotation: Screen.angleBetween(Screen.primaryOrientation, Screen.orientation)
         Behavior on rotation {
             RotationAnimator {
-                duration: UbuntuAnimation.BriskDuration
-                easing: UbuntuAnimation.StandardEasing
+                duration: LomiriAnimation.BriskDuration
+                easing: LomiriAnimation.StandardEasing
                 direction: RotationAnimator.Shortest
             }
         }
@@ -585,7 +585,7 @@ Item {
 
         opacity: tagDetailsOverlay.open ? 1.0 : 0.0
         visible: opacity != 0.0
-        Behavior on opacity { UbuntuNumberAnimation { duration: UbuntuAnimation.FastDuration} }
+        Behavior on opacity { LomiriNumberAnimation { duration: LomiriAnimation.FastDuration} }
         onOpacityChanged: {
             if (opacity == 0.0) {
                 viewFinderView.recentlyScannedTag = ""
