@@ -5,4 +5,7 @@ builder: cmake
 framework: ubuntu-sdk-20.04
 
 dependencies_target:
+- libqt5svg5-dev
+- qtquickcontrols2-5-dev
 - libexiv2-dev
+- libqzxing-dev

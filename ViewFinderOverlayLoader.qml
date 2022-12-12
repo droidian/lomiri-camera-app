@@ -24,6 +24,7 @@ Loader {
     property real revealProgress: loader.item ? loader.item.revealProgress : 0
     property var controls: loader.item ? loader.item.controls : null
     property var settings: loader.item.settings
+    property bool readOnly : false
     property bool readyForCapture
     property int sensorOrientation
 
@@ -32,7 +33,8 @@ Loader {
     }
 
     Component.onCompleted: {
-        loader.setSource("ViewFinderOverlay.qml", { "camera": loader.camera
+        var overlayType = !readOnly ? "ViewFinderOverlay.qml" : "ReaderOverlay.qml"
+        loader.setSource(overlayType, { "camera": loader.camera
                                                   });
     }
 

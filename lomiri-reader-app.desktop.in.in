@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Name=Reader
+Comment=Reader application
+GenericName=Reader
+Keywords=QR;Code;Reader
+Exec=@DESKTOP_EXEC@ --mode=reader %u
+Terminal=false
+Icon=@READER_ICON@
+X-Ubuntu-Touch=true
+X-Ubuntu-Single-Instance=true
+X-Ubuntu-Default-Department-ID=accessories
+X-Ubuntu-Rotates-Window-Contents=true
+X-Ubuntu-Splash-Image=@READER_SPLASH@
+X-Ubuntu-Splash-Color=#454545
