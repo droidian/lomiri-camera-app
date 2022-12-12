@@ -1,6 +1,6 @@
 usr/bin/lomiri-camera-app
 usr/lib/*/lomiri-camera-app/*
-usr/share/applications/lomiri-camera-app.desktop
+usr/share/applications/*.desktop
 usr/share/lomiri-camera-app/*.qml
 usr/share/lomiri-camera-app/qml/*
 usr/share/lomiri-camera-app/*.js
