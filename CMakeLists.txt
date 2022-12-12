@@ -79,7 +79,7 @@ if(CLICK_MODE)
 
 else(CLICK_MODE)
     set(CAMERA_APP_DIR ${CMAKE_INSTALL_DATADIR}/${CAMERA_APP})
-    set(CAMERA_ICON ${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/lomiri-camera-app.png)
+    set(CAMERA_ICON lomiri-camera-app)
     set(CAMERA_SPLASH ${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/lomiri-camera-app-splash.svg)
 
     set(READER_ICON "reader-app")
