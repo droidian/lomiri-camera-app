@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-07-03 03:23+0000\n"
+"PO-Revision-Date: 2022-12-18 15:47+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
-"Language-Team: Catalan <https://translate.ubports.com/projects/ubports/"
-"camera-app/ca/>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-camera-app/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -47,7 +47,7 @@ msgstr "el dia com a número amb un zero endavant (01 a 31)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr "el nom abreujat del dia traduït  (p.ex. \"Dll\" a \"Diu\")."
+msgstr "el nom abreujat del dia traduït (p.ex. \"Dll\" a \"Diu\")."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
