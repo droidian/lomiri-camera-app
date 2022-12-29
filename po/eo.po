@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-23 17:57+0000\n"
+"POT-Creation-Date: 2022-09-29 12:12+0000\n"
 "PO-Revision-Date: 2018-07-12 09:49+0000\n"
 "Last-Translator: Pablo F. <pablo.foche@gmail.com>\n"
-"Language-Team: Esperanto <https://translate.ubports.com/projects/ubports"
-"/camera-app/eo/>\n"
+"Language-Team: Esperanto <https://translate.ubports.com/projects/ubports/"
+"camera-app/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,60 +20,86 @@ msgstr ""
 "X-Generator: Weblate 2.17\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
-#: ../AdvancedOptions.qml:16
+#: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
+#: Information.qml:106
+msgid "Camera"
+msgstr "Kamerao"
+
+#: lomiri-camera-app.desktop.in:5
+msgid "Camera application"
+msgstr "Kamerao-aplikaĵo"
+
+#: lomiri-camera-app.desktop.in:7
+msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
+msgstr "Fotoj;Videoj;Akiro;Fotado;Ekrankopio;Surbendigo"
+
+#: lomiri-camera-app.desktop.in:10
+msgid "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
+msgstr ""
+
+#: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
 msgid "Settings"
 msgstr "Agordoj"
 
-#: ../AdvancedOptions.qml:48
+#: AdvancedOptions.qml:27
+msgid "Close"
+msgstr ""
+
+#: AdvancedOptions.qml:35 Information.qml:20 PhotogridView.qml:78
+#: SlideshowView.qml:86
+msgid "About"
+msgstr "Pri"
+
+#: AdvancedOptions.qml:66
 msgid "Add date stamp on captured images"
 msgstr "Aldoni daton al la bildoj"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
-#: ../AdvancedOptions.qml:70
+#: AdvancedOptions.qml:89
 msgid "Format"
 msgstr "Formo"
 
-#: ../AdvancedOptions.qml:122
+#: AdvancedOptions.qml:142
 msgid "Date formatting keywords"
 msgstr "Ŝlosil-vortoj de la data formo"
 
-#: ../AdvancedOptions.qml:127
+#: AdvancedOptions.qml:147
 msgid "the day as number without a leading zero (1 to 31)"
 msgstr "la tago kiel numero sen nulo antaŭe (1 ĝis 31)"
 
-#: ../AdvancedOptions.qml:128
+#: AdvancedOptions.qml:148
 msgid "the day as number with a leading zero (01 to 31)"
 msgstr "la tago kiel numero kun nulo antaŭe (01 ĝis 31)"
 
-#: ../AdvancedOptions.qml:129
+#: AdvancedOptions.qml:149
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
 msgstr "mallongigita nomo de la tago (ekz. 'Lun' ĝis 'Dim')."
 
-#: ../AdvancedOptions.qml:130
+#: AdvancedOptions.qml:150
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
 msgstr "longa nomo de la tago (ekz. 'Lundo' ĝis 'Dimanĉo')."
 
-#: ../AdvancedOptions.qml:131
+#: AdvancedOptions.qml:151
 msgid "the month as number without a leading zero (1 to 12)"
 msgstr "la monato kiel numero sen nulo antaŭe (1 ĝis 12)"
 
-#: ../AdvancedOptions.qml:132
+#: AdvancedOptions.qml:152
 msgid "the month as number with a leading zero (01 to 12)"
 msgstr "la monato kiel numero kun nulo antaŭe (01 ĝis 12)"
 
-#: ../AdvancedOptions.qml:133
+#: AdvancedOptions.qml:153
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
 msgstr "mallongigita nomo de la monato (ekz. 'Jan' ĝis 'Dec')."
 
-#: ../AdvancedOptions.qml:134
+#: AdvancedOptions.qml:154
 msgid "the long localized month name (e.g. 'January' to 'December')."
 msgstr "longa nomo de la monato (ekz. 'Januaro' ĝis 'Decembro')."
 
-#: ../AdvancedOptions.qml:135
+#: AdvancedOptions.qml:155
 msgid "the year as two digit number (00 to 99)"
 msgstr "la jaro kiel ducifera numero (00 ĝis 99)"
 
-#: ../AdvancedOptions.qml:136
+#: AdvancedOptions.qml:156
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
@@ -81,264 +107,310 @@ msgstr ""
 "la jaro kiel kvarcifera numero. Se la jaro estas negativa, subtraha signo "
 "devas esti aldonita."
 
-#: ../AdvancedOptions.qml:137
+#: AdvancedOptions.qml:157
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
 msgstr "la horo sen nulo antaŭe (0 ĝis 23 aŭ 1 ĝis 12 se Atm./Ptm. montriĝas)"
 
-#: ../AdvancedOptions.qml:138
+#: AdvancedOptions.qml:158
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
-msgstr "La horo kun nulo antaŭe (00 ĝis 23 aŭ 01 ĝis 12 se Atm./Ptm. montriĝas)"
+msgstr ""
+"La horo kun nulo antaŭe (00 ĝis 23 aŭ 01 ĝis 12 se Atm./Ptm. montriĝas)"
 
-#: ../AdvancedOptions.qml:139
+#: AdvancedOptions.qml:159
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
 msgstr "la horo sen nulo antaŭe (0 ĝis 23, eĉ se Atm./Ptm. montriĝas)"
 
-#: ../AdvancedOptions.qml:140
+#: AdvancedOptions.qml:160
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
 msgstr "La horo kun nulo antaŭe (00 ĝis 23, eĉ se Atm./Ptm. montriĝas)"
 
-#: ../AdvancedOptions.qml:141
+#: AdvancedOptions.qml:161
 msgid "the minute without a leading zero (0 to 59)"
 msgstr "La minutoj sen nulo antaŭe (0 ĝis 59)"
 
-#: ../AdvancedOptions.qml:142
+#: AdvancedOptions.qml:162
 msgid "the minute with a leading zero (00 to 59)"
 msgstr "la minutoj kun nulo antaŭe (00 ĝis 59)"
 
-#: ../AdvancedOptions.qml:143
+#: AdvancedOptions.qml:163
 msgid "the second without a leading zero (0 to 59)"
 msgstr "la sekundoj sen nulo antaŭe (0 ĝis 59)"
 
-#: ../AdvancedOptions.qml:144
+#: AdvancedOptions.qml:164
 msgid "the second with a leading zero (00 to 59)"
 msgstr "la sekundoj kun nulo antaŭe (00 ĝis 59)"
 
-#: ../AdvancedOptions.qml:145
+#: AdvancedOptions.qml:165
 msgid "the milliseconds without leading zeroes (0 to 999)"
 msgstr "la milisekundoj sen nuloj antaŭe (0 ĝis 999)"
 
-#: ../AdvancedOptions.qml:146
+#: AdvancedOptions.qml:166
 msgid "the milliseconds with leading zeroes (000 to 999)"
 msgstr "la milisekundoj kun nuloj antaŭe (000 ĝis 999)"
 
-#: ../AdvancedOptions.qml:147
+#: AdvancedOptions.qml:167
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
 msgstr "uzi Atm/Ptm-montrilon. AP estos anstataŭigita de 'Atm' aŭ 'Ptm'."
 
-#: ../AdvancedOptions.qml:148
+#: AdvancedOptions.qml:168
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
 msgstr "uzi atm/ptm-montrilon. ap estos anstataŭigita de 'atm' aŭ 'ptm'."
 
-#: ../AdvancedOptions.qml:149
+#: AdvancedOptions.qml:169
 msgid "the timezone (for example 'CEST')"
 msgstr "la horzono (ekz. 'CEST')"
 
-#: ../AdvancedOptions.qml:158
+#: AdvancedOptions.qml:178
 msgid "Add to Format"
 msgstr "Aldoni al formo"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
-#: ../AdvancedOptions.qml:189
+#: AdvancedOptions.qml:209
 msgid "Color"
 msgstr "Koloro"
 
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
-#: ../AdvancedOptions.qml:257
+#: AdvancedOptions.qml:278
 msgid "Alignment"
 msgstr "Ĝisrandigo"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
-#: ../AdvancedOptions.qml:303
+#: AdvancedOptions.qml:323
 msgid "Opacity"
 msgstr "Opakeco"
 
-#: ../DeleteDialog.qml:24
+#: AdvancedOptions.qml:346
+msgid "Blurred Overlay"
+msgstr ""
+
+#: AdvancedOptions.qml:367
+msgid "Only Blur Preview overlay"
+msgstr ""
+
+#: DeleteDialog.qml:24
 msgid "Delete media?"
 msgstr "Ĉu forigi audovidaĵon?"
 
-#: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
+#: DeleteDialog.qml:34 PhotogridView.qml:56 SlideshowView.qml:69
 msgid "Delete"
 msgstr "Forigi"
 
-#: ../DeleteDialog.qml:40 ../ViewFinderOverlay.qml:1122
-#: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
-#: ../ViewFinderView.qml:494
+#: DeleteDialog.qml:40 ViewFinderOverlay.qml:1197 ViewFinderOverlay.qml:1211
+#: ViewFinderOverlay.qml:1259 ViewFinderView.qml:404
 msgid "Cancel"
 msgstr "Nuligi"
 
-#: ../GalleryView.qml:200
+#: GalleryView.qml:270
 msgid "No media available."
 msgstr "Neniu aŭdovidaĵo disponebla."
 
-#: ../GalleryView.qml:235
+#: GalleryView.qml:305
 msgid "Scanning for content..."
 msgstr "Serĉante enhavon..."
 
-#: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
+#: GalleryViewHeader.qml:87 SlideshowView.qml:46
 msgid "Select"
 msgstr "Selekti"
 
-#: ../GalleryViewHeader.qml:83
+#: GalleryViewHeader.qml:88
 msgid "Edit Photo"
 msgstr "Redakti foton"
 
-#: ../GalleryViewHeader.qml:83
+#: GalleryViewHeader.qml:88
 msgid "Photo Roll"
 msgstr "Bobeno"
 
-#: ../Information.qml:20
-msgid "About"
-msgstr "Pri"
+#: Information.qml:25
+msgid "Back"
+msgstr ""
 
-#: ../Information.qml:82
+#: Information.qml:76
 msgid "Get the source"
 msgstr "Elŝuti la fonto-kodon"
 
-#: ../Information.qml:83
+#: Information.qml:77
 msgid "Report issues"
 msgstr "Sciigi problemojn"
 
-#: ../Information.qml:84
+#: Information.qml:78
 msgid "Help translate"
 msgstr "Helpi traduki"
 
-#: ../MediaInfoPopover.qml:25
-msgid "Media Information"
-msgstr "Informo pri la audovidaĵo"
-
-#: ../MediaInfoPopover.qml:30
-#, qt-format
-msgid "Name : %1"
-msgstr "Nomo: %1"
-
-#: ../MediaInfoPopover.qml:33
-#, qt-format
-msgid "Type : %1"
-msgstr "Speco: %1"
-
-#: ../MediaInfoPopover.qml:37
+#: MediaInfoPopover.qml:14
 #, qt-format
 msgid "Width : %1"
 msgstr "Larĝeco: %1"
 
-#: ../MediaInfoPopover.qml:41
+#: MediaInfoPopover.qml:15
 #, qt-format
 msgid "Height : %1"
 msgstr "Alteco: %1"
 
-#: ../NoSpaceHint.qml:33
+#: MediaInfoPopover.qml:16
+#, fuzzy, qt-format
+#| msgid "Name : %1"
+msgid "Date : %1"
+msgstr "Nomo: %1"
+
+#: MediaInfoPopover.qml:17
+#, fuzzy, qt-format
+#| msgid "Name : %1"
+msgid "Camera Model : %1"
+msgstr "Nomo: %1"
+
+#: MediaInfoPopover.qml:18
+#, fuzzy, qt-format
+#| msgid "Height : %1"
+msgid "Copyright : %1"
+msgstr "Alteco: %1"
+
+#: MediaInfoPopover.qml:19
+#, qt-format
+msgid "Exposure Time : %1"
+msgstr ""
+
+#: MediaInfoPopover.qml:20
+#, fuzzy, qt-format
+#| msgid "Name : %1"
+msgid "F. Number : %1"
+msgstr "Nomo: %1"
+
+#: MediaInfoPopover.qml:21
+#, qt-format
+msgid "Sub-File type : %1"
+msgstr ""
+
+#: MediaInfoPopover.qml:43
+msgid "Media Information"
+msgstr "Informo pri la audovidaĵo"
+
+#: MediaInfoPopover.qml:48
+#, qt-format
+msgid "Name : %1"
+msgstr "Nomo: %1"
+
+#: MediaInfoPopover.qml:51
+#, qt-format
+msgid "Type : %1"
+msgstr "Speco: %1"
+
+#: MediaInfoPopover.qml:83
+#, fuzzy, qt-format
+#| msgid "Width : %1"
+msgid "With Flash : %1"
+msgstr "Larĝeco: %1"
+
+#: MediaInfoPopover.qml:83
+msgid "Yes"
+msgstr ""
+
+#: MediaInfoPopover.qml:83
+msgid "No"
+msgstr ""
+
+#: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
 msgstr "Ne estas spaco en la aparato, liberigu iom da spaco por daŭrigi."
 
-#: ../PhotoRollHint.qml:69
+#: PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
 msgstr "Ŝovumu maldekstren por vidi la bobenon"
 
-#: ../PhotogridView.qml:42 ../SlideshowView.qml:60
+#: PhotogridView.qml:42 SlideshowView.qml:54
 msgid "Share"
 msgstr "Diskonigi"
 
-#: ../PhotogridView.qml:69 ../SlideshowView.qml:53
-msgid "Gallery"
-msgstr "Galerio"
-
-#: ../SlideshowView.qml:68
+#: SlideshowView.qml:62
 msgid "Image Info"
 msgstr "Bilda informo"
 
-#: ../SlideshowView.qml:86
+#: SlideshowView.qml:98
 msgid "Edit"
 msgstr "Redakti"
 
-#: ../SlideshowView.qml:441
+#: SlideshowView.qml:477
 msgid "Back to Photo roll"
 msgstr "Reveni al bobeno"
 
-#: ../UnableShareDialog.qml:25
+#: UnableShareDialog.qml:25
 msgid "Unable to share"
 msgstr "Ne eblas diskonigi"
 
-#: ../UnableShareDialog.qml:26
+#: UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
 msgstr "Ne eblas diskonigi fotojn kaj videojn samtempe"
 
-#: ../UnableShareDialog.qml:30
+#: UnableShareDialog.qml:30
 msgid "Ok"
 msgstr "Jes"
 
-#: ../ViewFinderOverlay.qml:367 ../ViewFinderOverlay.qml:390
-#: ../ViewFinderOverlay.qml:418 ../ViewFinderOverlay.qml:441
-#: ../ViewFinderOverlay.qml:526 ../ViewFinderOverlay.qml:589
-#: ../tests/unittests/tst_BottomEdgeIndicators.qml:42
-#: ../tests/unittests/tst_BottomEdgeIndicators.qml:65
-#: ../tests/unittests/tst_BottomEdgeIndicators.qml:86
+#: ViewFinderOverlay.qml:455 ViewFinderOverlay.qml:478
+#: ViewFinderOverlay.qml:506 ViewFinderOverlay.qml:529
+#: ViewFinderOverlay.qml:614 ViewFinderOverlay.qml:681
 msgid "On"
 msgstr "Ŝaltita"
 
-#: ../ViewFinderOverlay.qml:372 ../ViewFinderOverlay.qml:400
-#: ../ViewFinderOverlay.qml:423 ../ViewFinderOverlay.qml:446
-#: ../ViewFinderOverlay.qml:465 ../ViewFinderOverlay.qml:531
-#: ../ViewFinderOverlay.qml:599
-#: ../tests/unittests/tst_BottomEdgeIndicators.qml:47
-#: ../tests/unittests/tst_BottomEdgeIndicators.qml:70
-#: ../tests/unittests/tst_BottomEdgeIndicators.qml:91
+#: ViewFinderOverlay.qml:460 ViewFinderOverlay.qml:488
+#: ViewFinderOverlay.qml:511 ViewFinderOverlay.qml:534
+#: ViewFinderOverlay.qml:553 ViewFinderOverlay.qml:619
+#: ViewFinderOverlay.qml:691
 msgid "Off"
 msgstr "Malŝaltita"
 
-#: ../ViewFinderOverlay.qml:395
+#: ViewFinderOverlay.qml:483
 msgid "Auto"
 msgstr "Aŭtomata"
 
-#: ../ViewFinderOverlay.qml:432
+#: ViewFinderOverlay.qml:520
 msgid "HDR"
 msgstr "HDR"
 
-#: ../ViewFinderOverlay.qml:470
+#: ViewFinderOverlay.qml:558
 msgid "5 seconds"
 msgstr "5 sekundoj"
 
-#: ../ViewFinderOverlay.qml:475
+#: ViewFinderOverlay.qml:563
 msgid "15 seconds"
 msgstr "15 sekundoj"
 
-#: ../ViewFinderOverlay.qml:493
+#: ViewFinderOverlay.qml:581
 msgid "Fine Quality"
 msgstr "Bona kvalito"
 
-#: ../ViewFinderOverlay.qml:498
+#: ViewFinderOverlay.qml:586
 msgid "High Quality"
 msgstr "Alta kvalito"
 
-#: ../ViewFinderOverlay.qml:503
+#: ViewFinderOverlay.qml:591
 msgid "Normal Quality"
 msgstr "Normala kvalito"
 
-#: ../ViewFinderOverlay.qml:508
+#: ViewFinderOverlay.qml:596
 msgid "Basic Quality"
 msgstr "Baza kvalito"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
-#: ../ViewFinderOverlay.qml:541
+#: ViewFinderOverlay.qml:629
 msgid "SD"
 msgstr "SD"
 
-#: ../ViewFinderOverlay.qml:549
+#: ViewFinderOverlay.qml:637
 msgid "Save to SD Card"
 msgstr "Konservi en SD-Karto"
 
-#: ../ViewFinderOverlay.qml:554
+#: ViewFinderOverlay.qml:642
 msgid "Save internally"
 msgstr "Konservi interne"
 
-#: ../ViewFinderOverlay.qml:594
+#: ViewFinderOverlay.qml:686
 msgid "Vibrate"
 msgstr "Vibri"
 
-#: ../ViewFinderOverlay.qml:1119
+#: ViewFinderOverlay.qml:1194
 msgid "Low storage space"
 msgstr "Malmulta disponebla spaco"
 
-#: ../ViewFinderOverlay.qml:1120
+#: ViewFinderOverlay.qml:1195
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
@@ -346,11 +418,11 @@ msgstr ""
 "La konservo-spaco elĉerpiĝas. Por daŭrigi sen interrompoj liberigu iom da "
 "spaco nun."
 
-#: ../ViewFinderOverlay.qml:1133
+#: ViewFinderOverlay.qml:1208
 msgid "External storage not writeable"
 msgstr "La ekstera memorilo ne estas skribebla"
 
-#: ../ViewFinderOverlay.qml:1134
+#: ViewFinderOverlay.qml:1209
 msgid ""
 "It does not seem possible to write to your external storage media. Trying to "
 "eject and insert it again might solve the issue, or you might need to format "
@@ -359,11 +431,11 @@ msgstr ""
 "Ne eblas skribi en via eksterna memorilo. Por eble solvi la problemon elĵetu "
 "kaj remetu ĝin, se tio ne funkcias eble vi devos strukturi ĝin."
 
-#: ../ViewFinderOverlay.qml:1172
+#: ViewFinderOverlay.qml:1247
 msgid "Cannot access camera"
 msgstr "Ne eblas aliri la kameraon"
 
-#: ../ViewFinderOverlay.qml:1173
+#: ViewFinderOverlay.qml:1248
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
@@ -375,15 +447,15 @@ msgstr ""
 "\n"
 "Se doni permeson ne solvas tiun problemon, restartigu vian telefonon."
 
-#: ../ViewFinderOverlay.qml:1182
+#: ViewFinderOverlay.qml:1250
 msgid "Edit Permissions"
 msgstr "Redakti permesojn"
 
-#: ../ViewFinderView.qml:485
+#: ViewFinderView.qml:395
 msgid "Capture failed"
 msgstr "Kapto malsukcesis"
 
-#: ../ViewFinderView.qml:490
+#: ViewFinderView.qml:400
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
@@ -391,79 +463,70 @@ msgstr ""
 "Anstataŭigi vian eksteran memorilon, strukturi ĝin aŭ restartigi la aparaton "
 "povus solvi la problemon."
 
-#: ../ViewFinderView.qml:491
+#: ViewFinderView.qml:401
 msgid "Restarting your device might fix the problem."
 msgstr "Restartigi vian aparaton povus solvi la problemon."
 
-#: ../camera-app.qml:57
+#: camera-app.qml:65
 msgid "Flash"
 msgstr "Fulmolumo"
 
-#: ../camera-app.qml:58
+#: camera-app.qml:66
 msgid "Light;Dark"
 msgstr "Luma;Malluma"
 
-#: ../camera-app.qml:61
+#: camera-app.qml:69
 msgid "Flip Camera"
 msgstr "Inversigi la kameraon"
 
-#: ../camera-app.qml:62
+#: camera-app.qml:70
 msgid "Front Facing;Back Facing"
 msgstr "Antaŭ;Malantaŭ"
 
-#: ../camera-app.qml:65
+#: camera-app.qml:73
 msgid "Shutter"
 msgstr "Obturilo"
 
-#: ../camera-app.qml:66
+#: camera-app.qml:74
 msgid "Take a Photo;Snap;Record"
 msgstr "Fari foton;Kapti;Filmi"
 
-#: ../camera-app.qml:69
+#: camera-app.qml:77
 msgid "Mode"
 msgstr "Reĝimo"
 
-#: ../camera-app.qml:70
+#: camera-app.qml:78
 msgid "Stills;Video"
 msgstr "Foto;Video"
 
-#: ../camera-app.qml:74
+#: camera-app.qml:82
 msgid "White Balance"
 msgstr "Blanko-balanciĝo"
 
-#: ../camera-app.qml:75
+#: camera-app.qml:83
 msgid "Lighting Condition;Day;Cloudy;Inside"
 msgstr "Lumigado;Tage;Nube;Ene"
 
-#: ../camera-app.qml:380
+#: camera-app.qml:387
 #, qt-format
 msgid "<b>%1</b> photos taken today"
 msgstr "<b>%1</b> fotoj faritaj hodiaŭ"
 
-#: ../camera-app.qml:381
+#: camera-app.qml:388
 msgid "No photos taken today"
 msgstr "Neniu foto hodiaŭ"
 
-#: ../camera-app.qml:391
+#: camera-app.qml:398
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
 msgstr "<b>%1</b> videoj filmitaj hodiaŭ"
 
-#: ../camera-app.qml:392
+#: camera-app.qml:399
 msgid "No videos recorded today"
 msgstr "Neniu video filmita hodiaŭ"
 
-#: camera-app.desktop.in.in.h:1
-msgid "Camera"
-msgstr "Kamerao"
-
-#: camera-app.desktop.in.in.h:2
-msgid "Camera application"
-msgstr "Kamerao-aplikaĵo"
-
-#: camera-app.desktop.in.in.h:3
-msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
-msgstr "Fotoj;Videoj;Akiro;Fotado;Ekrankopio;Surbendigo"
+#~ msgid "Gallery"
+#~ msgstr "Galerio"
 
 #~ msgid "Version %1"
 #~ msgstr "Versio %1"

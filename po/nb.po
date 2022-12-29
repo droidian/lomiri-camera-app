@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-23 17:57+0000\n"
+"POT-Creation-Date: 2022-09-29 12:12+0000\n"
 "PO-Revision-Date: 2020-08-09 07:30+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://translate.ubports.com/projects/"
@@ -20,327 +20,398 @@ msgstr ""
 "X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
-#: ../AdvancedOptions.qml:16
+#: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
+#: Information.qml:106
+msgid "Camera"
+msgstr "Kamera"
+
+#: lomiri-camera-app.desktop.in:5
+msgid "Camera application"
+msgstr "Kameraprogram"
+
+#: lomiri-camera-app.desktop.in:7
+msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
+msgstr "Bilder;Videoer;Opptak;Fotografi;Øyeblikksbilde;Opptak"
+
+#: lomiri-camera-app.desktop.in:10
+msgid "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
+msgstr ""
+
+#: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
 msgid "Settings"
 msgstr "Innstillinger"
 
-#: ../AdvancedOptions.qml:48
+#: AdvancedOptions.qml:27
+msgid "Close"
+msgstr ""
+
+#: AdvancedOptions.qml:35 Information.qml:20 PhotogridView.qml:78
+#: SlideshowView.qml:86
+msgid "About"
+msgstr "Om"
+
+#: AdvancedOptions.qml:66
 msgid "Add date stamp on captured images"
 msgstr "Legg til tidsstempel på bilder som tas"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
-#: ../AdvancedOptions.qml:70
+#: AdvancedOptions.qml:89
 msgid "Format"
 msgstr "Format"
 
-#: ../AdvancedOptions.qml:122
+#: AdvancedOptions.qml:142
 msgid "Date formatting keywords"
 msgstr "Nøkkelord for datoformatering"
 
-#: ../AdvancedOptions.qml:127
+#: AdvancedOptions.qml:147
 msgid "the day as number without a leading zero (1 to 31)"
 msgstr "dag som nummer, uten innledende null (1 til 31)"
 
-#: ../AdvancedOptions.qml:128
+#: AdvancedOptions.qml:148
 msgid "the day as number with a leading zero (01 to 31)"
 msgstr "dagen som nummer, med innledende null (01 til 31)"
 
-#: ../AdvancedOptions.qml:129
+#: AdvancedOptions.qml:149
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
 msgstr "forkortet dagsnavn (f.eks. \"Man\" til \"Søn\")."
 
-#: ../AdvancedOptions.qml:130
+#: AdvancedOptions.qml:150
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
 msgstr "helt dagsnavn (f.eks. \"Mandag\" til \"Søndag\")."
 
-#: ../AdvancedOptions.qml:131
+#: AdvancedOptions.qml:151
 msgid "the month as number without a leading zero (1 to 12)"
 msgstr "måneden som nummer, uten innledende null (1 til 12)"
 
-#: ../AdvancedOptions.qml:132
+#: AdvancedOptions.qml:152
 msgid "the month as number with a leading zero (01 to 12)"
 msgstr "måneden som nummer, med innledende null (01 til 12)"
 
-#: ../AdvancedOptions.qml:133
+#: AdvancedOptions.qml:153
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
 msgstr "forkortet månedsnavn (f.eks. \"Jan\" til \"Des\")."
 
-#: ../AdvancedOptions.qml:134
+#: AdvancedOptions.qml:154
 msgid "the long localized month name (e.g. 'January' to 'December')."
 msgstr "helt månedsnavn (f.eks. \"Januar\" til \"Desember\")."
 
-#: ../AdvancedOptions.qml:135
+#: AdvancedOptions.qml:155
 msgid "the year as two digit number (00 to 99)"
 msgstr "året som tosifret nummer (00 til 99)"
 
-#: ../AdvancedOptions.qml:136
+#: AdvancedOptions.qml:156
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
 msgstr ""
 "året som firesifret nummer. Hvis året er negativt, legges et minustegn til."
 
-#: ../AdvancedOptions.qml:137
+#: AdvancedOptions.qml:157
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
 msgstr ""
 "timen uten innledende null (0 til 23 eller 1 til 12 hvis AM/PM -visning)"
 
-#: ../AdvancedOptions.qml:138
+#: AdvancedOptions.qml:158
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
 msgstr ""
 "timen med innledende null (00 til 23 eller 01 til12 hvis AM/PM -visning)"
 
-#: ../AdvancedOptions.qml:139
+#: AdvancedOptions.qml:159
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
 msgstr "timen uten innledende null (0 til 23, selv med AM/PM -visning)"
 
-#: ../AdvancedOptions.qml:140
+#: AdvancedOptions.qml:160
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
 msgstr "timen med innledende null (00 til 23, selv med AM/PM -visning)"
 
-#: ../AdvancedOptions.qml:141
+#: AdvancedOptions.qml:161
 msgid "the minute without a leading zero (0 to 59)"
 msgstr "minuttet uten innledende null (0 til 59)"
 
-#: ../AdvancedOptions.qml:142
+#: AdvancedOptions.qml:162
 msgid "the minute with a leading zero (00 to 59)"
 msgstr "minuttet med innledende null (00 til 59)"
 
-#: ../AdvancedOptions.qml:143
+#: AdvancedOptions.qml:163
 msgid "the second without a leading zero (0 to 59)"
 msgstr "sekundet uten innledende null (0 til 59)"
 
-#: ../AdvancedOptions.qml:144
+#: AdvancedOptions.qml:164
 msgid "the second with a leading zero (00 to 59)"
 msgstr "sekundet med innledende null (00 til 59)"
 
-#: ../AdvancedOptions.qml:145
+#: AdvancedOptions.qml:165
 msgid "the milliseconds without leading zeroes (0 to 999)"
 msgstr "millisekund uten innledende null (0 til 999)"
 
-#: ../AdvancedOptions.qml:146
+#: AdvancedOptions.qml:166
 msgid "the milliseconds with leading zeroes (000 to 999)"
 msgstr "millisekund med innledende null (000 til 999)"
 
-#: ../AdvancedOptions.qml:147
+#: AdvancedOptions.qml:167
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
 msgstr ""
 "bruk AM/PM -visning. AP vil bli erstattet av enten \"AM\" eller \"PM\"."
 
-#: ../AdvancedOptions.qml:148
+#: AdvancedOptions.qml:168
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
 msgstr "bruk AM/PM. AP vil bli erstattet av enten \"AM\" eller \"PM\"."
 
-#: ../AdvancedOptions.qml:149
+#: AdvancedOptions.qml:169
 msgid "the timezone (for example 'CEST')"
 msgstr "tidssonen (for eksempel \"CEST\")"
 
-#: ../AdvancedOptions.qml:158
+#: AdvancedOptions.qml:178
 msgid "Add to Format"
 msgstr "Legg til format"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
-#: ../AdvancedOptions.qml:189
+#: AdvancedOptions.qml:209
 msgid "Color"
 msgstr "Farge"
 
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
-#: ../AdvancedOptions.qml:257
+#: AdvancedOptions.qml:278
 msgid "Alignment"
 msgstr "Justering"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
-#: ../AdvancedOptions.qml:303
+#: AdvancedOptions.qml:323
 msgid "Opacity"
 msgstr "Dekkevne"
 
-#: ../DeleteDialog.qml:24
+#: AdvancedOptions.qml:346
+msgid "Blurred Overlay"
+msgstr ""
+
+#: AdvancedOptions.qml:367
+msgid "Only Blur Preview overlay"
+msgstr ""
+
+#: DeleteDialog.qml:24
 msgid "Delete media?"
 msgstr "Vil du slette mediet?"
 
-#: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
+#: DeleteDialog.qml:34 PhotogridView.qml:56 SlideshowView.qml:69
 msgid "Delete"
 msgstr "Slett"
 
-#: ../DeleteDialog.qml:40 ../ViewFinderOverlay.qml:1122
-#: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
-#: ../ViewFinderView.qml:494
+#: DeleteDialog.qml:40 ViewFinderOverlay.qml:1197 ViewFinderOverlay.qml:1211
+#: ViewFinderOverlay.qml:1259 ViewFinderView.qml:404
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: ../GalleryView.qml:200
+#: GalleryView.qml:270
 msgid "No media available."
 msgstr "Fant ingen tilgjengelige medier."
 
-#: ../GalleryView.qml:235
+#: GalleryView.qml:305
 msgid "Scanning for content..."
 msgstr "Søker etter innhold …"
 
-#: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
+#: GalleryViewHeader.qml:87 SlideshowView.qml:46
 msgid "Select"
 msgstr "Velg"
 
-#: ../GalleryViewHeader.qml:83
+#: GalleryViewHeader.qml:88
 msgid "Edit Photo"
 msgstr "Rediger bilde"
 
-#: ../GalleryViewHeader.qml:83
+#: GalleryViewHeader.qml:88
 msgid "Photo Roll"
 msgstr "Bilderull"
 
-#: ../Information.qml:20
-msgid "About"
-msgstr "Om"
+#: Information.qml:25
+msgid "Back"
+msgstr ""
 
-#: ../Information.qml:82
+#: Information.qml:76
 msgid "Get the source"
 msgstr "Hent kilden"
 
-#: ../Information.qml:83
+#: Information.qml:77
 msgid "Report issues"
 msgstr "Innrapporter feil"
 
-#: ../Information.qml:84
+#: Information.qml:78
 msgid "Help translate"
 msgstr "Hjelp til med oversettelsen"
 
-#: ../MediaInfoPopover.qml:25
-msgid "Media Information"
-msgstr "Programinformasjon"
-
-#: ../MediaInfoPopover.qml:30
-#, qt-format
-msgid "Name : %1"
-msgstr "Navn: %1"
-
-#: ../MediaInfoPopover.qml:33
-#, qt-format
-msgid "Type : %1"
-msgstr "Type: %1"
-
-#: ../MediaInfoPopover.qml:37
+#: MediaInfoPopover.qml:14
 #, qt-format
 msgid "Width : %1"
 msgstr "Bredde: %1"
 
-#: ../MediaInfoPopover.qml:41
+#: MediaInfoPopover.qml:15
 #, qt-format
 msgid "Height : %1"
 msgstr "Høyde: %1"
 
-#: ../NoSpaceHint.qml:33
+#: MediaInfoPopover.qml:16
+#, fuzzy, qt-format
+#| msgid "Name : %1"
+msgid "Date : %1"
+msgstr "Navn: %1"
+
+#: MediaInfoPopover.qml:17
+#, fuzzy, qt-format
+#| msgid "Name : %1"
+msgid "Camera Model : %1"
+msgstr "Navn: %1"
+
+#: MediaInfoPopover.qml:18
+#, fuzzy, qt-format
+#| msgid "Height : %1"
+msgid "Copyright : %1"
+msgstr "Høyde: %1"
+
+#: MediaInfoPopover.qml:19
+#, qt-format
+msgid "Exposure Time : %1"
+msgstr ""
+
+#: MediaInfoPopover.qml:20
+#, fuzzy, qt-format
+#| msgid "Name : %1"
+msgid "F. Number : %1"
+msgstr "Navn: %1"
+
+#: MediaInfoPopover.qml:21
+#, qt-format
+msgid "Sub-File type : %1"
+msgstr ""
+
+#: MediaInfoPopover.qml:43
+msgid "Media Information"
+msgstr "Programinformasjon"
+
+#: MediaInfoPopover.qml:48
+#, qt-format
+msgid "Name : %1"
+msgstr "Navn: %1"
+
+#: MediaInfoPopover.qml:51
+#, qt-format
+msgid "Type : %1"
+msgstr "Type: %1"
+
+#: MediaInfoPopover.qml:83
+#, fuzzy, qt-format
+#| msgid "Width : %1"
+msgid "With Flash : %1"
+msgstr "Bredde: %1"
+
+#: MediaInfoPopover.qml:83
+msgid "Yes"
+msgstr ""
+
+#: MediaInfoPopover.qml:83
+msgid "No"
+msgstr ""
+
+#: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
 msgstr "Ingen ledig plass på enheten. Frigjør lagringsplass for å fortsette."
 
-#: ../PhotoRollHint.qml:69
+#: PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
 msgstr "Skyv mot venstre for bilderull"
 
-#: ../PhotogridView.qml:42 ../SlideshowView.qml:60
+#: PhotogridView.qml:42 SlideshowView.qml:54
 msgid "Share"
 msgstr "Del"
 
-#: ../PhotogridView.qml:69 ../SlideshowView.qml:53
-msgid "Gallery"
-msgstr "Galleri"
-
-#: ../SlideshowView.qml:68
+#: SlideshowView.qml:62
 msgid "Image Info"
 msgstr "Bildeinfo"
 
-#: ../SlideshowView.qml:86
+#: SlideshowView.qml:98
 msgid "Edit"
 msgstr "Rediger"
 
-#: ../SlideshowView.qml:441
+#: SlideshowView.qml:477
 msgid "Back to Photo roll"
 msgstr "Bilderull"
 
-#: ../UnableShareDialog.qml:25
+#: UnableShareDialog.qml:25
 msgid "Unable to share"
 msgstr "Klarer ikke å dele"
 
-#: ../UnableShareDialog.qml:26
+#: UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
 msgstr "Klarer ikke å dele bilder og video samtidig"
 
-#: ../UnableShareDialog.qml:30
+#: UnableShareDialog.qml:30
 msgid "Ok"
 msgstr "OK"
 
-#: ../ViewFinderOverlay.qml:367 ../ViewFinderOverlay.qml:390
-#: ../ViewFinderOverlay.qml:418 ../ViewFinderOverlay.qml:441
-#: ../ViewFinderOverlay.qml:526 ../ViewFinderOverlay.qml:589
-#: ../tests/unittests/tst_BottomEdgeIndicators.qml:42
-#: ../tests/unittests/tst_BottomEdgeIndicators.qml:65
-#: ../tests/unittests/tst_BottomEdgeIndicators.qml:86
+#: ViewFinderOverlay.qml:455 ViewFinderOverlay.qml:478
+#: ViewFinderOverlay.qml:506 ViewFinderOverlay.qml:529
+#: ViewFinderOverlay.qml:614 ViewFinderOverlay.qml:681
 msgid "On"
 msgstr "Påslått"
 
-#: ../ViewFinderOverlay.qml:372 ../ViewFinderOverlay.qml:400
-#: ../ViewFinderOverlay.qml:423 ../ViewFinderOverlay.qml:446
-#: ../ViewFinderOverlay.qml:465 ../ViewFinderOverlay.qml:531
-#: ../ViewFinderOverlay.qml:599
-#: ../tests/unittests/tst_BottomEdgeIndicators.qml:47
-#: ../tests/unittests/tst_BottomEdgeIndicators.qml:70
-#: ../tests/unittests/tst_BottomEdgeIndicators.qml:91
+#: ViewFinderOverlay.qml:460 ViewFinderOverlay.qml:488
+#: ViewFinderOverlay.qml:511 ViewFinderOverlay.qml:534
+#: ViewFinderOverlay.qml:553 ViewFinderOverlay.qml:619
+#: ViewFinderOverlay.qml:691
 msgid "Off"
 msgstr "Avslått"
 
-#: ../ViewFinderOverlay.qml:395
+#: ViewFinderOverlay.qml:483
 msgid "Auto"
 msgstr "Auto"
 
-#: ../ViewFinderOverlay.qml:432
+#: ViewFinderOverlay.qml:520
 msgid "HDR"
 msgstr "HDR"
 
-#: ../ViewFinderOverlay.qml:470
+#: ViewFinderOverlay.qml:558
 msgid "5 seconds"
 msgstr "5 sekunder"
 
-#: ../ViewFinderOverlay.qml:475
+#: ViewFinderOverlay.qml:563
 msgid "15 seconds"
 msgstr "15 sekunder"
 
-#: ../ViewFinderOverlay.qml:493
+#: ViewFinderOverlay.qml:581
 msgid "Fine Quality"
 msgstr "God kvalitet"
 
-#: ../ViewFinderOverlay.qml:498
+#: ViewFinderOverlay.qml:586
 msgid "High Quality"
 msgstr "God kvalitet"
 
-#: ../ViewFinderOverlay.qml:503
+#: ViewFinderOverlay.qml:591
 msgid "Normal Quality"
 msgstr "Normal kvalitet"
 
-#: ../ViewFinderOverlay.qml:508
+#: ViewFinderOverlay.qml:596
 msgid "Basic Quality"
 msgstr "Enkel kvalitet"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
-#: ../ViewFinderOverlay.qml:541
+#: ViewFinderOverlay.qml:629
 msgid "SD"
 msgstr "SD"
 
-#: ../ViewFinderOverlay.qml:549
+#: ViewFinderOverlay.qml:637
 msgid "Save to SD Card"
 msgstr "Lagre på SD-kort"
 
-#: ../ViewFinderOverlay.qml:554
+#: ViewFinderOverlay.qml:642
 msgid "Save internally"
 msgstr "Lagre internt"
 
-#: ../ViewFinderOverlay.qml:594
+#: ViewFinderOverlay.qml:686
 msgid "Vibrate"
 msgstr "Vibrer"
 
-#: ../ViewFinderOverlay.qml:1119
+#: ViewFinderOverlay.qml:1194
 msgid "Low storage space"
 msgstr "Lite lagringsplass"
 
-#: ../ViewFinderOverlay.qml:1120
+#: ViewFinderOverlay.qml:1195
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
@@ -348,11 +419,11 @@ msgstr ""
 "Du er snart tom for ledig lagringsplass. Frigjør plass nå for å fortsette "
 "uten forstyrrelser."
 
-#: ../ViewFinderOverlay.qml:1133
+#: ViewFinderOverlay.qml:1208
 msgid "External storage not writeable"
 msgstr "Eksternt lagringsmedium er ikke tilgjengelig"
 
-#: ../ViewFinderOverlay.qml:1134
+#: ViewFinderOverlay.qml:1209
 msgid ""
 "It does not seem possible to write to your external storage media. Trying to "
 "eject and insert it again might solve the issue, or you might need to format "
@@ -361,11 +432,11 @@ msgstr ""
 "Klarer ikke å skrive til eksternt lagringsmedium. Prøv å ta det ut og sett "
 "det inn igjen, eller prøv å formatere det."
 
-#: ../ViewFinderOverlay.qml:1172
+#: ViewFinderOverlay.qml:1247
 msgid "Cannot access camera"
 msgstr "Fikk ikke tilgang til kamera"
 
-#: ../ViewFinderOverlay.qml:1173
+#: ViewFinderOverlay.qml:1248
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
@@ -378,15 +449,15 @@ msgstr ""
 "Start telefonen på nytt hvis dette problemet ikke forsvinner etter at "
 "programmet har fått tilgang til kameraet."
 
-#: ../ViewFinderOverlay.qml:1182
+#: ViewFinderOverlay.qml:1250
 msgid "Edit Permissions"
 msgstr "Rediger tillatelser"
 
-#: ../ViewFinderView.qml:485
+#: ViewFinderView.qml:395
 msgid "Capture failed"
 msgstr "Opptak mislyktes"
 
-#: ../ViewFinderView.qml:490
+#: ViewFinderView.qml:400
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
@@ -394,79 +465,70 @@ msgstr ""
 "Utbytting av ekstern media, formatering av den, eller omstart av enheten kan "
 "fikse problemet."
 
-#: ../ViewFinderView.qml:491
+#: ViewFinderView.qml:401
 msgid "Restarting your device might fix the problem."
 msgstr "Omstart av enheten din kan fikse problemet."
 
-#: ../camera-app.qml:57
+#: camera-app.qml:65
 msgid "Flash"
 msgstr "Blits"
 
-#: ../camera-app.qml:58
+#: camera-app.qml:66
 msgid "Light;Dark"
 msgstr "Lys;Mørk"
 
-#: ../camera-app.qml:61
+#: camera-app.qml:69
 msgid "Flip Camera"
 msgstr "Snu kamera"
 
-#: ../camera-app.qml:62
+#: camera-app.qml:70
 msgid "Front Facing;Back Facing"
 msgstr "Mot framsiden;Mot baksiden"
 
-#: ../camera-app.qml:65
+#: camera-app.qml:73
 msgid "Shutter"
 msgstr "Lukker"
 
-#: ../camera-app.qml:66
+#: camera-app.qml:74
 msgid "Take a Photo;Snap;Record"
 msgstr "Ta et bilde;Skyt;Ta opp"
 
-#: ../camera-app.qml:69
+#: camera-app.qml:77
 msgid "Mode"
 msgstr "Modus"
 
-#: ../camera-app.qml:70
+#: camera-app.qml:78
 msgid "Stills;Video"
 msgstr "Stillbider;Video"
 
-#: ../camera-app.qml:74
+#: camera-app.qml:82
 msgid "White Balance"
 msgstr "Hvitbalanse"
 
-#: ../camera-app.qml:75
+#: camera-app.qml:83
 msgid "Lighting Condition;Day;Cloudy;Inside"
 msgstr "Lysforhold;Dag;Overskyet;Innendørs"
 
-#: ../camera-app.qml:380
+#: camera-app.qml:387
 #, qt-format
 msgid "<b>%1</b> photos taken today"
 msgstr "<b>%1</b> bilder er tatt i dag"
 
-#: ../camera-app.qml:381
+#: camera-app.qml:388
 msgid "No photos taken today"
 msgstr "Ingen bilder er tatt i dag"
 
-#: ../camera-app.qml:391
+#: camera-app.qml:398
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
 msgstr "<b>%1</b> videoer er spilt inn i dag"
 
-#: ../camera-app.qml:392
+#: camera-app.qml:399
 msgid "No videos recorded today"
 msgstr "Ingen videoer er spilt inn i dag"
 
-#: camera-app.desktop.in.in.h:1
-msgid "Camera"
-msgstr "Kamera"
-
-#: camera-app.desktop.in.in.h:2
-msgid "Camera application"
-msgstr "Kameraprogram"
-
-#: camera-app.desktop.in.in.h:3
-msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
-msgstr "Bilder;Videoer;Opptak;Fotografi;Øyeblikksbilde;Opptak"
+#~ msgid "Gallery"
+#~ msgstr "Galleri"
 
 #~ msgid "Version %1"
 #~ msgstr "Versjon %1"
