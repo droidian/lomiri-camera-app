@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2022-12-21 07:48+0000\n"
+"PO-Revision-Date: 2022-12-31 03:51+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/lomiri/lomiri-"
-"camera-app/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-camera-app/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,7 +43,7 @@ msgstr "Paramètres"
 
 #: AdvancedOptions.qml:27
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 #: AdvancedOptions.qml:35 Information.qml:20 PhotogridView.qml:78
 #: SlideshowView.qml:86
