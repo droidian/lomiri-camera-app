@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2022-12-31 03:51+0000\n"
+"PO-Revision-Date: 2023-01-01 04:51+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/fr/>\n"
@@ -186,7 +186,7 @@ msgstr "Opacité"
 
 #: AdvancedOptions.qml:346
 msgid "Blurred Overlay"
-msgstr ""
+msgstr "Superposition floue"
 
 #: AdvancedOptions.qml:367
 msgid "Only Blur Preview overlay"
@@ -227,7 +227,7 @@ msgstr "Pellicule"
 
 #: Information.qml:25
 msgid "Back"
-msgstr ""
+msgstr "Retour"
 
 #: Information.qml:76
 msgid "Get the source"
@@ -252,38 +252,34 @@ msgid "Height : %1"
 msgstr "Hauteur : %1"
 
 #: MediaInfoPopover.qml:16
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Date : %1"
-msgstr "Nom : %1"
+msgstr "Date : %1"
 
 #: MediaInfoPopover.qml:17
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Camera Model : %1"
-msgstr "Nom : %1"
+msgstr "Modèle de l'appareil : %1"
 
 #: MediaInfoPopover.qml:18
-#, fuzzy, qt-format
-#| msgid "Height : %1"
+#, qt-format
 msgid "Copyright : %1"
-msgstr "Hauteur : %1"
+msgstr "Droits d'auteur : %1"
 
 #: MediaInfoPopover.qml:19
 #, qt-format
 msgid "Exposure Time : %1"
-msgstr ""
+msgstr "Temps d'exposition : %1"
 
 #: MediaInfoPopover.qml:20
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "F. Number : %1"
-msgstr "Nom : %1"
+msgstr "Numéro F. : %1"
 
 #: MediaInfoPopover.qml:21
 #, qt-format
 msgid "Sub-File type : %1"
-msgstr ""
+msgstr "Type de sous-fichier : %1"
 
 #: MediaInfoPopover.qml:43
 msgid "Media Information"
@@ -300,18 +296,17 @@ msgid "Type : %1"
 msgstr "Type : %1"
 
 #: MediaInfoPopover.qml:83
-#, fuzzy, qt-format
-#| msgid "Width : %1"
+#, qt-format
 msgid "With Flash : %1"
-msgstr "Largeur : %1"
+msgstr "Avec flash : %1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
-msgstr ""
+msgstr "Oui"
 
 #: MediaInfoPopover.qml:83
 msgid "No"
-msgstr ""
+msgstr "Non"
 
 #: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
