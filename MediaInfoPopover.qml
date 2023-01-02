@@ -13,7 +13,7 @@ Popover {
     property var infoKeys : [
               { "key": 'Exif.Photo.PixelYDimension' , "title" : i18n.tr( "Width : %1")},
               { "key": 'Exif.Photo.PixelXDimension' , "title" :i18n.tr( "Height : %1")},
-              { "key": 'Exif.Image.DateTime' , "title" :i18n.tr( "Date : %1")},
+              { "key": 'Exif.Photo.DateTimeOriginal' , "title" :i18n.tr( "Date : %1")},
               { "key": 'Exif.Image.Model' , "title" :i18n.tr( "Camera Model : %1")},
               { "key": 'Exif.Image.Copyright' , "title" :i18n.tr( "Copyright : %1")},
               { "key": 'Exif.Image.ExposureTime' , "title" :i18n.tr( "Exposure Time : %1")},
