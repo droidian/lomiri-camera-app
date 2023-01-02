@@ -42,21 +42,17 @@ Window {
         property bool blurEffectsPreviewOnly: true
       }
 
-    property int preFullScreenVisibility
-
     function toggleFullScreen() {
-        if (main.visibility != Window.FullScreen) {
-            preFullScreenVisibility = main.visibility;
+        if (main.visibility !== Window.FullScreen) {
             main.visibility = Window.FullScreen;
+            setFullscreen(true);
         } else {
-            main.visibility = preFullScreenVisibility;
+            main.visibility = Window.Windowed;
         }
     }
 
     function exitFullScreen() {
-        if (main.visibility == Window.FullScreen) {
-            main.visibility = preFullScreenVisibility;
-        }
+        main.visibility = Window.Windowed;
     }
 
     LomiriActions.ActionManager {
