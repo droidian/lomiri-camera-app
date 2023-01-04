@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
 "PO-Revision-Date: 2023-01-04 19:48+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Muhammad <muhammad23012009@hotmail.com>\n"
 "Language-Team: Urdu <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/ur/>\n"
 "Language: ur\n"
@@ -42,7 +42,7 @@ msgstr "ترتیبات"
 
 #: AdvancedOptions.qml:27
 msgid "Close"
-msgstr ""
+msgstr "بند کریں"
 
 #: AdvancedOptions.qml:35 Information.qml:20 PhotogridView.qml:78
 #: SlideshowView.qml:86
@@ -219,7 +219,7 @@ msgstr ""
 
 #: Information.qml:25
 msgid "Back"
-msgstr ""
+msgstr "واپس"
 
 #: Information.qml:76
 msgid "Get the source"
@@ -318,7 +318,7 @@ msgstr ""
 
 #: SlideshowView.qml:98
 msgid "Edit"
-msgstr ""
+msgstr "ترمیم"
 
 #: SlideshowView.qml:477
 msgid "Back to Photo roll"
