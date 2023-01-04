@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lomiri-camera-app-translations\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2023-01-04 19:48+0000\n"
+"PO-Revision-Date: 2023-01-05 20:47+0000\n"
 "Last-Translator: Muhammad <muhammad23012009@hotmail.com>\n"
 "Language-Team: Urdu <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/ur/>\n"
@@ -188,9 +188,8 @@ msgid "Delete media?"
 msgstr ""
 
 #: DeleteDialog.qml:34 PhotogridView.qml:56 SlideshowView.qml:69
-#, fuzzy
 msgid "Delete"
-msgstr "Delete"
+msgstr "حذف کریں"
 
 #: DeleteDialog.qml:40 ViewFinderOverlay.qml:1197 ViewFinderOverlay.qml:1211
 #: ViewFinderOverlay.qml:1259 ViewFinderView.qml:404
@@ -294,11 +293,11 @@ msgstr ""
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
-msgstr ""
+msgstr "ہاں"
 
 #: MediaInfoPopover.qml:83
 msgid "No"
-msgstr ""
+msgstr "نہیں"
 
 #: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
