@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2023-01-03 08:45+0000\n"
+"PO-Revision-Date: 2023-01-04 08:07+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/nb_NO/>\n"
@@ -34,8 +34,9 @@ msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
 msgstr "Bilder;Videoer;Opptak;Fotografi;Øyeblikksbilde;Opptak"
 
 #: lomiri-camera-app.desktop.in:10
+#, fuzzy
 msgid "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
 msgid "Settings"
