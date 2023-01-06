@@ -4,6 +4,8 @@ Camera is a simple and easy to use camera for [Ubuntu
 Touch](https://ubuntu-touch.io/). Main focus in this app is intuative and
 simple UI and reliable operation to allow taking good pictures easily or in
 other words: simple by default expansive when needed.
+It also provides a Barcode-Scanner with support for a wide range of 2D and 3D
+Barcodes, including QR-Codes.
 
 [![OpenStore](https://open-store.io/badges/en_US.png)](https://open-store.io/app/camera.ubports)
 

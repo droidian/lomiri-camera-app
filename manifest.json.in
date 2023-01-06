@@ -1,5 +1,5 @@
 {
-    "description": "An application to take pictures and videos with the device cameras",
+    "description": "An application to take pictures, videos and scan barcodes with the device cameras",
     "framework": "ubuntu-sdk-20.04",
     "architecture": "@CLICK_ARCH@",
     "hooks": {
