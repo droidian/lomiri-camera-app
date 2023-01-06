@@ -17,7 +17,7 @@
     "maintainer": "UBports <dev@ubports.com>",
     "name": "camera.ubports",
     "title": "Camera",
-    "version": "3.2.4",
+    "version": "@PROJECT_VERSION@",
     "x-test": {
         "autopilot": {
             "autopilot_module": "@AUTOPILOT_DIR@",
