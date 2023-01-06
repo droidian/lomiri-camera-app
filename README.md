@@ -23,8 +23,12 @@ Bugs and feature requests can be reported via our
 
 ## Translating
 
-This app can be translated on the [UBports Weblate](https://translate.ubports.com/projects/ubports/camera-app/).
-We welcome translators from all different languages. Thank you for your contribution!
+You can easily contribute to the localization of this project (i.e. the
+translation into your language) by visiting (and signing up with) the
+[Hosted Weblate service](https://hosted.weblate.org/projects/lomiri/lomiri-camera-app)
+
+The localization platform of this project is sponsored by Hosted Weblate
+via their free hosting plan for Libre and Open Source Projects.
 
 ## Developing
 
