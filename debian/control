@@ -54,7 +54,8 @@ Depends: cameraplugin-aal [armel armhf],
          ${misc:Depends},
          ${shlibs:Depends},
 Description: Camera application
- An application to take pictures and videos with the device camera(s)
+ An application to take pictures, videos and scan barcodes with device
+ camera(s).
 
 Package: lomiri-camera-app-autopilot
 # architecture is not "all", as we set the fake plugin as dependency
@@ -71,5 +72,5 @@ Depends: lomiri-camera-app (>= ${binary:Version}),
          python3-wand,
          python3-mediainfodll,
          python3-fixtures,
-Description: Test package for the camera app
+Description: Test package for lomiri-camera-app
  Autopilot tests for the lomiri-camera-app package
