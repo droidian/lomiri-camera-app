@@ -1,5 +1,5 @@
 {
-    "description": "An application to take pictures and videos with the device cameras",
+    "description": "An application to take pictures, videos and scan barcodes with the device cameras",
     "framework": "ubuntu-sdk-20.04",
     "architecture": "@CLICK_ARCH@",
     "hooks": {
@@ -17,7 +17,7 @@
     "maintainer": "UBports <dev@ubports.com>",
     "name": "camera.ubports",
     "title": "Camera",
-    "version": "3.2.4",
+    "version": "@PROJECT_VERSION@",
     "x-test": {
         "autopilot": {
             "autopilot_module": "@AUTOPILOT_DIR@",
