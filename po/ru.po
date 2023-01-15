@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2023-01-14 12:48+0000\n"
+"PO-Revision-Date: 2023-01-16 02:48+0000\n"
 "Last-Translator: Sergii Horichenko <m@sgg.im>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/ru/>\n"
@@ -44,7 +44,7 @@ msgstr "Настройки"
 
 #: AdvancedOptions.qml:27
 msgid "Close"
-msgstr ""
+msgstr "Закрыть"
 
 #: AdvancedOptions.qml:35 Information.qml:20 PhotogridView.qml:78
 #: SlideshowView.qml:86
@@ -187,11 +187,11 @@ msgstr "Прозрачность"
 
 #: AdvancedOptions.qml:346
 msgid "Blurred Overlay"
-msgstr ""
+msgstr "Размытое наложение"
 
 #: AdvancedOptions.qml:367
 msgid "Only Blur Preview overlay"
-msgstr ""
+msgstr "Только предварительное наложение размытия"
 
 #: DeleteDialog.qml:24
 msgid "Delete media?"
@@ -228,7 +228,7 @@ msgstr "Фотопленка"
 
 #: Information.qml:25
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: Information.qml:76
 msgid "Get the source"
@@ -253,42 +253,38 @@ msgid "Height : %1"
 msgstr "Высота : %1"
 
 #: MediaInfoPopover.qml:16
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Date : %1"
-msgstr "Название : %1"
+msgstr "Дата : %1"
 
 #: MediaInfoPopover.qml:17
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Camera Model : %1"
-msgstr "Название : %1"
+msgstr "Модель камеры : %1"
 
 #: MediaInfoPopover.qml:18
-#, fuzzy, qt-format
-#| msgid "Height : %1"
+#, qt-format
 msgid "Copyright : %1"
-msgstr "Высота : %1"
+msgstr "Авторские права : %1"
 
 #: MediaInfoPopover.qml:19
 #, qt-format
 msgid "Exposure Time : %1"
-msgstr ""
+msgstr "Выдержка : %1"
 
 #: MediaInfoPopover.qml:20
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "F. Number : %1"
-msgstr "Название : %1"
+msgstr "Диафрагма : %1"
 
 #: MediaInfoPopover.qml:21
 #, qt-format
 msgid "Sub-File type : %1"
-msgstr ""
+msgstr "Тип данных : %1"
 
 #: MediaInfoPopover.qml:43
 msgid "Media Information"
-msgstr "Информация о носителе"
+msgstr "Данные о файле"
 
 #: MediaInfoPopover.qml:48
 #, qt-format
@@ -301,18 +297,17 @@ msgid "Type : %1"
 msgstr "Тип : %1"
 
 #: MediaInfoPopover.qml:83
-#, fuzzy, qt-format
-#| msgid "Width : %1"
+#, qt-format
 msgid "With Flash : %1"
-msgstr "Ширина : %1"
+msgstr "Со вспышкой : %1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 #: MediaInfoPopover.qml:83
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 #: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
