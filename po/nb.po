@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2023-01-04 08:07+0000\n"
+"PO-Revision-Date: 2023-01-20 21:15+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/nb_NO/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 4.15.1\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
@@ -249,22 +249,19 @@ msgid "Height : %1"
 msgstr "Høyde: %1"
 
 #: MediaInfoPopover.qml:16
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Date : %1"
-msgstr "Navn: %1"
+msgstr "Dato: %1"
 
 #: MediaInfoPopover.qml:17
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Camera Model : %1"
-msgstr "Navn: %1"
+msgstr "Kameramodell: %1"
 
 #: MediaInfoPopover.qml:18
-#, fuzzy, qt-format
-#| msgid "Height : %1"
+#, qt-format
 msgid "Copyright : %1"
-msgstr "Høyde: %1"
+msgstr "Opphavsrett: %1"
 
 #: MediaInfoPopover.qml:19
 #, qt-format
@@ -275,7 +272,7 @@ msgstr "Eksponeringstid: %1"
 #, fuzzy, qt-format
 #| msgid "Name : %1"
 msgid "F. Number : %1"
-msgstr "Navn: %1"
+msgstr "F-.nummer: %1"
 
 #: MediaInfoPopover.qml:21
 #, qt-format
@@ -300,7 +297,7 @@ msgstr "Type: %1"
 #, fuzzy, qt-format
 #| msgid "Width : %1"
 msgid "With Flash : %1"
-msgstr "Bredde: %1"
+msgstr "Med blitz: %1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
