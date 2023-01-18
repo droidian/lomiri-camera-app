@@ -1,8 +1,10 @@
-lomiri-camera-app (3.2.4) UNRELEASED; urgency=medium
+lomiri-camera-app (4.0.0) unstable; urgency=medium
 
-  * Port to focal
+  [ UBports developers ]
+  * Upstream-provided Debian package for lomiri-camera-app. See upstream
+    ChangeLog for recent changes.
 
- -- Guido Berhoerster <guido+gitlab.com@berhoerster.name>  Mon, 13 Jun 2022 11:37:27 +0200
+ -- UBports developers <developers@ubports.com>  Wed, 18 Jan 2023 11:05:04 +0100
 
 camera-app (3.0.1+ubports) vivid; urgency=medium
 
