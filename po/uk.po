@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2023-01-16 02:48+0000\n"
+"PO-Revision-Date: 2023-01-23 00:29+0000\n"
 "Last-Translator: Sergii Horichenko <m@sgg.im>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/uk/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 4.15.1\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
@@ -28,7 +28,7 @@ msgstr "Камера"
 
 #: lomiri-camera-app.desktop.in:5
 msgid "Camera application"
-msgstr "Застосунок Камера"
+msgstr "Камера"
 
 #: lomiri-camera-app.desktop.in:7
 msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
@@ -51,7 +51,7 @@ msgstr "Закрити"
 #: AdvancedOptions.qml:35 Information.qml:20 PhotogridView.qml:78
 #: SlideshowView.qml:86
 msgid "About"
-msgstr "Про застосунок"
+msgstr "Про програму"
 
 #: AdvancedOptions.qml:66
 msgid "Add date stamp on captured images"
@@ -444,10 +444,10 @@ msgid ""
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
-"Застосунок Camera не має прав доступу до обладнання відеокамери або сталася "
-"якась інша помилка.\n"
+"Камера не має доступу до обладнання відеокамери або сталася якась інша "
+"помилка.\n"
 "\n"
-"Якщо надання прав доступу не усуне проблеми, перезавантажте ваш телефон."
+"Якщо надання прав доступу не вирішує проблему, перезавантажте свій пристрій."
 
 #: ViewFinderOverlay.qml:1250
 msgid "Edit Permissions"
