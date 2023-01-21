@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2023-01-20 21:15+0000\n"
+"PO-Revision-Date: 2023-01-23 00:29+0000\n"
 "Last-Translator: Daniel Frost <one@frostinfo.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/de/>\n"
@@ -270,10 +270,9 @@ msgid "Exposure Time : %1"
 msgstr "Belichtungszeit: %1"
 
 #: MediaInfoPopover.qml:20
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "F. Number : %1"
-msgstr "Name : %1"
+msgstr "F.Nummer : %1"
 
 #: MediaInfoPopover.qml:21
 #, qt-format
