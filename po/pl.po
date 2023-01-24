@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2019-09-17 15:50+0000\n"
-"Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
-"Language-Team: Polish <https://translate.ubports.com/projects/ubports/camera-"
-"app/pl/>\n"
+"PO-Revision-Date: 2023-01-25 21:50+0000\n"
+"Last-Translator: gnu-ewm <gnu.ewm@protonmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-camera-app/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 4.16-dev\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
@@ -36,7 +36,7 @@ msgstr "Zdjęcia;Fotografie;Nagrywanie;Filmy;Nagrania;Zrzuty"
 
 #: lomiri-camera-app.desktop.in:10
 msgid "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
 msgid "Settings"
@@ -44,7 +44,7 @@ msgstr "Ustawienia"
 
 #: AdvancedOptions.qml:27
 msgid "Close"
-msgstr ""
+msgstr "Zamknij"
 
 #: AdvancedOptions.qml:35 Information.qml:20 PhotogridView.qml:78
 #: SlideshowView.qml:86
@@ -185,7 +185,7 @@ msgstr "Nieprzezroczystość"
 
 #: AdvancedOptions.qml:346
 msgid "Blurred Overlay"
-msgstr ""
+msgstr "Rozmycie nakładki"
 
 #: AdvancedOptions.qml:367
 msgid "Only Blur Preview overlay"
@@ -226,7 +226,7 @@ msgstr "Podgląd zdjeć"
 
 #: Information.qml:25
 msgid "Back"
-msgstr ""
+msgstr "Wstecz"
 
 #: Information.qml:76
 msgid "Get the source"
@@ -251,38 +251,34 @@ msgid "Height : %1"
 msgstr "Wysokość: %1"
 
 #: MediaInfoPopover.qml:16
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Date : %1"
-msgstr "Nazwa: %1"
+msgstr "Data: %1"
 
 #: MediaInfoPopover.qml:17
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Camera Model : %1"
-msgstr "Nazwa: %1"
+msgstr "Model aparatu: %1"
 
 #: MediaInfoPopover.qml:18
-#, fuzzy, qt-format
-#| msgid "Height : %1"
+#, qt-format
 msgid "Copyright : %1"
-msgstr "Wysokość: %1"
+msgstr "Prawa autorskie: %1"
 
 #: MediaInfoPopover.qml:19
 #, qt-format
 msgid "Exposure Time : %1"
-msgstr ""
+msgstr "Czas ekspozycji : %1"
 
 #: MediaInfoPopover.qml:20
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "F. Number : %1"
-msgstr "Nazwa: %1"
+msgstr "Przysłona: %1"
 
 #: MediaInfoPopover.qml:21
 #, qt-format
 msgid "Sub-File type : %1"
-msgstr ""
+msgstr "Typ pliku podrzędnego : %1"
 
 #: MediaInfoPopover.qml:43
 msgid "Media Information"
@@ -299,18 +295,17 @@ msgid "Type : %1"
 msgstr "Typ: %1"
 
 #: MediaInfoPopover.qml:83
-#, fuzzy, qt-format
-#| msgid "Width : %1"
+#, qt-format
 msgid "With Flash : %1"
-msgstr "Szerokość: %1"
+msgstr "Lampa błyskowa: %1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
-msgstr ""
+msgstr "Tak"
 
 #: MediaInfoPopover.qml:83
 msgid "No"
-msgstr ""
+msgstr "Nie"
 
 #: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
@@ -330,7 +325,7 @@ msgstr "Informacje o obrazie"
 
 #: SlideshowView.qml:98
 msgid "Edit"
-msgstr "Edytuj"
+msgstr "Modyfikuj"
 
 #: SlideshowView.qml:477
 msgid "Back to Photo roll"
