@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2023-01-25 21:50+0000\n"
+"PO-Revision-Date: 2023-01-26 16:52+0000\n"
 "Last-Translator: gnu-ewm <gnu.ewm@protonmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/pl/>\n"
@@ -189,7 +189,7 @@ msgstr "Rozmycie nakładki"
 
 #: AdvancedOptions.qml:367
 msgid "Only Blur Preview overlay"
-msgstr ""
+msgstr "Tylko nakładka podglądu rozmycia"
 
 #: DeleteDialog.qml:24
 msgid "Delete media?"
