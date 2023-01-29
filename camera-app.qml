@@ -93,7 +93,7 @@ Window {
 
     readonly property int sensorOrientation: orientationSensor.reading ? orientationSensor.reading.orientation : OrientationReading.TopUp
     readonly property var angleToSensorOrientation: {1 /* OrientationReading.TopUp */: 0,
-                                                      4 /* OrientationReading.LeftU */: 90,
+                                                      4 /* OrientationReading.LeftUp */: 90,
                                                       2 /* OrientationReading.TopDown */: 180,
                                                       3 /* OrientationReading.RightUp */: 270}
 
@@ -110,6 +110,8 @@ Window {
                                                   } else {
                                                       0
                                                   }
+    // Checks if the sensor is different than the screen orientation (Landscape or Portrait)
+    readonly property bool sensorHasDifferentOrientation: Math.abs(orientedRotationAngle) == 90 || Math.abs(orientedRotationAngle) == 270
 
     OrientationSensor {
         id: orientationSensor
