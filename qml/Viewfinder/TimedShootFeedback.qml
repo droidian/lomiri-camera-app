@@ -63,8 +63,8 @@ OrientationHelper {
         rotation: timedShootFeedback.automaticOrientation ? 0 : timedShootFeedback.customRotation
         Behavior on rotation {
             RotationAnimator {
-                duration: UbuntuAnimation.BriskDuration
-                easing: UbuntuAnimation.StandardEasing
+                duration: LomiriAnimation.BriskDuration
+                easing: LomiriAnimation.StandardEasing
                 direction: RotationAnimator.Shortest
             }
         }

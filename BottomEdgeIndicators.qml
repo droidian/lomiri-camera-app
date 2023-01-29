@@ -84,8 +84,8 @@ Item {
                 
                 Behavior on rotation {
                     RotationAnimator {
-                        duration: UbuntuAnimation.BriskDuration
-                        easing: UbuntuAnimation.StandardEasing
+                        duration: LomiriAnimation.BriskDuration
+                        easing: LomiriAnimation.StandardEasing
                         direction: RotationAnimator.Shortest
                     }
                 }
