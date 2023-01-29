@@ -226,7 +226,7 @@ Item {
             }
         }
     }
-    
+
     function triggerShoot() {
         if (shootButton.enabled) {
             if (camera.captureMode == Camera.CaptureVideo && camera.videoRecorder.recorderState == CameraRecorder.RecordingState) {
