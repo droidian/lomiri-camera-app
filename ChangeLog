@@ -1,6 +1,71 @@
+2023-02-03 Guido Berhoerster
+
+        * Release 4.0.1 (HEAD -> main, tag: v4.0.1)
+
+2023-02-03 Mike Gabriel
+
+        * Merge branch 'personal/gberh/icon-sizes' into 'main' (1d35a58)
+
+2023-02-03 Guido Berhoerster
+
+        * Use primary icon in correct sizes for system installs (5594bfd)
+        * Merge branch 'personal/sunweaver/assets-copyright-attribution' into
+          'main' (a8fdcf1)
+
+2023-02-03 Mike Gabriel
+
+        * assets/COPYING-CC-BY-SA-3.0: Ship artwork license attribution file
+          in upstream section of the code tree, not only in
+          d/copyright. (a9b9636)
+
+2023-02-03 Guido Berhoerster
+
+        * Merge branch 'personal/sunweaver/copyright-headers' into 'main'
+          (47f410c)
+
+2023-02-03 Mike Gabriel
+
+        * copyright headers: Use unified spelling of the word 'UBports
+          Foundation'. (b56c4f0)
+        * copyright headers: Use unified spelling of the word 'Canonical
+          Ltd.'. (2d4fa2e)
+        * Merge branch 'personal/gberh/gettext-domain' into 'main' (aa169f3)
+
+2023-02-03 Guido Berhoerster
+
+        * Fix gettext domain for Barcode Reader (3c231fc)
+
+2023-01-30 Mike Gabriel
+
+        * Translated using Weblate (German) (06bc145)
+
+2023-01-26 gnu-ewm
+
+        * Translated using Weblate (Polish) (d9d41cf)
+
+2023-01-24 gnu-ewm
+
+        * Translated using Weblate (Polish) (2041982)
+
+2023-01-21 Sergii Horichenko
+
+        * Translated using Weblate (Ukrainian) (ddb3910)
+
+2023-01-21 Daniel Frost
+
+        * Translated using Weblate (German) (5fb74c5)
+
+2023-01-18 Allan Nordhøy
+
+        * Translated using Weblate (Norwegian Bokmål) (b54b7cc)
+
+2023-01-19 Daniel Frost
+
+        * Translated using Weblate (German) (dc531fa)
+
 2023-01-18 Guido Berhoerster
 
-        * Release 4.0.0 (HEAD -> main, tag: v4.0.0)
+        * Release 4.0.0 (93bc798) (tag: v4.0.0)
 
 2023-01-15 Sergii Horichenko
 
