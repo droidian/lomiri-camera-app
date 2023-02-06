@@ -483,7 +483,7 @@ Item {
                 anchors {
                     verticalCenter: scanActivityIndicator.verticalCenter
                 }
-                text: camera.cameraStatus == Camera.ActiveStatus ? 
+                text: camera.cameraStatus == Camera.ActiveStatus ?
                       i18n.tr("Scanning...") : i18n.tr("Preparing...")
                 textSize: Label.Large
                 color: "white"
@@ -706,6 +706,21 @@ Item {
                 }
                 onClicked: {
                     Qt.openUrlExternally(viewFinderView.recentlyScannedTag)
+                    tagDetailsOverlay.open = false
+                }
+            }
+
+            CircleButton {
+                id: clipboardButton
+                iconName: "edit-copy"
+                automaticOrientation: false
+                anchors.verticalCenter: parent.verticalCenter
+                visible: viewFinderView.recentlyScannedTag
+                onVisibleChanged: {
+                    buttonContainer.forceLayout()
+                }
+                onClicked: {
+                    Clipboard.push(viewFinderView.recentlyScannedTag)
                     tagDetailsOverlay.open = false
                 }
             }
