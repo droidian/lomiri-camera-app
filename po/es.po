@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2022-06-01 16:59+0000\n"
+"PO-Revision-Date: 2023-02-14 21:36+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
-"Language-Team: Spanish <https://translate.ubports.com/projects/ubports/"
-"camera-app/es/>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-camera-app/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 4.16-dev\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
@@ -43,7 +43,7 @@ msgstr "Configuración"
 
 #: AdvancedOptions.qml:27
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"
 
 #: AdvancedOptions.qml:35 Information.qml:20 PhotogridView.qml:78
 #: SlideshowView.qml:86
@@ -159,7 +159,7 @@ msgstr "usar am/pm. ap se sustituirá por 'am' o 'pm'."
 
 #: AdvancedOptions.qml:169
 msgid "the timezone (for example 'CEST')"
-msgstr "la zona horaria (por ejemplo 'CEST')"
+msgstr "el huso horario (por ejemplo «CEST»)"
 
 #: AdvancedOptions.qml:178
 msgid "Add to Format"
@@ -182,7 +182,7 @@ msgstr "Opacidad"
 
 #: AdvancedOptions.qml:346
 msgid "Blurred Overlay"
-msgstr ""
+msgstr "Superposición desenfocada"
 
 #: AdvancedOptions.qml:367
 msgid "Only Blur Preview overlay"
@@ -223,7 +223,7 @@ msgstr "Carrete"
 
 #: Information.qml:25
 msgid "Back"
-msgstr ""
+msgstr "Atrás"
 
 #: Information.qml:76
 msgid "Get the source"
@@ -248,38 +248,34 @@ msgid "Height : %1"
 msgstr "Altura: %1"
 
 #: MediaInfoPopover.qml:16
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Date : %1"
-msgstr "Nombre: %1"
+msgstr "Fecha: %1"
 
 #: MediaInfoPopover.qml:17
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Camera Model : %1"
-msgstr "Nombre: %1"
+msgstr "Modelo de cámara: %1"
 
 #: MediaInfoPopover.qml:18
-#, fuzzy, qt-format
-#| msgid "Height : %1"
+#, qt-format
 msgid "Copyright : %1"
-msgstr "Altura: %1"
+msgstr "Derechos de autor: %1"
 
 #: MediaInfoPopover.qml:19
 #, qt-format
 msgid "Exposure Time : %1"
-msgstr ""
+msgstr "Tiempo de exposición: %1"
 
 #: MediaInfoPopover.qml:20
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "F. Number : %1"
-msgstr "Nombre: %1"
+msgstr "Número f: %1"
 
 #: MediaInfoPopover.qml:21
 #, qt-format
 msgid "Sub-File type : %1"
-msgstr ""
+msgstr "Tipo de subarchivo: %1"
 
 #: MediaInfoPopover.qml:43
 msgid "Media Information"
@@ -296,18 +292,17 @@ msgid "Type : %1"
 msgstr "Tipo: %1"
 
 #: MediaInfoPopover.qml:83
-#, fuzzy, qt-format
-#| msgid "Width : %1"
+#, qt-format
 msgid "With Flash : %1"
-msgstr "Anchura: %1"
+msgstr "Con flash: %1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
-msgstr ""
+msgstr "Sí"
 
 #: MediaInfoPopover.qml:83
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
