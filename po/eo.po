@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2023-02-16 22:38+0000\n"
+"PO-Revision-Date: 2023-02-20 18:39+0000\n"
 "Last-Translator: phlostically <phlostically@mailinator.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/eo/>\n"
@@ -210,7 +210,7 @@ msgstr "Serĉante enhavon..."
 
 #: GalleryViewHeader.qml:87 SlideshowView.qml:46
 msgid "Select"
-msgstr "Selekti"
+msgstr "Elekti"
 
 #: GalleryViewHeader.qml:88
 msgid "Edit Photo"
