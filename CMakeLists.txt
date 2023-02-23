@@ -43,7 +43,7 @@ if(CLICK_MODE)
     set(CMAKE_INSTALL_BINDIR /)
     set(PLUGIN_BASE lib/${CMAKE_LIBRARY_ARCHITECTURE})
     set(PLUGIN_DIR ${PLUGIN_BASE}/CameraApp)
-    set(DESKTOP_EXEC "./${CAMERA_APP}")
+    set(DESKTOP_EXEC "lomiri-camera-app-migrate.py ${CAMERA_APP}")
     set(CAMERA_ICON "${CMAKE_INSTALL_DATADIR}/icons/lomiri-camera-app.svg")
     set(CAMERA_SPLASH "${CMAKE_INSTALL_DATADIR}/icons/lomiri-camera-app-splash.svg")
     install(FILES assets/lomiri-camera-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
@@ -88,6 +88,8 @@ else(CLICK_MODE)
     set(PLUGIN_DIR ${PLUGIN_BASE}/CameraApp)
     set(DESKTOP_EXEC ${CAMERA_APP})
 endif(CLICK_MODE)
+
+install(PROGRAMS lomiri-camera-app-migrate.py DESTINATION "${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}")
 
 # QR scanner
 set(QZXING_MULTIMEDIA ON)
