@@ -1,6 +1,34 @@
+2023-02-27 Guido Berhoerster
+
+        * Release 4.0.2 (HEAD -> main, tag: v4.0.2)
+
+2023-02-21 Heimen Stoffels
+
+        * Translated using Weblate (Dutch) (c843e5e)
+
+2023-02-19 phlostically
+
+        * Translated using Weblate (Esperanto) (52c8468)
+
+2023-02-16 phlostically
+
+        * Translated using Weblate (Esperanto) (95e28e7)
+
+2023-02-13 Adolfo Jayme Barrientos
+
+        * Translated using Weblate (Spanish) (a9b0b4e)
+
+2023-02-06 Mike Gabriel
+
+        * Merge branch 'addclipboardbutton' into 'main' (a86a2ac)
+
+2023-02-04 Danfro
+
+        * add copy to clipboard button to barcode reader (c8e5a38)
+
 2023-02-03 Guido Berhoerster
 
-        * Release 4.0.1 (HEAD -> main, tag: v4.0.1)
+        * Release 4.0.1 (119f703) (tag: v4.0.1)
 
 2023-02-03 Mike Gabriel
 
