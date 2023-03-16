@@ -5,6 +5,7 @@ Maintainer: UBports Developers <devs@ubports.com>
 XSBC-Original-Maintainer: Ugo Riboni <ugo.riboni@canonical.com>
 Build-Depends: cmake,
                debhelper-compat (= 12),
+               dh-migrations,
                libgl1-mesa-dev | libgl1-dev,
                libgles2-mesa-dev | libgles2-dev,
                pkg-config,
@@ -39,6 +40,7 @@ Package: lomiri-camera-app
 Architecture: any
 Depends: cameraplugin-aal [armel armhf],
          libqt5multimedia5,
+         python3:any,
          qml-module-qtquick2,
          qml-module-qtmultimedia | qml-module-qtmultimedia-gles,
          qml-module-lomiri-components,

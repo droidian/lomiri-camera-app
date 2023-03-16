@@ -1,5 +1,6 @@
 usr/bin/lomiri-camera-app
 usr/lib/*/lomiri-camera-app/*
+usr/share/lomiri-camera-app/lomiri-camera-app-migrate.py
 usr/share/applications/*.desktop
 usr/share/lomiri-camera-app/*.qml
 usr/share/lomiri-camera-app/qml/*

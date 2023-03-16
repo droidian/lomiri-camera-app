@@ -18,6 +18,9 @@
     "name": "camera.ubports",
     "title": "Camera",
     "version": "@PROJECT_VERSION@",
+    "migrations": {
+        "old-name": "com.ubuntu.camera"
+    },
     "x-test": {
         "autopilot": {
             "autopilot_module": "@AUTOPILOT_DIR@",
