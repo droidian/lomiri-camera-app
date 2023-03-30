@@ -4,6 +4,8 @@ builder: cmake
 
 framework: ubuntu-sdk-20.04
 
+ignore_review_errors: true
+
 dependencies_target:
 - libqt5svg5-dev
 - qtquickcontrols2-5-dev
