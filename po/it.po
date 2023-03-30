@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2023-03-30 13:46+0000\n"
+"PO-Revision-Date: 2023-04-02 03:46+0000\n"
 "Last-Translator: Sylke Vicious <silkevicious@tuta.io>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/it/>\n"
@@ -263,26 +263,24 @@ msgid "Camera Model : %1"
 msgstr "Modello Fotocamera : %1"
 
 #: MediaInfoPopover.qml:18
-#, fuzzy, qt-format
-#| msgid "Height : %1"
+#, qt-format
 msgid "Copyright : %1"
-msgstr "Altezza : %1"
+msgstr "Copyright : %1"
 
 #: MediaInfoPopover.qml:19
 #, qt-format
 msgid "Exposure Time : %1"
-msgstr ""
+msgstr "Tempo di Esposizione : %1"
 
 #: MediaInfoPopover.qml:20
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "F. Number : %1"
-msgstr "Nome : %1"
+msgstr "Numero F. : %1"
 
 #: MediaInfoPopover.qml:21
 #, qt-format
 msgid "Sub-File type : %1"
-msgstr ""
+msgstr "Tipo di Sotto-File : %1"
 
 #: MediaInfoPopover.qml:43
 msgid "Media Information"
@@ -299,22 +297,21 @@ msgid "Type : %1"
 msgstr "Tipo : %1"
 
 #: MediaInfoPopover.qml:83
-#, fuzzy, qt-format
-#| msgid "Width : %1"
+#, qt-format
 msgid "With Flash : %1"
-msgstr "Larghezza :%1"
+msgstr "Con Flash :%1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
-msgstr ""
+msgstr "Si"
 
 #: MediaInfoPopover.qml:83
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
-msgstr "Spazio sul dispositivo esaurito: liberare dello spazio per continuare."
+msgstr "Spazio sul dispositivo esaurito, liberare dello spazio per continuare."
 
 #: PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
@@ -334,7 +331,7 @@ msgstr "Modifica"
 
 #: SlideshowView.qml:477
 msgid "Back to Photo roll"
-msgstr "Indietro a rullino foto"
+msgstr "Indietro al rullino foto"
 
 #: UnableShareDialog.qml:25
 msgid "Unable to share"
@@ -419,8 +416,8 @@ msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
 msgstr ""
-"Lo spazio disponibile sul dispositivo si sta esaurendo: per continuare senza "
-"interruzioni, liberare dello spazio."
+"Lo spazio disponibile sul dispositivo si sta esaurendo. Per continuare senza "
+"interruzioni, liberare dello spazio ora."
 
 #: ViewFinderOverlay.qml:1208
 msgid "External storage not writeable"
@@ -483,7 +480,7 @@ msgstr "Luminoso;Buio"
 
 #: camera-app.qml:69
 msgid "Flip Camera"
-msgstr "Ruota la fotocamera"
+msgstr "Ruota la Fotocamera"
 
 #: camera-app.qml:70
 msgid "Front Facing;Back Facing"
@@ -507,7 +504,7 @@ msgstr "Foto;Video"
 
 #: camera-app.qml:82
 msgid "White Balance"
-msgstr "Bilanciamento bianco"
+msgstr "Bilanciamento Bianco"
 
 #: camera-app.qml:83
 msgid "Lighting Condition;Day;Cloudy;Inside"
