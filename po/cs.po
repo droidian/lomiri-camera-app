@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2023-03-28 15:43+0000\n"
+"PO-Revision-Date: 2023-03-30 13:46+0000\n"
 "Last-Translator: Jozef Mlich <jmlich83@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/cs/>\n"
@@ -35,7 +35,7 @@ msgstr "Fotografie;Videa;Zachytit;Vyfotit;Momentka;Záznam"
 
 #: lomiri-camera-app.desktop.in:10
 msgid "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
 msgid "Settings"
@@ -184,11 +184,11 @@ msgstr "Neprůhlednost"
 
 #: AdvancedOptions.qml:346
 msgid "Blurred Overlay"
-msgstr ""
+msgstr "Rozmazané překrytí"
 
 #: AdvancedOptions.qml:367
 msgid "Only Blur Preview overlay"
-msgstr ""
+msgstr "Rozmazat pouze překryv náhledu"
 
 #: DeleteDialog.qml:24
 msgid "Delete media?"
@@ -225,7 +225,7 @@ msgstr "Fotky"
 
 #: Information.qml:25
 msgid "Back"
-msgstr ""
+msgstr "Zpět"
 
 #: Information.qml:76
 msgid "Get the source"
@@ -250,38 +250,34 @@ msgid "Height : %1"
 msgstr "Výška : %1"
 
 #: MediaInfoPopover.qml:16
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Date : %1"
-msgstr "Název : %1"
+msgstr "Datum : %1"
 
 #: MediaInfoPopover.qml:17
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Camera Model : %1"
-msgstr "Název : %1"
+msgstr "Typ fotoaparátu: %1"
 
 #: MediaInfoPopover.qml:18
-#, fuzzy, qt-format
-#| msgid "Height : %1"
+#, qt-format
 msgid "Copyright : %1"
-msgstr "Výška : %1"
+msgstr "Autorská práva : %1"
 
 #: MediaInfoPopover.qml:19
 #, qt-format
 msgid "Exposure Time : %1"
-msgstr ""
+msgstr "Čas expozice : %1"
 
 #: MediaInfoPopover.qml:20
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "F. Number : %1"
-msgstr "Název : %1"
+msgstr "Clonové číslo : %1"
 
 #: MediaInfoPopover.qml:21
 #, qt-format
 msgid "Sub-File type : %1"
-msgstr ""
+msgstr "Typ podsouboru : %1"
 
 #: MediaInfoPopover.qml:43
 msgid "Media Information"
@@ -298,10 +294,9 @@ msgid "Type : %1"
 msgstr "Typ : %1"
 
 #: MediaInfoPopover.qml:83
-#, fuzzy, qt-format
-#| msgid "Width : %1"
+#, qt-format
 msgid "With Flash : %1"
-msgstr "Šířka : %1"
+msgstr "S bleskem: %1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
