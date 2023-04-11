@@ -8,22 +8,25 @@ msgstr ""
 "Project-Id-Version: lomiri-camera-app-translations\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-04-11 20:27+0000\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-camera-app/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
 #: Information.qml:106
 msgid "Camera"
-msgstr ""
+msgstr "კამერა"
 
 #: lomiri-camera-app.desktop.in:5
 msgid "Camera application"
-msgstr ""
+msgstr "კამერის აპლიკაცია"
 
 #: lomiri-camera-app.desktop.in:7
 msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
@@ -31,20 +34,20 @@ msgstr ""
 
 #: lomiri-camera-app.desktop.in:10
 msgid "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
 msgid "Settings"
-msgstr ""
+msgstr "მორგება"
 
 #: AdvancedOptions.qml:27
 msgid "Close"
-msgstr ""
+msgstr "დახურვა"
 
 #: AdvancedOptions.qml:35 Information.qml:20 PhotogridView.qml:78
 #: SlideshowView.qml:86
 msgid "About"
-msgstr ""
+msgstr "პროგრამის შესახებ"
 
 #: AdvancedOptions.qml:66
 msgid "Add date stamp on captured images"
@@ -53,7 +56,7 @@ msgstr ""
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: AdvancedOptions.qml:89
 msgid "Format"
-msgstr ""
+msgstr "ფორმატი"
 
 #: AdvancedOptions.qml:142
 msgid "Date formatting keywords"
@@ -155,22 +158,22 @@ msgstr ""
 
 #: AdvancedOptions.qml:178
 msgid "Add to Format"
-msgstr ""
+msgstr "ფორმატისთვის დამატება"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: AdvancedOptions.qml:209
 msgid "Color"
-msgstr ""
+msgstr "ფერი"
 
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: AdvancedOptions.qml:278
 msgid "Alignment"
-msgstr ""
+msgstr "სწორება"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: AdvancedOptions.qml:323
 msgid "Opacity"
-msgstr ""
+msgstr "გაუმჭირვალობა"
 
 #: AdvancedOptions.qml:346
 msgid "Blurred Overlay"
@@ -182,32 +185,32 @@ msgstr ""
 
 #: DeleteDialog.qml:24
 msgid "Delete media?"
-msgstr ""
+msgstr "წავშალო მედია?"
 
 #: DeleteDialog.qml:34 PhotogridView.qml:56 SlideshowView.qml:69
 msgid "Delete"
-msgstr ""
+msgstr "წაშლა"
 
 #: DeleteDialog.qml:40 ViewFinderOverlay.qml:1197 ViewFinderOverlay.qml:1211
 #: ViewFinderOverlay.qml:1259 ViewFinderView.qml:404
 msgid "Cancel"
-msgstr ""
+msgstr "გაუქმება"
 
 #: GalleryView.qml:270
 msgid "No media available."
-msgstr ""
+msgstr "მედიის გარეშე."
 
 #: GalleryView.qml:305
 msgid "Scanning for content..."
-msgstr ""
+msgstr "შემცველობის ძებნა..."
 
 #: GalleryViewHeader.qml:87 SlideshowView.qml:46
 msgid "Select"
-msgstr ""
+msgstr "აირჩიეთ"
 
 #: GalleryViewHeader.qml:88
 msgid "Edit Photo"
-msgstr ""
+msgstr "სურათის ჩასწორება"
 
 #: GalleryViewHeader.qml:88
 msgid "Photo Roll"
@@ -215,86 +218,86 @@ msgstr ""
 
 #: Information.qml:25
 msgid "Back"
-msgstr ""
+msgstr "უკან"
 
 #: Information.qml:76
 msgid "Get the source"
-msgstr ""
+msgstr "რესურსის მიღება"
 
 #: Information.qml:77
 msgid "Report issues"
-msgstr ""
+msgstr "პრობლემების შეტყობინება"
 
 #: Information.qml:78
 msgid "Help translate"
-msgstr ""
+msgstr "დაგვეხმარეთ, ვთარგმნოთ"
 
 #: MediaInfoPopover.qml:14
 #, qt-format
 msgid "Width : %1"
-msgstr ""
+msgstr "სიგანე: %1"
 
 #: MediaInfoPopover.qml:15
 #, qt-format
 msgid "Height : %1"
-msgstr ""
+msgstr "სიმაღლე: %1"
 
 #: MediaInfoPopover.qml:16
 #, qt-format
 msgid "Date : %1"
-msgstr ""
+msgstr "თარიღი: %1"
 
 #: MediaInfoPopover.qml:17
 #, qt-format
 msgid "Camera Model : %1"
-msgstr ""
+msgstr "კამერის მოდელი: %1"
 
 #: MediaInfoPopover.qml:18
 #, qt-format
 msgid "Copyright : %1"
-msgstr ""
+msgstr "საავტორო უფლებები: %1"
 
 #: MediaInfoPopover.qml:19
 #, qt-format
 msgid "Exposure Time : %1"
-msgstr ""
+msgstr "ექსპოზიციის დრო: %1"
 
 #: MediaInfoPopover.qml:20
 #, qt-format
 msgid "F. Number : %1"
-msgstr ""
+msgstr "F რიცხვი : %1"
 
 #: MediaInfoPopover.qml:21
 #, qt-format
 msgid "Sub-File type : %1"
-msgstr ""
+msgstr "ქვეფაილის ტიპი : %1"
 
 #: MediaInfoPopover.qml:43
 msgid "Media Information"
-msgstr ""
+msgstr "მედიის ინფორმაცია : %1"
 
 #: MediaInfoPopover.qml:48
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "სახელი : %1"
 
 #: MediaInfoPopover.qml:51
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "ტიპი : %1"
 
 #: MediaInfoPopover.qml:83
 #, qt-format
 msgid "With Flash : %1"
-msgstr ""
+msgstr "განათებით : %1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
-msgstr ""
+msgstr "დიახ"
 
 #: MediaInfoPopover.qml:83
 msgid "No"
-msgstr ""
+msgstr "არა"
 
 #: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
@@ -306,15 +309,15 @@ msgstr ""
 
 #: PhotogridView.qml:42 SlideshowView.qml:54
 msgid "Share"
-msgstr ""
+msgstr "გაზიარება"
 
 #: SlideshowView.qml:62
 msgid "Image Info"
-msgstr ""
+msgstr "ინფორმაცია გამოსახულების შესახებ"
 
 #: SlideshowView.qml:98
 msgid "Edit"
-msgstr ""
+msgstr "ჩასწორება"
 
 #: SlideshowView.qml:477
 msgid "Back to Photo roll"
@@ -322,7 +325,7 @@ msgstr ""
 
 #: UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr ""
+msgstr "გაზიარების შეცდომა"
 
 #: UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
@@ -330,73 +333,73 @@ msgstr ""
 
 #: UnableShareDialog.qml:30
 msgid "Ok"
-msgstr ""
+msgstr "დიახ"
 
 #: ViewFinderOverlay.qml:455 ViewFinderOverlay.qml:478
 #: ViewFinderOverlay.qml:506 ViewFinderOverlay.qml:529
 #: ViewFinderOverlay.qml:614 ViewFinderOverlay.qml:681
 msgid "On"
-msgstr ""
+msgstr "ჩართული"
 
 #: ViewFinderOverlay.qml:460 ViewFinderOverlay.qml:488
 #: ViewFinderOverlay.qml:511 ViewFinderOverlay.qml:534
 #: ViewFinderOverlay.qml:553 ViewFinderOverlay.qml:619
 #: ViewFinderOverlay.qml:691
 msgid "Off"
-msgstr ""
+msgstr "გამორთ"
 
 #: ViewFinderOverlay.qml:483
 msgid "Auto"
-msgstr ""
+msgstr "ავტომატური"
 
 #: ViewFinderOverlay.qml:520
 msgid "HDR"
-msgstr ""
+msgstr "HDR"
 
 #: ViewFinderOverlay.qml:558
 msgid "5 seconds"
-msgstr ""
+msgstr "5 წამი"
 
 #: ViewFinderOverlay.qml:563
 msgid "15 seconds"
-msgstr ""
+msgstr "15 წამი"
 
 #: ViewFinderOverlay.qml:581
 msgid "Fine Quality"
-msgstr ""
+msgstr "კარგი ხარისხი"
 
 #: ViewFinderOverlay.qml:586
 msgid "High Quality"
-msgstr ""
+msgstr "მაღალი ხარისხი"
 
 #: ViewFinderOverlay.qml:591
 msgid "Normal Quality"
-msgstr ""
+msgstr "ნორმალური ხარისხი"
 
 #: ViewFinderOverlay.qml:596
 msgid "Basic Quality"
-msgstr ""
+msgstr "ჩვეულებრივი ხარისხი"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
 #: ViewFinderOverlay.qml:629
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 #: ViewFinderOverlay.qml:637
 msgid "Save to SD Card"
-msgstr ""
+msgstr "SD-ბარათზე შენახვა"
 
 #: ViewFinderOverlay.qml:642
 msgid "Save internally"
-msgstr ""
+msgstr "შიდა მეხსიერებაში შენახვა"
 
 #: ViewFinderOverlay.qml:686
 msgid "Vibrate"
-msgstr ""
+msgstr "ბბრაცია"
 
 #: ViewFinderOverlay.qml:1194
 msgid "Low storage space"
-msgstr ""
+msgstr "დისკზე ცოტა ადგილია"
 
 #: ViewFinderOverlay.qml:1195
 msgid ""
@@ -406,7 +409,7 @@ msgstr ""
 
 #: ViewFinderOverlay.qml:1208
 msgid "External storage not writeable"
-msgstr ""
+msgstr "გარე საცავი ჩაწერადი არაა"
 
 #: ViewFinderOverlay.qml:1209
 msgid ""
@@ -417,7 +420,7 @@ msgstr ""
 
 #: ViewFinderOverlay.qml:1247
 msgid "Cannot access camera"
-msgstr ""
+msgstr "კამერასთან წვდომის შეცდომა"
 
 #: ViewFinderOverlay.qml:1248
 msgid ""
@@ -429,11 +432,11 @@ msgstr ""
 
 #: ViewFinderOverlay.qml:1250
 msgid "Edit Permissions"
-msgstr ""
+msgstr "წვდომების ჩასწორება"
 
 #: ViewFinderView.qml:395
 msgid "Capture failed"
-msgstr ""
+msgstr "გადაღების შეცდომა"
 
 #: ViewFinderView.qml:400
 msgid ""
@@ -447,11 +450,11 @@ msgstr ""
 
 #: camera-app.qml:65
 msgid "Flash"
-msgstr ""
+msgstr "განათება"
 
 #: camera-app.qml:66
 msgid "Light;Dark"
-msgstr ""
+msgstr "ღია;მუქი"
 
 #: camera-app.qml:69
 msgid "Flip Camera"
@@ -463,7 +466,7 @@ msgstr ""
 
 #: camera-app.qml:73
 msgid "Shutter"
-msgstr ""
+msgstr "შატერი"
 
 #: camera-app.qml:74
 msgid "Take a Photo;Snap;Record"
@@ -471,7 +474,7 @@ msgstr ""
 
 #: camera-app.qml:77
 msgid "Mode"
-msgstr ""
+msgstr "რეჟიმი"
 
 #: camera-app.qml:78
 msgid "Stills;Video"
@@ -479,7 +482,7 @@ msgstr ""
 
 #: camera-app.qml:82
 msgid "White Balance"
-msgstr ""
+msgstr "თეთრის ბალანსი"
 
 #: camera-app.qml:83
 msgid "Lighting Condition;Day;Cloudy;Inside"
@@ -488,17 +491,17 @@ msgstr ""
 #: camera-app.qml:387
 #, qt-format
 msgid "<b>%1</b> photos taken today"
-msgstr ""
+msgstr "დღეს <b>%1</b> სურათი გადაიღეთ"
 
 #: camera-app.qml:388
 msgid "No photos taken today"
-msgstr ""
+msgstr "დღეს სურათი არ გადაგიღიათ"
 
 #: camera-app.qml:398
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
-msgstr ""
+msgstr "დღეს <b>%1</b> ვიდეო გადაიღეთ"
 
 #: camera-app.qml:399
 msgid "No videos recorded today"
-msgstr ""
+msgstr "დღეს ვიდეო არ გადაგიღიათ"
