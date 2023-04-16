@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2019-04-23 19:04+0000\n"
-"Last-Translator: 谭永乐 <tanyongle0633@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
-"ubports/camera-app/zh_Hans/>\n"
+"PO-Revision-Date: 2023-04-22 21:43+0000\n"
+"Last-Translator: Lu Xu <oliver_lew@outlook.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"lomiri/lomiri-camera-app/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 4.18-dev\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
@@ -34,7 +34,7 @@ msgstr "照片；视频；拍照；连拍；快拍；录像"
 
 #: lomiri-camera-app.desktop.in:10
 msgid "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
 msgid "Settings"
@@ -42,7 +42,7 @@ msgstr "设置"
 
 #: AdvancedOptions.qml:27
 msgid "Close"
-msgstr ""
+msgstr "关闭"
 
 #: AdvancedOptions.qml:35 Information.qml:20 PhotogridView.qml:78
 #: SlideshowView.qml:86
@@ -177,11 +177,11 @@ msgstr "不透明度"
 
 #: AdvancedOptions.qml:346
 msgid "Blurred Overlay"
-msgstr ""
+msgstr "模糊效果"
 
 #: AdvancedOptions.qml:367
 msgid "Only Blur Preview overlay"
-msgstr ""
+msgstr "仅模糊预览"
 
 #: DeleteDialog.qml:24
 msgid "Delete media?"
@@ -218,7 +218,7 @@ msgstr "相机胶卷"
 
 #: Information.qml:25
 msgid "Back"
-msgstr ""
+msgstr "返回"
 
 #: Information.qml:76
 msgid "Get the source"
@@ -243,38 +243,34 @@ msgid "Height : %1"
 msgstr "高度：%1"
 
 #: MediaInfoPopover.qml:16
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Date : %1"
-msgstr "名称：%1"
+msgstr "日期：%1"
 
 #: MediaInfoPopover.qml:17
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Camera Model : %1"
-msgstr "名称：%1"
+msgstr "相机型号：%1"
 
 #: MediaInfoPopover.qml:18
-#, fuzzy, qt-format
-#| msgid "Height : %1"
+#, qt-format
 msgid "Copyright : %1"
-msgstr "高度：%1"
+msgstr "版权所有 ： %1"
 
 #: MediaInfoPopover.qml:19
 #, qt-format
 msgid "Exposure Time : %1"
-msgstr ""
+msgstr "曝光时间 ： %1"
 
 #: MediaInfoPopover.qml:20
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "F. Number : %1"
-msgstr "名称：%1"
+msgstr "F. 编号：%1"
 
 #: MediaInfoPopover.qml:21
 #, qt-format
 msgid "Sub-File type : %1"
-msgstr ""
+msgstr "子文件类型：%1"
 
 #: MediaInfoPopover.qml:43
 msgid "Media Information"
@@ -291,18 +287,17 @@ msgid "Type : %1"
 msgstr "类型：%1"
 
 #: MediaInfoPopover.qml:83
-#, fuzzy, qt-format
-#| msgid "Width : %1"
+#, qt-format
 msgid "With Flash : %1"
-msgstr "宽度：%1"
+msgstr "带闪光灯：%1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: MediaInfoPopover.qml:83
 msgid "No"
-msgstr ""
+msgstr "否"
 
 #: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
