@@ -102,6 +102,9 @@ Window {
             if (event.key == Qt.Key_F11) {
                 main.toggleFullScreen();
                 event.accepted = true;
+            } else if (event.key == Qt.Key_WebCam || event.key == Qt.Key_Camera) {
+                viewFinderView.finderOverlay.item.triggerShoot();
+                event.accepted = true;
             }
         }
         Keys.onEscapePressed: main.exitFullScreen()
