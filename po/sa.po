@@ -8,13 +8,16 @@ msgstr ""
 "Project-Id-Version: lomiri-camera-app-translations\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-07-07 11:49+0000\n"
+"Last-Translator: \"Rudra Harsh V.Singh\" <rudraHarsh45@proton.me>\n"
+"Language-Team: Sanskrit <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-camera-app/sa/>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n==2 ? 1 : 2;\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
 #: Information.qml:106
@@ -191,7 +194,7 @@ msgstr ""
 #: DeleteDialog.qml:40 ViewFinderOverlay.qml:1197 ViewFinderOverlay.qml:1211
 #: ViewFinderOverlay.qml:1259 ViewFinderView.qml:404
 msgid "Cancel"
-msgstr ""
+msgstr "निरसयतु"
 
 #: GalleryView.qml:270
 msgid "No media available."
