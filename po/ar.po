@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2022-03-24 05:37+0000\n"
-"Last-Translator: HEROBRINE7GAMER <tapermeerkat77@gmail.com>\n"
-"Language-Team: Arabic <https://translate.ubports.com/projects/ubports/camera-"
-"app/ar/>\n"
+"PO-Revision-Date: 2023-07-17 18:05+0000\n"
+"Last-Translator: abidin toumi <abidin24@disroot.org>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-camera-app/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 5.0-dev\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
@@ -36,7 +36,7 @@ msgstr "صور;فيديو;إلتقاط;التقاط;لقطة;تسجيل"
 
 #: lomiri-camera-app.desktop.in:10
 msgid "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
-msgstr ""
+msgstr "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
 msgid "Settings"
@@ -44,7 +44,7 @@ msgstr "الإعدادات"
 
 #: AdvancedOptions.qml:27
 msgid "Close"
-msgstr ""
+msgstr "أغلق"
 
 #: AdvancedOptions.qml:35 Information.qml:20 PhotogridView.qml:78
 #: SlideshowView.qml:86
@@ -220,7 +220,7 @@ msgstr "لف الصورة"
 
 #: Information.qml:25
 msgid "Back"
-msgstr ""
+msgstr "للخلف"
 
 #: Information.qml:76
 msgid "Get the source"
@@ -245,22 +245,19 @@ msgid "Height : %1"
 msgstr "الارتفاع: %1"
 
 #: MediaInfoPopover.qml:16
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Date : %1"
-msgstr "الاسم: %1"
+msgstr "تاريخ: %1"
 
 #: MediaInfoPopover.qml:17
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "Camera Model : %1"
-msgstr "الاسم: %1"
+msgstr "طراز الكاميرا: %1"
 
 #: MediaInfoPopover.qml:18
-#, fuzzy, qt-format
-#| msgid "Height : %1"
+#, qt-format
 msgid "Copyright : %1"
-msgstr "الارتفاع: %1"
+msgstr "حقوق النشر: %1"
 
 #: MediaInfoPopover.qml:19
 #, qt-format
@@ -276,7 +273,7 @@ msgstr "الاسم: %1"
 #: MediaInfoPopover.qml:21
 #, qt-format
 msgid "Sub-File type : %1"
-msgstr ""
+msgstr "نوع الملف الفرعي: %1"
 
 #: MediaInfoPopover.qml:43
 msgid "Media Information"
@@ -300,11 +297,11 @@ msgstr "العرض: %1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
-msgstr ""
+msgstr "نعم"
 
 #: MediaInfoPopover.qml:83
 msgid "No"
-msgstr ""
+msgstr "لا"
 
 #: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
