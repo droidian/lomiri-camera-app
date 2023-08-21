@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2023-08-20 08:04+0000\n"
+"PO-Revision-Date: 2023-08-28 00:57+0000\n"
 "Last-Translator: NPL <alterlinuxer@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
@@ -295,11 +295,11 @@ msgstr "フラッシュ : %1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
-msgstr "Yes"
+msgstr "はい"
 
 #: MediaInfoPopover.qml:83
 msgid "No"
-msgstr "No"
+msgstr "いいえ"
 
 #: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
