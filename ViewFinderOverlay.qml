@@ -18,9 +18,9 @@ import QtQuick 2.12
 import QtQuick.Window 2.2
 import Lomiri.Components 1.3
 import Lomiri.Components.Popups 1.3
-import QtMultimedia 5.9
-import QtPositioning 5.2
-import QtSensors 5.0
+import QtMultimedia 5.12
+import QtPositioning 5.12
+import QtSensors 5.11
 import CameraApp 0.1
 import Qt.labs.settings 1.0
 import QtGraphicalEffects 1.0
@@ -909,6 +909,28 @@ Item {
             }
         }
 
+        FileOperations {
+            id: fileOperations
+        }
+
+        function dezimal2sexagesimal(coord) {
+            var degree = Math.trunc(coord)
+            console.log("degree: " + degree)
+            var dezimals = coord - degree
+            console.log("dezimals: " + dezimals)
+            var minutes = Math.trunc(dezimals * 60)
+            var minDezimals = (dezimals * 60) - minutes
+            console.log("minutes: " + minutes)
+            var seconds = minDezimals * 60  //keep decimals here for higher precision
+            console.log("seconds: " + seconds)
+            var sexaCoord = degree.toString() + "/1" + " " + minutes.toString() + "/1" + " " + seconds.toFixed(2).toString() + "/100" //zeros equal to number of decimals
+            // var sexaCoord = [degree.toString() + "/1",minutes.toString() + "/1",seconds.toFixed(2).toString() + "/100"] //zeros equal to number of decimals
+            // var sexaCoord = [[degree.toString(),1],[minutes.toString(),1],[seconds.toFixed(2).toString(),100]] //zeros equal to number of decimals
+            // var sexaCoord = degree.toString() + "° " + minutes.toString() + "\' " + seconds.toFixed(2).toString() + "\"" //zeros equal to number of decimals
+            console.log("sexaCoord: " + sexaCoord)
+            return sexaCoord
+        }
+
         function switchCamera() {
             camera.switchInProgress = true;
             //                viewFinderGrab.sourceItem = viewFinder;
@@ -988,6 +1010,10 @@ Item {
                                                        viewFinderOverlay.settings.dateStampColor,
                                                        viewFinderOverlay.settings.dateStampOpacity,
                                                        viewFinderOverlay.settings.dateStampAlign);
+                }
+                var position = positionSource.position;
+                if (settings.gpsEnabled && positionSource.isPrecise) {
+                    fileOperations.setEXIFData(path, controls.dezimal2sexagesimal(position.coordinate.latitude), controls.dezimal2sexagesimal(position.coordinate.longitude));
                 }
             }
         }

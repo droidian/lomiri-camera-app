@@ -40,13 +40,34 @@ QJsonObject FileOperations::getEXIFData(const QString & path) const
         exifImageFile = Exiv2::ImageFactory::open(exifPath);
         exifImageFile->readMetadata();
         Exiv2::ExifData &exifData = exifImageFile->exifData();
-    
+
         for( Exiv2::ExifMetadata::iterator iter = exifData.begin(); iter != exifData.end(); iter++) {
                 retJson[QString::fromStdString(iter->key())] = QString::fromStdString(iter->value().toString());
         }
      } catch (const std::exception& e) {
         qDebug() << "Failed when reading EXIF data : " <<  e.what();
      }
-      
+
      return retJson;
+}
+
+bool FileOperations::setEXIFData(const QString & path, const QString & latitude, const QString & longitude) const
+{
+     const QString & exifPath = path;
+     Exiv2::Image::AutoPtr exifImageFile = Exiv2::ImageFactory::open(exifPath.toStdString());
+     try {
+        exifImageFile->readMetadata();
+        Exiv2::ExifData &exifData = exifImageFile->exifData();
+
+        exifData["Exif.GPSInfo.GPSLatitude"] = latitude.toStdString();
+        exifData["Exif.GPSInfo.GPSLongitude"] = longitude.toStdString();
+        exifData["Exif.Image.Rating"] = 1;
+        for( Exiv2::ExifMetadata::iterator iter = exifData.begin(); iter != exifData.end(); iter++) {
+                qDebug() << QString::fromStdString(iter->value().toString());
+        }
+        exifImageFile->writeMetadata();
+        return true;
+     } catch (const std::exception& e) {
+        qDebug() << "Failed when reading EXIF data : " <<  e.what();
+     }
 }

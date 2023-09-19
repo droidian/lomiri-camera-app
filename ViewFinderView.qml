@@ -56,7 +56,7 @@ FocusScope {
         }
     }
 
-    property Camera camera: Camera {
+    property Camera camera: Camera { 
         id: camera
         captureMode: Camera.CaptureStillImage
         cameraState: Camera.UnloadedState
@@ -353,7 +353,7 @@ FocusScope {
         }
 
         // Tapping anywhere on the screen should not trigger any camera
-        // controls while PhotoRoll hint is visible 
+        // controls while PhotoRoll hint is visible
         MouseArea {
             anchors.fill: parent
             enabled: photoRollHint.visible

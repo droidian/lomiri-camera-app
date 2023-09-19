@@ -28,6 +28,7 @@ public:
     explicit FileOperations(QObject *parent = 0);
     Q_INVOKABLE bool remove(const QString & fileName) const;
     Q_INVOKABLE QJsonObject getEXIFData(const QString & path) const;
+    Q_INVOKABLE bool setEXIFData(const QString & path, const QString & latitude, const QString & longitude) const;
 };
 
 #endif // FILEOPERATIONS_H
