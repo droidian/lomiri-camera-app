@@ -73,10 +73,6 @@ Item {
 
         IconButton {
             objectName: "backButton"
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-            }
             width: units.gu(8)
             iconName: editMode ? "save" : "back"
             iconColor: theme.palette.normal.backgroundText
@@ -94,38 +90,26 @@ Item {
         }
 
         //-------------------------------------------------------------------------------
-        
+
         IconButton {
             objectName: "viewToggleButton"
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-            }
             iconName: header.gridMode ? "stock_image" : "view-grid-symbolic"
 			iconColor: theme.palette.normal.backgroundText
             onClicked: header.toggleViews()
             visible: !main.contentExportMode && !userSelectionMode && !editMode
         }
-        
+
         IconButton {
             objectName: "galleryLink"
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-            }
             iconName: "gallery-app-symbolic"
 			iconColor: theme.palette.normal.backgroundText
             onClicked:  { Qt.openUrlExternally("appid://gallery.ubports/gallery/current-user-version") }
             visible: !main.contentExportMode && !userSelectionMode && !editMode
         }
-        //------------------------------------------------------------------------- 
-        
+        //-------------------------------------------------------------------------
+
         IconButton {
             objectName: "selectAllButton"
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-            }
             iconName: "select"
 			iconColor: theme.palette.normal.backgroundText
             onClicked: header.toggleSelectAll()
@@ -134,10 +118,6 @@ Item {
 
         IconButton {
             objectName: "singleActionButton"
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-            }
             action: actionsDrawer.actions[0] ? actionsDrawer.actions[0] : null
 			iconColor: theme.palette.normal.backgroundText
             visible: actionsDrawer.actions.length == 1 && !editMode
@@ -146,10 +126,6 @@ Item {
 
         IconButton {
             objectName: "additionalActionsButton"
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-            }
             iconName: "contextual-menu"
 			iconColor: theme.palette.normal.backgroundText
             visible: actionsDrawer.actions.length > 1 && !editMode
@@ -158,10 +134,6 @@ Item {
 
         IconButton {
             objectName: "validationButton"
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-            }
             iconName: "ok"
 			iconColor: theme.palette.normal.backgroundText
             onClicked: header.validationClicked()
