@@ -74,6 +74,7 @@ Item {
         IconButton {
             objectName: "backButton"
             width: units.gu(8)
+            Layout.fillHeight: true
             iconName: editMode ? "save" : "back"
             iconColor: theme.palette.normal.backgroundText
             onClicked: editMode ? header.exitEditor() : header.exit()
@@ -93,6 +94,7 @@ Item {
 
         IconButton {
             objectName: "viewToggleButton"
+            Layout.fillHeight: true
             iconName: header.gridMode ? "stock_image" : "view-grid-symbolic"
 			iconColor: theme.palette.normal.backgroundText
             onClicked: header.toggleViews()
@@ -101,6 +103,7 @@ Item {
 
         IconButton {
             objectName: "galleryLink"
+            Layout.fillHeight: true
             iconName: "gallery-app-symbolic"
 			iconColor: theme.palette.normal.backgroundText
             onClicked:  { Qt.openUrlExternally("appid://gallery.ubports/gallery/current-user-version") }
@@ -110,6 +113,7 @@ Item {
 
         IconButton {
             objectName: "selectAllButton"
+            Layout.fillHeight: true
             iconName: "select"
 			iconColor: theme.palette.normal.backgroundText
             onClicked: header.toggleSelectAll()
@@ -118,6 +122,7 @@ Item {
 
         IconButton {
             objectName: "singleActionButton"
+            Layout.fillHeight: true
             action: actionsDrawer.actions[0] ? actionsDrawer.actions[0] : null
 			iconColor: theme.palette.normal.backgroundText
             visible: actionsDrawer.actions.length == 1 && !editMode
@@ -126,6 +131,7 @@ Item {
 
         IconButton {
             objectName: "additionalActionsButton"
+            Layout.fillHeight: true
             iconName: "contextual-menu"
 			iconColor: theme.palette.normal.backgroundText
             visible: actionsDrawer.actions.length > 1 && !editMode
@@ -134,6 +140,7 @@ Item {
 
         IconButton {
             objectName: "validationButton"
+            Layout.fillHeight: true
             iconName: "ok"
 			iconColor: theme.palette.normal.backgroundText
             onClicked: header.validationClicked()
