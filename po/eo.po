@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2023-02-20 18:39+0000\n"
+"PO-Revision-Date: 2023-10-18 05:51+0000\n"
 "Last-Translator: phlostically <phlostically@mailinator.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/eo/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 5.1\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
@@ -326,7 +326,7 @@ msgstr "Bilda informo"
 
 #: SlideshowView.qml:98
 msgid "Edit"
-msgstr "Redakti"
+msgstr "Modifi"
 
 #: SlideshowView.qml:477
 msgid "Back to Photo roll"
