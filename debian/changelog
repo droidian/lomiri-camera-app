@@ -1,3 +1,10 @@
+lomiri-camera-app (4.0.3) unstable; urgency=medium
+
+  * Upstream-provided Debian package for lomiri-camera-app. See upstream
+    ChangeLog for recent changes.
+
+ -- UBports developers <developers@ubports.com>  Sun, 15 Oct 2023 12:49:38 +0200
+
 lomiri-camera-app (4.0.2) unstable; urgency=medium
 
   * Upstream-provided Debian package for lomiri-camera-app. See upstream

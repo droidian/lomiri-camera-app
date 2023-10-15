@@ -1,6 +1,151 @@
+2023-10-15 Mike Gabriel
+
+        * Release 4.0.3 (HEAD -> main, tag: v4.0.3)
+
+2023-09-17 Allan Nordhøy
+
+        * Translated using Weblate (Norwegian Bokmål) (2dfea80)
+
+2023-09-06 bittin1ddc447d824349b2
+
+        * Translated using Weblate (Swedish) (02089af)
+
+2023-08-21 NPL
+
+        * Translated using Weblate (Japanese) (31b13cb)
+
+2023-08-12 NPL
+
+        * Translated using Weblate (Japanese) (398a068)
+
+2023-08-13 Abdullah AL Shohag
+
+        * Translated using Weblate (Bengali (Bangladesh)) (df4ea89)
+
+2023-07-09 Jimmy Lejeune
+
+        * Translated using Weblate (French) (f90c626)
+
+2023-07-10 abidin toumi
+
+        * Translated using Weblate (Arabic) (847a75b)
+
+2023-06-30 Rudra Harsh V.Singh
+
+        * Translated using Weblate (Sanskrit) (5235f60)
+
+2023-07-01 Hosted Weblate
+
+        * Update translation files (11f729d)
+
+2023-06-30 Weblate
+
+        * Added translation using Weblate (Sanskrit) (efdb929)
+
+2023-06-27 Rudra Harsh V.Singh
+
+        * Translated using Weblate (English (Canada)) (6b11c67)
+
+2023-06-22 Lionel Duboeuf
+
+        * Translated using Weblate (French) (84f7af3)
+
+2023-06-06 Guido Berhoerster
+
+        * Merge branch 'add_ignore_review' into 'main' (d4280f6)
+
+2023-03-30 Danfro
+
+        * add ignore review errors to clickable.yaml to allow local building
+          (a4355e2)
+
+2023-05-17 Mike Gabriel
+
+        * Merge branch 'master_-_camerabutton' into 'main' (82ea258)
+
+2023-01-30 kugiigi
+
+        * Removed Xperia x specific code and replaced with Qt.Key_WebCam
+          (db498ed)
+
+2021-02-06 Kugi Eusebio
+
+        * Updated function name to new one (ae82247)
+
+2020-10-16 Kugi Eusebio
+
+        * Changed name of new function shoot to triggerShoot (56effed)
+
+2020-08-28 Kugi Eusebio
+
+        * Added standard Qt Camera Key (3d978de)
+        * Added Xperia X camera button support (9f97b0c)
+
+2023-04-16 Lu Xu
+
+        * Translated using Weblate (Chinese (Simplified)) (5af66c0)
+
+2023-04-14 Lundrin
+
+        * Translated using Weblate (Hungarian) (6dc05d1)
+
+2023-04-11 Temuri Doghonadze
+
+        * Translated using Weblate (Georgian) (c648c1a)
+
+2023-04-04 gallegonovato
+
+        * Translated using Weblate (Spanish) (60a768d)
+
+2023-03-30 Sylke Vicious
+
+        * Translated using Weblate (Italian) (cee1fbf)
+        * Translated using Weblate (Italian) (07acc83)
+
+2023-03-30 Jozef Mlich
+
+        * Translated using Weblate (Czech) (72b95db)
+
+2023-03-27 Jozef Mlich
+
+        * Translated using Weblate (Czech) (14eba1e)
+
+2023-03-24 Mike Gabriel
+
+        * Merge branch 'personal/gberh/fix-migration' into 'main' (9cc6dd6)
+
+2023-03-23 Guido Berhoerster
+
+        * Handle migration edge case (057cc40)
+
+2023-03-16 Mike Gabriel
+
+        * Merge branch 'personal/gberh/click-migrate' into 'main' (a18f209)
+
+2023-02-28 Guido Berhoerster
+
+        * Use session-migration for migration in Debian (0da406c)
+
+2023-02-23 Guido Berhoerster
+
+        * Add migrations to manifest (dbfd1f5)
+        * Add migration wrapper script (5aa23db)
+
+2023-03-03 Taisei Washington
+
+        * Translated using Weblate (Japanese) (e8e2b0d)
+
+2023-03-01 Allan Nordhøy
+
+        * Translated using Weblate (Telugu) (344f01f)
+
+2023-02-26 Luna Jernberg
+
+        * Translated using Weblate (Swedish) (f4edf3e)
+
 2023-02-27 Guido Berhoerster
 
-        * Release 4.0.2 (HEAD -> main, tag: v4.0.2)
+        * Release 4.0.2 (90e80a7) (tag: v4.0.2)
 
 2023-02-21 Heimen Stoffels
 
