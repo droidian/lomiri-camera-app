@@ -778,42 +778,6 @@ Item {
         processing: camera.photoCaptureInProgress
     }
 
-    StorageMonitor {
-        id: storageMonitor
-        location: (StorageLocations.removableStoragePresent && settings.preferRemovableStorage) ?
-                   StorageLocations.removableStorageLocation : StorageLocations.videosLocation
-        onDiskSpaceLowChanged: if (storageMonitor.diskSpaceLow && !storageMonitor.diskSpaceCriticallyLow) {
-                                   PopupUtils.open(freeSpaceLowDialogComponent);
-                               }
-        onDiskSpaceCriticallyLowChanged: if (storageMonitor.diskSpaceCriticallyLow) {
-                                             camera.videoRecorder.stop();
-                                         }
-        onIsWriteableChanged: if (!isWriteable && !diskSpaceLow && !main.contentExportMode) {
-                                  PopupUtils.open(readOnlyMediaDialogComponent);
-                              }
-    }
-
-    NoSpaceHint {
-        id: noSpaceHint
-        objectName: "noSpace"
-        anchors.fill: parent
-        visible: storageMonitor.diskSpaceCriticallyLow
-    }
-
-    Component {
-        id: freeSpaceLowDialogComponent
-        Dialog {
-            id: freeSpaceLowDialog
-            objectName: "lowSpaceDialog"
-            title: i18n.tr("Low storage space")
-            text: i18n.tr("You are running out of storage space. To continue without interruptions, free up storage space now.")
-            Button {
-                text: i18n.tr("Cancel")
-                onClicked: PopupUtils.close(freeSpaceLowDialog)
-            }
-        }
-    }
-
     Component {
          id: readOnlyMediaDialogComponent
          Dialog {
