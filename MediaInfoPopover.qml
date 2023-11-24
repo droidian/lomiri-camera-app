@@ -19,7 +19,6 @@ Popover {
               { "key": 'Exif.Image.ExposureTime' , "title" :i18n.tr( "Exposure Time : %1")},
               { "key": 'Exif.Image.FNumber' , "title" :i18n.tr( "F. Number : %1")},
               { "key": 'Exif.Image.NewSubfileType' , "title" :i18n.tr( "Sub-File type : %1")},
-              { "key": 'Exif.Image.Rating' , "title" :i18n.tr( "Rating : %1")}
             ];
 
     FileOperations {
@@ -51,9 +50,6 @@ Popover {
             Label {
                 text:i18n.tr("Type : %1").arg(infoPopover.model.fileType)
             }
-            Label {
-                text:i18n.tr("Rating : %1").arg(exifData["Exif.Image.Rating"])
-            }
             //Print stright forward EXIF data
             Repeater {
                 model:infoKeys
@@ -61,15 +57,6 @@ Popover {
                     visible:undefined !== exifData[modelData['key']];
                     text:visible ? modelData["title"].arg(exifData[modelData['key']]) : "";
                 }
-            }
-            Label {
-                text:i18n.tr("GPS Longitude : %1").arg(exifData["Exif.GPSInfo.GPSLongitude"])
-            }
-            Label {
-                text:i18n.tr("GPS Latitude : %1").arg(exifData["Exif.GPSInfo.GPSLatitude"])
-            }
-            Label {
-                text:i18n.tr("GPS Altitude : %1").arg(exifData["Exif.GPSInfo.GPSAltitude"])
             }
             Label {
                 visible: undefined !== exifData['Exif.Photo.Flash'];
