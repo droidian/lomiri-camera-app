@@ -1,6 +1,129 @@
+2024-01-25 Mike Gabriel
+
+        * Release 4.0.4 (HEAD -> main, tag: 4.0.4)
+
+2023-12-31 phlostically
+
+        * Translated using Weblate (Esperanto) (cefe2cf)
+
+2024-01-04 Mike Gabriel
+
+        * Merge branch 'dropbadanchorfocal' into 'main' (de2d7b4)
+
+2023-11-24 Danfro
+
+        * Revert "stash" since this does not belong to this branch (81dfdc2)
+
+2023-09-19 Danfro
+
+        * make the buttons fill the header height as discussed in !172
+          (e59045d)
+        * reimplement !172 for focal by dropping the anchors that litter the
+          log (d0b25d4)
+        * rebase on main (5bf4b5e)
+
+2024-01-04 Mike Gabriel
+
+        * Merge branch 'main' into 'main' (4067da5)
+
+2023-10-15 Muhammad
+
+        * BarcodeReaderOverlay: get rid of lowspace overlays;  why were they
+          even here? (15c841e)
+
+2023-12-28 Hosted Weblate
+
+        * Update translation files (6bb3991)
+
+2023-12-27 Weblate
+
+        * Added translation using Weblate (Chinese (Simplified)
+          (zh_LATN@pinyin)) (51a1cf6)
+        * Added translation using Weblate (Tamil (Sri Lanka)) (0842504)
+        * Added translation using Weblate (Meadow Mari) (20ed6b5)
+        * Added translation using Weblate (Crimean Tatar) (24bae40)
+        * Added translation using Weblate (Chuvash) (e9c7d65)
+        * Added translation using Weblate (Silesian) (e75f1dc)
+        * Added translation using Weblate (Venetian) (4f8ec97)
+        * Added translation using Weblate (Ossetian) (44dd0f3)
+        * Added translation using Weblate (Sami (Northern)) (b848c72)
+        * Added translation using Weblate (Greenlandic) (1689f8c)
+        * Added translation using Weblate (Assamese) (49c4700)
+        * Added translation using Weblate (Cornish) (56573c8)
+        * Added translation using Weblate (Frisian) (e5abf21)
+        * Added translation using Weblate (Kashubian) (3ec4422)
+        * Added translation using Weblate (Aragonese) (67df321)
+        * Added translation using Weblate (Filipino) (74ad134)
+        * Added translation using Weblate (Tigrinya) (3a056a4)
+
+2023-12-27 Hosted Weblate
+
+        * Update translation files (5866026)
+
+2023-12-26 Weblate
+
+        * Added translation using Weblate (Tatar) (474a3a4)
+        * Added translation using Weblate (Italian (it_CARES)) (9873557)
+        * Added translation using Weblate (Tibetan) (ad55755)
+        * Added translation using Weblate (German (Walser)) (e480a54)
+        * Added translation using Weblate (Haitian) (f9c98cb)
+        * Added translation using Weblate (Latin) (1a9a09d)
+
+2023-12-25 Adam Havelka
+
+        * Translated using Weblate (Czech) (4f78b9f)
+
+2023-12-01 Adam Havelka
+
+        * Translated using Weblate (Czech) (c1050c1)
+
+2023-10-18 Lundrin
+
+        * Translated using Weblate (Hungarian) (6d76389)
+
+2023-10-19 Hosted Weblate
+
+        * Update translation files (2ef8ffa)
+
+2023-10-18 Weblate
+
+        * Added translation using Weblate (Xhosa) (25b0558)
+        * Added translation using Weblate (Manx) (95e4cef)
+        * Added translation using Weblate (Corsican) (016ca50)
+        * Added translation using Weblate (Chechen) (766d0ca)
+        * Added translation using Weblate (Wolof) (af198e9)
+        * Added translation using Weblate (Kurdish (Central)) (238c4e6)
+        * Added translation using Weblate (Uzbek) (9731fc2)
+        * Added translation using Weblate (Kyrgyz) (00851cf)
+        * Added translation using Weblate (Kurdish) (63629fa)
+        * Added translation using Weblate (Sotho (Southern)) (fee1b0b)
+        * Added translation using Weblate (Kannada) (e3ec883)
+        * Added translation using Weblate (Kazakh) (4550bf0)
+        * Added translation using Weblate (Faroese) (690dac8)
+        * Added translation using Weblate (Nepali) (d9492d9)
+        * Added translation using Weblate (Norwegian Nynorsk) (8208599)
+        * Added translation using Weblate (Interlingua) (f549513)
+        * Added translation using Weblate (Swahili) (90368dc)
+        * Added translation using Weblate (Afrikaans) (143e5e9)
+        * Added translation using Weblate (Marathi) (64ac270)
+        * Added translation using Weblate (Vietnamese) (b661629)
+        * Added translation using Weblate (Odia) (3f3f357)
+        * Added translation using Weblate (Occitan) (5d68df8)
+        * Added translation using Weblate (Bengali) (04542fc)
+        * Added translation using Weblate (Estonian) (e91c08a)
+        * Added translation using Weblate (Irish) (9d24196)
+
+2023-10-13 Império Linux
+
+        * Translated using Weblate (Portuguese (Brazil)) (4e46623)
+
+2023-10-11 phlostically
+
+        * Translated using Weblate (Esperanto) (7e2d44b)
+
 2023-10-15 Mike Gabriel
 
-        * Release 4.0.3 (HEAD -> main, tag: v4.0.3)
+        * Release 4.0.3 (b8ac0e4) (tag: v4.0.3)
 
 2023-09-17 Allan Nordhøy
 

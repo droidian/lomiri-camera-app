@@ -1,0 +1,6 @@
+Overview of changes in ayatana-indicator-display 4.0.4
+
+ - Drop bad anchor to reduce log filling up - reimplementation for focal
+   (@Danfro).
+ - BarcodeReaderOverlay: get rid of lowspace overlays (@muhammad23012009).
+ - Translation updates.
