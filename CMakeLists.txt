@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(lomiri-camera-app VERSION 4.0.4 LANGUAGES CXX)
+project(lomiri-camera-app VERSION 4.0.5 LANGUAGES CXX)
 set (CMAKE_CXX_STANDARD 11)
 
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
