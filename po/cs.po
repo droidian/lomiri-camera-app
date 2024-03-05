@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-29 12:12+0000\n"
-"PO-Revision-Date: 2023-12-26 12:00+0000\n"
+"PO-Revision-Date: 2024-03-11 08:26+0000\n"
 "Last-Translator: Adam Havelka <adam@uxes.cz>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/cs/>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
 #: Information.qml:106
 msgid "Camera"
-msgstr "Kamera"
+msgstr "Fotoaparát"
 
 #: lomiri-camera-app.desktop.in:5
 msgid "Camera application"
-msgstr "Aplikace kamera"
+msgstr "Aplikace fotoaparát"
 
 #: lomiri-camera-app.desktop.in:7
 msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
