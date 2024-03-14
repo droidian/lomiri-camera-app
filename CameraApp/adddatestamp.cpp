@@ -89,11 +89,19 @@ int AddDateStamp::rotationToAligment(int rotation) {
 
 long AddDateStamp::getOrientation(QString pathToImage) {
      const std::string& srcExifPath = pathToImage.toStdString();
+#if EXIV2_TEST_VERSION(0,28,0)
+      Exiv2::Image::UniquePtr exifImageFile;
+#else
       Exiv2::Image::AutoPtr exifImageFile;
+#endif
       exifImageFile = Exiv2::ImageFactory::open(srcExifPath);
       exifImageFile->readMetadata();
       Exiv2::ExifData &exifData = exifImageFile->exifData();
+#if EXIV2_TEST_VERSION(0,28,0)
+      long orientationFlags  = exifData["Exif.Image.Orientation"].toUint32();
+#else
       long orientationFlags  = exifData["Exif.Image.Orientation"].toLong();
+#endif
       
       return orientationFlags;
 }
@@ -108,12 +116,20 @@ bool AddDateStamp::isOrientationMirrored( long orientationFlags ) {
 
 void AddDateStamp::copyMetadata(QString srcPath, QString dstPath) {
       const std::string& srcExifPath = srcPath.toStdString();
+#if EXIV2_TEST_VERSION(0,28,0)
+      Exiv2::Image::UniquePtr srcImageFile;
+#else
       Exiv2::Image::AutoPtr srcImageFile;
+#endif
       srcImageFile = Exiv2::ImageFactory::open(srcExifPath);
       srcImageFile->readMetadata();
 
       const std::string& dstExifPath = dstPath.toStdString();
+#if EXIV2_TEST_VERSION(0,28,0)
+      Exiv2::Image::UniquePtr dstImageFile;
+#else
       Exiv2::Image::AutoPtr dstImageFile;
+#endif
       dstImageFile = Exiv2::ImageFactory::open(dstExifPath);
       
       dstImageFile->setMetadata(*srcImageFile);
