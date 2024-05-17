@@ -103,6 +103,7 @@ FocusScope {
     }
 
     function exit() {
+        showPhotoAtIndex(0);
     }
 
     Settings {
