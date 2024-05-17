@@ -34,7 +34,11 @@ bool FileOperations::remove(const QString & fileName) const
 QJsonObject FileOperations::getEXIFData(const QString & path) const
 {
      const std::string& exifPath = path.toStdString();
+#if EXIV2_TEST_VERSION(0,28,0)
+     Exiv2::Image::UniquePtr exifImageFile;
+#else
      Exiv2::Image::AutoPtr exifImageFile;
+#endif
      QJsonObject retJson;
      try {
         exifImageFile = Exiv2::ImageFactory::open(exifPath);
