@@ -49,6 +49,7 @@ Item {
                 enabled: model.available && (!optionValueSelector.caller || optionValueSelector.caller == optionButton)
                 opacity: enabled ? 1.0 : 0.05
                 Behavior on opacity {LomiriNumberAnimation {duration: LomiriAnimation.FastDuration}}
+                customRotation: main.orientedRotationAngle
             }
         }
     }
@@ -62,11 +63,23 @@ Item {
         interactive: true
         flickableDirection: Flickable.VerticalFlick
         boundsBehavior: Flickable.DragAndOvershootBounds
+        rotation: main.orientedRotationAngle
+            
+        Behavior on rotation {
+            RotationAnimator {
+                duration: LomiriAnimation.BriskDuration
+                easing: LomiriAnimation.StandardEasing
+                direction: RotationAnimator.Shortest
+            }
+        }
+
+        onRotationChanged: if (caller) { alignWith(caller); }
 
         property OptionButton caller
-        property int screenHeight: ( (Screen.orientation == Qt.PortraitOrientation || Screen.orientation == Qt.InvertedPortraitOrientation)
-                                            ? Screen.height
-                                            : Screen.width)
+        property int screenHeight: ((Screen.orientation == Qt.PortraitOrientation || Screen.orientation == Qt.InvertedPortraitOrientation)
+                                            ? main.sensorHasDifferentOrientation ? Screen.width : Screen.height
+                                            : main.sensorHasDifferentOrientation ? Screen.height : Screen.width
+                                   )
 
         function toggle(model, callerButton) {
             if (optionValueSelectorVisible && optionValueSelector.model === model) {
@@ -101,17 +114,23 @@ Item {
             var itemX = parent.mapFromItem(item, 0, 0).x;
             var centeredX = itemX + item.width / 2.0 - width / 2.0;
             var margin = units.gu(1);
+            var offScreenToTheLeft = main.sensorHasDifferentOrientation ? centeredX + width / 2.0 - height / 2.0 < margin
+                                                            : centeredX < margin;
+            var offScreenToTheRight = main.sensorHasDifferentOrientation ? centeredX  + width / 2.0 + height / 2.0 > optionsOverlay.width - margin
+                                                            : centeredX + width > optionsOverlay.width - margin;
+            var offScreenOffset = itemX + item.width - width;
 
-            if (centeredX < margin) {
+            if (offScreenToTheLeft) {
                 x = itemX;
-            } else if (centeredX + width > item.parent.width - margin) {
-                x = itemX + item.width - width;
+            } else if (offScreenToTheRight) {
+                x = offScreenOffset;
             } else {
                 x = centeredX;
             }
 
             // vertically position the options above the caller button
-            y = Qt.binding(function() { return Math.max(-(screenHeight - (optionsOverlay.height - item.y) - units.gu(2)), optionsGrid.y + item.y - height - units.gu(2)) });
+            y = Qt.binding(function() { return Math.max(-(screenHeight - (optionsOverlay.height - item.y) - units.gu(2))
+                                                            , optionsGrid.y + item.y - (main.sensorHasDifferentOrientation ? height / 2 + width: height) - units.gu(2)) });
         }
 
         visible: opacity !== 0.0

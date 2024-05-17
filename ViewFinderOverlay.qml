@@ -1003,6 +1003,8 @@ Item {
                 bottomMargin: units.gu(6)
             }
 
+            automaticOrientation: false
+            customRotation: main.staticRotationAngle
             iconName: (camera.captureMode == Camera.CaptureStillImage) ? "camcorder" : "camera-symbolic"
             onClicked: controls.changeRecordMode()
             enabled: camera.videoRecorder.recorderState == CameraRecorder.StoppedState && !main.contentExportMode
@@ -1031,7 +1033,7 @@ Item {
             onClicked: {
                 viewFinderOverlay.triggerShoot();
             }
-            rotation: Screen.angleBetween(Screen.primaryOrientation, Screen.orientation)
+            rotation: main.staticRotationAngle
             Behavior on rotation {
                 RotationAnimator {
                     duration: LomiriAnimation.BriskDuration
@@ -1052,6 +1054,8 @@ Item {
                 bottomMargin: units.gu(6)
             }
 
+            automaticOrientation: false
+            customRotation: main.staticRotationAngle
             enabled: !camera.switchInProgress && camera.videoRecorder.recorderState == CameraRecorder.StoppedState
                      && !camera.photoCaptureInProgress && !camera.timedCaptureInProgress
             iconName: "camera-flip"
@@ -1137,6 +1141,7 @@ Item {
             Behavior on opacity { LomiriNumberAnimation {} }
             visible: opacity != 0
             time: camera.videoRecorder.duration / 1000
+            rotation: main.staticRotationAngle
         }
 
         FocusRing {

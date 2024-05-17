@@ -23,6 +23,7 @@ import UserMetrics 0.1
 import Lomiri.Content 1.3
 import CameraApp 0.1
 import Qt.labs.settings 1.0
+import QtSensors 5.2
 
 Window {
     id: main
@@ -90,6 +91,32 @@ Window {
         main.show();
     }
 
+    readonly property int sensorOrientation: orientationSensor.reading ? orientationSensor.reading.orientation : OrientationReading.TopUp
+    readonly property var angleToSensorOrientation: {1 /* OrientationReading.TopUp */: 0,
+                                                      4 /* OrientationReading.LeftUp */: 90,
+                                                      2 /* OrientationReading.TopDown */: 180,
+                                                      3 /* OrientationReading.RightUp */: 270}
+
+    readonly property int sensorOrientationAngle: angleToSensorOrientation[sensorOrientation]
+    readonly property int screenOrientationAngle: Screen.angleBetween(Screen.primaryOrientation, Screen.orientation)
+    
+    readonly property int staticRotationAngle: screenOrientationAngle == sensorOrientationAngle ? screenOrientationAngle : sensorOrientationAngle
+    readonly property int orientedRotationAngle: if (screenOrientationAngle != sensorOrientationAngle) {
+                                                      if (screenOrientationAngle > 0) {
+                                                          sensorOrientationAngle - screenOrientationAngle
+                                                      } else {
+                                                          staticRotationAngle
+                                                      }
+                                                  } else {
+                                                      0
+                                                  }
+    // Checks if the sensor is different than the screen orientation (Landscape or Portrait)
+    readonly property bool sensorHasDifferentOrientation: Math.abs(orientedRotationAngle) == 90 || Math.abs(orientedRotationAngle) == 270
+
+    OrientationSensor {
+        id: orientationSensor
+        active: true
+    }
 
     Flickable {
         id: viewSwitcher
