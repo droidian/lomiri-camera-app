@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-29 12:12+0000\n"
+"POT-Creation-Date: 2024-05-17 10:34+0000\n"
 "PO-Revision-Date: 2021-05-21 14:05+0000\n"
 "Last-Translator: Davidrebolomaga <davidre345@hotmail.com>\n"
 "Language-Team: Galician <https://translate.ubports.com/projects/ubports/"
@@ -34,7 +34,26 @@ msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
 msgstr "Fotos;Vídeos;Captura;Fotografía;Pantalla;Gravar"
 
 #: lomiri-camera-app.desktop.in:10
-msgid "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
+msgid "lomiri-camera-app"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:4
+#: lomiri-barcode-reader-app.desktop.in:6
+msgid "Barcode Reader"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:5
+#, fuzzy
+#| msgid "Camera application"
+msgid "Barcode Reader application"
+msgstr "Aplicativo da cámara"
+
+#: lomiri-barcode-reader-app.desktop.in:7
+msgid "QR;Code;Reader"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:10
+msgid "lomiri-barcode-reader-app"
 msgstr ""
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
@@ -194,8 +213,8 @@ msgstr "Eliminar o elemento multimedia?"
 msgid "Delete"
 msgstr "Eliminar"
 
-#: DeleteDialog.qml:40 ViewFinderOverlay.qml:1197 ViewFinderOverlay.qml:1211
-#: ViewFinderOverlay.qml:1259 ViewFinderView.qml:404
+#: DeleteDialog.qml:40 ViewFinderOverlay.qml:1203 ViewFinderOverlay.qml:1217
+#: ViewFinderOverlay.qml:1265 ViewFinderView.qml:409
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -207,15 +226,15 @@ msgstr "Non hai elementos multimedia dispoñíbeis."
 msgid "Scanning for content..."
 msgstr "Buscando contido..."
 
-#: GalleryViewHeader.qml:87 SlideshowView.qml:46
+#: GalleryViewHeader.qml:84 SlideshowView.qml:46
 msgid "Select"
 msgstr "Seleccionar"
 
-#: GalleryViewHeader.qml:88
+#: GalleryViewHeader.qml:85
 msgid "Edit Photo"
 msgstr "Editar foto"
 
-#: GalleryViewHeader.qml:88
+#: GalleryViewHeader.qml:85
 msgid "Photo Roll"
 msgstr "Rolo de fotos"
 
@@ -343,73 +362,73 @@ msgstr "Non é posíbel compartir vídeos e imaxes ao mesmo tempo"
 msgid "Ok"
 msgstr "Aceptar"
 
-#: ViewFinderOverlay.qml:455 ViewFinderOverlay.qml:478
-#: ViewFinderOverlay.qml:506 ViewFinderOverlay.qml:529
-#: ViewFinderOverlay.qml:614 ViewFinderOverlay.qml:681
+#: ViewFinderOverlay.qml:469 ViewFinderOverlay.qml:492
+#: ViewFinderOverlay.qml:520 ViewFinderOverlay.qml:543
+#: ViewFinderOverlay.qml:628 ViewFinderOverlay.qml:695
 msgid "On"
 msgstr "Activado"
 
-#: ViewFinderOverlay.qml:460 ViewFinderOverlay.qml:488
-#: ViewFinderOverlay.qml:511 ViewFinderOverlay.qml:534
-#: ViewFinderOverlay.qml:553 ViewFinderOverlay.qml:619
-#: ViewFinderOverlay.qml:691
+#: ViewFinderOverlay.qml:474 ViewFinderOverlay.qml:502
+#: ViewFinderOverlay.qml:525 ViewFinderOverlay.qml:548
+#: ViewFinderOverlay.qml:567 ViewFinderOverlay.qml:633
+#: ViewFinderOverlay.qml:705
 msgid "Off"
 msgstr "Desactivado"
 
-#: ViewFinderOverlay.qml:483
+#: ViewFinderOverlay.qml:497
 msgid "Auto"
 msgstr "Automático"
 
-#: ViewFinderOverlay.qml:520
+#: ViewFinderOverlay.qml:534
 msgid "HDR"
 msgstr "HDR"
 
-#: ViewFinderOverlay.qml:558
+#: ViewFinderOverlay.qml:572
 msgid "5 seconds"
 msgstr "5 segundos"
 
-#: ViewFinderOverlay.qml:563
+#: ViewFinderOverlay.qml:577
 msgid "15 seconds"
 msgstr "15 segundos"
 
-#: ViewFinderOverlay.qml:581
+#: ViewFinderOverlay.qml:595
 msgid "Fine Quality"
 msgstr "Calidade fina"
 
-#: ViewFinderOverlay.qml:586
+#: ViewFinderOverlay.qml:600
 msgid "High Quality"
 msgstr "Calidade alta"
 
-#: ViewFinderOverlay.qml:591
+#: ViewFinderOverlay.qml:605
 msgid "Normal Quality"
 msgstr "Calidade normal"
 
-#: ViewFinderOverlay.qml:596
+#: ViewFinderOverlay.qml:610
 msgid "Basic Quality"
 msgstr "Calidade básica"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
-#: ViewFinderOverlay.qml:629
+#: ViewFinderOverlay.qml:643
 msgid "SD"
 msgstr "SD"
 
-#: ViewFinderOverlay.qml:637
+#: ViewFinderOverlay.qml:651
 msgid "Save to SD Card"
 msgstr "Gardar na tarxeta SD"
 
-#: ViewFinderOverlay.qml:642
+#: ViewFinderOverlay.qml:656
 msgid "Save internally"
 msgstr "Gardar internamente"
 
-#: ViewFinderOverlay.qml:686
+#: ViewFinderOverlay.qml:700
 msgid "Vibrate"
 msgstr "Vibrar"
 
-#: ViewFinderOverlay.qml:1194
+#: ViewFinderOverlay.qml:1200
 msgid "Low storage space"
 msgstr "Pouco espazo de almacenamento"
 
-#: ViewFinderOverlay.qml:1195
+#: ViewFinderOverlay.qml:1201
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
@@ -417,11 +436,11 @@ msgstr ""
 "Queda pouco espazo de almacenamento. Para continuar sen interrupcións, "
 "libere espazo agora."
 
-#: ViewFinderOverlay.qml:1208
+#: ViewFinderOverlay.qml:1214
 msgid "External storage not writeable"
 msgstr "O almacenamento externo non é escribíbel"
 
-#: ViewFinderOverlay.qml:1209
+#: ViewFinderOverlay.qml:1215
 msgid ""
 "It does not seem possible to write to your external storage media. Trying to "
 "eject and insert it again might solve the issue, or you might need to format "
@@ -431,11 +450,11 @@ msgstr ""
 "e inserilo outra vez podería resolver o problema, ou podería necesitar "
 "formatalo."
 
-#: ViewFinderOverlay.qml:1247
+#: ViewFinderOverlay.qml:1253
 msgid "Cannot access camera"
 msgstr "Non é posíbel acceder á cámara"
 
-#: ViewFinderOverlay.qml:1248
+#: ViewFinderOverlay.qml:1254
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
@@ -447,15 +466,15 @@ msgstr ""
 "\n"
 "Se conceder os permisos non resolve o problema, reinicie o dispositivo."
 
-#: ViewFinderOverlay.qml:1250
+#: ViewFinderOverlay.qml:1256
 msgid "Edit Permissions"
 msgstr "Editar permisos"
 
-#: ViewFinderView.qml:395
+#: ViewFinderView.qml:400
 msgid "Capture failed"
 msgstr "A captura fallou"
 
-#: ViewFinderView.qml:400
+#: ViewFinderView.qml:405
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
@@ -463,65 +482,65 @@ msgstr ""
 "Substituír o medio externo, formatalo, ou reiniciar o dispositivo podería "
 "resolver o problema."
 
-#: ViewFinderView.qml:401
+#: ViewFinderView.qml:406
 msgid "Restarting your device might fix the problem."
 msgstr "Reiniciar o dispositivo podería resolver o problema."
 
-#: camera-app.qml:65
+#: camera-app.qml:61
 msgid "Flash"
 msgstr "Flash"
 
-#: camera-app.qml:66
+#: camera-app.qml:62
 msgid "Light;Dark"
 msgstr "Claro;Escuro"
 
-#: camera-app.qml:69
+#: camera-app.qml:65
 msgid "Flip Camera"
 msgstr "Virar a cámara"
 
-#: camera-app.qml:70
+#: camera-app.qml:66
 msgid "Front Facing;Back Facing"
 msgstr "Orientación frontal;Orientación traseira"
 
-#: camera-app.qml:73
+#: camera-app.qml:69
 msgid "Shutter"
 msgstr "Obturador"
 
-#: camera-app.qml:74
+#: camera-app.qml:70
 msgid "Take a Photo;Snap;Record"
 msgstr "Facer unha foto;Tomar;Gravar"
 
-#: camera-app.qml:77
+#: camera-app.qml:73
 msgid "Mode"
 msgstr "Modo"
 
-#: camera-app.qml:78
+#: camera-app.qml:74
 msgid "Stills;Video"
 msgstr "Instantáneas;Vídeo"
 
-#: camera-app.qml:82
+#: camera-app.qml:78
 msgid "White Balance"
 msgstr "Balance de brancos"
 
-#: camera-app.qml:83
+#: camera-app.qml:79
 msgid "Lighting Condition;Day;Cloudy;Inside"
 msgstr "Condicións de luz;Día;Nubrado;Interior"
 
-#: camera-app.qml:387
+#: camera-app.qml:386
 #, qt-format
 msgid "<b>%1</b> photos taken today"
 msgstr "<b>%1</b> fotos feitas hoxe"
 
-#: camera-app.qml:388
+#: camera-app.qml:387
 msgid "No photos taken today"
 msgstr "Ningunha foto feita hoxe"
 
-#: camera-app.qml:398
+#: camera-app.qml:397
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
 msgstr "<b>%1</b> vídeos gravados hoxe"
 
-#: camera-app.qml:399
+#: camera-app.qml:398
 msgid "No videos recorded today"
 msgstr "Ningún vídeo gravado hoxe"
 

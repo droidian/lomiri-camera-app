@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-29 12:12+0000\n"
+"POT-Creation-Date: 2024-05-17 10:34+0000\n"
 "PO-Revision-Date: 2024-05-16 17:56+0000\n"
 "Last-Translator: Daniel Soohan Park <soobak0313@outlook.com>\n"
-"Language-Team: Korean <https://hosted.weblate.org/projects/lomiri/"
-"lomiri-camera-app/ko/>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/lomiri/lomiri-"
+"camera-app/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +34,26 @@ msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
 msgstr "사진;동영상;비디오;촬영;녹화"
 
 #: lomiri-camera-app.desktop.in:10
-msgid "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
+msgid "lomiri-camera-app"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:4
+#: lomiri-barcode-reader-app.desktop.in:6
+msgid "Barcode Reader"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:5
+#, fuzzy
+#| msgid "Camera application"
+msgid "Barcode Reader application"
+msgstr "카메라 애플리케이션"
+
+#: lomiri-barcode-reader-app.desktop.in:7
+msgid "QR;Code;Reader"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:10
+msgid "lomiri-barcode-reader-app"
 msgstr ""
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
@@ -107,12 +126,14 @@ msgstr "네 자릿수로 연도 표기. 연도가 음수라면 음수 기호가 
 
 #: AdvancedOptions.qml:157
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
-msgstr "앞에 0을 붙이지 않고 시간 표기 (0에서 23까지, 오전/오후를 표기한다면 1에서 "
-"12까지)"
+msgstr ""
+"앞에 0을 붙이지 않고 시간 표기 (0에서 23까지, 오전/오후를 표기한다면 1에서 12"
+"까지)"
 
 #: AdvancedOptions.qml:158
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
-msgstr "앞에 0을 붙여 시간 표기 (00에서 23까지, 오전/오후를 표기한다면 01에서 12까지)"
+msgstr ""
+"앞에 0을 붙여 시간 표기 (00에서 23까지, 오전/오후를 표기한다면 01에서 12까지)"
 
 #: AdvancedOptions.qml:159
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
@@ -193,8 +214,8 @@ msgstr "미디어를 삭제할까요?"
 msgid "Delete"
 msgstr "삭제"
 
-#: DeleteDialog.qml:40 ViewFinderOverlay.qml:1197 ViewFinderOverlay.qml:1211
-#: ViewFinderOverlay.qml:1259 ViewFinderView.qml:404
+#: DeleteDialog.qml:40 ViewFinderOverlay.qml:1203 ViewFinderOverlay.qml:1217
+#: ViewFinderOverlay.qml:1265 ViewFinderView.qml:409
 msgid "Cancel"
 msgstr "취소"
 
@@ -206,15 +227,15 @@ msgstr "미디어가 없습니다."
 msgid "Scanning for content..."
 msgstr "콘텐츠를 찾는 중..."
 
-#: GalleryViewHeader.qml:87 SlideshowView.qml:46
+#: GalleryViewHeader.qml:84 SlideshowView.qml:46
 msgid "Select"
 msgstr "선택"
 
-#: GalleryViewHeader.qml:88
+#: GalleryViewHeader.qml:85
 msgid "Edit Photo"
 msgstr "사진 편집"
 
-#: GalleryViewHeader.qml:88
+#: GalleryViewHeader.qml:85
 msgid "Photo Roll"
 msgstr "사진 롤"
 
@@ -337,179 +358,182 @@ msgstr "사진과 동영상을 동시에 공유할 수 없음"
 msgid "Ok"
 msgstr "확인"
 
-#: ViewFinderOverlay.qml:455 ViewFinderOverlay.qml:478
-#: ViewFinderOverlay.qml:506 ViewFinderOverlay.qml:529
-#: ViewFinderOverlay.qml:614 ViewFinderOverlay.qml:681
+#: ViewFinderOverlay.qml:469 ViewFinderOverlay.qml:492
+#: ViewFinderOverlay.qml:520 ViewFinderOverlay.qml:543
+#: ViewFinderOverlay.qml:628 ViewFinderOverlay.qml:695
 msgid "On"
 msgstr "켜기"
 
-#: ViewFinderOverlay.qml:460 ViewFinderOverlay.qml:488
-#: ViewFinderOverlay.qml:511 ViewFinderOverlay.qml:534
-#: ViewFinderOverlay.qml:553 ViewFinderOverlay.qml:619
-#: ViewFinderOverlay.qml:691
+#: ViewFinderOverlay.qml:474 ViewFinderOverlay.qml:502
+#: ViewFinderOverlay.qml:525 ViewFinderOverlay.qml:548
+#: ViewFinderOverlay.qml:567 ViewFinderOverlay.qml:633
+#: ViewFinderOverlay.qml:705
 msgid "Off"
 msgstr "끄기"
 
-#: ViewFinderOverlay.qml:483
+#: ViewFinderOverlay.qml:497
 msgid "Auto"
 msgstr "자동"
 
-#: ViewFinderOverlay.qml:520
+#: ViewFinderOverlay.qml:534
 msgid "HDR"
 msgstr "HDR"
 
-#: ViewFinderOverlay.qml:558
+#: ViewFinderOverlay.qml:572
 msgid "5 seconds"
 msgstr "5초"
 
-#: ViewFinderOverlay.qml:563
+#: ViewFinderOverlay.qml:577
 msgid "15 seconds"
 msgstr "15초"
 
-#: ViewFinderOverlay.qml:581
+#: ViewFinderOverlay.qml:595
 msgid "Fine Quality"
 msgstr "훌륭한 화질"
 
-#: ViewFinderOverlay.qml:586
+#: ViewFinderOverlay.qml:600
 msgid "High Quality"
 msgstr "높은 화질"
 
-#: ViewFinderOverlay.qml:591
+#: ViewFinderOverlay.qml:605
 msgid "Normal Quality"
 msgstr "보통 화질"
 
-#: ViewFinderOverlay.qml:596
+#: ViewFinderOverlay.qml:610
 msgid "Basic Quality"
 msgstr "기본 화질"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
-#: ViewFinderOverlay.qml:629
+#: ViewFinderOverlay.qml:643
 msgid "SD"
 msgstr "SD"
 
-#: ViewFinderOverlay.qml:637
+#: ViewFinderOverlay.qml:651
 msgid "Save to SD Card"
 msgstr "SD 카드에 저장"
 
-#: ViewFinderOverlay.qml:642
+#: ViewFinderOverlay.qml:656
 msgid "Save internally"
 msgstr "내장 메모리에 저장"
 
-#: ViewFinderOverlay.qml:686
+#: ViewFinderOverlay.qml:700
 msgid "Vibrate"
 msgstr "진동"
 
-#: ViewFinderOverlay.qml:1194
+#: ViewFinderOverlay.qml:1200
 msgid "Low storage space"
 msgstr "저장 공간 부족"
 
-#: ViewFinderOverlay.qml:1195
+#: ViewFinderOverlay.qml:1201
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
-msgstr "저장 공간이 부족합니다. 중단 없이 계속하려면 지금 저장 공간을 확보해 주세요."
+msgstr ""
+"저장 공간이 부족합니다. 중단 없이 계속하려면 지금 저장 공간을 확보해 주세요."
 
-#: ViewFinderOverlay.qml:1208
+#: ViewFinderOverlay.qml:1214
 msgid "External storage not writeable"
 msgstr "외부 저장 장치에 쓸 수 없음"
 
-#: ViewFinderOverlay.qml:1209
+#: ViewFinderOverlay.qml:1215
 msgid ""
 "It does not seem possible to write to your external storage media. Trying to "
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
-msgstr "외부 저장 장치에 쓸 수 없는 것 같습니다. 제거 후 다시 삽입하면 해결될 수도 "
-"있으며, 포맷이 필요할 수도 있습니다."
+msgstr ""
+"외부 저장 장치에 쓸 수 없는 것 같습니다. 제거 후 다시 삽입하면 해결될 수도 있"
+"으며, 포맷이 필요할 수도 있습니다."
 
-#: ViewFinderOverlay.qml:1247
+#: ViewFinderOverlay.qml:1253
 msgid "Cannot access camera"
 msgstr "카메라에 접근할 수 없음"
 
-#: ViewFinderOverlay.qml:1248
+#: ViewFinderOverlay.qml:1254
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
-"카메라 앱이 카메라 장치에 접근할 권한을 가지고 있지 않거나, 다른 오류가 "
-"발생했습니다.\n"
+"카메라 앱이 카메라 장치에 접근할 권한을 가지고 있지 않거나, 다른 오류가 발생"
+"했습니다.\n"
 "\n"
 "권한을 허용해도 문제가 해결되지 않는다면 장치를 재시작해 주세요."
 
-#: ViewFinderOverlay.qml:1250
+#: ViewFinderOverlay.qml:1256
 msgid "Edit Permissions"
 msgstr "권한 편집"
 
-#: ViewFinderView.qml:395
+#: ViewFinderView.qml:400
 msgid "Capture failed"
 msgstr "촬영 실패"
 
-#: ViewFinderView.qml:400
+#: ViewFinderView.qml:405
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
-msgstr "외부 저장 장치를 교체하거나, 포맷하거나, 장치를 재시작하면 문제가 해결될 "
-"수도 있습니다."
+msgstr ""
+"외부 저장 장치를 교체하거나, 포맷하거나, 장치를 재시작하면 문제가 해결될 수"
+"도 있습니다."
 
-#: ViewFinderView.qml:401
+#: ViewFinderView.qml:406
 msgid "Restarting your device might fix the problem."
 msgstr "장치를 재시작하면 문제가 해결될 수도 있습니다."
 
-#: camera-app.qml:65
+#: camera-app.qml:61
 msgid "Flash"
 msgstr "플래시"
 
-#: camera-app.qml:66
+#: camera-app.qml:62
 msgid "Light;Dark"
 msgstr "밝게;어둡게"
 
-#: camera-app.qml:69
+#: camera-app.qml:65
 msgid "Flip Camera"
 msgstr "카메라 전환"
 
-#: camera-app.qml:70
+#: camera-app.qml:66
 msgid "Front Facing;Back Facing"
 msgstr "전면;후면"
 
-#: camera-app.qml:73
+#: camera-app.qml:69
 msgid "Shutter"
 msgstr "셔터"
 
-#: camera-app.qml:74
+#: camera-app.qml:70
 msgid "Take a Photo;Snap;Record"
 msgstr "사진 찍기;스냅샷;녹화"
 
-#: camera-app.qml:77
+#: camera-app.qml:73
 msgid "Mode"
 msgstr "모드"
 
-#: camera-app.qml:78
+#: camera-app.qml:74
 msgid "Stills;Video"
 msgstr "스틸;동영상"
 
-#: camera-app.qml:82
+#: camera-app.qml:78
 msgid "White Balance"
 msgstr "화이트 밸런스"
 
-#: camera-app.qml:83
+#: camera-app.qml:79
 msgid "Lighting Condition;Day;Cloudy;Inside"
 msgstr "조명;낮;구름 낌;실내"
 
-#: camera-app.qml:387
+#: camera-app.qml:386
 #, qt-format
 msgid "<b>%1</b> photos taken today"
 msgstr "<b>%1</b>장의 사진을 오늘 찍으셨습니다."
 
-#: camera-app.qml:388
+#: camera-app.qml:387
 msgid "No photos taken today"
 msgstr "아직 오늘 사진을 찍지 않으셨습니다."
 
-#: camera-app.qml:398
+#: camera-app.qml:397
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
 msgstr "<b>%1</b>편의 동영상을 오늘 찍으셨습니다."
 
-#: camera-app.qml:399
+#: camera-app.qml:398
 msgid "No videos recorded today"
 msgstr "아직 오늘 동영상을 찍지 않으셨습니다."

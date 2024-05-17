@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-29 12:12+0000\n"
+"POT-Creation-Date: 2024-05-17 10:34+0000\n"
 "PO-Revision-Date: 2022-12-18 15:47+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/lomiri/lomiri-"
@@ -34,7 +34,26 @@ msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
 msgstr "Fotos; fotografies; vídeos; vídeo; captura; fés foto; enregistra"
 
 #: lomiri-camera-app.desktop.in:10
-msgid "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
+msgid "lomiri-camera-app"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:4
+#: lomiri-barcode-reader-app.desktop.in:6
+msgid "Barcode Reader"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:5
+#, fuzzy
+#| msgid "Camera application"
+msgid "Barcode Reader application"
+msgstr "Aplicació de càmera"
+
+#: lomiri-barcode-reader-app.desktop.in:7
+msgid "QR;Code;Reader"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:10
+msgid "lomiri-barcode-reader-app"
 msgstr ""
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
@@ -194,8 +213,8 @@ msgstr "Voleu suprimir-ho?"
 msgid "Delete"
 msgstr "Elimina"
 
-#: DeleteDialog.qml:40 ViewFinderOverlay.qml:1197 ViewFinderOverlay.qml:1211
-#: ViewFinderOverlay.qml:1259 ViewFinderView.qml:404
+#: DeleteDialog.qml:40 ViewFinderOverlay.qml:1203 ViewFinderOverlay.qml:1217
+#: ViewFinderOverlay.qml:1265 ViewFinderView.qml:409
 msgid "Cancel"
 msgstr "Cancel·la"
 
@@ -207,15 +226,15 @@ msgstr "No hi ha cap element multimèdia disponible."
 msgid "Scanning for content..."
 msgstr "S'està cercant contingut multimèdia..."
 
-#: GalleryViewHeader.qml:87 SlideshowView.qml:46
+#: GalleryViewHeader.qml:84 SlideshowView.qml:46
 msgid "Select"
 msgstr "Selecciona"
 
-#: GalleryViewHeader.qml:88
+#: GalleryViewHeader.qml:85
 msgid "Edit Photo"
 msgstr "Edita la fotografia"
 
-#: GalleryViewHeader.qml:88
+#: GalleryViewHeader.qml:85
 msgid "Photo Roll"
 msgstr "Rotlle de fotos"
 
@@ -343,73 +362,73 @@ msgstr "No es poden compartir fotos i vídeos a l'hora"
 msgid "Ok"
 msgstr "D'acord"
 
-#: ViewFinderOverlay.qml:455 ViewFinderOverlay.qml:478
-#: ViewFinderOverlay.qml:506 ViewFinderOverlay.qml:529
-#: ViewFinderOverlay.qml:614 ViewFinderOverlay.qml:681
+#: ViewFinderOverlay.qml:469 ViewFinderOverlay.qml:492
+#: ViewFinderOverlay.qml:520 ViewFinderOverlay.qml:543
+#: ViewFinderOverlay.qml:628 ViewFinderOverlay.qml:695
 msgid "On"
 msgstr "Activat"
 
-#: ViewFinderOverlay.qml:460 ViewFinderOverlay.qml:488
-#: ViewFinderOverlay.qml:511 ViewFinderOverlay.qml:534
-#: ViewFinderOverlay.qml:553 ViewFinderOverlay.qml:619
-#: ViewFinderOverlay.qml:691
+#: ViewFinderOverlay.qml:474 ViewFinderOverlay.qml:502
+#: ViewFinderOverlay.qml:525 ViewFinderOverlay.qml:548
+#: ViewFinderOverlay.qml:567 ViewFinderOverlay.qml:633
+#: ViewFinderOverlay.qml:705
 msgid "Off"
 msgstr "Inactiu"
 
-#: ViewFinderOverlay.qml:483
+#: ViewFinderOverlay.qml:497
 msgid "Auto"
 msgstr "Automàtic"
 
-#: ViewFinderOverlay.qml:520
+#: ViewFinderOverlay.qml:534
 msgid "HDR"
 msgstr "HDR"
 
-#: ViewFinderOverlay.qml:558
+#: ViewFinderOverlay.qml:572
 msgid "5 seconds"
 msgstr "5 segons"
 
-#: ViewFinderOverlay.qml:563
+#: ViewFinderOverlay.qml:577
 msgid "15 seconds"
 msgstr "15 segons"
 
-#: ViewFinderOverlay.qml:581
+#: ViewFinderOverlay.qml:595
 msgid "Fine Quality"
 msgstr "Qualitat extra"
 
-#: ViewFinderOverlay.qml:586
+#: ViewFinderOverlay.qml:600
 msgid "High Quality"
 msgstr "Qualitat extra"
 
-#: ViewFinderOverlay.qml:591
+#: ViewFinderOverlay.qml:605
 msgid "Normal Quality"
 msgstr "Qualitat normal"
 
-#: ViewFinderOverlay.qml:596
+#: ViewFinderOverlay.qml:610
 msgid "Basic Quality"
 msgstr "Qualitat bàsica"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
-#: ViewFinderOverlay.qml:629
+#: ViewFinderOverlay.qml:643
 msgid "SD"
 msgstr "SD"
 
-#: ViewFinderOverlay.qml:637
+#: ViewFinderOverlay.qml:651
 msgid "Save to SD Card"
 msgstr "Desa-ho a la targeta SD"
 
-#: ViewFinderOverlay.qml:642
+#: ViewFinderOverlay.qml:656
 msgid "Save internally"
 msgstr "Desa-ho a la memòria interna"
 
-#: ViewFinderOverlay.qml:686
+#: ViewFinderOverlay.qml:700
 msgid "Vibrate"
 msgstr "Vibra"
 
-#: ViewFinderOverlay.qml:1194
+#: ViewFinderOverlay.qml:1200
 msgid "Low storage space"
 msgstr "Poc espai d'emmagatzematge"
 
-#: ViewFinderOverlay.qml:1195
+#: ViewFinderOverlay.qml:1201
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
@@ -417,11 +436,11 @@ msgstr ""
 "S'està esgotant l'espai d'emmagatzematge. Hauríeu d'alliberar espai per "
 "continuar sense interrupcions."
 
-#: ViewFinderOverlay.qml:1208
+#: ViewFinderOverlay.qml:1214
 msgid "External storage not writeable"
 msgstr "No es pot escriure a l'emmagatzemament extern"
 
-#: ViewFinderOverlay.qml:1209
+#: ViewFinderOverlay.qml:1215
 msgid ""
 "It does not seem possible to write to your external storage media. Trying to "
 "eject and insert it again might solve the issue, or you might need to format "
@@ -431,11 +450,11 @@ msgstr ""
 "provar d'expulsar-lo i inserir-lo un altre cop, o potser us caldria formatar-"
 "lo."
 
-#: ViewFinderOverlay.qml:1247
+#: ViewFinderOverlay.qml:1253
 msgid "Cannot access camera"
 msgstr "No es pot accedir a la càmera"
 
-#: ViewFinderOverlay.qml:1248
+#: ViewFinderOverlay.qml:1254
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
@@ -448,15 +467,15 @@ msgstr ""
 "Si després d'atorgar permisos a l'aplicació no s'ha resolt el problema, "
 "caldrà que reinicieu el vostre dispositiu."
 
-#: ViewFinderOverlay.qml:1250
+#: ViewFinderOverlay.qml:1256
 msgid "Edit Permissions"
 msgstr "Edita els permisos"
 
-#: ViewFinderView.qml:395
+#: ViewFinderView.qml:400
 msgid "Capture failed"
 msgstr "Ha fallat la captura"
 
-#: ViewFinderView.qml:400
+#: ViewFinderView.qml:405
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
@@ -464,65 +483,65 @@ msgstr ""
 "El reemplaçament del vostre mitjà extern, formatar-lo, o reiniciar el "
 "dispositiu podria arreglar el problema."
 
-#: ViewFinderView.qml:401
+#: ViewFinderView.qml:406
 msgid "Restarting your device might fix the problem."
 msgstr "El reinici del vostre dispositiu podria arreglar el problema."
 
-#: camera-app.qml:65
+#: camera-app.qml:61
 msgid "Flash"
 msgstr "Flaix"
 
-#: camera-app.qml:66
+#: camera-app.qml:62
 msgid "Light;Dark"
 msgstr "Clar;Fosc"
 
-#: camera-app.qml:69
+#: camera-app.qml:65
 msgid "Flip Camera"
 msgstr "Gira la càmera"
 
-#: camera-app.qml:70
+#: camera-app.qml:66
 msgid "Front Facing;Back Facing"
 msgstr "Frontal;posterior"
 
-#: camera-app.qml:73
+#: camera-app.qml:69
 msgid "Shutter"
 msgstr "Disparador"
 
-#: camera-app.qml:74
+#: camera-app.qml:70
 msgid "Take a Photo;Snap;Record"
 msgstr "Fés una foto;Captura;Grava"
 
-#: camera-app.qml:77
+#: camera-app.qml:73
 msgid "Mode"
 msgstr "Mode"
 
-#: camera-app.qml:78
+#: camera-app.qml:74
 msgid "Stills;Video"
 msgstr "Imatge estàtica;Vídeo"
 
-#: camera-app.qml:82
+#: camera-app.qml:78
 msgid "White Balance"
 msgstr "Balanç de blancs"
 
-#: camera-app.qml:83
+#: camera-app.qml:79
 msgid "Lighting Condition;Day;Cloudy;Inside"
 msgstr "Condició d'il·luminació;Dia;Núvol;Interior"
 
-#: camera-app.qml:387
+#: camera-app.qml:386
 #, qt-format
 msgid "<b>%1</b> photos taken today"
 msgstr "Avui heu fet <b>%1</b> fotos"
 
-#: camera-app.qml:388
+#: camera-app.qml:387
 msgid "No photos taken today"
 msgstr "Avui no heu fet cap foto"
 
-#: camera-app.qml:398
+#: camera-app.qml:397
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
 msgstr "Avui heu fet <b>%1</b> vídeos"
 
-#: camera-app.qml:399
+#: camera-app.qml:398
 msgid "No videos recorded today"
 msgstr "Avui no heu fet cap video"
 

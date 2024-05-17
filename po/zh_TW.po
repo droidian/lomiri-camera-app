@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-29 12:12+0000\n"
+"POT-Creation-Date: 2024-05-17 10:34+0000\n"
 "PO-Revision-Date: 2022-04-15 10:53+0000\n"
 "Last-Translator: P.-H. Lin <cypressyew@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
@@ -34,7 +34,26 @@ msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
 msgstr "照片;影片;捕捉;拍攝;快照;錄影"
 
 #: lomiri-camera-app.desktop.in:10
-msgid "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
+msgid "lomiri-camera-app"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:4
+#: lomiri-barcode-reader-app.desktop.in:6
+msgid "Barcode Reader"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:5
+#, fuzzy
+#| msgid "Camera application"
+msgid "Barcode Reader application"
+msgstr "相機應用程式"
+
+#: lomiri-barcode-reader-app.desktop.in:7
+msgid "QR;Code;Reader"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:10
+msgid "lomiri-barcode-reader-app"
 msgstr ""
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
@@ -192,8 +211,8 @@ msgstr "要刪除媒體？"
 msgid "Delete"
 msgstr "刪除"
 
-#: DeleteDialog.qml:40 ViewFinderOverlay.qml:1197 ViewFinderOverlay.qml:1211
-#: ViewFinderOverlay.qml:1259 ViewFinderView.qml:404
+#: DeleteDialog.qml:40 ViewFinderOverlay.qml:1203 ViewFinderOverlay.qml:1217
+#: ViewFinderOverlay.qml:1265 ViewFinderView.qml:409
 msgid "Cancel"
 msgstr "取消"
 
@@ -205,15 +224,15 @@ msgstr "沒有可用的媒體。"
 msgid "Scanning for content..."
 msgstr "正在掃描內容…"
 
-#: GalleryViewHeader.qml:87 SlideshowView.qml:46
+#: GalleryViewHeader.qml:84 SlideshowView.qml:46
 msgid "Select"
 msgstr "選擇"
 
-#: GalleryViewHeader.qml:88
+#: GalleryViewHeader.qml:85
 msgid "Edit Photo"
 msgstr "編輯相片"
 
-#: GalleryViewHeader.qml:88
+#: GalleryViewHeader.qml:85
 msgid "Photo Roll"
 msgstr "相片膠卷"
 
@@ -341,84 +360,84 @@ msgstr "無法同時分享相片與影片"
 msgid "Ok"
 msgstr "確定"
 
-#: ViewFinderOverlay.qml:455 ViewFinderOverlay.qml:478
-#: ViewFinderOverlay.qml:506 ViewFinderOverlay.qml:529
-#: ViewFinderOverlay.qml:614 ViewFinderOverlay.qml:681
+#: ViewFinderOverlay.qml:469 ViewFinderOverlay.qml:492
+#: ViewFinderOverlay.qml:520 ViewFinderOverlay.qml:543
+#: ViewFinderOverlay.qml:628 ViewFinderOverlay.qml:695
 msgid "On"
 msgstr "開"
 
-#: ViewFinderOverlay.qml:460 ViewFinderOverlay.qml:488
-#: ViewFinderOverlay.qml:511 ViewFinderOverlay.qml:534
-#: ViewFinderOverlay.qml:553 ViewFinderOverlay.qml:619
-#: ViewFinderOverlay.qml:691
+#: ViewFinderOverlay.qml:474 ViewFinderOverlay.qml:502
+#: ViewFinderOverlay.qml:525 ViewFinderOverlay.qml:548
+#: ViewFinderOverlay.qml:567 ViewFinderOverlay.qml:633
+#: ViewFinderOverlay.qml:705
 msgid "Off"
 msgstr "關閉"
 
-#: ViewFinderOverlay.qml:483
+#: ViewFinderOverlay.qml:497
 msgid "Auto"
 msgstr "自動"
 
-#: ViewFinderOverlay.qml:520
+#: ViewFinderOverlay.qml:534
 msgid "HDR"
 msgstr "HDR"
 
-#: ViewFinderOverlay.qml:558
+#: ViewFinderOverlay.qml:572
 msgid "5 seconds"
 msgstr "5 秒"
 
-#: ViewFinderOverlay.qml:563
+#: ViewFinderOverlay.qml:577
 msgid "15 seconds"
 msgstr "15 秒"
 
-#: ViewFinderOverlay.qml:581
+#: ViewFinderOverlay.qml:595
 msgid "Fine Quality"
 msgstr "精細畫質"
 
-#: ViewFinderOverlay.qml:586
+#: ViewFinderOverlay.qml:600
 msgid "High Quality"
 msgstr "高清畫質"
 
-#: ViewFinderOverlay.qml:591
+#: ViewFinderOverlay.qml:605
 msgid "Normal Quality"
 msgstr "一般畫質"
 
-#: ViewFinderOverlay.qml:596
+#: ViewFinderOverlay.qml:610
 msgid "Basic Quality"
 msgstr "基本畫質"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
-#: ViewFinderOverlay.qml:629
+#: ViewFinderOverlay.qml:643
 msgid "SD"
 msgstr "SD 卡"
 
-#: ViewFinderOverlay.qml:637
+#: ViewFinderOverlay.qml:651
 msgid "Save to SD Card"
 msgstr "儲存到 SD 卡"
 
-#: ViewFinderOverlay.qml:642
+#: ViewFinderOverlay.qml:656
 msgid "Save internally"
 msgstr "儲存到內部空間"
 
-#: ViewFinderOverlay.qml:686
+#: ViewFinderOverlay.qml:700
 msgid "Vibrate"
 msgstr "振動"
 
-#: ViewFinderOverlay.qml:1194
+#: ViewFinderOverlay.qml:1200
 msgid "Low storage space"
 msgstr "可用儲存空間過少"
 
-#: ViewFinderOverlay.qml:1195
+#: ViewFinderOverlay.qml:1201
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
 msgstr ""
 "您的儲存空間正逐漸耗盡。若要繼續使用而不被中斷，請立刻釋放一些儲存空間。"
 
-#: ViewFinderOverlay.qml:1208
+#: ViewFinderOverlay.qml:1214
 msgid "External storage not writeable"
 msgstr "外部儲存裝置為不可寫入狀態"
 
-#: ViewFinderOverlay.qml:1209
+#: ViewFinderOverlay.qml:1215
 msgid ""
 "It does not seem possible to write to your external storage media. Trying to "
 "eject and insert it again might solve the issue, or you might need to format "
@@ -427,11 +446,11 @@ msgstr ""
 "無法寫入您的外部儲存裝置。請嘗試將其退出並重新插入來修正這個問題，或者您可能"
 "需要將其格式化。"
 
-#: ViewFinderOverlay.qml:1247
+#: ViewFinderOverlay.qml:1253
 msgid "Cannot access camera"
 msgstr "無法存取相機"
 
-#: ViewFinderOverlay.qml:1248
+#: ViewFinderOverlay.qml:1254
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
@@ -442,79 +461,79 @@ msgstr ""
 "\n"
 "如果在授予其權限後仍無法解決此問題，請重新啟動您的裝置。"
 
-#: ViewFinderOverlay.qml:1250
+#: ViewFinderOverlay.qml:1256
 msgid "Edit Permissions"
 msgstr "編輯權限"
 
-#: ViewFinderView.qml:395
+#: ViewFinderView.qml:400
 msgid "Capture failed"
 msgstr "拍攝失敗"
 
-#: ViewFinderView.qml:400
+#: ViewFinderView.qml:405
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
 msgstr "更換您的外部儲存媒體，將其格式化或重新啟動裝置可能可以解決此問題。"
 
-#: ViewFinderView.qml:401
+#: ViewFinderView.qml:406
 msgid "Restarting your device might fix the problem."
 msgstr "重啟您的裝置可能可以解決此問題。"
 
-#: camera-app.qml:65
+#: camera-app.qml:61
 msgid "Flash"
 msgstr "閃光燈"
 
-#: camera-app.qml:66
+#: camera-app.qml:62
 msgid "Light;Dark"
 msgstr "亮;暗"
 
-#: camera-app.qml:69
+#: camera-app.qml:65
 msgid "Flip Camera"
 msgstr "切換相機鏡頭"
 
-#: camera-app.qml:70
+#: camera-app.qml:66
 msgid "Front Facing;Back Facing"
 msgstr "前置鏡頭;後置鏡頭"
 
-#: camera-app.qml:73
+#: camera-app.qml:69
 msgid "Shutter"
 msgstr "快門"
 
-#: camera-app.qml:74
+#: camera-app.qml:70
 msgid "Take a Photo;Snap;Record"
 msgstr "拍一張照片;快照;錄影"
 
-#: camera-app.qml:77
+#: camera-app.qml:73
 msgid "Mode"
 msgstr "模式"
 
-#: camera-app.qml:78
+#: camera-app.qml:74
 msgid "Stills;Video"
 msgstr "寫照;影片"
 
-#: camera-app.qml:82
+#: camera-app.qml:78
 msgid "White Balance"
 msgstr "白平衡"
 
-#: camera-app.qml:83
+#: camera-app.qml:79
 msgid "Lighting Condition;Day;Cloudy;Inside"
 msgstr "光線照明情況;日光;陰天;室內"
 
-#: camera-app.qml:387
+#: camera-app.qml:386
 #, qt-format
 msgid "<b>%1</b> photos taken today"
 msgstr "今天已拍攝 <b>%1</b> 張相片"
 
-#: camera-app.qml:388
+#: camera-app.qml:387
 msgid "No photos taken today"
 msgstr "今天尚未拍攝相片"
 
-#: camera-app.qml:398
+#: camera-app.qml:397
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
 msgstr "今天已錄製 <b>%1</b> 卷影片"
 
-#: camera-app.qml:399
+#: camera-app.qml:398
 msgid "No videos recorded today"
 msgstr "今天尚未錄製影片"
 

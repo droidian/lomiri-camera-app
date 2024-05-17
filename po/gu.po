@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-29 12:12+0000\n"
+"POT-Creation-Date: 2024-05-17 10:34+0000\n"
 "PO-Revision-Date: 2019-04-12 05:52+0000\n"
 "Last-Translator: Aashrut <Aashrut99@gmail.com>\n"
 "Language-Team: Gujarati <https://translate.ubports.com/projects/ubports/"
@@ -33,7 +33,26 @@ msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
 msgstr "ફોટાઓ;વિડિયોઝ;કેપ્ચર;શૂટ;સ્નેપશોટ;રેકોર્ડ"
 
 #: lomiri-camera-app.desktop.in:10
-msgid "/usr/share/lomiri-camera-app/lomiri-camera-app.png"
+msgid "lomiri-camera-app"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:4
+#: lomiri-barcode-reader-app.desktop.in:6
+msgid "Barcode Reader"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:5
+#, fuzzy
+#| msgid "Camera application"
+msgid "Barcode Reader application"
+msgstr "કેમેરા વિનિયોગ"
+
+#: lomiri-barcode-reader-app.desktop.in:7
+msgid "QR;Code;Reader"
+msgstr ""
+
+#: lomiri-barcode-reader-app.desktop.in:10
+msgid "lomiri-barcode-reader-app"
 msgstr ""
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
@@ -191,8 +210,8 @@ msgstr "મિડિયા કાઢી નાખો?"
 msgid "Delete"
 msgstr "કાઢી નાખો"
 
-#: DeleteDialog.qml:40 ViewFinderOverlay.qml:1197 ViewFinderOverlay.qml:1211
-#: ViewFinderOverlay.qml:1259 ViewFinderView.qml:404
+#: DeleteDialog.qml:40 ViewFinderOverlay.qml:1203 ViewFinderOverlay.qml:1217
+#: ViewFinderOverlay.qml:1265 ViewFinderView.qml:409
 msgid "Cancel"
 msgstr "રદ કરો"
 
@@ -204,15 +223,15 @@ msgstr "કોઇ મિડિયા હયાત નથી."
 msgid "Scanning for content..."
 msgstr "વસ્તુ માટે સ્કેન કરી રહ્યા છે..."
 
-#: GalleryViewHeader.qml:87 SlideshowView.qml:46
+#: GalleryViewHeader.qml:84 SlideshowView.qml:46
 msgid "Select"
 msgstr "પસંદ કરો"
 
-#: GalleryViewHeader.qml:88
+#: GalleryViewHeader.qml:85
 msgid "Edit Photo"
 msgstr "ફોટો સુધારો"
 
-#: GalleryViewHeader.qml:88
+#: GalleryViewHeader.qml:85
 msgid "Photo Roll"
 msgstr "ફોટો રોલ"
 
@@ -340,83 +359,83 @@ msgstr "ફોટો અને વિડિયો એકસાથે શેર �
 msgid "Ok"
 msgstr "ઠીક છે"
 
-#: ViewFinderOverlay.qml:455 ViewFinderOverlay.qml:478
-#: ViewFinderOverlay.qml:506 ViewFinderOverlay.qml:529
-#: ViewFinderOverlay.qml:614 ViewFinderOverlay.qml:681
+#: ViewFinderOverlay.qml:469 ViewFinderOverlay.qml:492
+#: ViewFinderOverlay.qml:520 ViewFinderOverlay.qml:543
+#: ViewFinderOverlay.qml:628 ViewFinderOverlay.qml:695
 msgid "On"
 msgstr "શરુ"
 
-#: ViewFinderOverlay.qml:460 ViewFinderOverlay.qml:488
-#: ViewFinderOverlay.qml:511 ViewFinderOverlay.qml:534
-#: ViewFinderOverlay.qml:553 ViewFinderOverlay.qml:619
-#: ViewFinderOverlay.qml:691
+#: ViewFinderOverlay.qml:474 ViewFinderOverlay.qml:502
+#: ViewFinderOverlay.qml:525 ViewFinderOverlay.qml:548
+#: ViewFinderOverlay.qml:567 ViewFinderOverlay.qml:633
+#: ViewFinderOverlay.qml:705
 msgid "Off"
 msgstr "બંધ"
 
-#: ViewFinderOverlay.qml:483
+#: ViewFinderOverlay.qml:497
 msgid "Auto"
 msgstr "આપમેળે"
 
-#: ViewFinderOverlay.qml:520
+#: ViewFinderOverlay.qml:534
 msgid "HDR"
 msgstr "એચડીઆર"
 
-#: ViewFinderOverlay.qml:558
+#: ViewFinderOverlay.qml:572
 msgid "5 seconds"
 msgstr "૫ સેકન્ડ"
 
-#: ViewFinderOverlay.qml:563
+#: ViewFinderOverlay.qml:577
 msgid "15 seconds"
 msgstr "૧૫ સેકન્ડો"
 
-#: ViewFinderOverlay.qml:581
+#: ViewFinderOverlay.qml:595
 msgid "Fine Quality"
 msgstr "સારી ગુણવત્તા"
 
-#: ViewFinderOverlay.qml:586
+#: ViewFinderOverlay.qml:600
 msgid "High Quality"
 msgstr "ઉચ્ચ ગુણવત્તા"
 
-#: ViewFinderOverlay.qml:591
+#: ViewFinderOverlay.qml:605
 msgid "Normal Quality"
 msgstr "સામાન્ય ગુણવત્તા"
 
-#: ViewFinderOverlay.qml:596
+#: ViewFinderOverlay.qml:610
 msgid "Basic Quality"
 msgstr "બેઝિક ગુણવત્તા"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
-#: ViewFinderOverlay.qml:629
+#: ViewFinderOverlay.qml:643
 msgid "SD"
 msgstr "એસડી"
 
-#: ViewFinderOverlay.qml:637
+#: ViewFinderOverlay.qml:651
 msgid "Save to SD Card"
 msgstr "SD કાર્ડમાં સાચવો"
 
-#: ViewFinderOverlay.qml:642
+#: ViewFinderOverlay.qml:656
 msgid "Save internally"
 msgstr "આંતરિક રીતે સાચવો"
 
-#: ViewFinderOverlay.qml:686
+#: ViewFinderOverlay.qml:700
 msgid "Vibrate"
 msgstr "ધ્રુજાવો"
 
-#: ViewFinderOverlay.qml:1194
+#: ViewFinderOverlay.qml:1200
 msgid "Low storage space"
 msgstr "ઓછી સંગ્રહ જગ્યા"
 
-#: ViewFinderOverlay.qml:1195
+#: ViewFinderOverlay.qml:1201
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
 msgstr "તમારી પાસે કોઈ સંગ્રહ જગ્યા નથી. કોઈ અડચણ વગર ચાલુ રાખવા, જગ્યા મુક્ત કરો."
 
-#: ViewFinderOverlay.qml:1208
+#: ViewFinderOverlay.qml:1214
 msgid "External storage not writeable"
 msgstr "બાહ્ય સંગ્રહ સ્થાન લખી શકાય તેમ નથી"
 
-#: ViewFinderOverlay.qml:1209
+#: ViewFinderOverlay.qml:1215
 msgid ""
 "It does not seem possible to write to your external storage media. Trying to "
 "eject and insert it again might solve the issue, or you might need to format "
@@ -425,11 +444,11 @@ msgstr ""
 "તમારા બાહ્ય સંગ્રહ સ્થાન પર લખી શકાય તેમ લાગતું નથી. તેને ઇજેક્ટ કરી અને પાછું ઈન્સર્ટ "
 "કરવાથી સમસ્યા દૂર થશે, અથવા તમારે તેને ફોર્મેટ કરવું પડે."
 
-#: ViewFinderOverlay.qml:1247
+#: ViewFinderOverlay.qml:1253
 msgid "Cannot access camera"
 msgstr "કેમેરામાં પ્રવેશ મેળવી શકાતો નથી"
 
-#: ViewFinderOverlay.qml:1248
+#: ViewFinderOverlay.qml:1254
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
@@ -439,15 +458,15 @@ msgstr ""
 "કેમેરા એપ પાસે કેમેરા ના હાર્ડવેરમાં પ્રવેશ મેળવવાની પરવાનગી નથી અથવા અન્ય કોઈ ભૂલ છે.\n"
 "જો પરવાનગી આપવાથી સમસ્યાનો ઉકેલ ન આવે તો, તમારા ડિવાઇસ ને રિબૂટ કરો."
 
-#: ViewFinderOverlay.qml:1250
+#: ViewFinderOverlay.qml:1256
 msgid "Edit Permissions"
 msgstr "પરવાનગીમાં ફેરફાર કરો"
 
-#: ViewFinderView.qml:395
+#: ViewFinderView.qml:400
 msgid "Capture failed"
 msgstr "કેપ્ચર નિષ્ફળ નિવડ્યું"
 
-#: ViewFinderView.qml:400
+#: ViewFinderView.qml:405
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
@@ -455,65 +474,65 @@ msgstr ""
 "તમારા બાહ્ય મિડિયા ને બદલતાં, તેને ફોર્મેટ કરતાં, અથવા ડિવાઇસ ને રિસ્ટાર્ટ કરતાં સમસ્યા "
 "દૂર થશે."
 
-#: ViewFinderView.qml:401
+#: ViewFinderView.qml:406
 msgid "Restarting your device might fix the problem."
 msgstr "તમારા ડિવાઇસ ને રિસ્ટાર્ટ કરતાં સમસ્યા દૂર થશે."
 
-#: camera-app.qml:65
+#: camera-app.qml:61
 msgid "Flash"
 msgstr "ફલેશ"
 
-#: camera-app.qml:66
+#: camera-app.qml:62
 msgid "Light;Dark"
 msgstr "આછો;ઘટ્ટ"
 
-#: camera-app.qml:69
+#: camera-app.qml:65
 msgid "Flip Camera"
 msgstr "કેમેરા ફ્લિપ કરો"
 
-#: camera-app.qml:70
+#: camera-app.qml:66
 msgid "Front Facing;Back Facing"
 msgstr "સામેની બાજુ;પાછળની બાજુ"
 
-#: camera-app.qml:73
+#: camera-app.qml:69
 msgid "Shutter"
 msgstr "શટર"
 
-#: camera-app.qml:74
+#: camera-app.qml:70
 msgid "Take a Photo;Snap;Record"
 msgstr "એક ફોટો;સ્નેપ;રેકોર્ડ લો"
 
-#: camera-app.qml:77
+#: camera-app.qml:73
 msgid "Mode"
 msgstr "મોડ"
 
-#: camera-app.qml:78
+#: camera-app.qml:74
 msgid "Stills;Video"
 msgstr "સ્થિત ફોટા;વિડિયો"
 
-#: camera-app.qml:82
+#: camera-app.qml:78
 msgid "White Balance"
 msgstr "સફેદ રંગનું સંતુલન"
 
-#: camera-app.qml:83
+#: camera-app.qml:79
 msgid "Lighting Condition;Day;Cloudy;Inside"
 msgstr "પ્રકાશની સ્થિતિ;દિવસ;વાદળછાયું;અંદર"
 
-#: camera-app.qml:387
+#: camera-app.qml:386
 #, qt-format
 msgid "<b>%1</b> photos taken today"
 msgstr "<b>%૧</b> ફોટો આજે લેવાયા"
 
-#: camera-app.qml:388
+#: camera-app.qml:387
 msgid "No photos taken today"
 msgstr "આજે કોઈ ફોટો લેવાયા નથી"
 
-#: camera-app.qml:398
+#: camera-app.qml:397
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
 msgstr "<b>%૧</b> વિડિયો આજે રેકોર્ડ થયાં"
 
-#: camera-app.qml:399
+#: camera-app.qml:398
 msgid "No videos recorded today"
 msgstr "આજે કોઈ વિડીયો રેકોર્ડ થયાં નથી"
 
