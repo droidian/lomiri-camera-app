@@ -23,7 +23,7 @@ add_custom_target(${POT_FILE} ALL
                           --package-name='${GETTEXT_PACKAGE}'
                           --copyright-holder='Canonical Ltd.'
                           -D ${CMAKE_BINARY_DIR}
-                          ${DESKTOP_FILE}.in
+                          ${DESKTOP_FILE}.in ${DESKTOP_FILE_READER}.in
                   COMMAND ${GETTEXT_XGETTEXT_EXECUTABLE} -o ${POT_FILE}
                           --from-code=UTF-8
                           --c++ --qt
