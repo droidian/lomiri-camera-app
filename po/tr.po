@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-17 10:34+0000\n"
-"PO-Revision-Date: 2022-12-29 21:09+0000\n"
-"Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/lomiri/lomiri-"
-"camera-app/tr/>\n"
+"PO-Revision-Date: 2024-05-29 17:23+0000\n"
+"Last-Translator: Ali Beyaz <alipolatbeyaz@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-camera-app/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 5.6-dev\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
@@ -35,26 +35,24 @@ msgstr "Fotoğraflar;Videolar;Yakalama;Çek;Anlık Çekim;Kayıt"
 
 #: lomiri-camera-app.desktop.in:10
 msgid "lomiri-camera-app"
-msgstr ""
+msgstr "lomiri-camera-app"
 
 #: lomiri-barcode-reader-app.desktop.in:4
 #: lomiri-barcode-reader-app.desktop.in:6
 msgid "Barcode Reader"
-msgstr ""
+msgstr "Barkod okuyucu"
 
 #: lomiri-barcode-reader-app.desktop.in:5
-#, fuzzy
-#| msgid "Camera application"
 msgid "Barcode Reader application"
-msgstr "Kamera uygulaması"
+msgstr "Barkod Okuyucu uygulaması"
 
 #: lomiri-barcode-reader-app.desktop.in:7
 msgid "QR;Code;Reader"
-msgstr ""
+msgstr "QR;Code;Reader"
 
 #: lomiri-barcode-reader-app.desktop.in:10
 msgid "lomiri-barcode-reader-app"
-msgstr ""
+msgstr "lomiri-barcode-reader-app"
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
 msgid "Settings"
@@ -283,15 +281,14 @@ msgid "Exposure Time : %1"
 msgstr "Pozlama Süresi : %1"
 
 #: MediaInfoPopover.qml:20
-#, fuzzy, qt-format
-#| msgid "Name : %1"
+#, qt-format
 msgid "F. Number : %1"
-msgstr "İsim: %1"
+msgstr "F.Numarası : %1"
 
 #: MediaInfoPopover.qml:21
 #, qt-format
 msgid "Sub-File type : %1"
-msgstr ""
+msgstr "Alt Dosya türü : %1"
 
 #: MediaInfoPopover.qml:43
 msgid "Media Information"
@@ -308,10 +305,9 @@ msgid "Type : %1"
 msgstr "Tip: %1"
 
 #: MediaInfoPopover.qml:83
-#, fuzzy, qt-format
-#| msgid "Width : %1"
+#, qt-format
 msgid "With Flash : %1"
-msgstr "Genişlik: %1"
+msgstr "Flaşlı : %1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
