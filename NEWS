@@ -1,3 +1,13 @@
+Overview of changes in lomiri-camera-app 4.0.6
+
+ - Fix position logic of OptionsOverlay.
+ - Rotate relevant controls/UI even with locked screen orientation.
+ - Reset photo grid view at index 0 in photo roll when back button is
+   pressed.
+ - Support Exiv2 0.28+.
+ - Allow translation of the Barcode reader desktop file.
+ - Translation updates.
+
 Overview of changes in lomiri-camera-app 4.0.5
 
  - Drop bad anchor to reduce log filling up - reimplementation for focal
