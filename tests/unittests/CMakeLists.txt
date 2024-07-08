@@ -4,9 +4,18 @@ find_program(XVFB_RUN_BIN
 
 set(XVFB_RUN_CMD ${XVFB_RUN_BIN} -a -s "-screen 0 1024x768x24")
 
+find_package(Qt5Test REQUIRED)
+find_package(Qt5QuickTest REQUIRED)
+
 add_executable(tst_QmlTests tst_QmlTests.cpp)
-qt5_use_modules(tst_QmlTests Core Qml Quick Test QuickTest)
-target_link_libraries(tst_QmlTests ${TPL_QT5_LIBRARIES})
+target_link_libraries(tst_QmlTests
+    Qt5::Core
+    Qt5::Qml
+    Qt5::Quick
+    Qt5::Test
+    Qt5::QuickTest
+    ${TPL_QT5_LIBRARIES}
+)
 add_test(tst_QmlTests ${XVFB_RUN_CMD} ${CMAKE_CURRENT_BINARY_DIR}/tst_QmlTests -import ${CMAKE_SOURCE_DIR} -import ${CMAKE_BINARY_DIR})
 
 # copy qml test files to build dir
@@ -31,7 +40,6 @@ add_executable(tst_storagemonitor
     storageinfocontrol.cpp
     )
 
-qt5_use_modules(tst_storagemonitor Widgets Core Quick Qml Test)
 add_test(tst_storagemonitor tst_storagemonitor -xunitxml -o test.xml)
 add_test(flake8 python3 -m flake8 ${CMAKE_SOURCE_DIR}/tests/autopilot)
 set_tests_properties(tst_storagemonitor PROPERTIES
@@ -40,6 +48,11 @@ set_tests_properties(tst_storagemonitor PROPERTIES
     )
 
 target_link_libraries(tst_storagemonitor
+    Qt5::Core
+    Qt5::Quick
+    Qt5::Qml
+    Qt5::Test
+    Qt5::Widgets
     camera-qml
     stdc++
 )
