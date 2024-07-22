@@ -97,6 +97,7 @@ bool CameraApplication::setup()
 
     m_engine.reset(new QQmlApplicationEngine());
     m_engine->rootContext()->setContextProperty("application", this);
+    m_engine->rootContext()->setContextProperty("i18nDirectory", cameraAppLocaleDirectory());
     m_engine->setBaseUrl(QUrl::fromLocalFile(cameraAppDirectory()));
     m_engine->addImportPath(cameraAppImportDirectory());
     qDebug() << "Import path added" << cameraAppImportDirectory();

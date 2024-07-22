@@ -88,6 +88,7 @@ Window {
 
     Component.onCompleted: {
         i18n.domain = "lomiri-camera-app";
+        i18n.bindtextdomain("lomiri-camera-app", i18nDirectory);
         main.show();
     }
 

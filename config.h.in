@@ -64,6 +64,16 @@ inline QString cameraAppImportDirectory() {
     }
 }
 
+inline QString cameraAppLocaleDirectory() {
+    if (!SNAP_ENV.isEmpty()) {
+        return SNAP_ENV + "/@CMAKE_INSTALL_FULL_LOCALEDIR@";
+    } else if (isClick()) {
+        return QDir::currentPath() + "/@CMAKE_INSTALL_FULL_LOCALEDIR@";
+    } else {
+        return "@CMAKE_INSTALL_FULL_LOCALEDIR@";
+    }
+}
+
 inline QString sourceQml(const CameraMode& mode) {
     static QString qmlFile("camera-app.qml");
     if (mode == CameraMode::BARCODE_READER) {
