@@ -506,7 +506,7 @@ Item {
             Behavior on opacity { LomiriNumberAnimation { duration: LomiriAnimation.FastDuration} }
             visible: opacity != 0.0
             enabled: visible
-            iconSource: !tagDetailsOverlay.open ? "assets/qr.png" : ""
+            iconSource: !tagDetailsOverlay.open ? "assets/qr.svg" : ""
             iconName: tagDetailsOverlay.open ? "close" : ""
 
             onClicked: {
