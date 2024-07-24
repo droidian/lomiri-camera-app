@@ -225,5 +225,7 @@ set (GETTEXT_PACKAGE "lomiri-camera-app")
 
 add_subdirectory(po)
 
-enable_testing()
-add_subdirectory(tests)
+include(CTest)
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+endif()
