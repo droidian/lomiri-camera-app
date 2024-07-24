@@ -85,6 +85,8 @@ else(CLICK_MODE)
 
     set(READER_ICON "lomiri-barcode-reader-app")
     set(READER_SPLASH "${CAMERA_APP_DIR}/assets/lomiri-barcode-reader-app-splash.svg")
+    install(FILES assets/lomiri-barcode-reader-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/scalable/apps)
+
     set(PLUGIN_BASE ${CMAKE_INSTALL_FULL_LIBDIR}/${CAMERA_APP})
     set(PLUGIN_DIR ${PLUGIN_BASE}/CameraApp)
     set(DESKTOP_EXEC ${CAMERA_APP})
