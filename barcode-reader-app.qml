@@ -30,7 +30,7 @@ Window {
     width: Math.min(Screen.width, height * viewFinderView.aspectRatio)
     height: Math.min(Screen.height, units.gu(80))
     color: "black"
-    title: "Camera"
+    title: i18n.tr("Camera")
     // special flag only supported by Unity8/MIR so far that hides the shell's
     // top panel in Staged mode
     flags: Qt.Window | 0x00800000
