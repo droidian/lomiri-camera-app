@@ -13,12 +13,49 @@ set(CMAKE_AUTOMOC ON)
 # Standard install paths. Needs to be set before finding packages.
 include(GNUInstallDirs)
 
+find_package(PkgConfig)
 find_package(Qt5Qml)
 find_package(Qt5Quick)
 find_package(Qt5Multimedia)
 find_package(Qt5Gui)
 find_package(Qt5Svg)
 find_package(Qt5QuickControls2)
+
+if(PkgConfig_FOUND)
+    pkg_check_modules(QZXING QZXing)
+endif()
+
+if(NOT QZXING_FOUND)
+    message(WARNING "No QZXing package config found, will try to detect it.")
+    list(APPEND QZXING_LIBRARY_DIRS "")
+
+    # Not used for anything in this codebase?
+    list(APPEND QZXING_CFLAGS_OTHER
+        -DENABLE_ENCODER_GENERIC
+        -DQZXING_QML
+        -DQZXING_MULTIMEDIA
+        -DQZXING_LIBRARY
+        -DZXING_ICONV_CONST
+        -DDISABLE_LIBRARY_FEATURES
+        -DENABLE_DECODER_QR_CODE
+        -DQ_OS_UBUNTUTOUCH
+    )
+
+    # Exact name depends on what was used to build it (QMake or CMake)
+    find_library(QZXING_LIBRARIES NAMES QZXing qzxing)
+    message(STATUS "QZXING_LIBRARIES: ${QZXING_LIBRARIES}")
+
+    # Exact path depends on what was used to build it (QMake or CMake)
+    find_path(QZXING_INCLUDE_DIRS QZXing.h PATH_SUFFIXES qzxing)
+    message(STATUS "QZXING_INCLUDE_DIRS: ${QZXING_INCLUDE_DIRS}")
+
+    if(NOT QZXING_LIBRARIES)
+        message(FATAL_ERROR "Could not find QZXing library")
+    endif()
+    if(NOT QZXING_INCLUDE_DIRS)
+        message(FATAL_ERROR "Could not find QZXing headers")
+    endif()
+endif()
 
 include(FindGettext)
 if(NOT GETTEXT_FOUND)
@@ -94,17 +131,8 @@ endif(CLICK_MODE)
 
 install(PROGRAMS lomiri-camera-app-migrate.py DESTINATION "${CAMERA_APP_DIR}")
 
-# QR scanner
-set(QZXING_MULTIMEDIA ON)
-add_definitions(
-    -DENABLE_ENCODER_GENERIC
-    -DQZXING_QML
-    -DQZXING_MULTIMEDIA
-    -DQZXING_LIBRARY
-    -DZXING_ICONV_CONST
-    -DDISABLE_LIBRARY_FEATURES
-    -DENABLE_DECODER_QR_CODE
-    -DQ_OS_UBUNTUTOUCH
+add_compile_options(
+    ${QZXING_CFLAGS_OTHER}
 )
 
 configure_file(config.h.in ${CMAKE_CURRENT_BINARY_DIR}/config.h @ONLY)
@@ -116,6 +144,7 @@ include_directories(
     ${Qt5Quick_INCLUDE_DIRS}
     ${Qt5Multimedia_INCLUDE_DIRS}
     ${Qt5Gui_INCLUDE_DIRS}
+    ${QZXING_INCLUDE_DIRS}
     )
 
 set(camera_app_HDRS
@@ -130,13 +159,18 @@ add_executable(${CAMERA_APP}
     ${camera_app_SRCS}
     )
 
+target_link_directories(${CAMERA_APP}
+    PUBLIC
+    ${QZXING_LIBRARY_DIRS}
+)
+
 target_link_libraries(${CAMERA_APP}
     ${Qt5Core_LIBRARIES}
     ${Qt5Quick_LIBRARIES}
     ${Qt5Multimedia_LIBRARIES}
     ${Qt5Gui_LIBRARIES}
     stdc++
-    qzxing
+    ${QZXING_LIBRARIES}
     )
 
 install(TARGETS ${CAMERA_APP}

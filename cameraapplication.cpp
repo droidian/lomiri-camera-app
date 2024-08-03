@@ -25,7 +25,7 @@
 #include <QQmlEngine>
 #include <QScreen>
 #include <QtGui/QGuiApplication>
-#include <qzxing/QZXing.h>
+#include <QZXing.h>
 
 #include "config.h"
 
