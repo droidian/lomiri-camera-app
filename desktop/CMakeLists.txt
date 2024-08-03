@@ -1,2 +1,2 @@
-install(DIRECTORY icons/hicolor DESTINATION DESTINATION
+install(DIRECTORY icons/hicolor DESTINATION
         ${CMAKE_INSTALL_DATADIR}/icons FILES_MATCHING PATTERN *.png)
