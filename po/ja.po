@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-17 10:34+0000\n"
-"PO-Revision-Date: 2023-08-28 00:57+0000\n"
-"Last-Translator: NPL <alterlinuxer@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/lomiri/lomiri-"
-"camera-app/ja/>\n"
+"PO-Revision-Date: 2024-08-06 14:39+0000\n"
+"Last-Translator: umesaburo sagawa <atowa-notonare-yamatonare427@pm.me>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-camera-app/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0.1-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
@@ -35,26 +35,24 @@ msgstr "写真;ビデオ;キャプチャ;撮影;スナップショット;録画"
 
 #: lomiri-camera-app.desktop.in:10
 msgid "lomiri-camera-app"
-msgstr ""
+msgstr "ubuntuカメラアプリ"
 
 #: lomiri-barcode-reader-app.desktop.in:4
 #: lomiri-barcode-reader-app.desktop.in:6
 msgid "Barcode Reader"
-msgstr ""
+msgstr "バーコードリーダー"
 
 #: lomiri-barcode-reader-app.desktop.in:5
-#, fuzzy
-#| msgid "Camera application"
 msgid "Barcode Reader application"
-msgstr "カメラアプリ"
+msgstr "バーコードリーダーアプリ"
 
 #: lomiri-barcode-reader-app.desktop.in:7
 msgid "QR;Code;Reader"
-msgstr ""
+msgstr "QRコードリーダー"
 
 #: lomiri-barcode-reader-app.desktop.in:10
 msgid "lomiri-barcode-reader-app"
-msgstr ""
+msgstr "ubuntu バーコードリーダーアプリ"
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
 msgid "Settings"
@@ -200,7 +198,6 @@ msgid "Blurred Overlay"
 msgstr "ぼかし効果"
 
 #: AdvancedOptions.qml:367
-#, fuzzy
 msgid "Only Blur Preview overlay"
 msgstr "プレビューオーバーレイのみぼかす"
 
