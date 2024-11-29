@@ -42,8 +42,8 @@ Item {
     property real thumbWidth: units.gu(1.5)
     property real thumbHeight: units.gu(1.5)
 
-    property string backgroundImage: "assets/zoom_bar@18.png"
-    property string thumbImage: "assets/zoom_point@18.png"
+    property string backgroundImage: "../../assets/zoom_bar@18.png"
+    property string thumbImage: "../../assets/zoom_point@18.png"
 
     implicitHeight: thumbShape.height + 2.0 * thumbSpacing + units.gu(2)
     implicitWidth: backgroundShape.width

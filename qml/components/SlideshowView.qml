@@ -25,7 +25,6 @@ import QtGraphicalEffects 1.0
 
 import CameraApp 0.1
 import "MimeTypeMapper.js" as MimeTypeMapper
-import "qml/components"
 
 FocusScope {
     id: slideshowView

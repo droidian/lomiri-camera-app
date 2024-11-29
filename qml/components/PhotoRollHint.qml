@@ -52,7 +52,7 @@ Item {
 
             asynchronous: true
             cache: false
-            source: photoRollHint.enabled ? "assets/camera_swipe.png" : ""
+            source: photoRollHint.enabled ? "../../assets/camera_swipe.png" : ""
         }
 
         Label {

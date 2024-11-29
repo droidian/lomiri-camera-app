@@ -31,7 +31,7 @@ Image {
     y: center.y - height / 2.0
     width: units.gu(11)
     height: units.gu(11)
-    source: "assets/focus_ring.png"
+    source: "../../assets/focus_ring.png"
     asynchronous: true
     cache: false
 

@@ -25,6 +25,8 @@ import CameraApp 0.1
 import Qt.labs.settings 1.0
 import QtGraphicalEffects 1.0
 
+import "../components"
+
 Item {
     id: viewFinderOverlay
 
@@ -567,7 +569,7 @@ Item {
 
                     property string settingsProperty: "selfTimerDelay"
                     property string icon: ""
-                    property string iconSource: "assets/self_timer.svg"
+                    property string iconSource: "../../assets/self_timer.svg"
                     property string label: ""
                     property bool isToggle: true
                     property int selectedIndex: bottomEdge.indexForValue(selfTimerOptionsModel, settings.selfTimerDelay)
@@ -629,7 +631,7 @@ Item {
 
                     property string settingsProperty: "gridEnabled"
                     property string icon: ""
-                    property string iconSource: "assets/grid_lines.svg"
+                    property string iconSource: "../../assets/grid_lines.svg"
                     property string label: ""
                     property bool isToggle: true
                     property int selectedIndex: bottomEdge.indexForValue(gridOptionsModel, settings.gridEnabled)
@@ -709,7 +711,7 @@ Item {
                         value: 2
                     }
                     ListElement {
-                        iconSource: "assets/vibrate.png"
+                        iconSource: "../../assets/vibrate.png"
                         label: QT_TR_NOOP("Vibrate")
                         value: 1
                     }

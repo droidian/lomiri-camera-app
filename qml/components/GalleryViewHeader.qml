@@ -19,8 +19,6 @@ import Lomiri.Components 1.3
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 
-import "qml/components"
-
 Item {
     id: header
     anchors {

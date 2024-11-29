@@ -17,6 +17,8 @@
 import QtQuick 2.12
 import QtQuick.Window 2.2
 
+import "../Viewfinder"
+
 Item {
     id: snapshotRoot
     property alias source: image.source

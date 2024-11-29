@@ -3,9 +3,6 @@ import Lomiri.Components 1.3
 import Qt.labs.settings 1.0
 import Lomiri.Components.ListItems 1.3 as ListItems
 
-import "qml/components"
-
-
 Page {
     id:_advancedOptionsPage
 
@@ -289,10 +286,10 @@ Page {
                             orientation: Qt.Horizontal
 
 		             model:[
-		                {"value" :Qt.AlignBottom | Qt.AlignRight,"icon":"assets/align_bottom_right.png"},
-		                {"value" :Qt.AlignBottom | Qt.AlignLeft,"icon":"assets/align_bottom_left.png"},
-		                {"value" :Qt.AlignTop | Qt.AlignRight,"icon":"assets/align_top_right.png"},
-		                {"value" :Qt.AlignTop | Qt.AlignLeft,"icon":"assets/align_top_left.png"},
+                        {"value" :Qt.AlignBottom | Qt.AlignRight,"icon":"../../assets/align_bottom_right.png"},
+                        {"value" :Qt.AlignBottom | Qt.AlignLeft,"icon":"../../assets/align_bottom_left.png"},
+                        {"value" :Qt.AlignTop | Qt.AlignRight,"icon":"../../assets/align_top_right.png"},
+                        {"value" :Qt.AlignTop | Qt.AlignLeft,"icon":"../../assets/align_top_left.png"},
 		             ]
 		             delegate: CircleButton {
 		                height:dateStampAlignmentItem.height - units.gu(1)
