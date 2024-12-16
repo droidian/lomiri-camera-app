@@ -54,7 +54,7 @@ Popover {
             Repeater {
                 model:infoKeys
                 Label {
-                    visible:undefined !== exifData[modelData['key']];
+                    visible: undefined !== exifData && undefined !== exifData[modelData['key']];
                     text:visible ? modelData["title"].arg(exifData[modelData['key']]) : "";
                 }
             }
