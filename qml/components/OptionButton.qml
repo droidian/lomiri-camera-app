@@ -21,7 +21,7 @@ CircleButton {
     objectName: "optionButton"
 
     property var model
-    property string settingsProperty: model.settingsProperty
+    property string settingsProperty: model.settingsProperty !== undefined ? model.settingsProperty : ""
 
     iconName: (!model.get(model.selectedIndex) || !model.get(model.selectedIndex).icon) ?
                                                     (model.icon ? model.icon : "") :
