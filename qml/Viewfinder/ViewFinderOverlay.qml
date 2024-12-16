@@ -267,7 +267,7 @@ Item {
     }
 
     function stringToSize(resolution) {
-        var r = resolution.split("x");
+        var r = resolution ? resolution.split("x") : null;
         return Qt.size(r[0], r[1]);
     }
 
