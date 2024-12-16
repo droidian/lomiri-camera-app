@@ -8,7 +8,7 @@ Popover {
     id: infoPopover
     property var currentMedia: null
     property var model: null
-    property var exifData: fileOperations.getEXIFData(currentMedia.url)
+    property var exifData: currentMedia != undefined ? fileOperations.getEXIFData(currentMedia.url) : undefined
 
     property var infoKeys : [
               { "key": 'Exif.Photo.PixelYDimension' , "title" : i18n.tr( "Width : %1")},
@@ -59,7 +59,7 @@ Popover {
                 }
             }
             Label {
-                visible: undefined !== exifData['Exif.Photo.Flash'];
+                visible: undefined !== exifData && undefined !== exifData['Exif.Photo.Flash'];
                 text: {
                     if (!visible)
                         return "";
