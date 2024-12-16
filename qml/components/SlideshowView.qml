@@ -416,14 +416,14 @@ FocusScope {
     }
 
     Binding {
-        target: header;
-        property: "editMode";
+        target: header
+        property: "editMode"
         value: editor.active
     }
 
     Binding {
-        target: header;
-        property: "editModeActions";
+        target: header
+        property: "editModeActions"
         value: editor.item ? editor.item.actions : 0;
         when: editor.active && editor.item
     }
