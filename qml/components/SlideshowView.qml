@@ -44,7 +44,7 @@ FocusScope {
     property list<Action> slideShowSelectionActions: [
         Action {
             text: i18n.tr("Select")
-            iconName: listView.currentItem.isSelected ? "close" : "ok"
+            iconName: listView.currentItem && listView.currentItem.isSelected ? "close" : "ok"
             onTriggered: slideshowView.toggleSelection()
         }
     ]
