@@ -1,16 +1,13 @@
 Source: lomiri-camera-app
-Section: x11
+Section: misc
 Priority: optional
-Maintainer: UBports Developers <devs@ubports.com>
-XSBC-Original-Maintainer: Ugo Riboni <ugo.riboni@canonical.com>
+Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
+Uploaders: Mike Gabriel <sunweaver@debian.org>,
+           Marius Gripsgard <marius@ubports.com>,
 Build-Depends: cmake,
-               debhelper-compat (= 12),
-               dh-migrations,
-               libgl1-mesa-dev | libgl1-dev,
-               libgles2-mesa-dev | libgles2-dev,
+               debhelper-compat (= 13),
+               libgl-dev,
                pkg-config,
-               python3:any,
-               python3-flake8 (>= 2.2.2-1ubuntu4) | python3-flake8:native,
                qtbase5-dev,
                qtquickcontrols2-5-dev,
                qtdeclarative5-dev,
@@ -19,60 +16,47 @@ Build-Depends: cmake,
                qml-module-qt-labs-settings,
                qml-module-qttest,
                qml-module-lomiri-components,
-               qml-module-lomiri-thumbnailer0.1,
+               qml-module-lomiri-thumbnailer,
                qml-module-lomiri-action,
-               qtdeclarative5-usermetrics0.1,
+               qml-module-usermetrics,
                qml-module-lomiri-content,
                qtmultimedia5-dev,
                libqt5svg5-dev,
-               libusermetricsinput1-dev,
+               libusermetricsinput-dev,
                libexiv2-dev,
                libqzxing-dev,
                gettext,
-               dh-translations,
+               xauth,
                xvfb,
-Standards-Version: 3.9.5
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
 Homepage: https://gitlab.com/ubports/development/apps/lomiri-camera-app
-Vcs-Browser: https://gitlab.com/ubports/development/apps/lomiri-camera-app
-Vcs-Git: https://gitlab.com/ubports/development/apps/lomiri-camera-app.git
+Vcs-Browser: https://salsa.debian.org/ubports-team/lomiri-camera-app
+Vcs-Git: https://salsa.debian.org/ubports-team/lomiri-camera-app.git
 
 Package: lomiri-camera-app
 Architecture: any
-Depends: cameraplugin-aal [armel armhf],
-         libqt5multimedia5,
-         python3:any,
+Depends: libqt5multimedia5,
          qml-module-qtquick2,
          qml-module-qtmultimedia | qml-module-qtmultimedia-gles,
          qml-module-lomiri-components,
          qml-module-lomiri-action,
          qml-module-qtquick-window2,
-         qtdeclarative5-usermetrics0.1,
+         qml-module-usermetrics,
          qml-module-lomiri-content,
-         qml-module-lomiri-thumbnailer0.1,
+         qml-module-lomiri-thumbnailer,
          qml-module-qtpositioning,
          qml-module-qtsensors,
          qml-module-qzxing,
          qml-module-lomiri-components-extras,
          ${misc:Depends},
          ${shlibs:Depends},
-Description: Camera application
- An application to take pictures, videos and scan barcodes with device
- camera(s).
-
-Package: lomiri-camera-app-autopilot
-# architecture is not "all", as we set the fake plugin as dependency
-Architecture: i386 amd64 armhf
-Depends: lomiri-camera-app (>= ${binary:Version}),
-         cameraplugin-fake [!armel !armhf],
-         libautopilot-qt (>= 1.4),
-         libqt5test5,
-         libqt5widgets5,
-         lomiri-autopilot,
-         ${misc:Depends},
-         ${shlibs:Depends},
-         python3-autopilot,
-         python3-wand,
-         python3-mediainfodll,
-         python3-fixtures,
-Description: Test package for lomiri-camera-app
- Autopilot tests for the lomiri-camera-app package
+Description: Camera and Barcode Scanner App for Lomiri Operating Environment
+ This app is a core app for Ubuntu Touch's shell Lomiri. Ubuntu Touch is
+ a mobile OS developed by the UBports Foundation. Lomiri is its operating
+ environment optimized for touch based human-machine interaction, but
+ also supports convergence (i.e. switching between tablet/phone and
+ desktop mode).
+ .
+ This package provides Lomiri's Camera App and additionally also its
+ Barcode Scanner App.
