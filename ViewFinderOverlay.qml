@@ -24,6 +24,7 @@ import QtSensors 5.0
 import CameraApp 0.1
 import Qt.labs.settings 1.0
 import QtGraphicalEffects 1.0
+import Process 1.0
 
 Item {
     id: viewFinderOverlay
@@ -197,13 +198,8 @@ Item {
         }
     }
 
-    Connections {
-        target: camera.imageCapture
-        onImageCaptured: {
-           if(settings.shutterVibration) {
-               Haptics.play({intensity:0.25,duration:LomiriAnimation.SnapDuration/3});
-           }
-        }
+	Process {
+        id: process
     }
 
     Connections {
@@ -1031,6 +1027,11 @@ Item {
                    ((camera.videoRecorder.recorderState == CameraRecorder.StoppedState) ? "record_off" : "record_on") :
                    "camera"
             onClicked: {
+                if (settings.playShutterSound) {
+                    process.start("/usr/bin/fbcli", [ "-E", "camera-shutter" ]);
+                } else if (settings.shutterVibration) {
+                    process.start("/usr/bin/fbcli", [ "-E", "window-close" ]);
+                }
                 viewFinderOverlay.triggerShoot();
             }
             rotation: main.staticRotationAngle
