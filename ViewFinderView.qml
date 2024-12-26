@@ -270,13 +270,6 @@ FocusScope {
                     return camera.orientation;
                 }
             }
-
-            transform: Rotation {
-                origin.x: viewFinder.width / 2
-                origin.y: viewFinder.height / 2
-                axis.x: 0; axis.y: 1; axis.z: 0
-                angle: application.desktopMode ? 180 : 0
-            }
         }
 
         /* Convenience item tracking the real position and size of the real video feed.
