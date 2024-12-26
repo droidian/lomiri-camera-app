@@ -5,7 +5,6 @@
         "camera",
         "audio",
         "video",
-        "usermetrics",
         "content_exchange",
         "content_exchange_source",
         "location",

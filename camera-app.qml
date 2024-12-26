@@ -19,7 +19,6 @@ import QtQuick.Window 2.2
 import QtMultimedia 5.0
 import Lomiri.Components 1.3
 import Lomiri.Action 1.1 as LomiriActions
-import UserMetrics 0.1
 import Lomiri.Content 1.3
 import CameraApp 0.1
 import Qt.labs.settings 1.0
@@ -404,27 +403,5 @@ Window {
             }
             main.transfer = transfer;
         }
-    }
-
-    Metric {
-        id: metricPhotos
-        name: "camera-photos"
-        // Mark text for translation at a later point.
-        // It will be translated by dtr (or dgettext) to allows plural forms
-        format: i18n.tag("<b>%1</b> photos taken today")
-        emptyFormat: i18n.tag("No photos taken today")
-        domain: "lomiri-camera-app"
-        minimum: 0.0
-    }
-
-    Metric {
-        id: metricVideos
-        name: "camera-videos"
-        // Mark text for translation at a later point.
-        // It will be translated by dtr (or dgettext) to allows plural forms
-        format: i18n.tag("<b>%1</b> videos recorded today")
-        emptyFormat: i18n.tag("No videos recorded today")
-        domain: "lomiri-camera-app"
-        minimum: 0.0
     }
 }
