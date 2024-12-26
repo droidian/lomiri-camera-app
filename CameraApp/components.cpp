@@ -26,6 +26,7 @@
 #include "storagemonitor.h"
 #include "storagelocations.h"
 #include "postprocessoperations.h"
+#include "process.h"
 
 static QObject* StorageLocations_singleton_factory(QQmlEngine* engine, QJSEngine* scriptEngine)
 {
@@ -45,6 +46,7 @@ void Components::registerTypes(const char *uri)
     qmlRegisterType<StorageMonitor>(uri, 0, 1, "StorageMonitor");
     qmlRegisterType<PostProcessOperations>(uri, 0, 1, "PostProcessOperations");
     qmlRegisterSingletonType<StorageLocations>(uri, 0, 1, "StorageLocations", StorageLocations_singleton_factory);
+	qmlRegisterType<Process>( "Process", 1, 0, "Process" );
 }
 
 void Components::initializeEngine(QQmlEngine *engine, const char *uri)
