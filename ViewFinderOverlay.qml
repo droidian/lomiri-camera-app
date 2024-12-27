@@ -1027,10 +1027,12 @@ Item {
                    ((camera.videoRecorder.recorderState == CameraRecorder.StoppedState) ? "record_off" : "record_on") :
                    "camera"
             onClicked: {
-                if (settings.playShutterSound) {
-                    process.start("/usr/bin/fbcli", [ "-E", "camera-shutter" ]);
-                } else if (settings.shutterVibration) {
-                    process.start("/usr/bin/fbcli", [ "-E", "window-close" ]);
+                if (camera.captureMode == Camera.CaptureStillImage) {
+                    if (settings.playShutterSound) {
+                        process.start("/usr/bin/fbcli", [ "-E", "camera-shutter" ]);
+                    } else if (settings.shutterVibration) {
+                        process.start("/usr/bin/fbcli", [ "-E", "window-close" ]);
+                    }
                 }
                 viewFinderOverlay.triggerShoot();
             }
