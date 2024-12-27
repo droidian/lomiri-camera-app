@@ -51,14 +51,6 @@ FocusScope {
 
     property list<Action> slideShowActions: [
         Action {
-            text: i18n.tr("Share")
-            iconName: "share"
-            onTriggered: {
-                var dialog = PopupUtils.open(sharePopoverComponent)
-                dialog.parent = slideshowView
-            }
-        },
-        Action {
             text: i18n.tr("Image Info")
             iconName: "info"
             onTriggered: {
@@ -360,26 +352,6 @@ FocusScope {
                     }
                 }
             }
-        }
-    }
-
-   Component {
-        id: sharePopoverComponent
-
-        SharePopover {
-            id: sharePopover
-
-            ContentItem {
-                id: contentItem
-            }
-
-            Component.onCompleted: {
-                contentItem.url = slideshowView.model.get(slideshowView.currentIndex, "filePath");
-                transferItems = [contentItem];
-            }
-            onVisibleChanged: toggleHeader()
-
-            transferContentType: MimeTypeMapper.mimeTypeToContentType(slideshowView.model.get(slideshowView.currentIndex, "fileType"));
         }
     }
 
