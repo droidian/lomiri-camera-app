@@ -41,20 +41,6 @@ FocusScope {
     property var actions: userSelectionMode ? userSelectionActions : regularModeActions
     property list<Action> userSelectionActions: [
         Action {
-            text: i18n.tr("Share")
-            iconName: "share"
-            enabled: model.selectedFiles.length > 0
-            onTriggered: {
-                // Display a warning message if we are attempting to share mixed
-                // content, as the framework does not properly support this
-                if (selectionContainsMixedMedia()) {
-                    PopupUtils.open(unableShareDialogComponent).parent = photogridView;
-                } else {
-                    PopupUtils.open(sharePopoverComponent).parent = photogridView;
-                }
-            }
-        },
-        Action {
             text: i18n.tr("Delete")
             iconName: "delete"
             onTriggered: {
@@ -284,22 +270,6 @@ FocusScope {
     }
 
     Component {
-        id: sharePopoverComponent
-
-        SharePopover {
-            id: sharePopover
-
-            onContentPeerSelected: photogridView.exitUserSelectionMode();
-            onVisibleChanged: photogridView.toggleHeader()
-
-            transferContentType: MimeTypeMapper.mimeTypeToContentType(model.get(model.selectedFiles[0], "fileType"));
-            transferItems: model.selectedFiles.map(function(row) {
-                             return contentItemComp.createObject(parent, {"url": model.get(row, "filePath")});
-                           })
-        }
-    }
-
-    Component {
         id: deleteDialogComponent
 
         DeleteDialog {
@@ -316,13 +286,4 @@ FocusScope {
             onVisibleChanged: photogridView.toggleHeader()
         }
     }
-
-    Component {
-        id: unableShareDialogComponent
-        UnableShareDialog {
-            objectName: "unableShareDialog"
-            onVisibleChanged: photogridView.toggleHeader()
-        }
-    }
-
 }
