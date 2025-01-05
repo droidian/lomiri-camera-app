@@ -140,7 +140,18 @@ FocusScope {
             flickDeceleration = flickDeceleration * scaleFactor;
         }
 
-        anchors.fill: parent
+        width: main.staticRotationAngle == 0 ? parent.width : parent.height
+        height: main.staticRotationAngle == 0 ? parent.height : parent.width
+        rotation: main.orientedRotationAngle
+        Behavior on rotation {
+            RotationAnimator {
+                duration: LomiriAnimation.BriskDuration
+                easing: LomiriAnimation.StandardEasing
+                direction: RotationAnimator.Shortest
+            }
+        }
+
+        anchors.centerIn: parent
         model: slideshowView.model
         focus: true
         orientation: ListView.Horizontal
