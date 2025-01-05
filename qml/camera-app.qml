@@ -92,13 +92,21 @@ Window {
     Component.onCompleted: {
         i18n.domain = "lomiri-camera-app";
         i18n.bindtextdomain("lomiri-camera-app", i18nDirectory);
+        main.orientationLock = gsettings.orientationLock;
+        gsettings.orientationLock = true;
         main.show();
+    }
+
+    Component.onDestruction: {
+        gsettings.orientationLock = main.orientationLock;
     }
 
     GSettings {
         id: gsettings
         schema.id: "org.gnome.settings-daemon.peripherals.touchscreen"
     }
+
+    property bool orientationLock: false
 
     readonly property int sensorOrientation: orientationSensor.reading ? orientationSensor.reading.orientation : OrientationReading.TopUp
     readonly property var angleToSensorOrientation: {1 /* OrientationReading.TopUp */: 0,
