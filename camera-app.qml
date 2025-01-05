@@ -17,6 +17,7 @@
 import QtQuick 2.12
 import QtQuick.Window 2.2
 import QtMultimedia 5.0
+import GSettings 1.0
 import Lomiri.Components 1.3
 import Lomiri.Action 1.1 as LomiriActions
 import Lomiri.Content 1.3
@@ -91,6 +92,11 @@ Window {
         main.show();
     }
 
+    GSettings {
+        id: gsettings
+        schema.id: "org.gnome.settings-daemon.peripherals.touchscreen"
+    }
+
     readonly property int sensorOrientation: orientationSensor.reading ? orientationSensor.reading.orientation : OrientationReading.TopUp
     readonly property var angleToSensorOrientation: {1 /* OrientationReading.TopUp */: 0,
                                                       4 /* OrientationReading.LeftUp */: 90,
@@ -100,7 +106,7 @@ Window {
     readonly property int sensorOrientationAngle: angleToSensorOrientation[sensorOrientation]
     readonly property int screenOrientationAngle: Screen.angleBetween(Screen.primaryOrientation, Screen.orientation)
     
-    readonly property int staticRotationAngle: screenOrientationAngle == sensorOrientationAngle ? screenOrientationAngle : sensorOrientationAngle
+    readonly property int staticRotationAngle: gsettings.orientationLock == false ? 0 : sensorOrientationAngle
     readonly property int orientedRotationAngle: if (screenOrientationAngle != sensorOrientationAngle) {
                                                       if (screenOrientationAngle > 0) {
                                                           sensorOrientationAngle - screenOrientationAngle
