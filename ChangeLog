@@ -1,6 +1,157 @@
+2025-01-31 Mike Gabriel
+
+        * Release 4.0.7 (HEAD -> main, tag: v4.0.7)
+
+2025-01-14 Ricky Tigg
+
+        * Translated using Weblate (Finnish) (0d41298)
+
+2025-01-12 தமிழ்நேரம்
+
+        * Translated using Weblate (Tamil) (f9edf4c)
+
+2024-12-27 Hosted Weblate
+
+        * Update translation files (8034104)
+
+2024-12-17 Distant Prince
+
+        * Translated using Weblate (Crimean Tatar) (808ef44)
+        * Translated using Weblate (Chuvash) (52d068f)
+        * Translated using Weblate (Assamese) (adbd000)
+        * Translated using Weblate (Corsican) (e6b8ac6)
+        * Translated using Weblate (Chechen) (e00f5a4)
+        * Translated using Weblate (Afrikaans) (a2c6a4a)
+        * Translated using Weblate (Bengali) (9490bf4)
+        * Translated using Weblate (Estonian) (ddd2e1b)
+        * Translated using Weblate (Bemba) (66723a7)
+        * Translated using Weblate (English (Canada)) (ef14205)
+        * Translated using Weblate (Dhivehi) (e95ade5)
+        * Translated using Weblate (English (United States)) (59c42b9)
+
+2024-10-30 Serhii Horichenko
+
+        * Translated using Weblate (Ukrainian) (9065e5e)
+
+2024-10-12 ikozyris
+
+        * Translated using Weblate (Greek) (c855a46)
+
+2024-09-22 Ratchanan Srirattanamet
+
+        * Merge branch 'personal/sunweaver/shared-runner-for-contributors'
+          into 'main' (9772740)
+
+2024-09-22 Mike Gabriel
+
+        * .gitlab-ci.yml: use shared runner if run outside our namespace.
+          (d417801)
+
+2024-08-06 umesaburo sagawa
+
+        * Translated using Weblate (Japanese) (57cc2c3)
+
+2024-08-04 Steve
+
+        * Translated using Weblate (French) (c9bb081)
+
+2024-08-03 Mike Gabriel
+
+        * Merge branch 'fix/bindtextdomain' into 'main' (3f16250)
+
+2024-07-22 OPNA2608
+
+        * Call i18n.bindtextdomain with buildtime-determined locale path
+          (04d99af)
+
+2024-08-03 Mike Gabriel
+
+        * Merge branch 'fix/qzxing-pkg-config' into 'main' (2ae059a)
+
+2024-07-24 OPNA2608
+
+        * Try to find QZXing via pkg-config (5f13592)
+
+2024-08-03 Mike Gabriel
+
+        * Merge branch 'fix/installMoreIcons' into 'main' (9c1d937)
+
+2024-07-24 OPNA2608
+
+        * CMakeLists.txt: Also install barcode SVG icon in non-click mode
+          (6e81fc2)
+        * Vectorise barcode icons (8ec05a8)
+        * CMakeLists.txt: Fix splash locations in non-click mode (f068972)
+        * CMakeLists.txt: Also install camera SVG icon in non-click mode
+          (42b982f)
+
+2024-08-03 Mike Gabriel
+
+        * Merge branch 'fix/titleTranslation' into 'main' (95c984f)
+
+2024-07-24 OPNA2608
+
+        * {camera,barcode-reader}-app.qml: Fix title translation (1a68720)
+
+2024-08-03 Mike Gabriel
+
+        * Merge branch 'fix/gnuInstallDirs' into 'main' (10b01be)
+
+2024-07-22 OPNA2608
+
+        * Fix GNUInstallDirs variable concatenations in CMake (226aae2)
+
+2024-08-03 Mike Gabriel
+
+        * Merge branch 'fix/doubleDestination' into 'main' (d6c4934)
+
+2024-07-22 OPNA2608
+
+        * desktop/CMakeLists.txt: Remove doubled DESTINATION (ae76b86)
+
+2024-08-03 Mike Gabriel
+
+        * Merge branch 'add/optionalTesting' into 'main' (c7aa4c9)
+
+2024-07-24 OPNA2608
+
+        * CMakeLists.txt: Make tests optional (a53ec14)
+
+2024-07-22 Jiri Grönroos
+
+        * Translated using Weblate (Finnish) (dfd9e12)
+
+2024-07-25 gallegonovato
+
+        * Translated using Weblate (Spanish) (750eb47)
+
+2024-07-20 Ivo Xavier
+
+        * Translated using Weblate (Portuguese) (8690db6)
+
+2024-07-17 Mike Gabriel
+
+        * Translated using Weblate (German) (229d555)
+
+2024-07-17 Jozef Mlich
+
+        * Translated using Weblate (Czech) (e7e4b4f)
+
+2024-07-13 Joan CiberSheep
+
+        * Translated using Weblate (Catalan) (7699fd6)
+
+2024-07-12 Mike Gabriel
+
+        * Merge branch 'fix/qt5_use_modules' into 'main' (567f983)
+
+2024-07-08 OPNA2608
+
+        * Stop using qt5_use_modules (a8969b3)
+
 2024-06-14 Mike Gabriel
 
-        * Release 4.0.6 (HEAD -> main, tag: 4.0.6)
+        * Release 4.0.6 (bbc337a) (tag: v4.0.6)
 
 2024-06-05 Eryk Michalak
 
