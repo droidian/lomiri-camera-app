@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-17 10:34+0000\n"
-"PO-Revision-Date: 2025-02-04 07:51+0000\n"
+"PO-Revision-Date: 2025-02-04 18:53+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/hr/>\n"
@@ -66,7 +66,7 @@ msgstr "Zatvori"
 #: AdvancedOptions.qml:35 Information.qml:20 PhotogridView.qml:78
 #: SlideshowView.qml:86
 msgid "About"
-msgstr ""
+msgstr "Informacije"
 
 #: AdvancedOptions.qml:66
 msgid "Add date stamp on captured images"
