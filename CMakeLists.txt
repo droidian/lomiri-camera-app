@@ -251,6 +251,9 @@ else(CLICK_MODE)
         DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_READER}
         DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
+    install(FILES camera-contenthub.json
+            DESTINATION ${CMAKE_INSTALL_DATADIR}/lomiri-content-hub/peers
+            RENAME lomiri-camera-app)
 endif(CLICK_MODE)
 
 add_subdirectory(CameraApp)
