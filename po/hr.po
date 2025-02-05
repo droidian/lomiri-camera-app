@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-17 10:34+0000\n"
-"PO-Revision-Date: 2025-02-04 18:53+0000\n"
+"PO-Revision-Date: 2025-02-06 10:51+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/hr/>\n"
@@ -344,11 +344,11 @@ msgstr ""
 
 #: UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr ""
+msgstr "Ne može se dijeliti"
 
 #: UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
-msgstr ""
+msgstr "Fotografije i videa se ne mogu istovremeno dijeliti"
 
 #: UnableShareDialog.qml:30
 msgid "Ok"
