@@ -1,5 +1,6 @@
 /*
  * Copyright 2015 Canonical Ltd.
+ * Copyright (C) 2025 UBports Foundation
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,6 +17,7 @@
 
 import QtQuick 2.12
 import Lomiri.Components 1.3
+import "qml/components"
 
 Item {
     property string videoPath
@@ -44,14 +46,10 @@ Item {
             running: thumbnail.status == Image.Loading
         }
 
-        Icon {
-            width: units.gu(5)
-            height: units.gu(5)
+        PlayIcon {
             anchors.centerIn: parent
-            name: "media-playback-start"
-            color: "white"
-            opacity: 0.8
-            asynchronous: true
+            width: units.gu(7)
+            height: width
         }
 
         MouseArea {
