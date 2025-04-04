@@ -1,5 +1,6 @@
 /*
  * Copyright 2014 Canonical Ltd.
+ * Copyright (C) 2025 UBports Foundation
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -307,15 +308,11 @@ FocusScope {
                          }
                     }
 
-                    Icon {
-                        width: units.gu(5)
-                        height: units.gu(5)
+                    PlayIcon {
                         anchors.centerIn: parent
-                        name: "media-playback-start"
-                        color: "white"
-                        opacity: 0.8
+                        width: units.gu(7)
+                        height: width
                         visible: media.isVideo
-                        asynchronous: true
                     }
 
                     MouseArea {

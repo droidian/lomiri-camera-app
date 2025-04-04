@@ -1,5 +1,6 @@
 /*
  * Copyright 2014 Canonical Ltd.
+ * Copyright (C) 2025 UBports Foundation
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,6 +22,7 @@ import Lomiri.Thumbnailer 0.1
 import Lomiri.Content 1.3
 import Qt.labs.settings 1.0
 import CameraApp 0.1
+import "qml/components"
 import "MimeTypeMapper.js" as MimeTypeMapper
 
 FocusScope {
@@ -207,15 +209,11 @@ FocusScope {
                     Behavior on opacity { LomiriNumberAnimation {duration: LomiriAnimation.FastDuration} }
                 }
 
-                Icon {
-                    width: units.gu(3)
-                    height: units.gu(3)
+                PlayIcon {
                     anchors.centerIn: parent
-                    name: "media-playback-start"
-                    color: "white"
-                    opacity: 0.8
+                    width: units.gu(5.5)
+                    height: width
                     visible: isVideo
-                    asynchronous: true
                 }
 
                 Icon {
