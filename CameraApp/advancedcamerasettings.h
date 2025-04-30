@@ -49,6 +49,7 @@ class AdvancedCameraSettings : public QObject
     Q_PROPERTY (bool hdrEnabled READ hdrEnabled WRITE setHdrEnabled NOTIFY hdrEnabledChanged)
     Q_PROPERTY (bool hasHdr READ hasHdr NOTIFY hasHdrChanged)
     Q_PROPERTY (int encodingQuality READ encodingQuality WRITE setEncodingQuality NOTIFY encodingQualityChanged)
+    Q_PROPERTY (bool hasEXIF READ hasEXIF WRITE setEXIF NOTIFY hasEXIFChanged)
 
 public:
     explicit AdvancedCameraSettings(QObject *parent = 0);
@@ -62,10 +63,12 @@ public:
     float getScreenAspectRatio() const;
     QStringList videoSupportedResolutions();
     QStringList imageSupportedResolutions();
+    bool hasEXIF() const;
     bool hasFlash() const;
     bool hasHdr() const;
     bool hdrEnabled() const;
     void setHdrEnabled(bool enabled);
+    void setEXIF(bool enabled);
     int encodingQuality() const;
     void setEncodingQuality(int quality);
     void readCapabilities();
@@ -81,6 +84,7 @@ Q_SIGNALS:
     void encodingQualityChanged();
     void videoSupportedResolutionsChanged();
     void imageSupportedResolutionsChanged();
+    void hasEXIFChanged();
 
 private Q_SLOTS:
     void onCameraStatusChanged(QCamera::Status status);
@@ -110,6 +114,7 @@ private:
     QVideoEncoderSettingsControl* m_videoEncoderControl;
     QCameraInfoControl* m_cameraInfoControl;
     bool m_hdrEnabled;
+    bool m_hasEXIF;
     QStringList m_videoSupportedResolutions;
     QStringList m_imageSupportedResolutions;
 };
