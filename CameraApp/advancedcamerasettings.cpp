@@ -45,7 +45,8 @@ AdvancedCameraSettings::AdvancedCameraSettings(QObject *parent) :
     m_imageEncoderControl(0),
     m_videoEncoderControl(0),
     m_cameraInfoControl(0),
-    m_hdrEnabled(false)
+    m_hdrEnabled(false),
+    m_hasEXIF(false)
 {
 }
 
@@ -469,6 +470,10 @@ QStringList AdvancedCameraSettings::videoSupportedResolutions()
     }
 }
 
+bool AdvancedCameraSettings::hasEXIF() const
+{
+    return m_hasEXIF;
+}
 
 bool AdvancedCameraSettings::hasFlash() const
 {
@@ -496,6 +501,12 @@ bool AdvancedCameraSettings::hasHdr() const
 bool AdvancedCameraSettings::hdrEnabled() const
 {
     return m_hdrEnabled;
+}
+
+void AdvancedCameraSettings::setEXIF(bool enabled)
+{
+    m_hasEXIF = enabled;
+    Q_EMIT hasEXIFChanged();
 }
 
 void AdvancedCameraSettings::setHdrEnabled(bool enabled)

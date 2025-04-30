@@ -30,3 +30,14 @@ void PostProcessOperations::addDateStamp(const QString & path, QString dateForma
     connect(this->workingThread, &AddDateStamp::finished, this->workingThread, &QObject::deleteLater);
     this->workingThread->start();
 }
+void PostProcessOperations::deleteEXIFdata(const QString &path)
+{
+    #if EXIV2_TEST_VERSION(0,28,0)
+      Exiv2::Image::UniquePtr imgFile;
+    #else
+      Exiv2::Image::AutoPtr imgFile;
+    #endif
+    imgFile = Exiv2::ImageFactory::open(path.toStdString());
+    imgFile->clearMetadata();
+    imgFile->writeMetadata();
+}

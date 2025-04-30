@@ -48,6 +48,7 @@ Item {
 
         property int flashMode: Camera.FlashAuto
         property bool gpsEnabled: false
+        property bool hasEXIF: false // Should it even be enabled by default?
         property bool hdrEnabled: false
         property bool videoFlashOn: false
         // Left for compatibility
@@ -87,6 +88,8 @@ Item {
         onPhotoResolutionsChanged: updateViewfinderResolution();
         onVideoResolutionsChanged: updateViewfinderResolution();
 
+        onGpsEnabledChanged: if(gpsEnabled&&!hasEXIF)hasEXIF = true;
+        onHasEXIFChanged: if(gpsEnabled&&!hasEXIF)gpsEnabled = false;
         onFlashModeChanged: if (flashMode != Camera.FlashOff) hdrEnabled = false;
         onHdrEnabledChanged: if (hdrEnabled) flashMode = Camera.FlashOff
     }
@@ -103,6 +106,12 @@ Item {
         property: "mode"
         value: settings.videoFlashOn && viewFinderView.inView ? videoFlashOnValue : Camera.FlashOff
         when: camera.captureMode == Camera.CaptureVideo
+    }
+
+    Binding {
+        target: camera.advanced
+        property: "hasEXIF"
+        value: settings.hasEXIF
     }
 
     Binding {
@@ -720,6 +729,33 @@ Item {
                     property bool available: true
                     property bool visible: camera.captureMode == Camera.CaptureStillImage
                     property bool showInIndicators: false
+                },
+                ListModel {
+                    id: photoEXIFSettingsModel
+
+                    function setSettingProperty(value) {
+                        settings.hasEXIF = value;
+                    }
+
+                    property string settingsProperty: "hasEXIF"
+                    property string icon: ""
+                    property string label: ""
+                    property bool isToggle: true
+                    property int selectedIndex: bottomEdge.indexForValue(photoEXIFSettingsModel, settings.hasEXIF)
+                    property bool available: true
+                    property bool visible: camera.captureMode === Camera.CaptureStillImage
+                    property bool showInIndicators: false
+
+                    ListElement {
+                        icon: "private-browsing-exit"
+                        label: QT_TR_NOOP("Save device info")
+                        value: true
+                    }
+                    ListElement {
+                        icon: "private-browsing"
+                        label: QT_TR_NOOP("No device info")
+                        value: false
+                    }
                 }
             ]
 
@@ -889,7 +925,7 @@ Item {
                 camera.imageCapture.setMetadata("Orientation", orientation);
                 camera.imageCapture.setMetadata("Date", new Date());
                 var position = positionSource.position;
-                if (settings.gpsEnabled && positionSource.isPrecise) {
+                if (settings.hasEXIF && settings.gpsEnabled && positionSource.isPrecise) {
                     camera.imageCapture.setMetadata("GPSLatitude", position.coordinate.latitude);
                     camera.imageCapture.setMetadata("GPSLongitude", position.coordinate.longitude);
                     camera.imageCapture.setMetadata("GPSTimeStamp", position.timestamp);
@@ -982,6 +1018,10 @@ Item {
                 }
             }
             onImageSaved : {
+                if(path &&!settings.hasEXIF)
+                {
+                    postProcessOperations.deleteEXIFdata(path);
+                }
                 if(path && settings.dateStampImages && !main.contentExportMode) {
                     postProcessOperations.addDateStamp(path,
                                                        viewFinderOverlay.settings.dateStampFormat,
