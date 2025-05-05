@@ -1,3 +1,13 @@
+Overview of changes in lomiri-camera-app 4.0.8
+
+  - Add option to erase EXIF metadata.
+  - Redesigned video play icon.
+  - Bump clickable minimum version.
+  - CMakeLists.txt: Install content-hub peers configuration also when
+    built as non-click package.
+  - Translation updates (thanks to all contributors on
+    hosted.weblate.org).
+
 Overview of changes in lomiri-camera-app 4.0.7
 
   - Vectorise barcode icons.

@@ -1,6 +1,62 @@
+2025-05-05 Mike Gabriel
+
+        * Release 4.0.8 (HEAD -> main, tag: v4.0.8)
+
+2025-04-30 Mike Gabriel
+
+        * Merge branch 'main' into 'main' (7356b75)
+
+2025-04-30 le0nklcpp
+
+        * Add option to erase EXIF metadata (70974d7)
+
+2025-04-04 Mike Gabriel
+
+        * Merge branch 'main_-_playicon' into 'main' (0598d0d)
+
+2025-03-10 kugiigi
+
+        * Redesigned video play icon (743aca9)
+
+2025-03-13 Niko
+
+        * Translated using Weblate (Serbian) (4cef9fb)
+        * Translated using Weblate (Serbian) (8e304fc)
+
+2025-02-12 Mike Gabriel
+
+        * Merge branch 'bump_clickable_min' into 'main' (a63e793)
+
+2025-01-23 Danfro
+
+        * bump clickable minimum version (ba2f967)
+
+2025-02-05 Milo Ivir
+
+        * Translated using Weblate (Croatian) (5fa8ee8)
+
+2025-02-05 Ratchanan Srirattanamet
+
+        * Merge branch
+          'personal/sunweaver/content-hub-integration-for-non-click-builds'
+          into 'main' (4cdbf20)
+
 2025-01-31 Mike Gabriel
 
-        * Release 4.0.7 (HEAD -> main, tag: v4.0.7)
+        * CMakeLists.txt: Install content-hub peers configuration also when
+          built as non-click package. (55960ab)
+
+2025-02-04 Milo Ivir
+
+        * Translated using Weblate (Croatian) (d977919)
+
+2025-02-01 Milo Ivir
+
+        * Translated using Weblate (Croatian) (b9fde5b)
+
+2025-01-31 Mike Gabriel
+
+        * Release 4.0.7 (48a89a0) (tag: v4.0.7)
 
 2025-01-14 Ricky Tigg
 
