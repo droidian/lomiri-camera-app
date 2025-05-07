@@ -130,6 +130,8 @@ Item {
         target: camera.videoRecorder
         property: "resolution"
         value: settings.videoResolutions[camera.deviceId] || Qt.size(-1, -1)
+        // This makes sure that the correct video resolution is initiated
+        when: camera.cameraStatus == Camera.LoadedStatus || camera.cameraStatus == Camera.ActiveStatus
     }
 
     Binding {
