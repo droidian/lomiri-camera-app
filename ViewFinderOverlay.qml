@@ -124,6 +124,8 @@ Item {
         target: camera.advanced
         property: "encodingQuality"
         value: settings.encodingQuality
+        // This makes sure that the correct image quality is initiated
+        when: camera.cameraStatus == Camera.ActiveStatus
     }
 
     Binding {
