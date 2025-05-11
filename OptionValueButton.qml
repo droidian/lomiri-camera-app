@@ -63,6 +63,7 @@ AbstractButton {
             id: label
             anchors {
                 left: iconLabelGroup.showIcon ? icon.right : parent.left
+                leftMargin: iconLabelGroup.showIcon ? units.gu(1) : 0
                 verticalCenter: parent.verticalCenter
             }
 
