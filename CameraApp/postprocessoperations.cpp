@@ -38,6 +38,14 @@ void PostProcessOperations::deleteEXIFdata(const QString &path)
       Exiv2::Image::AutoPtr imgFile;
     #endif
     imgFile = Exiv2::ImageFactory::open(path.toStdString());
+    imgFile->readMetadata();
+    Exiv2::ExifData &exifData = imgFile->exifData();
+    #if EXIV2_TEST_VERSION(0,28,0)
+      long orientationFlags  = exifData["Exif.Image.Orientation"].toUint32();
+    #else
+      long orientationFlags  = exifData["Exif.Image.Orientation"].toLong();
+    #endif
     imgFile->clearMetadata();
+    exifData["Exif.Image.Orientation"] = std::to_string(orientationFlags);
     imgFile->writeMetadata();
 }
