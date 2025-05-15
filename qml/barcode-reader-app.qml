@@ -24,6 +24,9 @@ import CameraApp 0.1
 import Qt.labs.settings 1.0
 import QZXing 3.3
 
+import "components"
+import "Viewfinder"
+
 Window {
     id: main
     objectName: "main"

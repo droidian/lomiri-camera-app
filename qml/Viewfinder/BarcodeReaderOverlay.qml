@@ -26,6 +26,8 @@ import CameraApp 0.1
 import Qt.labs.settings 1.0
 import QtGraphicalEffects 1.0
 
+import "../components"
+
 Item {
     id: viewFinderOverlay
 

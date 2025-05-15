@@ -22,7 +22,6 @@ import Lomiri.Thumbnailer 0.1
 import Lomiri.Content 1.3
 import Qt.labs.settings 1.0
 import CameraApp 0.1
-import "qml/components"
 import "MimeTypeMapper.js" as MimeTypeMapper
 
 FocusScope {
