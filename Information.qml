@@ -109,8 +109,7 @@ Page {
             width: parent.width
             color: theme.palette.normal.backgroundSecondaryText
             horizontalAlignment: Text.AlignHCenter
-            //TODO find a way to retirve the version from the manifest file
-            text: "";//i18n.tr("Version %1").arg("3.0.1.747")
+            text: i18n.tr("Version %1").arg(Qt.application.version)
         }
 
     }
