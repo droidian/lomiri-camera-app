@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lomiri-camera-app-translations\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-17 10:34+0000\n"
-"PO-Revision-Date: 2025-05-10 18:00+0000\n"
+"PO-Revision-Date: 2025-05-20 10:07+0000\n"
 "Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/et/>\n"
@@ -79,128 +79,130 @@ msgstr "Vorming"
 
 #: AdvancedOptions.qml:142
 msgid "Date formatting keywords"
-msgstr ""
+msgstr "Märksõnad kuupäeva vormindamiseks"
 
 #: AdvancedOptions.qml:147
 msgid "the day as number without a leading zero (1 to 31)"
-msgstr ""
+msgstr "päev numbrina ja ilma nullita (1 kuni 31)"
 
 #: AdvancedOptions.qml:148
 msgid "the day as number with a leading zero (01 to 31)"
-msgstr ""
+msgstr "päev numbrina ja koos nulliga (01 kuni 31)"
 
 #: AdvancedOptions.qml:149
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr ""
+msgstr "päeva lühend kohalikus keeles (Esmasp-Pühap)."
 
 #: AdvancedOptions.qml:150
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
-msgstr ""
+msgstr "päeva täisnimi kohalikus keeles (Esmaspäev-Pühapäev)."
 
 #: AdvancedOptions.qml:151
 msgid "the month as number without a leading zero (1 to 12)"
-msgstr ""
+msgstr "kuu numbrina ja ilma nullita (1 kuni 12)"
 
 #: AdvancedOptions.qml:152
 msgid "the month as number with a leading zero (01 to 12)"
-msgstr ""
+msgstr "kuu numbrina ja koos nulliga (01 kuni 12)"
 
 #: AdvancedOptions.qml:153
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr ""
+msgstr "kuu lühend kohalikus keeles (Jaan-Dets)."
 
 #: AdvancedOptions.qml:154
 msgid "the long localized month name (e.g. 'January' to 'December')."
-msgstr ""
+msgstr "kuu täisnimi kohalikus keeles (Jaanuar-Detsember)."
 
 #: AdvancedOptions.qml:155
 msgid "the year as two digit number (00 to 99)"
-msgstr ""
+msgstr "aasta kahekohalise numbrina (00 kuni 99)"
 
 #: AdvancedOptions.qml:156
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
 msgstr ""
+"aasta neljakohalise numbrina. Kui aasta on negatiivne, siis lisatakse ette "
+"miinusmärk."
 
 #: AdvancedOptions.qml:157
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
-msgstr ""
+msgstr "tund ilma nullita (1 kuni 23 või AM/PM puhul 1 kuni 12)"
 
 #: AdvancedOptions.qml:158
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
-msgstr ""
+msgstr "tund koos nulliga (01 kuni 23 või AM/PM puhul 01 kuni 12)"
 
 #: AdvancedOptions.qml:159
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "tund ilma nullita (1 kuni 23, seda ka AM/PM puhul)"
 
 #: AdvancedOptions.qml:160
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "tund koos nulliga (1 kuni 23, seda ka AM/PM puhul)"
 
 #: AdvancedOptions.qml:161
 msgid "the minute without a leading zero (0 to 59)"
-msgstr ""
+msgstr "minut ilma nullita (0 kuni 59)"
 
 #: AdvancedOptions.qml:162
 msgid "the minute with a leading zero (00 to 59)"
-msgstr ""
+msgstr "minut koos nulliga (0 kuni 59)"
 
 #: AdvancedOptions.qml:163
 msgid "the second without a leading zero (0 to 59)"
-msgstr ""
+msgstr "sekund ilma nullita (0 kuni 59)"
 
 #: AdvancedOptions.qml:164
 msgid "the second with a leading zero (00 to 59)"
-msgstr ""
+msgstr "sekund koos nulliga (0 kuni 59)"
 
 #: AdvancedOptions.qml:165
 msgid "the milliseconds without leading zeroes (0 to 999)"
-msgstr ""
+msgstr "millisekund ilma nullita (0 kuni 999)"
 
 #: AdvancedOptions.qml:166
 msgid "the milliseconds with leading zeroes (000 to 999)"
-msgstr ""
+msgstr "millisekund koos nulliga (0 kuni 999)"
 
 #: AdvancedOptions.qml:167
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr ""
+msgstr "kasuta AM/PM märkimisviisi. AP asendatakse vastavalt AM-i või PM-iga."
 
 #: AdvancedOptions.qml:168
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr ""
+msgstr "kasuta am/pm märkimisviisi. ap asendatakse vastavalt am-i või pm-iga."
 
 #: AdvancedOptions.qml:169
 msgid "the timezone (for example 'CEST')"
-msgstr ""
+msgstr "ajavöönd (näiteks „EST“)"
 
 #: AdvancedOptions.qml:178
 msgid "Add to Format"
-msgstr ""
+msgstr "Lisa vormingule"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: AdvancedOptions.qml:209
 msgid "Color"
-msgstr ""
+msgstr "Värv"
 
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: AdvancedOptions.qml:278
 msgid "Alignment"
-msgstr ""
+msgstr "Joondumine"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: AdvancedOptions.qml:323
 msgid "Opacity"
-msgstr ""
+msgstr "Läbipaistmatus"
 
 #: AdvancedOptions.qml:346
 msgid "Blurred Overlay"
-msgstr ""
+msgstr "Hägustatud ülekate"
 
 #: AdvancedOptions.qml:367
 msgid "Only Blur Preview overlay"
-msgstr ""
+msgstr "Ainult hägustatud ülekatte eelvaade"
 
 #: DeleteDialog.qml:24
 msgid "Delete media?"
@@ -233,7 +235,7 @@ msgstr "Muuda fotot"
 
 #: GalleryViewHeader.qml:85
 msgid "Photo Roll"
-msgstr ""
+msgstr "Filmirull"
 
 #: Information.qml:25
 msgid "Back"
@@ -284,71 +286,73 @@ msgstr "Säriaeg: %1"
 #: MediaInfoPopover.qml:20
 #, qt-format
 msgid "F. Number : %1"
-msgstr ""
+msgstr "Ava suhtarv: %1"
 
 #: MediaInfoPopover.qml:21
 #, qt-format
 msgid "Sub-File type : %1"
-msgstr ""
+msgstr "Alamfaili tüüp: %1"
 
 #: MediaInfoPopover.qml:43
 msgid "Media Information"
-msgstr ""
+msgstr "Meedia teave"
 
 #: MediaInfoPopover.qml:48
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "Nimi : %1"
 
 #: MediaInfoPopover.qml:51
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "Tüüp : %1"
 
 #: MediaInfoPopover.qml:83
 #, qt-format
 msgid "With Flash : %1"
-msgstr ""
+msgstr "Koos välguga : %1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
-msgstr ""
+msgstr "Jah"
 
 #: MediaInfoPopover.qml:83
 msgid "No"
-msgstr ""
+msgstr "Ei"
 
 #: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
 msgstr ""
+"Nutiseadmes pole enam vaba andmeruumi. Jätkamiseks palun esmalt kustuta või "
+"teisalda faile."
 
 #: PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
-msgstr ""
+msgstr "Filmirulli jaoks viipa vasakule"
 
 #: PhotogridView.qml:42 SlideshowView.qml:54
 msgid "Share"
-msgstr ""
+msgstr "Jaga"
 
 #: SlideshowView.qml:62
 msgid "Image Info"
-msgstr ""
+msgstr "Pildi teave"
 
 #: SlideshowView.qml:98
 msgid "Edit"
-msgstr ""
+msgstr "Muuda"
 
 #: SlideshowView.qml:477
 msgid "Back to Photo roll"
-msgstr ""
+msgstr "Tagasi filmirulli juurde"
 
 #: UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr ""
+msgstr "Pole võimalik jagada"
 
 #: UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
-msgstr ""
+msgstr "Samal ajal ei saa jagada fotosid ja videoid"
 
 #: UnableShareDialog.qml:30
 msgid "Ok"
