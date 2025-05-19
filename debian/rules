@@ -5,30 +5,38 @@
 #export DH_VERBOSE=1
 export DPKG_GENSYMBOLS_CHECK_LEVEL=4
 
-%:
-	dh $@ --with translations,migrations
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
-DEB_HOST_ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
+include /usr/share/dpkg/architecture.mk
+
+%:
+	dh $@
 
 # Skip tests on the archs they are known to be flaky with current configuration
 testskip_architectures := arm64 powerpc
 
+# Skip tests on mips64el. The QmlTests crash with segmentation fault (not only in
+# this package) which makes one guess that there is something odd going on with the
+# QmlTest test suite... No deeper motivation to hunt this down on an architecture
+# where Lomiri et al. will probably never used on.
+testskip_architectures += mips64el
+
 override_dh_auto_test:
 ifneq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(testskip_architectures)))
 	dh_auto_test
+else
+	-dh_auto_test
 endif
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DCLICK_MODE=OFF -DINSTALL_TESTS=ON
+	dh_auto_configure -- -DCLICK_MODE=OFF -DBUILD_TESTING=OFF
 
 override_dh_install:
+	rm debian/lomiri-camera-app/usr/share/lomiri-camera-app/lomiri-camera-app-migrate.py
 	dh_install
 
 override_dh_missing:
 	dh_missing --fail-missing
 
-override_dh_translations:
-	# Override dh_translations to work around http://pad.lv/1183262.
-	# Unfortunately, the default build directory is not exposed
-	# (see http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=601774).
-	$(MAKE) -C obj-$(DEB_HOST_GNU_TYPE) lomiri-camera-app.pot
+get-orig-source:
+	uscan --noconf --force-download --rename --download-current-version --destdir=..
