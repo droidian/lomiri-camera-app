@@ -18,7 +18,7 @@ Page {
         id:_advancedOptionsPageHeader
         StyleHints {
             backgroundColor:"transparent"
-            foregroundColor: theme.palette.normal.backgroudText
+            foregroundColor: theme.palette.normal.backgroundText
         }
         title: i18n.tr("Settings")
         leadingActionBar.actions: [
@@ -64,7 +64,7 @@ Page {
                 ListItemLayout {
                     id: datestampSwitchLayout
                     title.text: i18n.tr("Add date stamp on captured images")
-                    title.color: theme.palette.normal.backgroudText
+                    title.color: theme.palette.normal.backgroundText
                     title.horizontalAlignment:Text.AlignLeft
                     Switch {
                         SlotsLayout.position: SlotsLayout.Last
@@ -88,7 +88,7 @@ Page {
                         // TRANSLATORS: this refers to the opacity  of date stamp added to captured images
                         title.text: i18n.tr("Format")
                         title.horizontalAlignment:Text.AlignLeft
-                        title.color: theme.palette.normal.backgroudText
+                        title.color: theme.palette.normal.backgroundText
                         TextField {
                             id:dateFormatText
                             SlotsLayout.position: SlotsLayout.Last
@@ -204,7 +204,7 @@ Page {
                     ListItemLayout {
                         id:  dateStampColorItemLayout
 
-                        title.color:  theme.palette.normal.backgroudText
+                        title.color:  theme.palette.normal.backgroundText
                         // TRANSLATORS: this refers to the color of date stamp added to captured images
                         title.text:i18n.tr("Color")
                         title.horizontalAlignment:Text.AlignLeft
@@ -273,7 +273,7 @@ Page {
                     divider.visible: false
                     ListItemLayout {
                         id:  dateStampAlignmentItemLayout
-                        title.color:  theme.palette.normal.backgroudText
+                        title.color:  theme.palette.normal.backgroundText
                         // TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
                         title.text:i18n.tr("Alignment")
                         title.horizontalAlignment:Text.AlignLeft
@@ -318,7 +318,7 @@ Page {
                     ListItemLayout {
                         id:  dateStampOpacityItemLayout
                         height: dateStampOpacityItem.height
-                        title.color:  theme.palette.normal.backgroudText
+                        title.color:  theme.palette.normal.backgroundText
                         // TRANSLATORS: this refers to the opacity  of date stamp added to captured images
                         title.text:i18n.tr("Opacity")
                         title.horizontalAlignment:Text.AlignLeft
@@ -345,7 +345,7 @@ Page {
                     id: blurEffectSwitch
                     title.text: i18n.tr("Blurred Overlay")
                     title.horizontalAlignment:Text.AlignLeft
-                    title.color: theme.palette.normal.backgroudText
+                    title.color: theme.palette.normal.backgroundText
                     Switch {
                         SlotsLayout.position: SlotsLayout.Last
                         checked: appSettings.blurEffects
@@ -366,7 +366,7 @@ Page {
 			  id: blurEffectsPreviewOnlySwitch
 			  title.text: i18n.tr("Only Blur Preview overlay")
 				title.horizontalAlignment:Text.AlignLeft
-			  title.color: theme.palette.normal.backgroudText
+			  title.color: theme.palette.normal.backgroundText
 			  Switch {
 			     SlotsLayout.position: SlotsLayout.Last
 			     checked: appSettings.blurEffectsPreviewOnly
