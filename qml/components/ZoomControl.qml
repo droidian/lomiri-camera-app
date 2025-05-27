@@ -50,7 +50,7 @@ Item {
             left: parent.left
             verticalCenter: parent.verticalCenter
         }
-        source: "assets/zoom_minus.png"
+        source: "../../assets/zoom_minus.png"
         asynchronous: true
         cache: false
     }
@@ -74,7 +74,7 @@ Item {
             right: parent.right
             verticalCenter: parent.verticalCenter
         }
-        source: "assets/zoom_plus.png"
+        source: "../../assets/zoom_plus.png"
         asynchronous: true
         cache: false
     }

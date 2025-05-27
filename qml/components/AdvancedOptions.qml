@@ -3,16 +3,13 @@ import Lomiri.Components 1.3
 import Qt.labs.settings 1.0
 import Lomiri.Components.ListItems 1.3 as ListItems
 
-import "qml/components"
-
-
 Page {
     id:_advancedOptionsPage
 
     
     signal back();
     
-    property Settings settings: viewFinderView.finderOverlay.settings    
+    property Settings settings: viewFinderView.finderOverlay.settings
     
     header: PageHeader {
         id:_advancedOptionsPageHeader
@@ -22,21 +19,21 @@ Page {
         }
         title: i18n.tr("Settings")
         leadingActionBar.actions: [
-               Action {
-                   iconName: "close"
-                   text: i18n.tr("Close")
-                   onTriggered: _advancedOptionsPage.back();
-               }
-           ]
-           
-       trailingActionBar.actions: [
-                Action {
-                   iconName: "info"
-                   text: i18n.tr("About")
-                   onTriggered: { 
-                       galleryPageStack.push(infoPageComponent)
-                   }
-               }
+            Action {
+                iconName: "close"
+                text: i18n.tr("Close")
+                onTriggered: _advancedOptionsPage.back();
+            }
+        ]
+
+        trailingActionBar.actions: [
+            Action {
+                iconName: "info"
+                text: i18n.tr("About")
+                onTriggered: {
+                    galleryPageStack.push(infoPageComponent)
+                }
+            }
         ]
     }
 
@@ -227,7 +224,7 @@ Page {
                             function getItemIdx(item) {
                                 for(var i in model ) {
                                     if(item == model[i]) {
-                                      return i;
+                                        return i;
                                     }
                                 }
                                 return -1;
@@ -288,22 +285,22 @@ Page {
                             clip:true
                             orientation: Qt.Horizontal
 
-		             model:[
-		                {"value" :Qt.AlignBottom | Qt.AlignRight,"icon":"assets/align_bottom_right.png"},
-		                {"value" :Qt.AlignBottom | Qt.AlignLeft,"icon":"assets/align_bottom_left.png"},
-		                {"value" :Qt.AlignTop | Qt.AlignRight,"icon":"assets/align_top_right.png"},
-		                {"value" :Qt.AlignTop | Qt.AlignLeft,"icon":"assets/align_top_left.png"},
-		             ]
-		             delegate: CircleButton {
-		                height:dateStampAlignmentItem.height - units.gu(1)
-		                width:height
-		                automaticOrientation:false
-		                iconSource: Qt.resolvedUrl( modelData.icon )
-		                on:(modelData.value == settings.dateStampAlign)
-		                onClicked: {
-		                   settings.dateStampAlign = modelData.value;
-		                }
-		             }
+                            model:[
+                                {"value" :Qt.AlignBottom | Qt.AlignRight,"icon":"../../assets/align_bottom_right.png"},
+                                {"value" :Qt.AlignBottom | Qt.AlignLeft,"icon":"../../assets/align_bottom_left.png"},
+                                {"value" :Qt.AlignTop | Qt.AlignRight,"icon":"../../assets/align_top_right.png"},
+                                {"value" :Qt.AlignTop | Qt.AlignLeft,"icon":"../../assets/align_top_left.png"},
+                            ]
+                            delegate: CircleButton {
+                                height:dateStampAlignmentItem.height - units.gu(1)
+                                width:height
+                                automaticOrientation:false
+                                iconSource: Qt.resolvedUrl( modelData.icon )
+                                on:(modelData.value == settings.dateStampAlign)
+                                onClicked: {
+                                    settings.dateStampAlign = modelData.value;
+                                }
+                            }
                         }
                     }
                 }
@@ -334,7 +331,7 @@ Page {
                             stepSize: 0.1
                             live:true
                             onValueChanged: {
-                                 settings.dateStampOpacity = dateStampColor.opacity = value;
+                                settings.dateStampOpacity = dateStampColor.opacity = value;
                             }
                         }
                     }
@@ -362,18 +359,18 @@ Page {
                 highlightWhenPressed: false
 
                 ListItem {
-			ListItemLayout {
-			  id: blurEffectsPreviewOnlySwitch
-			  title.text: i18n.tr("Only Blur Preview overlay")
-				title.horizontalAlignment:Text.AlignLeft
-			  title.color: theme.palette.normal.backgroundText
-			  Switch {
-			     SlotsLayout.position: SlotsLayout.Last
-			     checked: appSettings.blurEffectsPreviewOnly
-			     onClicked: appSettings.blurEffectsPreviewOnly = checked
-			  }
-		     }
-	        }
+                    ListItemLayout {
+                        id: blurEffectsPreviewOnlySwitch
+                        title.text: i18n.tr("Only Blur Preview overlay")
+                        title.horizontalAlignment:Text.AlignLeft
+                        title.color: theme.palette.normal.backgroudText
+                        Switch {
+                            SlotsLayout.position: SlotsLayout.Last
+                            checked: appSettings.blurEffectsPreviewOnly
+                            onClicked: appSettings.blurEffectsPreviewOnly = checked
+                        }
+                    }
+                }
             }
         }
     }

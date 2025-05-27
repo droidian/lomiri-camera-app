@@ -23,7 +23,7 @@ import CameraApp 0.1
 //import QtGraphicalEffects 1.0
 import Lomiri.Content 1.3
 
-import "qml/Viewfinder"
+import "../components"
 
 FocusScope {
     id: viewFinderView
@@ -301,7 +301,7 @@ FocusScope {
             width: viewFinderGeometry.width
             height: viewFinderGeometry.height
             visible: viewFinderOverlay.settings != undefined && viewFinderOverlay.settings.gridEnabled
-            source: "qml/Viewfinder/GridLines.qml"
+            source: "GridLines.qml"
             asynchronous: true
         }
 

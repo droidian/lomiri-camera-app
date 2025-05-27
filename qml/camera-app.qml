@@ -25,6 +25,9 @@ import CameraApp 0.1
 import Qt.labs.settings 1.0
 import QtSensors 5.2
 
+import "components"
+import "Viewfinder"
+
 Window {
     id: main
     objectName: "main"

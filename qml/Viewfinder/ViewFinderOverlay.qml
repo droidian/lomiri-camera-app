@@ -25,6 +25,8 @@ import CameraApp 0.1
 import Qt.labs.settings 1.0
 import QtGraphicalEffects 1.0
 
+import "../components"
+
 Item {
     id: viewFinderOverlay
 
@@ -265,7 +267,7 @@ Item {
     }
 
     function stringToSize(resolution) {
-        var r = resolution.split("x");
+        var r = resolution ? resolution.split("x") : null;
         return Qt.size(r[0], r[1]);
     }
 
@@ -567,7 +569,7 @@ Item {
 
                     property string settingsProperty: "selfTimerDelay"
                     property string icon: ""
-                    property string iconSource: "assets/self_timer.svg"
+                    property string iconSource: "../../assets/self_timer.svg"
                     property string label: ""
                     property bool isToggle: true
                     property int selectedIndex: bottomEdge.indexForValue(selfTimerOptionsModel, settings.selfTimerDelay)
@@ -629,7 +631,7 @@ Item {
 
                     property string settingsProperty: "gridEnabled"
                     property string icon: ""
-                    property string iconSource: "assets/grid_lines.svg"
+                    property string iconSource: "../../assets/grid_lines.svg"
                     property string label: ""
                     property bool isToggle: true
                     property int selectedIndex: bottomEdge.indexForValue(gridOptionsModel, settings.gridEnabled)
@@ -709,7 +711,7 @@ Item {
                         value: 2
                     }
                     ListElement {
-                        iconSource: "assets/vibrate.png"
+                        iconSource: "../../assets/vibrate.png"
                         label: QT_TR_NOOP("Vibrate")
                         value: 1
                     }
@@ -949,6 +951,20 @@ Item {
             }
         }
 
+        FileOperations {
+            id: fileOperations
+        }
+
+        function decimal2sexagesimal(coord) {
+            var degree = Math.trunc(coord)
+            var decimals = coord - degree
+            var minutes = Math.trunc(decimals * 60)
+            var minDecimals = (decimals * 60) - minutes
+            var seconds = minDecimals * 60  //keep decimals here for higher precision
+            var sexaCoord = degree.toString() + "/1" + " " + minutes.toString() + "/1" + " " + seconds.toFixed(0).toString() + "/1" //zeros equal to number of decimals
+            return sexaCoord
+        }
+
         function switchCamera() {
             camera.switchInProgress = true;
             //                viewFinderGrab.sourceItem = viewFinder;
@@ -1032,6 +1048,10 @@ Item {
                                                        viewFinderOverlay.settings.dateStampColor,
                                                        viewFinderOverlay.settings.dateStampOpacity,
                                                        viewFinderOverlay.settings.dateStampAlign);
+                }
+                if (settings.hasEXIF && settings.gpsEnabled && positionSource.isPrecise) {
+                    var position = positionSource.position;
+                    fileOperations.setEXIFData(path, controls.decimal2sexagesimal(position.coordinate.latitude), controls.decimal2sexagesimal(position.coordinate.longitude));
                 }
             }
         }

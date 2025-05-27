@@ -25,7 +25,6 @@ import QtGraphicalEffects 1.0
 
 import CameraApp 0.1
 import "MimeTypeMapper.js" as MimeTypeMapper
-import "qml/components"
 
 FocusScope {
     id: slideshowView
@@ -45,7 +44,7 @@ FocusScope {
     property list<Action> slideShowSelectionActions: [
         Action {
             text: i18n.tr("Select")
-            iconName: listView.currentItem.isSelected ? "close" : "ok"
+            iconName: listView.currentItem && listView.currentItem.isSelected ? "close" : "ok"
             onTriggered: slideshowView.toggleSelection()
         }
     ]
@@ -383,7 +382,7 @@ FocusScope {
    MediaInfoPopover {
         id: infoPopover
         contentWidth:slideshowView.width > units.gu(45) ? units.gu(40) : slideshowView.width*0.85
-        currentMedia: listView.currentItem.getMedia()
+        currentMedia: listView.currentItem ? listView.currentItem.getMedia() : undefined
         model:{
             "fileName": slideshowView.model.get(slideshowView.currentIndex, "fileName"),
             "fileType": slideshowView.model.get(slideshowView.currentIndex, "fileType"),
@@ -416,8 +415,18 @@ FocusScope {
         }
     }
 
-    Binding { target: header; property: "editMode"; value: editor.active }
-    Binding { target: header; property: "editModeActions"; value: editor.item.actions; when: editor.active && editor.item }
+    Binding {
+        target: header
+        property: "editMode"
+        value: editor.active
+    }
+
+    Binding {
+        target: header
+        property: "editModeActions"
+        value: editor.item ? editor.item.actions : 0;
+        when: editor.active && editor.item
+    }
 
     function reloadImage(image) {
         var async = image.asynchronous;

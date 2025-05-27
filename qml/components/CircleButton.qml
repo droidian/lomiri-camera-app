@@ -33,7 +33,7 @@ AbstractButton {
 
     Image {
         anchors.fill: parent
-        source: "assets/lomiri_shape.svg"
+        source: "../../assets/lomiri_shape.svg"
         opacity: button.pressed ? 0.7 : 0.3
         sourceSize.width: width
         sourceSize.height: height

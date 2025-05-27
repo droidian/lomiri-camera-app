@@ -26,6 +26,8 @@ import CameraApp 0.1
 import Qt.labs.settings 1.0
 import QtGraphicalEffects 1.0
 
+import "../components"
+
 Item {
     id: viewFinderOverlay
 
@@ -506,7 +508,7 @@ Item {
             Behavior on opacity { LomiriNumberAnimation { duration: LomiriAnimation.FastDuration} }
             visible: opacity != 0.0
             enabled: visible
-            iconSource: !tagDetailsOverlay.open ? "assets/qr.svg" : ""
+            iconSource: !tagDetailsOverlay.open ? "../../assets/qr.svg" : ""
             iconName: tagDetailsOverlay.open ? "close" : ""
 
             onClicked: {

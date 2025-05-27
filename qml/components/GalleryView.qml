@@ -21,7 +21,6 @@ import Lomiri.Thumbnailer 0.1
 
 import CameraApp 0.1
 import "MimeTypeMapper.js" as MimeTypeMapper
-import "qml/components"
 
 Item {
     id: galleryView

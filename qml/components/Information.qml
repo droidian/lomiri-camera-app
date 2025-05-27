@@ -90,7 +90,7 @@ Page {
             anchors.horizontalCenter: parent.horizontalCenter
             height: Math.min(parent.width/2, parent.height/2)
             width:height
-            name:"lomiri-camera-app"
+            source:"../../assets/lomiri-camera-app.svg"
             layer.enabled: true
             layer.effect: LomiriShapeOverlay {
                 relativeRadius: 0.75

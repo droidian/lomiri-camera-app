@@ -41,16 +41,16 @@ Item {
     states: [
         State {
             name: "camera"
-            PropertyChanges { target: icon; source: "assets/shutter_stills.png" }
+            PropertyChanges { target: icon; source: "../../assets/shutter_stills.png" }
         },
         State {
             name: "record_off"
-            PropertyChanges { target: icon; source: "assets/record_video.png" }
+            PropertyChanges { target: icon; source: "../../assets/record_video.png" }
 
         },
         State {
             name: "record_on"
-            PropertyChanges { target: icon; source: "assets/record_video_stop.png" }
+            PropertyChanges { target: icon; source: "../../assets/record_video_stop.png" }
         }
     ]
 }

@@ -80,9 +80,9 @@ inline QString sourceQml(const CameraMode& mode) {
         qmlFile = QString("barcode-reader-app.qml");
     }
     if (isClick()) {
-        return QDir::currentPath() + "/" + qmlFile;
+        return QDir::currentPath() + "/qml/" + qmlFile;
     } else {
-        return cameraAppDirectory() + "/" + qmlFile;
+        return cameraAppDirectory() + "/qml/" + qmlFile;
     }
 }
 

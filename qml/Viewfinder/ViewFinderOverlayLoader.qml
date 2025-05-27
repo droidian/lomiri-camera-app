@@ -16,6 +16,8 @@
 
 import QtQuick 2.12
 
+import "../components"
+
 Loader {
     id: loader
 
