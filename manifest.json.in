@@ -17,7 +17,7 @@
     "maintainer": "UBports <dev@ubports.com>",
     "name": "camera.ubports",
     "title": "Camera",
-    "version": "@PROJECT_VERSION@",
+    "version": "@CLICK_VERSION@",
     "migrations": {
         "old-name": "com.ubuntu.camera"
     },

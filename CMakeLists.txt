@@ -64,6 +64,8 @@ endif(NOT GETTEXT_FOUND)
 
 option(INSTALL_TESTS "Install the tests on make install" off)
 option(CLICK_MODE "Installs to a contained location" on)
+set(CLICK_VERSION "${PROJECT_VERSION}"
+    CACHE STRING "Version of built Click. Meaningful only in Click mode.")
 
 set(CAMERA_APP lomiri-camera-app)
 set(AUTOPILOT_DIR lomiri_camera_app)

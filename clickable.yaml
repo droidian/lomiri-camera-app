@@ -3,6 +3,7 @@ clickable_minimum_required: '8.0.0'
 builder: cmake
 
 framework: ubuntu-sdk-20.04
+build_args: "-DCLICK_MODE=ON -DCLICK_VERSION=$(git describe --tags --dirty|sed -e 's/^v//')"
 
 ignore_review_errors: true
 
