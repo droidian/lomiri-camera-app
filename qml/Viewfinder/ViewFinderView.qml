@@ -131,7 +131,24 @@ FocusScope {
             }
 
             onImageSaved: {
-                if (main.contentExportMode) viewFinderExportConfirmation.mediaPath = path;
+                if(!viewFinderOverlay.settings.hasEXIF) {
+                    // TODO: make this operation asynchronous.
+                    postProcessOperations.deleteEXIFdata(path);
+                }
+
+                if(viewFinderOverlay.settings.dateStampImages && !main.contentExportMode) {
+                    postProcessOperations.addDateStamp(path,
+                                                       viewFinderOverlay.settings.dateStampFormat,
+                                                       viewFinderOverlay.settings.dateStampColor,
+                                                       viewFinderOverlay.settings.dateStampOpacity,
+                                                       viewFinderOverlay.settings.dateStampAlign);
+                }
+
+                // TODO: make it so that asynchronous operations signals to us
+                // on finished and only then proceed to the code below.
+
+                if (main.contentExportMode)
+                    viewFinderExportConfirmation.mediaPath = path;
 
                 viewFinderView.photoTaken(path);
                 metricPhotos.increment();
@@ -367,6 +384,10 @@ FocusScope {
         asynchronous: true
         anchors.fill: parent
         sourceComponent: viewFinderExportConfirmationComp
+    }
+
+    PostProcessOperations {
+        id: postProcessOperations
     }
 
     property alias viewFinderExportConfirmation: viewFinderExportConfirmationLoader.item

@@ -951,20 +951,6 @@ Item {
             }
         }
 
-        FileOperations {
-            id: fileOperations
-        }
-
-        function decimal2sexagesimal(coord) {
-            var degree = Math.trunc(coord)
-            var decimals = coord - degree
-            var minutes = Math.trunc(decimals * 60)
-            var minDecimals = (decimals * 60) - minutes
-            var seconds = minDecimals * 60  //keep decimals here for higher precision
-            var sexaCoord = degree.toString() + "/1" + " " + minutes.toString() + "/1" + " " + seconds.toFixed(0).toString() + "/1" //zeros equal to number of decimals
-            return sexaCoord
-        }
-
         function switchCamera() {
             camera.switchInProgress = true;
             //                viewFinderGrab.sourceItem = viewFinder;
@@ -1024,10 +1010,6 @@ Item {
                                           position.horizontalAccuracy <= 100)
         }
 
-        PostProcessOperations {
-            id: postProcessOperations
-        }
-
         Connections {
             target: camera.imageCapture
             onReadyChanged: {
@@ -1035,23 +1017,6 @@ Item {
                     if (camera.switchInProgress) {
                         controls.completeSwitch();
                     }
-                }
-            }
-            onImageSaved : {
-                if(path &&!settings.hasEXIF)
-                {
-                    postProcessOperations.deleteEXIFdata(path);
-                }
-                if(path && settings.dateStampImages && !main.contentExportMode) {
-                    postProcessOperations.addDateStamp(path,
-                                                       viewFinderOverlay.settings.dateStampFormat,
-                                                       viewFinderOverlay.settings.dateStampColor,
-                                                       viewFinderOverlay.settings.dateStampOpacity,
-                                                       viewFinderOverlay.settings.dateStampAlign);
-                }
-                if (settings.hasEXIF && settings.gpsEnabled && positionSource.isPrecise) {
-                    var position = positionSource.position;
-                    fileOperations.setEXIFData(path, controls.decimal2sexagesimal(position.coordinate.latitude), controls.decimal2sexagesimal(position.coordinate.longitude));
                 }
             }
         }
