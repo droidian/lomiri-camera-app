@@ -1,6 +1,126 @@
+2025-06-05 Mike Gabriel
+
+        * Release 4.1.0 (HEAD -> main, tag: v4.1.0)
+
+2025-05-30 Mike Gabriel
+
+        * Merge branch 'personal/peat-psuwit/217-postprocess-race' into
+          'main' (51603ca)
+
+2025-05-30 Ratchanan Srirattanamet
+
+        * qml/Viewfinder: fix content export preview corruption in !hasEXIF
+          mode (f3f7476)
+          Fixes:
+          https://gitlab.com/ubports/development/apps/lomiri-camera-app/-/issues/217
+
+          Fixes: e38dbba16647 ("add fixes to barcodereader app and
+          drop obsolete imports")
+
+2025-05-27 Mike Gabriel
+
+        * Merge branch 'personal/peat-psuwit/click-version-from-git' into
+          'main' (cbd071a)
+
+2025-05-27 Ratchanan Srirattanamet
+
+        * Ensure Clicks built on CI has unique version string (cb49c39)
+
+2025-05-27 Mike Gabriel
+
+        * Merge branch 'lomiri-camera-app-main' into 'main' (4c7f87d)
+
+2025-05-16 Danfro
+
+        * update path for icon in about page (709e186)
+
+2025-05-15 Danfro
+
+        * bump qtquick import in barcodereaderapp.qml to match version of all
+          other imports (6a3d08c)
+        * add fixes to barcodereader app and drop obsolete imports (e38dbba)
+
+2024-12-19 Sergey Chupligin
+
+        * SlideshowView: fixup warnings (39ac857)
+
+2024-12-16 Sergey Chupligin
+
+        * Fixup codestyle (ebab13f)
+        * Fixup warnings into MediaInfoPopover (7ebe2c7)
+        * Fixup warnings into SlideshowView (095b04b)
+        * Fixup warning when settingsProperty is undefined (7523534)
+        * Fixup waning on unknow image resolution (e1a8d1b)
+        * Fixup warning when exif data is undefined (f1bea6c)
+
+2024-11-29 Sergey Chupligin
+
+        * Move qml files into qml directory (5f36ac8)
+
+2025-05-26 Mike Gabriel
+
+        * Merge branch 'fix_color_spelling' into 'main' (78f7b94)
+
+2025-05-13 Danfro
+
+        * fix spelling of background color in AdvancedOptions.qml (cdcb6ba)
+
+2025-05-25 Mike Gabriel
+
+        * Merge branch 'add_versionnumber' into 'main' (fdffadc)
+
+2025-05-16 Danfro
+
+        * enable automatic version number in about page (9f31a75)
+
+2025-05-19 Priit Jõerüüt
+
+        * Translated using Weblate (Estonian) (4a8933c)
+
+2025-05-18 Ida Brenna
+
+        * Translated using Weblate (Norwegian Bokmål) (5e18aeb)
+
+2025-05-13 Mike Gabriel
+
+        * Merge branch 'save-exif-orientation' into 'main' (cb4d868)
+
+2025-05-13 le0nklcpp
+
+        * Save orientation when erasing metadata (f000473)
+
+2025-05-11 Mike Gabriel
+
+        * Merge branch 'add_iconmargin' into 'main' (6af054a)
+
+2025-05-11 Danfro
+
+        * add left margin between icon and label in options selector
+          (d1c57c2)
+
+2025-05-06 Priit Jõerüüt
+
+        * Translated using Weblate (Estonian) (0a55a86)
+
+2025-05-09 Mike Gabriel
+
+        * Merge branch 'main_-_imagequalityfix' into 'main' (7368d85)
+
+2025-05-09 kugiigi
+
+        * Fix incorrect image quality (1a298a5)
+
+2025-05-08 Mike Gabriel
+
+        * Merge branch 'main_-_videoresofix' into 'main' (c934b62)
+
+2025-05-08 kugiigi
+
+        * Fix incorrect video resolution (5e16f47)
+
 2025-05-05 Mike Gabriel
 
-        * Release 4.0.8 (HEAD -> main, tag: v4.0.8)
+        * Release 4.0.8 (d7f1f3b) (tag: v4.0.8)
 
 2025-04-30 Mike Gabriel
 

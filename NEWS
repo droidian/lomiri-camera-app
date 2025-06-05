@@ -1,3 +1,28 @@
+Overview of changes in lomiri-camera-app 4.1.0
+
+  - qml/Viewfinder: Fix content export preview corruption in !hasEXIF
+    mode.
+  - Update path for icon in about page.
+  - Bump qtquick import in barcodereaderapp.qml to match version of all
+    other imports.
+  - Add fixes to barcodereader app and drop obsolete imports.
+  - SlideshowView: fixup warnings.
+  - Fixup codestyle.
+  - Fixup warnings in MediaInfoPopover.
+  - Fixup warnings in SlideshowView.
+  - Fixup warning when settingsProperty is undefined.
+  - Fixup warning on unknown image resolution.
+  - Fixup warning when EXIF data is undefined.
+  - Restructure source tree, move qml files into qml sub-directory.
+  - Fix spelling of background color in AdvancedOptions.qml.
+  - Show version number in about page, taken from CMake configuration.
+  - Save orientation when erasing metadata.
+  - Add left margin between icon and label in options selector.
+  - Fix incorrect image quality on app startup.
+  - Fix incorrect video resolution on app startup.
+  - Translation updates (thanks to all contributors on
+    hosted.weblate.org).
+
 Overview of changes in lomiri-camera-app 4.0.8
 
   - Add option to erase EXIF metadata.
