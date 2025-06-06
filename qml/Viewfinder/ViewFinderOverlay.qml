@@ -57,6 +57,7 @@ Item {
         property bool hasEXIF: false // Should it even be enabled by default?
         property bool hdrEnabled: false
         property bool videoFlashOn: false
+        property int videoQuality: 0 // 0 - Normal, 1 - High
         // Left for compatibility
         property int videoFlashMode: -1
         property int selfTimerDelay: 0
@@ -131,6 +132,14 @@ Item {
         property: "encodingQuality"
         value: settings.encodingQuality
         // This makes sure that the correct image quality is initiated
+        when: camera.cameraStatus == Camera.ActiveStatus
+    }
+
+    Binding {
+        target: camera.videoRecorder
+        property: "videoBitRate"
+        value: getVideoBitrate()
+        // This makes sure that the correct video bitrate is initiated
         when: camera.cameraStatus == Camera.ActiveStatus
     }
 
@@ -391,6 +400,44 @@ Item {
             setPhotoResolution(getAutomaticPhotoResolution());
         }
 
+    }
+
+    // Get the appropriate video bitrate based on the current quality setting
+    function getVideoBitrate() {
+        const quality = settings.videoQuality
+        const resoSize = camera.videoRecorder.resolution
+
+        if (quality === 1) { // High Quality
+            switch(true) {
+                case resoSize.height >= 2160:
+                    return 48000000 // 48 Mbps
+                case resoSize.height >= 1440:
+                    return 35000000 // 35 Mbps
+                case resoSize.height >= 1080:
+                    return 17000000 // 17 Mbps
+                case resoSize.height >= 720:
+                    return 10000000 // 10 Mbps
+                case resoSize.height >= 480:
+                    return 6000000 // 6 Mbps
+                default:
+                    return 5000000 // 5 Mbps
+            }
+        } else {
+            switch(true) {
+                case resoSize.height >= 2160:
+                    return 35000000 // 35 Mbps
+                case resoSize.height >= 1440:
+                    return 16000000 // 16 Mbps
+                case resoSize.height >= 1080:
+                    return 8000000 // 8 Mbps
+                case resoSize.height >= 720:
+                    return 5000000 // 5 Mbps
+                case resoSize.height >= 480:
+                    return 2500000 // 2.5 Mbps
+                default:
+                    return 2000000 // 2 Mbps
+            }
+        }
     }
 
     function setPhotoResolution(resolution) {
@@ -654,6 +701,27 @@ Item {
                         icon: ""
                         label: QT_TR_NOOP("Basic Quality")
                         value: 1 // QMultimedia.LowQuality
+                    }
+                },
+                ListModel {
+                    id: videoQualityOptionsModel
+                    property string settingsProperty: "videoQuality"
+                    property string icon: "stock_video"
+                    property string label: ""
+                    property bool isToggle: false
+                    property int selectedIndex: bottomEdge.indexForValue(videoQualityOptionsModel, settings.videoQuality)
+                    property bool available: true
+                    property bool visible: camera.captureMode == Camera.CaptureVideo
+                    property bool showInIndicators: false
+                    ListElement {
+                        icon: ""
+                        label: QT_TR_NOOP("High Quality")
+                        value: 1
+                    }
+                    ListElement {
+                        icon: ""
+                        label: QT_TR_NOOP("Normal Quality")
+                        value: 0
                     }
                 },
                 ListModel {
