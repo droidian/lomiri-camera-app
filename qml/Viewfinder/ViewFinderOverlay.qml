@@ -40,6 +40,10 @@ Item {
     // Sometimes the value is FlashVideoLight, sometimes it's FlashTorch
     property int videoFlashOnValue: Camera.FlashVideoLight
 
+    // Screen's aspect ratio in both major orientations
+    readonly property string screenAspectRatio: sizeToAspectRatio(Qt.size(Screen.width, Screen.height))
+    readonly property string screenAspectRatio2: sizeToAspectRatio(Qt.size(Screen.height, Screen.width))
+
     function showFocusRing(x, y) {
         focusRing.center = Qt.point(x, y);
         focusRing.show();
@@ -259,7 +263,20 @@ Item {
     function resolutionToLabel(resolution) {
         // takes in a resolution string (e.g. "1920x1080") and returns a nicer
         // form of it for display in the UI: "1080p"
-        return resolution.split("x").pop() + "p";
+        // and also includes the aspect ratio
+        const label = resolution.split("x").pop() + "p";
+        const aspectRatio = sizeToAspectRatio(stringToSize(resolution));
+        let finalAspectRatio = aspectRatio
+
+        // Label those that are equal to screen's aspect ratio as "Full"
+        // except 16:9 since it's common
+        if ((aspectRatio === viewFinderOverlay.screenAspectRatio
+                || aspectRatio === viewFinderOverlay.screenAspectRatio2
+             )
+                && aspectRatio !== "16:9") {
+            finalAspectRatio = i18n.tr("Full")
+        }
+        return "%1 (%2)".arg(label).arg(finalAspectRatio);
     }
 
     function sizeToString(size) {
@@ -309,13 +326,19 @@ Item {
 
     function updateVideoResolutionOptions() {
         // Clear and refill videoResolutionOptionsModel with available resolutions
-        // Try to only display well known resolutions: 1080p, 720p and 480p
+        // Try to only display well known resolutions: 2160p, 1440p, 1080p, 720p and 480p
         videoResolutionOptionsModel.clear();
         var supported = camera.advanced.videoSupportedResolutions;
-        var wellKnown = ["1920x1080", "1280x720", "640x480"];
+        var wellKnown = ["2160", "1440", "1080", "720", "480"];
 
         var supportedFiltered = supported.filter(function (resolution) {
-            return wellKnown.indexOf(resolution) !== -1;
+            return wellKnown.findIndex(
+                value => {
+                    const _pattern = "x" + value + "$"
+                    const _regex = new RegExp(_pattern, "g")
+                    return resolution.match(_regex)
+                }
+            ) !== -1;
         });
 
         if (supportedFiltered.length === 0)
@@ -324,7 +347,7 @@ Item {
         // Sort resolutions from low to high, but then insert them into model
         // in reverse order (so that highest resolution appear first).
         supportedFiltered.sort(function(a, b) {
-            return a.split("x")[0] - b.split("x")[0];
+            return a.split("x")[1] - b.split("x")[1];
         });
 
         for (var i=0; i<supportedFiltered.length; i++) {
