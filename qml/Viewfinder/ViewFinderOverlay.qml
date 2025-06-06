@@ -288,6 +288,13 @@ Item {
             }
         }
         numerator = Math.round(ratio * bestDenominator);
+
+        // Further simplify square aspect ratio to 1:1
+        if (numerator === bestDenominator) {
+            numerator = 1;
+            bestDenominator = 1;
+        }
+
         return "%1:%2".arg(numerator).arg(bestDenominator);
     }
 
