@@ -85,10 +85,3 @@ inline QString sourceQml(const CameraMode& mode) {
         return cameraAppDirectory() + "/qml/" + qmlFile;
     }
 }
-
-static const QString PROJECT_VERSION = QStringLiteral ("@PROJECT_VERSION@");
-
-inline QString projectVersion (void)
-{
-    return PROJECT_VERSION;
-}
