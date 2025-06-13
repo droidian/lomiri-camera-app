@@ -75,7 +75,8 @@ Window {
         active: true
         decoder {
             enabledDecoders: QZXing.DecoderFormat_QR_CODE
-            imageSourceFilter: QZXing.SourceFilter_ImageNormal
+            imageSourceFilter: QZXing.SourceFilter_ImageNormal |
+                               QZXing.SourceFilter_ImageInverted
 
             onTagFoundAdvanced: {
                 viewFinderView.recentlyScannedTag = tag
