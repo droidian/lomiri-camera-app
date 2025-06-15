@@ -269,23 +269,29 @@ Item {
         }
     }
 
-    function resolutionToLabel(resolution) {
+    function resolutionToLabel(resolution, full=true) {
         // takes in a resolution string (e.g. "1920x1080") and returns a nicer
         // form of it for display in the UI: "1080p"
-        // and also includes the aspect ratio
         const label = resolution.split("x").pop() + "p";
-        const aspectRatio = sizeToAspectRatio(stringToSize(resolution));
-        let finalAspectRatio = aspectRatio
 
-        // Label those that are equal to screen's aspect ratio as "Full"
-        // except 16:9 since it's common
-        if ((aspectRatio === viewFinderOverlay.screenAspectRatio
-                || aspectRatio === viewFinderOverlay.screenAspectRatio2
-             )
-                && aspectRatio !== "16:9") {
-            finalAspectRatio = i18n.tr("Full")
+        if (full) {
+            // Include the aspect ratio in full format
+            const aspectRatio = sizeToAspectRatio(stringToSize(resolution));
+            let finalAspectRatio = aspectRatio
+
+            // Label those that are equal to screen's aspect ratio as "Full"
+            // except 16:9 since it's common
+            if ((aspectRatio === viewFinderOverlay.screenAspectRatio
+                    || aspectRatio === viewFinderOverlay.screenAspectRatio2
+                 )
+                    && aspectRatio !== "16:9") {
+                finalAspectRatio = i18n.tr("Full")
+            }
+
+            return "%1 (%2)".arg(label).arg(finalAspectRatio);
         }
-        return "%1 (%2)".arg(label).arg(finalAspectRatio);
+
+        return "%1".arg(label);
     }
 
     function sizeToString(size) {
@@ -778,7 +784,7 @@ Item {
                     }
 
                     property string icon: ""
-                    property string label: "HD"
+                    property string label: resolutionToLabel(settings.videoResolutions[camera.deviceId], false)
                     property bool isToggle: false
                     property int selectedIndex: bottomEdge.indexForValue(videoResolutionOptionsModel,
                                                     settings.videoResolutions[camera.deviceId])
