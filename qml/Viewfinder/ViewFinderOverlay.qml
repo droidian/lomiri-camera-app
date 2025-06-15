@@ -731,6 +731,22 @@ Item {
                     }
                 },
                 ListModel {
+                    id: videoResolutionOptionsModel
+
+                    function setSettingProperty(value) {
+                        setVideoResolution(value);
+                    }
+
+                    property string icon: ""
+                    property string label: resolutionToLabel(settings.videoResolutions[camera.deviceId], false)
+                    property bool isToggle: false
+                    property int selectedIndex: bottomEdge.indexForValue(videoResolutionOptionsModel,
+                                                    settings.videoResolutions[camera.deviceId])
+                    property bool available: true
+                    property bool visible: camera.captureMode == Camera.CaptureVideo
+                    property bool showInIndicators: false
+                },
+                ListModel {
                     id: gridOptionsModel
 
                     property string settingsProperty: "gridEnabled"
@@ -775,22 +791,6 @@ Item {
                         label: QT_TR_NOOP("Save internally")
                         value: false
                     }
-                },
-                ListModel {
-                    id: videoResolutionOptionsModel
-
-                    function setSettingProperty(value) {
-                        setVideoResolution(value);
-                    }
-
-                    property string icon: ""
-                    property string label: resolutionToLabel(settings.videoResolutions[camera.deviceId], false)
-                    property bool isToggle: false
-                    property int selectedIndex: bottomEdge.indexForValue(videoResolutionOptionsModel,
-                                                    settings.videoResolutions[camera.deviceId])
-                    property bool available: true
-                    property bool visible: camera.captureMode == Camera.CaptureVideo
-                    property bool showInIndicators: false
                 },
                 ListModel {
                     id: shutterSoundOptionsModel
