@@ -40,6 +40,10 @@ Item {
     // Sometimes the value is FlashVideoLight, sometimes it's FlashTorch
     property int videoFlashOnValue: Camera.FlashVideoLight
 
+    // Screen's aspect ratio in both major orientations
+    readonly property string screenAspectRatio: sizeToAspectRatio(Qt.size(Screen.width, Screen.height))
+    readonly property string screenAspectRatio2: sizeToAspectRatio(Qt.size(Screen.height, Screen.width))
+
     function showFocusRing(x, y) {
         focusRing.center = Qt.point(x, y);
         focusRing.show();
@@ -53,6 +57,7 @@ Item {
         property bool hasEXIF: false // Should it even be enabled by default?
         property bool hdrEnabled: false
         property bool videoFlashOn: false
+        property int videoQuality: 0 // 0 - Normal, 1 - High
         // Left for compatibility
         property int videoFlashMode: -1
         property int selfTimerDelay: 0
@@ -127,6 +132,14 @@ Item {
         property: "encodingQuality"
         value: settings.encodingQuality
         // This makes sure that the correct image quality is initiated
+        when: camera.cameraStatus == Camera.ActiveStatus
+    }
+
+    Binding {
+        target: camera.videoRecorder
+        property: "videoBitRate"
+        value: getVideoBitrate()
+        // This makes sure that the correct video bitrate is initiated
         when: camera.cameraStatus == Camera.ActiveStatus
     }
 
@@ -256,10 +269,29 @@ Item {
         }
     }
 
-    function resolutionToLabel(resolution) {
+    function resolutionToLabel(resolution, full=true) {
         // takes in a resolution string (e.g. "1920x1080") and returns a nicer
         // form of it for display in the UI: "1080p"
-        return resolution.split("x").pop() + "p";
+        const label = resolution.split("x").pop() + "p";
+
+        if (full) {
+            // Include the aspect ratio in full format
+            const aspectRatio = sizeToAspectRatio(stringToSize(resolution));
+            let finalAspectRatio = aspectRatio
+
+            // Label those that are equal to screen's aspect ratio as "Full"
+            // except 16:9 since it's common
+            if ((aspectRatio === viewFinderOverlay.screenAspectRatio
+                    || aspectRatio === viewFinderOverlay.screenAspectRatio2
+                 )
+                    && aspectRatio !== "16:9") {
+                finalAspectRatio = i18n.tr("Full")
+            }
+
+            return "%1 (%2)".arg(label).arg(finalAspectRatio);
+        }
+
+        return "%1".arg(label);
     }
 
     function sizeToString(size) {
@@ -288,6 +320,13 @@ Item {
             }
         }
         numerator = Math.round(ratio * bestDenominator);
+
+        // Further simplify square aspect ratio to 1:1
+        if (numerator === bestDenominator) {
+            numerator = 1;
+            bestDenominator = 1;
+        }
+
         return "%1:%2".arg(numerator).arg(bestDenominator);
     }
 
@@ -302,13 +341,19 @@ Item {
 
     function updateVideoResolutionOptions() {
         // Clear and refill videoResolutionOptionsModel with available resolutions
-        // Try to only display well known resolutions: 1080p, 720p and 480p
+        // Try to only display well known resolutions: 2160p, 1440p, 1080p, 720p and 480p
         videoResolutionOptionsModel.clear();
         var supported = camera.advanced.videoSupportedResolutions;
-        var wellKnown = ["1920x1080", "1280x720", "640x480"];
+        var wellKnown = ["2160", "1440", "1080", "720", "480"];
 
         var supportedFiltered = supported.filter(function (resolution) {
-            return wellKnown.indexOf(resolution) !== -1;
+            return wellKnown.findIndex(
+                value => {
+                    const _pattern = "x" + value + "$"
+                    const _regex = new RegExp(_pattern, "g")
+                    return resolution.match(_regex)
+                }
+            ) !== -1;
         });
 
         if (supportedFiltered.length === 0)
@@ -317,7 +362,7 @@ Item {
         // Sort resolutions from low to high, but then insert them into model
         // in reverse order (so that highest resolution appear first).
         supportedFiltered.sort(function(a, b) {
-            return a.split("x")[0] - b.split("x")[0];
+            return a.split("x")[1] - b.split("x")[1];
         });
 
         for (var i=0; i<supportedFiltered.length; i++) {
@@ -361,6 +406,44 @@ Item {
             setPhotoResolution(getAutomaticPhotoResolution());
         }
 
+    }
+
+    // Get the appropriate video bitrate based on the current quality setting
+    function getVideoBitrate() {
+        const quality = settings.videoQuality
+        const resoSize = camera.videoRecorder.resolution
+
+        if (quality === 1) { // High Quality
+            switch(true) {
+                case resoSize.height >= 2160:
+                    return 48000000 // 48 Mbps
+                case resoSize.height >= 1440:
+                    return 35000000 // 35 Mbps
+                case resoSize.height >= 1080:
+                    return 17000000 // 17 Mbps
+                case resoSize.height >= 720:
+                    return 10000000 // 10 Mbps
+                case resoSize.height >= 480:
+                    return 6000000 // 6 Mbps
+                default:
+                    return 5000000 // 5 Mbps
+            }
+        } else {
+            switch(true) {
+                case resoSize.height >= 2160:
+                    return 35000000 // 35 Mbps
+                case resoSize.height >= 1440:
+                    return 16000000 // 16 Mbps
+                case resoSize.height >= 1080:
+                    return 8000000 // 8 Mbps
+                case resoSize.height >= 720:
+                    return 5000000 // 5 Mbps
+                case resoSize.height >= 480:
+                    return 2500000 // 2.5 Mbps
+                default:
+                    return 2000000 // 2 Mbps
+            }
+        }
     }
 
     function setPhotoResolution(resolution) {
@@ -627,6 +710,43 @@ Item {
                     }
                 },
                 ListModel {
+                    id: videoQualityOptionsModel
+                    property string settingsProperty: "videoQuality"
+                    property string icon: "stock_video"
+                    property string label: ""
+                    property bool isToggle: false
+                    property int selectedIndex: bottomEdge.indexForValue(videoQualityOptionsModel, settings.videoQuality)
+                    property bool available: true
+                    property bool visible: camera.captureMode == Camera.CaptureVideo
+                    property bool showInIndicators: false
+                    ListElement {
+                        icon: ""
+                        label: QT_TR_NOOP("High Quality")
+                        value: 1
+                    }
+                    ListElement {
+                        icon: ""
+                        label: QT_TR_NOOP("Normal Quality")
+                        value: 0
+                    }
+                },
+                ListModel {
+                    id: videoResolutionOptionsModel
+
+                    function setSettingProperty(value) {
+                        setVideoResolution(value);
+                    }
+
+                    property string icon: ""
+                    property string label: resolutionToLabel(settings.videoResolutions[camera.deviceId], false)
+                    property bool isToggle: false
+                    property int selectedIndex: bottomEdge.indexForValue(videoResolutionOptionsModel,
+                                                    settings.videoResolutions[camera.deviceId])
+                    property bool available: true
+                    property bool visible: camera.captureMode == Camera.CaptureVideo
+                    property bool showInIndicators: false
+                },
+                ListModel {
                     id: gridOptionsModel
 
                     property string settingsProperty: "gridEnabled"
@@ -671,22 +791,6 @@ Item {
                         label: QT_TR_NOOP("Save internally")
                         value: false
                     }
-                },
-                ListModel {
-                    id: videoResolutionOptionsModel
-
-                    function setSettingProperty(value) {
-                        setVideoResolution(value);
-                    }
-
-                    property string icon: ""
-                    property string label: "HD"
-                    property bool isToggle: false
-                    property int selectedIndex: bottomEdge.indexForValue(videoResolutionOptionsModel,
-                                                    settings.videoResolutions[camera.deviceId])
-                    property bool available: true
-                    property bool visible: camera.captureMode == Camera.CaptureVideo
-                    property bool showInIndicators: false
                 },
                 ListModel {
                     id: shutterSoundOptionsModel
