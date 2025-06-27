@@ -8,422 +8,429 @@ msgstr ""
 "Project-Id-Version: lomiri-camera-app-translations\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-17 10:34+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-06-28 18:47+0000\n"
+"Last-Translator: phmqXPD <phmq.xpd@gmail.com>\n"
+"Language-Team: Vietnamese <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-camera-app/vi/>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
 #: Information.qml:106
 msgid "Camera"
-msgstr ""
+msgstr "Máy ảnh"
 
 #: lomiri-camera-app.desktop.in:5
 msgid "Camera application"
-msgstr ""
+msgstr "Ứng dụng máy ảnh"
 
 #: lomiri-camera-app.desktop.in:7
 msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
-msgstr ""
+msgstr "Ảnh;Video;Chụp;Chụp;Ảnh chụp nhanh;Quay"
 
 #: lomiri-camera-app.desktop.in:10
 msgid "lomiri-camera-app"
-msgstr ""
+msgstr "lomiri-camera-app"
 
 #: lomiri-barcode-reader-app.desktop.in:4
 #: lomiri-barcode-reader-app.desktop.in:6
 msgid "Barcode Reader"
-msgstr ""
+msgstr "Trình đọc mã vạch"
 
 #: lomiri-barcode-reader-app.desktop.in:5
 msgid "Barcode Reader application"
-msgstr ""
+msgstr "Ứng dụng đọc mã vạch"
 
 #: lomiri-barcode-reader-app.desktop.in:7
 msgid "QR;Code;Reader"
-msgstr ""
+msgstr "QR;Mã;Trình đọc"
 
 #: lomiri-barcode-reader-app.desktop.in:10
 msgid "lomiri-barcode-reader-app"
-msgstr ""
+msgstr "lomiri-barcode-reader-app"
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
 msgid "Settings"
-msgstr ""
+msgstr "Cài đặt"
 
 #: AdvancedOptions.qml:27
 msgid "Close"
-msgstr ""
+msgstr "Đóng"
 
 #: AdvancedOptions.qml:35 Information.qml:20 PhotogridView.qml:78
 #: SlideshowView.qml:86
 msgid "About"
-msgstr ""
+msgstr "Giới thiệu"
 
 #: AdvancedOptions.qml:66
 msgid "Add date stamp on captured images"
-msgstr ""
+msgstr "Thêm thời gian vào ảnh đã chụp"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: AdvancedOptions.qml:89
 msgid "Format"
-msgstr ""
+msgstr "Định dạng"
 
 #: AdvancedOptions.qml:142
 msgid "Date formatting keywords"
-msgstr ""
+msgstr "Các từ khóa định dạng ngày"
 
 #: AdvancedOptions.qml:147
 msgid "the day as number without a leading zero (1 to 31)"
-msgstr ""
+msgstr "ngày (dưới dạng số, không có số 0 ở đầu, từ 1 đến 31)"
 
 #: AdvancedOptions.qml:148
 msgid "the day as number with a leading zero (01 to 31)"
-msgstr ""
+msgstr "ngày (dưới dạng số, có số 0 ở đầu, từ 01 đến 31)"
 
 #: AdvancedOptions.qml:149
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr ""
+msgstr "tên ngày viết tắt theo địa phương (ví dụ: 'T2' đến 'CN')."
 
 #: AdvancedOptions.qml:150
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
-msgstr ""
+msgstr "tên ngày đầy đủ theo địa phương (ví dụ: 'Thứ Hai' đến 'Chủ Nhật')."
 
 #: AdvancedOptions.qml:151
 msgid "the month as number without a leading zero (1 to 12)"
-msgstr ""
+msgstr "tháng (dạng số, không có số 0 ở đầu, từ 1 đến 12)"
 
 #: AdvancedOptions.qml:152
 msgid "the month as number with a leading zero (01 to 12)"
-msgstr ""
+msgstr "tháng (dạng số, có số 0 ở đầu, từ 01 đến 12)"
 
 #: AdvancedOptions.qml:153
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr ""
+msgstr "tên tháng viết tắt theo địa phương (ví dụ: 'Thg 1' đến 'Thg 12')."
 
 #: AdvancedOptions.qml:154
 msgid "the long localized month name (e.g. 'January' to 'December')."
 msgstr ""
+"tên tháng đầy đủ theo địa phương (ví dụ: 'Tháng Một' đến 'Tháng Mười Hai')."
 
 #: AdvancedOptions.qml:155
 msgid "the year as two digit number (00 to 99)"
-msgstr ""
+msgstr "năm (dạng hai chữ số, từ 00 đến 99)"
 
 #: AdvancedOptions.qml:156
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
-msgstr ""
+msgstr "năm (dạng bốn chữ số). Nếu năm là âm, sẽ có dấu trừ đứng trước."
 
 #: AdvancedOptions.qml:157
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
 msgstr ""
+"giờ (không có số 0 ở đầu, từ 0 đến 23 hoặc từ 1 đến 12 nếu hiển thị AM/PM)"
 
 #: AdvancedOptions.qml:158
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
-msgstr ""
+msgstr "giờ (có số 0 ở đầu, từ 00 đến 23 hoặc từ 01 đến 12 nếu hiển thị AM/PM)"
 
 #: AdvancedOptions.qml:159
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "giờ (không có số 0 ở đầu, từ 0 đến 23, ngay cả khi hiển thị AM/PM)"
 
 #: AdvancedOptions.qml:160
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "giờ (có số 0 ở đầu, từ 00 đến 23, ngay cả khi hiển thị AM/PM)"
 
 #: AdvancedOptions.qml:161
 msgid "the minute without a leading zero (0 to 59)"
-msgstr ""
+msgstr "phút (không có số 0 ở đầu, từ 0 đến 59)"
 
 #: AdvancedOptions.qml:162
 msgid "the minute with a leading zero (00 to 59)"
-msgstr ""
+msgstr "phút (có số 0 ở đầu, từ 00 đến 59)"
 
 #: AdvancedOptions.qml:163
 msgid "the second without a leading zero (0 to 59)"
-msgstr ""
+msgstr "giây (không có số 0 ở đầu, từ 0 đến 59)"
 
 #: AdvancedOptions.qml:164
 msgid "the second with a leading zero (00 to 59)"
-msgstr ""
+msgstr "giây (có số 0 ở đầu, từ 00 đến 59)"
 
 #: AdvancedOptions.qml:165
 msgid "the milliseconds without leading zeroes (0 to 999)"
-msgstr ""
+msgstr "mili giây (không có số 0 ở đầu, từ 0 đến 999)"
 
 #: AdvancedOptions.qml:166
 msgid "the milliseconds with leading zeroes (000 to 999)"
-msgstr ""
+msgstr "mili giây (có số 0 ở đầu, từ 000 đến 999)"
 
 #: AdvancedOptions.qml:167
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr ""
+msgstr "sử dụng hiển thị AM/PM. AP sẽ được thay thế bằng 'AM' hoặc 'PM'."
 
 #: AdvancedOptions.qml:168
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr ""
+msgstr "sử dụng hiển thị AM/PM. AP sẽ được thay thế bằng 'AM' hoặc 'PM'."
 
 #: AdvancedOptions.qml:169
 msgid "the timezone (for example 'CEST')"
-msgstr ""
+msgstr "múi giờ (ví dụ: 'CEST')"
 
 #: AdvancedOptions.qml:178
 msgid "Add to Format"
-msgstr ""
+msgstr "Thêm vào Định dạng"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: AdvancedOptions.qml:209
 msgid "Color"
-msgstr ""
+msgstr "Màu"
 
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: AdvancedOptions.qml:278
 msgid "Alignment"
-msgstr ""
+msgstr "Căn chỉnh"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: AdvancedOptions.qml:323
 msgid "Opacity"
-msgstr ""
+msgstr "Độ mờ đục"
 
 #: AdvancedOptions.qml:346
 msgid "Blurred Overlay"
-msgstr ""
+msgstr "Lớp phủ làm mờ"
 
 #: AdvancedOptions.qml:367
 msgid "Only Blur Preview overlay"
-msgstr ""
+msgstr "Chỉ làm mờ lớp phủ xem trước"
 
 #: DeleteDialog.qml:24
 msgid "Delete media?"
-msgstr ""
+msgstr "Xóa 'phương tiện' này chứ?"
 
 #: DeleteDialog.qml:34 PhotogridView.qml:56 SlideshowView.qml:69
 msgid "Delete"
-msgstr ""
+msgstr "Xóa bỏ"
 
 #: DeleteDialog.qml:40 ViewFinderOverlay.qml:1203 ViewFinderOverlay.qml:1217
 #: ViewFinderOverlay.qml:1265 ViewFinderView.qml:409
 msgid "Cancel"
-msgstr ""
+msgstr "Hủy bỏ"
 
 #: GalleryView.qml:270
 msgid "No media available."
-msgstr ""
+msgstr "Không có 'phương tiện' khả dụng."
 
 #: GalleryView.qml:305
 msgid "Scanning for content..."
-msgstr ""
+msgstr "Đang quét nội dung..."
 
 #: GalleryViewHeader.qml:84 SlideshowView.qml:46
 msgid "Select"
-msgstr ""
+msgstr "Chọn"
 
 #: GalleryViewHeader.qml:85
 msgid "Edit Photo"
-msgstr ""
+msgstr "Chỉnh sửa ảnh"
 
 #: GalleryViewHeader.qml:85
 msgid "Photo Roll"
-msgstr ""
+msgstr "Thư viện ảnh"
 
 #: Information.qml:25
 msgid "Back"
-msgstr ""
+msgstr "Trở lại"
 
 #: Information.qml:76
 msgid "Get the source"
-msgstr ""
+msgstr "Lấy nguồn"
 
 #: Information.qml:77
 msgid "Report issues"
-msgstr ""
+msgstr "Báo cáo sự cố"
 
 #: Information.qml:78
 msgid "Help translate"
-msgstr ""
+msgstr "Hỗ trợ dịch"
 
 #: MediaInfoPopover.qml:14
 #, qt-format
 msgid "Width : %1"
-msgstr ""
+msgstr "Chiều dài : %1"
 
 #: MediaInfoPopover.qml:15
 #, qt-format
 msgid "Height : %1"
-msgstr ""
+msgstr "Chiều cao : %1"
 
 #: MediaInfoPopover.qml:16
 #, qt-format
 msgid "Date : %1"
-msgstr ""
+msgstr "Ngày : %1"
 
 #: MediaInfoPopover.qml:17
 #, qt-format
 msgid "Camera Model : %1"
-msgstr ""
+msgstr "Kiểu máy ảnh : %1"
 
 #: MediaInfoPopover.qml:18
 #, qt-format
 msgid "Copyright : %1"
-msgstr ""
+msgstr "Bản quyền : %1"
 
 #: MediaInfoPopover.qml:19
 #, qt-format
 msgid "Exposure Time : %1"
-msgstr ""
+msgstr "Thời gian phơi sáng : %1"
 
 #: MediaInfoPopover.qml:20
 #, qt-format
 msgid "F. Number : %1"
-msgstr ""
+msgstr "Số khẩu độ ống kính (f) : %1"
 
 #: MediaInfoPopover.qml:21
 #, qt-format
 msgid "Sub-File type : %1"
-msgstr ""
+msgstr "Kiểu tệp con : %1"
 
 #: MediaInfoPopover.qml:43
 msgid "Media Information"
-msgstr ""
+msgstr "Thông tin 'phương tiện' này"
 
 #: MediaInfoPopover.qml:48
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "Tên : %1"
 
 #: MediaInfoPopover.qml:51
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "Thể loại : %1"
 
 #: MediaInfoPopover.qml:83
 #, qt-format
 msgid "With Flash : %1"
-msgstr ""
+msgstr "Với 'Flash' : %1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
-msgstr ""
+msgstr "Có"
 
 #: MediaInfoPopover.qml:83
 msgid "No"
-msgstr ""
+msgstr "Không"
 
 #: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
-msgstr ""
+msgstr "Thiết bị hết dung lượng, hãy giải phóng bộ nhớ để tiếp tục."
 
 #: PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
-msgstr ""
+msgstr "Vuốt sang trái để xem thư viện ảnh"
 
 #: PhotogridView.qml:42 SlideshowView.qml:54
 msgid "Share"
-msgstr ""
+msgstr "Chia sẻ"
 
 #: SlideshowView.qml:62
 msgid "Image Info"
-msgstr ""
+msgstr "Thông tin ảnh"
 
 #: SlideshowView.qml:98
 msgid "Edit"
-msgstr ""
+msgstr "Chỉnh sửa"
 
 #: SlideshowView.qml:477
 msgid "Back to Photo roll"
-msgstr ""
+msgstr "Quay lại Thư viện ảnh"
 
 #: UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr ""
+msgstr "Không thể chia sẻ"
 
 #: UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
-msgstr ""
+msgstr "Không thể chia sẻ ảnh và video cùng lúc"
 
 #: UnableShareDialog.qml:30
 msgid "Ok"
-msgstr ""
+msgstr "Ô kê"
 
 #: ViewFinderOverlay.qml:469 ViewFinderOverlay.qml:492
 #: ViewFinderOverlay.qml:520 ViewFinderOverlay.qml:543
 #: ViewFinderOverlay.qml:628 ViewFinderOverlay.qml:695
 msgid "On"
-msgstr ""
+msgstr "Bật"
 
 #: ViewFinderOverlay.qml:474 ViewFinderOverlay.qml:502
 #: ViewFinderOverlay.qml:525 ViewFinderOverlay.qml:548
 #: ViewFinderOverlay.qml:567 ViewFinderOverlay.qml:633
 #: ViewFinderOverlay.qml:705
 msgid "Off"
-msgstr ""
+msgstr "Tắt"
 
 #: ViewFinderOverlay.qml:497
 msgid "Auto"
-msgstr ""
+msgstr "Tự động"
 
 #: ViewFinderOverlay.qml:534
 msgid "HDR"
-msgstr ""
+msgstr "HDR"
 
 #: ViewFinderOverlay.qml:572
 msgid "5 seconds"
-msgstr ""
+msgstr "5 giây"
 
 #: ViewFinderOverlay.qml:577
 msgid "15 seconds"
-msgstr ""
+msgstr "15 giây"
 
 #: ViewFinderOverlay.qml:595
 msgid "Fine Quality"
-msgstr ""
+msgstr "Chất lượng ổn"
 
 #: ViewFinderOverlay.qml:600
 msgid "High Quality"
-msgstr ""
+msgstr "Chất lượng cao"
 
 #: ViewFinderOverlay.qml:605
 msgid "Normal Quality"
-msgstr ""
+msgstr "Chất lượng bình thường"
 
 #: ViewFinderOverlay.qml:610
 msgid "Basic Quality"
-msgstr ""
+msgstr "Chất lượng cơ bản"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
 #: ViewFinderOverlay.qml:643
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 #: ViewFinderOverlay.qml:651
 msgid "Save to SD Card"
-msgstr ""
+msgstr "Lưu vào Thẻ SD"
 
 #: ViewFinderOverlay.qml:656
 msgid "Save internally"
-msgstr ""
+msgstr "Lưu nội bộ"
 
 #: ViewFinderOverlay.qml:700
 msgid "Vibrate"
-msgstr ""
+msgstr "Rung"
 
 #: ViewFinderOverlay.qml:1200
 msgid "Low storage space"
-msgstr ""
+msgstr "Dung lượng bộ nhớ ít"
 
 #: ViewFinderOverlay.qml:1201
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
 msgstr ""
+"Bộ nhớ của bạn sắp đầy. Để tiếp tục sử dụng mà không gián đoạn thông báo "
+"này, hãy giải phóng dung lượng ngay bây giờ."
 
 #: ViewFinderOverlay.qml:1214
 msgid "External storage not writeable"
-msgstr ""
+msgstr "Bộ nhớ ngoài không ghi được"
 
 #: ViewFinderOverlay.qml:1215
 msgid ""
@@ -431,10 +438,12 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
+"Có vẻ không thể ghi dữ liệu vào bộ nhớ ngoài của bạn. Thử tháo ra và gắn lại "
+"có thể khắc phục được sự cố, hoặc bạn có thể cần định dạng lại."
 
 #: ViewFinderOverlay.qml:1253
 msgid "Cannot access camera"
-msgstr ""
+msgstr "Không thể truy cập máy ảnh"
 
 #: ViewFinderOverlay.qml:1254
 msgid ""
@@ -443,79 +452,86 @@ msgid ""
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
+"Ứng dụng Máy ảnh không có quyền truy cập phần cứng máy ảnh hoặc đã xảy ra "
+"lỗi khác.\n"
+"\n"
+"Nếu việc cấp quyền không khắc phục được sự cố này, hãy khởi động lại thiết "
+"bị của bạn."
 
 #: ViewFinderOverlay.qml:1256
 msgid "Edit Permissions"
-msgstr ""
+msgstr "Chỉnh sửa quyền"
 
 #: ViewFinderView.qml:400
 msgid "Capture failed"
-msgstr ""
+msgstr "Chụp thất bại"
 
 #: ViewFinderView.qml:405
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
 msgstr ""
+"Thay thế thiết bị lưu trữ phương tiện ngoài, định dạng lại hoặc khởi động "
+"lại thiết bị có thể khắc phục sự cố."
 
 #: ViewFinderView.qml:406
 msgid "Restarting your device might fix the problem."
-msgstr ""
+msgstr "Khởi động lại thiết bị có thể khắc phục được sự cố."
 
 #: camera-app.qml:61
 msgid "Flash"
-msgstr ""
+msgstr "Flash"
 
 #: camera-app.qml:62
 msgid "Light;Dark"
-msgstr ""
+msgstr "Sáng;Tối"
 
 #: camera-app.qml:65
 msgid "Flip Camera"
-msgstr ""
+msgstr "Lật máy ảnh"
 
 #: camera-app.qml:66
 msgid "Front Facing;Back Facing"
-msgstr ""
+msgstr "Trước mặt;Đằng sau"
 
 #: camera-app.qml:69
 msgid "Shutter"
-msgstr ""
+msgstr "Màn chập"
 
 #: camera-app.qml:70
 msgid "Take a Photo;Snap;Record"
-msgstr ""
+msgstr "Chụp ảnh;Chụp nhanh;Ghi hình"
 
 #: camera-app.qml:73
 msgid "Mode"
-msgstr ""
+msgstr "Chế độ"
 
 #: camera-app.qml:74
 msgid "Stills;Video"
-msgstr ""
+msgstr "Ảnh tĩnh;Video"
 
 #: camera-app.qml:78
 msgid "White Balance"
-msgstr ""
+msgstr "Cân bằng trắng"
 
 #: camera-app.qml:79
 msgid "Lighting Condition;Day;Cloudy;Inside"
-msgstr ""
+msgstr "Điều kiện ánh sáng;Ban ngày;Trời nhiều mây;Trong nhà"
 
 #: camera-app.qml:386
 #, qt-format
 msgid "<b>%1</b> photos taken today"
-msgstr ""
+msgstr "<b>%1</b> ảnh được chụp hôm nay"
 
 #: camera-app.qml:387
 msgid "No photos taken today"
-msgstr ""
+msgstr "Không có ảnh được chụp hôm nay"
 
 #: camera-app.qml:397
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
-msgstr ""
+msgstr "<b>%1</b> video được quay hôm nay"
 
 #: camera-app.qml:398
 msgid "No videos recorded today"
-msgstr ""
+msgstr "Không có video được quay hôm nay"
