@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-17 10:34+0000\n"
-"PO-Revision-Date: 2023-04-22 21:43+0000\n"
-"Last-Translator: Lu Xu <oliver_lew@outlook.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
-"lomiri/lomiri-camera-app/zh_Hans/>\n"
+"PO-Revision-Date: 2025-07-17 00:37+0000\n"
+"Last-Translator: \"Alioc.\" <hit.177411245@gmail.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/lomiri/lomiri-camera-app/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
@@ -34,26 +34,24 @@ msgstr "照片；视频；拍照；连拍；快拍；录像"
 
 #: lomiri-camera-app.desktop.in:10
 msgid "lomiri-camera-app"
-msgstr ""
+msgstr "Lomiri相机应用"
 
 #: lomiri-barcode-reader-app.desktop.in:4
 #: lomiri-barcode-reader-app.desktop.in:6
 msgid "Barcode Reader"
-msgstr ""
+msgstr "条形码阅读器"
 
 #: lomiri-barcode-reader-app.desktop.in:5
-#, fuzzy
-#| msgid "Camera application"
 msgid "Barcode Reader application"
-msgstr "相机应用程序"
+msgstr "条形码阅读器应用程序"
 
 #: lomiri-barcode-reader-app.desktop.in:7
 msgid "QR;Code;Reader"
-msgstr ""
+msgstr "QR;代码;读者"
 
 #: lomiri-barcode-reader-app.desktop.in:10
 msgid "lomiri-barcode-reader-app"
-msgstr ""
+msgstr "Lomiri条形码阅读器应用程序"
 
 #: AdvancedOptions.qml:23 PhotogridView.qml:69 SlideshowView.qml:77
 msgid "Settings"
