@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: lomiri-camera-app-translations\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-17 10:34+0000\n"
-"PO-Revision-Date: 2025-05-20 10:07+0000\n"
-"Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
+"PO-Revision-Date: 2025-07-26 20:06+0000\n"
+"Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/et/>\n"
 "Language: et\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
 #: Information.qml:106
@@ -389,50 +389,52 @@ msgstr "15 sekundit"
 
 #: ViewFinderOverlay.qml:595
 msgid "Fine Quality"
-msgstr ""
+msgstr "Parim kvaliteet"
 
 #: ViewFinderOverlay.qml:600
 msgid "High Quality"
-msgstr ""
+msgstr "Kõrge kvaliteet"
 
 #: ViewFinderOverlay.qml:605
 msgid "Normal Quality"
-msgstr ""
+msgstr "Tavaline kvaliteet"
 
 #: ViewFinderOverlay.qml:610
 msgid "Basic Quality"
-msgstr ""
+msgstr "Algkvaliteet"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
 #: ViewFinderOverlay.qml:643
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 #: ViewFinderOverlay.qml:651
 msgid "Save to SD Card"
-msgstr ""
+msgstr "Salvesta SD-kaardile"
 
 #: ViewFinderOverlay.qml:656
 msgid "Save internally"
-msgstr ""
+msgstr "Salvesta sisemisse andmeruumi"
 
 #: ViewFinderOverlay.qml:700
 msgid "Vibrate"
-msgstr ""
+msgstr "Vibreeri"
 
 #: ViewFinderOverlay.qml:1200
 msgid "Low storage space"
-msgstr ""
+msgstr "Andmeruumi napib"
 
 #: ViewFinderOverlay.qml:1201
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
 msgstr ""
+"Sinu nutiseadmes on tekkinud andmeruumi puudus. Tõrgeteta jätkamiseks "
+"vabasta kohe andmeruumi."
 
 #: ViewFinderOverlay.qml:1214
 msgid "External storage not writeable"
-msgstr ""
+msgstr "Välises andmeruumis puudub kirjutusõigus"
 
 #: ViewFinderOverlay.qml:1215
 msgid ""
@@ -440,10 +442,13 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
+"Tundub, et pole võimalik salvestada välisesse andmeruumi. Võid proovida ta "
+"väljastada ja siis uuesti sisestada, aga võib-olla on hoopis vaja ta uuesti "
+"vormindada või sootuks asendada."
 
 #: ViewFinderOverlay.qml:1253
 msgid "Cannot access camera"
-msgstr ""
+msgstr "Puudub ligipääs kaamerale"
 
 #: ViewFinderOverlay.qml:1254
 msgid ""
@@ -452,79 +457,86 @@ msgid ""
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
+"Kaamerarakendusel ei tundu olevat õigusi kaamera kasutamiseks või tekkis muu "
+"viga.\n"
+"\n"
+"Kui vajalike õiguste lisamine ei lahenda viga, siis palun käivita nutiseade "
+"uuesti."
 
 #: ViewFinderOverlay.qml:1256
 msgid "Edit Permissions"
-msgstr ""
+msgstr "Muuda õigusi"
 
 #: ViewFinderView.qml:400
 msgid "Capture failed"
-msgstr ""
+msgstr "Pildi või video jäädvustamine ei õnnestunud"
 
 #: ViewFinderView.qml:405
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
 msgstr ""
+"Välise andmekandja asendamine, uuesti vormindamine või nutiseadme uuesti "
+"käivitamine võib vea parandada."
 
 #: ViewFinderView.qml:406
 msgid "Restarting your device might fix the problem."
-msgstr ""
+msgstr "Nutiseadme uuesti käivitamine võib vea parandada."
 
 #: camera-app.qml:61
 msgid "Flash"
-msgstr ""
+msgstr "Välk"
 
 #: camera-app.qml:62
 msgid "Light;Dark"
-msgstr ""
+msgstr "Hele;Tume"
 
 #: camera-app.qml:65
 msgid "Flip Camera"
-msgstr ""
+msgstr "Vaheta kaamerat"
 
 #: camera-app.qml:66
 msgid "Front Facing;Back Facing"
-msgstr ""
+msgstr "Esikaamera;Tagakaamera;Eespoolne;Tagapoolne;Ees;Taga"
 
 #: camera-app.qml:69
 msgid "Shutter"
-msgstr ""
+msgstr "Katik"
 
 #: camera-app.qml:70
 msgid "Take a Photo;Snap;Record"
-msgstr ""
+msgstr "Pildistamine;Klõps;Pilt;Foto;Jäädvustamine;Klõpsa"
 
 #: camera-app.qml:73
 msgid "Mode"
-msgstr ""
+msgstr "Režiim"
 
 #: camera-app.qml:74
 msgid "Stills;Video"
-msgstr ""
+msgstr "Pilt;Kaader;Salvestus;Video;Foto"
 
 #: camera-app.qml:78
 msgid "White Balance"
-msgstr ""
+msgstr "Valge tasakaal"
 
 #: camera-app.qml:79
 msgid "Lighting Condition;Day;Cloudy;Inside"
-msgstr ""
+msgstr "Valgus;Valgustus;Pilvine;Väljas;Tasakaal"
 
 #: camera-app.qml:386
 #, qt-format
 msgid "<b>%1</b> photos taken today"
-msgstr ""
+msgstr "Täna oled pildistanud <b>%1</b> fotot"
 
 #: camera-app.qml:387
 msgid "No photos taken today"
-msgstr ""
+msgstr "Sa pole täna ühtegi fotot pildistanud"
 
 #: camera-app.qml:397
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
-msgstr ""
+msgstr "Täna oled salvestanud <b>%1</b> videot"
 
 #: camera-app.qml:398
 msgid "No videos recorded today"
-msgstr ""
+msgstr "Sa pole täna ühtegi videot salvestanud"
