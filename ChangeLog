@@ -1,6 +1,48 @@
+2025-08-11 Mike Gabriel
+
+        * Release 4.1.1 (HEAD -> main, tag: v4.1.1)
+
+2025-07-19 Priit Jõerüüt
+
+        * Translated using Weblate (Estonian) (f7ed793)
+
+2025-07-11 Alioc
+
+        * Translated using Weblate (Chinese (Simplified Han script))
+          (c921686)
+
+2025-06-27 phmqXPD
+
+        * Translated using Weblate (Vietnamese) (691df5a)
+
+2025-06-23 Mike Gabriel
+
+        * Merge branch 'main_-_videoquality' into 'main' (b56e4e5)
+
+2025-06-15 kugiigi
+
+        * Move resolution icon beside video quality (2c4791f)
+        * Use current video resolution label instead of just HD (c8a2e28)
+
+2025-06-06 kugiigi
+
+        * Add video quality setting (07c3353)
+        * Add support for more resolutions and aspect ratio (cd617ca)
+        * Simplify label of square aspect ratio to 1:1 (977d854)
+
+2025-06-15 Mike Gabriel
+
+        * Merge branch 'personal/fredldotme/qr-scan-invert-color' into 'main'
+          (c789a45)
+
+2025-06-13 Alfred Neumayer
+
+        * qml: Activate QZXing.SourceFilter_ImageInverted for
+          imageSourceFilter (993643a)
+
 2025-06-05 Mike Gabriel
 
-        * Release 4.1.0 (HEAD -> main, tag: v4.1.0)
+        * Release 4.1.0 (4e5f837) (tag: v4.1.0)
 
 2025-05-30 Mike Gabriel
 
