@@ -17,8 +17,7 @@
 
 import QtQuick 2.12
 import QtTest 1.0
-import "../../"
-import "../../.." //Needed for out of source build
+import "../../qml/Viewfinder"
 
 TestCase {
     name: "ViewFinderGeometry"

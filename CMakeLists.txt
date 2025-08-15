@@ -191,6 +191,8 @@ install(DIRECTORY ${QML_DIR}
     DESTINATION ${CAMERA_APP_DIR}
     )
 
+# For tests
+file(COPY ${QML_DIR} DESTINATION ${CMAKE_BINARY_DIR})
 
 set(ASSETS_DIR assets)
 
