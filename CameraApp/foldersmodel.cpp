@@ -209,6 +209,9 @@ QHash<int, QByteArray> FoldersModel::roleNames() const
     roles[FileUrlRole] = "fileURL";
     roles[FileTypeRole] = "fileType";
     roles[SelectedRole] = "selected";
+    roles[ParentUrlRole] = "parentUrl";
+    roles[FileSizeRole] = "fileSize";
+    roles[FileSizeLabelRole] = "fileSizeLabel";
     return roles;
 }
 
@@ -240,11 +243,51 @@ QVariant FoldersModel::data(const QModelIndex& index, int role) const
         case SelectedRole:
             return m_selectedFiles.contains(index.row());
             break;
+        case ParentUrlRole:
+            return QUrl::fromLocalFile(item.absolutePath());
+            break;
+        case FileSizeRole:
+            return item.size();
+            break;
+        case FileSizeLabelRole:
+            return formatFileSize(item.size());;
+            break;
         default:
             break;
     }
 
     return QVariant();
+}
+
+QString FoldersModel::formatFileSize(qint64 size) const
+{
+    struct UnitSizes {
+        qint64      bytes;
+        const char *name;
+    };
+
+    static UnitSizes m_unitBytes[5] = {
+        { 1,           "Bytes" }
+        , {1024,         "kB"}
+        // got it from http://wiki.answers.com/Q/How_many_bytes_are_in_a_megabyte
+        , {1000 * 1000,  "MB"}
+        , {1000 *  m_unitBytes[2].bytes,   "GB"}
+        , {1000 *  m_unitBytes[3].bytes, "TB"}
+    };
+
+    QString ret;
+    int unit = sizeof(m_unitBytes) / sizeof(m_unitBytes[0]);
+    while ( unit-- > 1 && size < m_unitBytes[unit].bytes );
+
+    if (unit > 0 ) {
+        ret.sprintf("%0.1f %s", (float)size / m_unitBytes[unit].bytes,
+                    m_unitBytes[unit].name);
+
+    } else {
+        ret.sprintf("%ld %s", (long int)size, m_unitBytes[0].name);
+    }
+
+    return ret;
 }
 
 int FoldersModel::rowCount(const QModelIndex& parent) const
@@ -363,3 +406,4 @@ void FoldersModel::componentComplete()
     m_completed = true;
     updateFileInfoList();
 }
+

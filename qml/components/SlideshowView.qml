@@ -62,7 +62,8 @@ FocusScope {
             text: i18n.tr("Image Info")
             iconName: "info"
             onTriggered: {
-                infoPopover.show()
+                let dialog = PopupUtils.open(mediaInfoDialog)
+                dialog.parent = slideshowView
             }
         },
         Action {
@@ -227,15 +228,19 @@ FocusScope {
         }
     }
 
-   MediaInfoPopover {
-        id: infoPopover
-        contentWidth:slideshowView.width > units.gu(45) ? units.gu(40) : slideshowView.width*0.85
-        mediaUrl: listView.currentItem && listView.currentItem.mediaUrl && !listView.currentItem.isVideo
-                        ? listView.currentItem.mediaUrl : ""
-        model:{
-            "fileName": slideshowView.model.get(slideshowView.currentIndex, "fileName"),
-            "fileType": slideshowView.model.get(slideshowView.currentIndex, "fileType"),
-        }
+    Component {
+        id: mediaInfoDialog
+
+        MediaInfoDialog {
+            mediaUrl: listView.currentItem && listView.currentItem.mediaUrl && !listView.currentItem.isVideo
+                            ? listView.currentItem.mediaUrl : ""
+            model:{
+                "fileName": slideshowView.model.get(slideshowView.currentIndex, "fileName"),
+                "fileType": slideshowView.model.get(slideshowView.currentIndex, "fileType"),
+                "fileSizeLabel": slideshowView.model.get(slideshowView.currentIndex, "fileSizeLabel"),
+                "parentUrl": slideshowView.model.get(slideshowView.currentIndex, "parentUrl"),
+            }
+         }
      }
 
     Component {

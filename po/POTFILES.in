@@ -8,7 +8,7 @@ qml/components/GalleryViewHeader.qml
 qml/components/GalleryViewLoader.qml
 qml/components/IconButton.qml
 qml/components/Information.qml
-qml/components/MediaInfoPopover.qml
+qml/components/MediaInfoDialog.qml
 qml/components/NoSpaceHint.qml
 qml/components/OptionButton.qml
 qml/components/OptionValueButton.qml
