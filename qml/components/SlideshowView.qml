@@ -97,7 +97,13 @@ FocusScope {
         id: editAction
         text: i18n.tr("Edit")
         iconName: "edit"
-        onTriggered: editor.start(listView.currentItem.url)
+
+        onTriggered: {
+            let path = listView.currentItem.mediaUrl.toString();
+            path = path.replace("file://", "");
+
+            editor.start(path)
+        }
         enabled: listView.currentItem && !listView.currentItem.isVideo
     }
 
@@ -124,7 +130,7 @@ FocusScope {
 
     function exit() {
         if (listView.currentItem) {
-            listView.currentItem.zoomOut();
+            listView.currentItem.zoomOut(true);
         }
         showPhotoAtIndex(0);
     }
@@ -166,195 +172,37 @@ FocusScope {
                 LomiriNumberAnimation { property: "opacity"; to: 0 }
             }
         }
-        delegate: Item {
+        delegate: SingleMediaViewer {
             id: delegate
             objectName: "mediaItem" + index
-            property bool pinchInProgress: zoomPinchArea.active
-            property string url: fileURL
-            property bool isSelected: selected
-            property alias isVideo: media.isVideo
 
-            function zoomIn(centerX, centerY, factor) {
-                flickable.scaleCenterX = centerX / (flickable.sizeScale * flickable.width);
-                flickable.scaleCenterY = centerY / (flickable.sizeScale * flickable.height);
-                flickable.sizeScale = factor;
-            }
+            scale: 1 - (photoBottomEdge.dragProgress * 0.05)
+            mediaUrl: model.fileURL
+            useImageProvider: true
 
-            function zoomOut() {
-                if (flickable.sizeScale != 1.0) {
-                    flickable.scaleCenterX = flickable.contentX / flickable.width / (flickable.sizeScale - 1);
-                    flickable.scaleCenterY = flickable.contentY / flickable.height / (flickable.sizeScale - 1);
-                    flickable.sizeScale = 1.0;
-                }
-            }
+            // TODO: This needs to be enabled because for some reason
+            // initial zoom in stutters when loading the full resolution
+            // version of the image. This doesn't seem to happen in other apps
+            // like File Manager
+            dynamicImageScaling: true
 
-            function reload() {
-                reloadImage(image);
-                reloadImage(highResolutionImage);
-            }
-
-            function getMedia() {
-                return  isVideo ? null : media;
-            }
+            backgroundTiledImageSource: "../../assets/transparency-bg.png"
+            isVideo: MimeTypeMapper.mimeTypeToContentType(model.fileType) === ContentType.Videos
 
             width: ListView.view.width
             height: ListView.view.height
 
-            ActivityIndicator {
-                anchors.centerIn: parent
-                visible: running
-                running: image.status == Image.Loading
-            }
+            property bool isSelected: selected
 
-            PinchArea {
-                id: zoomPinchArea
-                anchors.fill: parent
+            // Needed as ListView.isCurrentItem can't be used directly in a change handler
+            property bool isActive: ListView.isCurrentItem
+            onIsActiveChanged: if (!isActive) reset();
 
-                property real initialZoom
-                property real maximumScale: 3.0
-                property real minimumZoom: 1.0
-                property real maximumZoom: 3.0
-                property bool active: false
-                property var center
-                enabled: !media.isVideo
+            onClicked: slideshowView.toggleHeader();
 
-                onPinchStarted: {
-                    active = true;
-                    initialZoom = flickable.sizeScale;
-                    center = zoomPinchArea.mapToItem(media, pinch.startCenter.x, pinch.startCenter.y);
-                    zoomIn(center.x, center.y, initialZoom);
-                }
-                onPinchUpdated: {
-                    var zoomFactor = MathUtils.clamp(initialZoom * pinch.scale, minimumZoom, maximumZoom);
-                    flickable.sizeScale = zoomFactor;
-                }
-                onPinchFinished: {
-                    active = false;
-                }
-
-                Flickable {
-                    id: flickable
-                    anchors.fill: parent
-                    contentWidth: media.width
-                    contentHeight: media.height
-                    contentX: (sizeScale - 1) * scaleCenterX * width
-                    contentY: (sizeScale - 1) * scaleCenterY * height
-                    interactive: !delegate.pinchInProgress
-
-                    property real sizeScale: 1.0
-                    property real scaleCenterX: 0.0
-                    property real scaleCenterY: 0.0
-                    Behavior on sizeScale {
-                        enabled: !delegate.pinchInProgress
-                        LomiriNumberAnimation {duration: LomiriAnimation.FastDuration}
-                    }
-                    Behavior on scaleCenterX {
-                        LomiriNumberAnimation {duration: LomiriAnimation.FastDuration}
-                    }
-                    Behavior on scaleCenterY {
-                        LomiriNumberAnimation {duration: LomiriAnimation.FastDuration}
-                    }
-
-                    Item {
-                        id: media
-                        scale:1 - (photoBottomEdge.dragProgress*0.05)
-                        width: flickable.width * flickable.sizeScale
-                        height: flickable.height * flickable.sizeScale
-
-                        property bool isVideo: MimeTypeMapper.mimeTypeToContentType(fileType) === ContentType.Videos
-                        property string photoUrl: editingAvailable ? "image://photo/%1".arg(fileURL.toString()) : fileURL.toString()
-                        property string url: fileURL.toString().replace("file://", "");
-                        Image {
-                            id: image
-                            anchors.fill: parent
-                            asynchronous: true
-                            cache: false
-                            source: slideshowView.inView ? (media.isVideo ? "image://thumbnailer/%1".arg(fileURL.toString())
-                                                                          : media.photoUrl) : ""
-                            sourceSize {
-                                width: listView.maxDimension
-                                height: listView.maxDimension
-                            }
-                            fillMode: Image.PreserveAspectFit
-                            opacity: status == Image.Ready ? 1.0 : 0.0
-                            Behavior on opacity { LomiriNumberAnimation {duration: LomiriAnimation.FastDuration} }
-                        }
-
-                        Image {
-                            id: highResolutionImage
-                            anchors.fill: parent
-                            asynchronous: true
-                            cache: false
-                            source: slideshowView.inView && (flickable.sizeScale > 1.0 ) ?
-                                        media.photoUrl :
-                                        ""
-                            sourceSize {
-                                width: listView.maxDimension * (zoomPinchArea.maximumZoom / 2)
-                                height: listView.maxDimension  * (zoomPinchArea.maximumZoom / 2)
-                            }
-                            fillMode: Image.PreserveAspectFit
-                        }
-
-                        Icon {
-                            objectName: "thumbnailLoadingErrorIcon"
-                            anchors.centerIn: parent
-                            width: units.gu(30)
-                            height: width
-                            name: media.isVideo ? "stock_video" : "stock_image"
-                            color: "white"
-                            opacity: image.status == Image.Error ? 1.0 : 0.0
-                            asynchronous: true
-                         }
-                    }
-
-                    PlayIcon {
-                        anchors.centerIn: parent
-                        width: units.gu(7)
-                        height: width
-                        visible: media.isVideo
-                    }
-
-                    MouseArea {
-                        // Work around being parented under flickable.contentItem
-                        parent: flickable
-                        anchors.fill: parent
-                        onClicked: {
-                            // For videos, we check for a tap in the center
-                            // on the play button icon
-                            if (media.isVideo
-                                && mouse.x > width / 2 - units.gu(5)
-                                && mouse.x < width / 2 + units.gu(5)
-                                && mouse.y > height / 2 - units.gu(5)
-                                && mouse.y < height / 2 + units.gu(5)) {
-                                var url = fileURL.toString().replace("file://", "video://");
-                                Qt.openUrlExternally(url);
-                            } else {
-                                slideshowView.toggleHeader();
-                                mouse.accepted = false;
-                            }
-                        }
-                        onDoubleClicked: {
-                            if (listView.moving) {
-                                // FIXME: workaround for Qt bug specific to touch:
-                                // doubleClicked is received even though the MouseArea
-                                // was tapped only once but another MouseArea was also
-                                // tapped shortly before.
-                                // Ref.: https://bugreports.qt.io/browse/QTBUG-39332
-                                return;
-                            }
-
-                            if (media.isVideo) {
-                                return;
-                            }
-
-                            if (flickable.sizeScale < zoomPinchArea.maximumZoom) {
-                                zoomIn(mouse.x, mouse.y, zoomPinchArea.maximumZoom);
-                            } else {
-                                zoomOut();
-                            }
-                        }
-                    }
-                }
+            function reload() {
+                mediaUrl = "";
+                mediaUrl = model.fileURL;
             }
         }
     }
@@ -382,7 +230,8 @@ FocusScope {
    MediaInfoPopover {
         id: infoPopover
         contentWidth:slideshowView.width > units.gu(45) ? units.gu(40) : slideshowView.width*0.85
-        currentMedia: listView.currentItem ? listView.currentItem.getMedia() : undefined
+        mediaUrl: listView.currentItem && listView.currentItem.mediaUrl && !listView.currentItem.isVideo
+                        ? listView.currentItem.mediaUrl : ""
         model:{
             "fileName": slideshowView.model.get(slideshowView.currentIndex, "fileName"),
             "fileType": slideshowView.model.get(slideshowView.currentIndex, "fileType"),
@@ -426,15 +275,6 @@ FocusScope {
         property: "editModeActions"
         value: editor.item ? editor.item.actions : 0;
         when: editor.active && editor.item
-    }
-
-    function reloadImage(image) {
-        var async = image.asynchronous;
-        var source = image.source;
-        image.asynchronous = false;
-        image.source = "";
-        image.asynchronous = async;
-        image.source = source;
     }
 
     Loader {

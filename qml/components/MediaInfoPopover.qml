@@ -6,9 +6,9 @@ import CameraApp 0.1
 
 Popover {
     id: infoPopover
-    property var currentMedia: null
+    property url mediaUrl: null
     property var model: null
-    property var exifData: currentMedia != undefined ? fileOperations.getEXIFData(currentMedia.url) : undefined
+    property var exifData: mediaUrl != undefined ? fileOperations.getEXIFData(mediaUrl) : undefined
 
     property var infoKeys : [
               { "key": 'Exif.Photo.PixelYDimension' , "title" : i18n.tr( "Width : %1")},
