@@ -23,8 +23,8 @@ AbstractButton {
     property string iconName
     property alias iconColor: icon.color
 
-    width: units.gu(5)
-    height: width
+    implicitWidth: units.gu(5)
+    implicitHeight: width
 
     Rectangle {
         anchors.fill: parent
