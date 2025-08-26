@@ -42,7 +42,10 @@ public:
         FilePathRole = Qt::UserRole + 2,
         FileUrlRole = Qt::UserRole + 3,
         FileTypeRole = Qt::UserRole + 4,
-        SelectedRole = Qt::UserRole + 5
+        SelectedRole = Qt::UserRole + 5,
+        ParentUrlRole = Qt::UserRole + 6,
+        FileSizeRole = Qt::UserRole + 7,
+        FileSizeLabelRole = Qt::UserRole + 8
     };
 
     explicit FoldersModel(QObject *parent = 0);
@@ -90,6 +93,7 @@ Q_SIGNALS:
     void loadingChanged();
 
 private:
+    QString  formatFileSize(qint64 size)  const;
     QStringList m_folders;
     QStringList m_typeFilters;
     QFileInfoList m_fileInfoList;

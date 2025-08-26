@@ -208,13 +208,6 @@ FocusScope {
                     Behavior on opacity { LomiriNumberAnimation {duration: LomiriAnimation.FastDuration} }
                 }
 
-                PlayIcon {
-                    anchors.centerIn: parent
-                    width: units.gu(5.5)
-                    height: width
-                    visible: isVideo
-                }
-
                 Icon {
                     objectName: "thumbnailLoadingErrorIcon"
                     anchors.centerIn: parent
@@ -224,7 +217,14 @@ FocusScope {
                     color: "white"
                     opacity: thumbnail.status == Image.Error ? 1.0 : 0.0
                     asynchronous: true
-                 }
+                }
+
+                PlayIcon {
+                    anchors.centerIn: parent
+                    width: units.gu(5.5)
+                    height: width
+                    visible: isVideo
+                }
 
                 MouseArea {
                     anchors.fill: parent
