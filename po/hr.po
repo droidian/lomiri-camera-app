@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-17 10:34+0000\n"
-"PO-Revision-Date: 2025-02-06 10:51+0000\n"
+"PO-Revision-Date: 2025-09-09 22:02+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/hr/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: lomiri-camera-app.desktop.in:4 lomiri-camera-app.desktop.in:6
@@ -70,114 +70,116 @@ msgstr "Informacije"
 
 #: AdvancedOptions.qml:66
 msgid "Add date stamp on captured images"
-msgstr ""
+msgstr "Dodaj datum na snimljene slike"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: AdvancedOptions.qml:89
 msgid "Format"
-msgstr ""
+msgstr "Format"
 
 #: AdvancedOptions.qml:142
 msgid "Date formatting keywords"
-msgstr ""
+msgstr "Ključne riječi za formatiranje datuma"
 
 #: AdvancedOptions.qml:147
 msgid "the day as number without a leading zero (1 to 31)"
-msgstr ""
+msgstr "dan kao broj bez vodeće nule (od 1 do 31)"
 
 #: AdvancedOptions.qml:148
 msgid "the day as number with a leading zero (01 to 31)"
-msgstr ""
+msgstr "dan kao broj s vodećom nulom (od 01 do 31)"
 
 #: AdvancedOptions.qml:149
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr ""
+msgstr "skraćen lokalizirani naziv dana (npr. „pon” do „ned”)."
 
 #: AdvancedOptions.qml:150
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
-msgstr ""
+msgstr "dugačak lokalizirani naziv dana (npr. „ponedjeljak” do „nedjelja”)."
 
 #: AdvancedOptions.qml:151
 msgid "the month as number without a leading zero (1 to 12)"
-msgstr ""
+msgstr "mjesec kao broj bez vodeće nule (od 1 do 12)"
 
 #: AdvancedOptions.qml:152
 msgid "the month as number with a leading zero (01 to 12)"
-msgstr ""
+msgstr "mjesec kao broj s vodećom nulom (od 01 do 12)"
 
 #: AdvancedOptions.qml:153
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr ""
+msgstr "skraćen lokalizirani naziv mjeseca (npr. „sij” do „pro”)."
 
 #: AdvancedOptions.qml:154
 msgid "the long localized month name (e.g. 'January' to 'December')."
-msgstr ""
+msgstr "dugačak lokalizirani naziv mjeseca (npr. „siječanj” do „prosinac”)."
 
 #: AdvancedOptions.qml:155
 msgid "the year as two digit number (00 to 99)"
-msgstr ""
+msgstr "godina kao dvoznamenkasti broj (00 do 99)"
 
 #: AdvancedOptions.qml:156
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
 msgstr ""
+"godina kao četveroznamenkasti broj. Ako je godina negativna, ispred se "
+"dodaje znak minus."
 
 #: AdvancedOptions.qml:157
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
-msgstr ""
+msgstr "sat bez vodeće nule (od 0 do 23 ili od 1 do 12 ako se prikazuje AM/PM)"
 
 #: AdvancedOptions.qml:158
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
-msgstr ""
+msgstr "sat s vodećom nulom (00 do 23 ili 01 do 12 ako se prikazuje AM/PM)"
 
 #: AdvancedOptions.qml:159
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "sat bez vodeće nule (od 0 do 23, čak i s prikazom AM/PM)"
 
 #: AdvancedOptions.qml:160
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "sat s vodećom nulom (od 00 do 23, čak i s AM/PM prikazom)"
 
 #: AdvancedOptions.qml:161
 msgid "the minute without a leading zero (0 to 59)"
-msgstr ""
+msgstr "minuta bez vodeće nule (od 0 do 59)"
 
 #: AdvancedOptions.qml:162
 msgid "the minute with a leading zero (00 to 59)"
-msgstr ""
+msgstr "minuta s vodećom nulom (od 00 do 59)"
 
 #: AdvancedOptions.qml:163
 msgid "the second without a leading zero (0 to 59)"
-msgstr ""
+msgstr "sekunda bez vodeće nule (od 0 do 59)"
 
 #: AdvancedOptions.qml:164
 msgid "the second with a leading zero (00 to 59)"
-msgstr ""
+msgstr "sekunda s vodećom nulom (od 00 do 59)"
 
 #: AdvancedOptions.qml:165
 msgid "the milliseconds without leading zeroes (0 to 999)"
-msgstr ""
+msgstr "milisekunde bez vodećih nula (od 0 do 999)"
 
 #: AdvancedOptions.qml:166
 msgid "the milliseconds with leading zeroes (000 to 999)"
-msgstr ""
+msgstr "milisekunde s vodećim nulama (od 000 do 999)"
 
 #: AdvancedOptions.qml:167
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr ""
+msgstr "koristite prikaz AM/PM. AP će se zamijeniti s „AM” ili „PM”."
 
 #: AdvancedOptions.qml:168
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr ""
+msgstr "koristite prikaz am/pm. ap će se zamijeniti s „am” ili „pm”."
 
 #: AdvancedOptions.qml:169
 msgid "the timezone (for example 'CEST')"
-msgstr ""
+msgstr "vremenska zona (na primjer „CEST”)"
 
 #: AdvancedOptions.qml:178
 msgid "Add to Format"
-msgstr ""
+msgstr "Dodaj formatu"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: AdvancedOptions.qml:209
@@ -196,11 +198,11 @@ msgstr "Neprozirnost"
 
 #: AdvancedOptions.qml:346
 msgid "Blurred Overlay"
-msgstr ""
+msgstr "Zamućeni sloj"
 
 #: AdvancedOptions.qml:367
 msgid "Only Blur Preview overlay"
-msgstr ""
+msgstr "Samo „Pregled” sa zamućenim slojem"
 
 #: DeleteDialog.qml:24
 msgid "Delete media?"
@@ -233,7 +235,7 @@ msgstr "Uredi fotografiju"
 
 #: GalleryViewHeader.qml:85
 msgid "Photo Roll"
-msgstr ""
+msgstr "Traka fotografija"
 
 #: Information.qml:25
 msgid "Back"
@@ -241,7 +243,7 @@ msgstr "Natrag"
 
 #: Information.qml:76
 msgid "Get the source"
-msgstr ""
+msgstr "Nabavi izvor"
 
 #: Information.qml:77
 msgid "Report issues"
@@ -284,16 +286,16 @@ msgstr "Vrijeme ekspozicije: %1"
 #: MediaInfoPopover.qml:20
 #, qt-format
 msgid "F. Number : %1"
-msgstr ""
+msgstr "F. broj: %1"
 
 #: MediaInfoPopover.qml:21
 #, qt-format
 msgid "Sub-File type : %1"
-msgstr ""
+msgstr "Vrsta poddatoteke : %1"
 
 #: MediaInfoPopover.qml:43
 msgid "Media Information"
-msgstr ""
+msgstr "Podaci medija"
 
 #: MediaInfoPopover.qml:48
 #, qt-format
@@ -308,7 +310,7 @@ msgstr "Vrsta: %1"
 #: MediaInfoPopover.qml:83
 #, qt-format
 msgid "With Flash : %1"
-msgstr ""
+msgstr "S flashom : %1"
 
 #: MediaInfoPopover.qml:83
 msgid "Yes"
@@ -321,10 +323,11 @@ msgstr "Ne"
 #: NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
 msgstr ""
+"Na uređaju više nema slobodne memorije. Za nastavljanje oslobodite memoriju."
 
 #: PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
-msgstr ""
+msgstr "Povucite prstom lijevo na traku fotografija"
 
 #: PhotogridView.qml:42 SlideshowView.qml:54
 msgid "Share"
@@ -340,7 +343,7 @@ msgstr "Uredi"
 
 #: SlideshowView.qml:477
 msgid "Back to Photo roll"
-msgstr ""
+msgstr "Natrag na traku fotografija"
 
 #: UnableShareDialog.qml:25
 msgid "Unable to share"
@@ -418,17 +421,19 @@ msgstr "Vibriraj"
 
 #: ViewFinderOverlay.qml:1200
 msgid "Low storage space"
-msgstr ""
+msgstr "Malo memorije"
 
 #: ViewFinderOverlay.qml:1201
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
 msgstr ""
+"Ponestaje vam memorije. Kako biste nastavili bez prekida, oslobodite "
+"memoriju."
 
 #: ViewFinderOverlay.qml:1214
 msgid "External storage not writeable"
-msgstr ""
+msgstr "U eksternu memoriju nije moguće pisati"
 
 #: ViewFinderOverlay.qml:1215
 msgid ""
@@ -436,10 +441,13 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
+"Čini se da nije moguće pisati na vaš ekstrni medij za spremanje. Pokušaj "
+"izbacivanja i ponovnog povezivanja mogao bi riješiti problem ili će se možda "
+"morati formatirati."
 
 #: ViewFinderOverlay.qml:1253
 msgid "Cannot access camera"
-msgstr ""
+msgstr "Nije moguće pristupiti kameri"
 
 #: ViewFinderOverlay.qml:1254
 msgid ""
@@ -448,24 +456,30 @@ msgid ""
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
+"Aplikacija „Kamera” nema dozvolu za pristup kameri ili se dogodila jedna "
+"druga greška.\n"
+"\n"
+"Ako dodjeljivanje dozvole ne riješi problem, pokrenite uređaj ponovo."
 
 #: ViewFinderOverlay.qml:1256
 msgid "Edit Permissions"
-msgstr ""
+msgstr "Uredi dozvole"
 
 #: ViewFinderView.qml:400
 msgid "Capture failed"
-msgstr ""
+msgstr "Snimanje nije uspjelo"
 
 #: ViewFinderView.qml:405
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
 msgstr ""
+"Zamjena eksternog medija, njegovo formatiranje ili ponovno pokretanje "
+"uređaja bi moglo riješiti problem."
 
 #: ViewFinderView.qml:406
 msgid "Restarting your device might fix the problem."
-msgstr ""
+msgstr "Ponovno pokretanje uređaja bi moglo riješiti problem."
 
 #: camera-app.qml:61
 msgid "Flash"
@@ -510,17 +524,17 @@ msgstr "Stanje osvjetljenja;Dan;Oblačno;Unutarnji prostor"
 #: camera-app.qml:386
 #, qt-format
 msgid "<b>%1</b> photos taken today"
-msgstr ""
+msgstr "Broj danas snimljenih fotografija: <b>%1</b>"
 
 #: camera-app.qml:387
 msgid "No photos taken today"
-msgstr ""
+msgstr "Danas nije snimljena nijedna fotografija"
 
 #: camera-app.qml:397
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
-msgstr ""
+msgstr "Broj danas snimljenih videa: <b>%1</b>"
 
 #: camera-app.qml:398
 msgid "No videos recorded today"
-msgstr ""
+msgstr "Danas nije snimljen nijedan video"
