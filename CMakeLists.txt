@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 project(lomiri-camera-app VERSION 4.1.1 LANGUAGES CXX)
 set (CMAKE_CXX_STANDARD 11)
 
