@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-17 10:34+0000\n"
-"PO-Revision-Date: 2025-09-09 22:02+0000\n"
+"PO-Revision-Date: 2025-09-21 17:05+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-camera-app/hr/>\n"
@@ -210,7 +210,7 @@ msgstr "Izbrisati medij?"
 
 #: DeleteDialog.qml:34 PhotogridView.qml:56 SlideshowView.qml:69
 msgid "Delete"
-msgstr "Obriši"
+msgstr "Izbriši"
 
 #: DeleteDialog.qml:40 ViewFinderOverlay.qml:1203 ViewFinderOverlay.qml:1217
 #: ViewFinderOverlay.qml:1265 ViewFinderView.qml:409
@@ -243,7 +243,7 @@ msgstr "Natrag"
 
 #: Information.qml:76
 msgid "Get the source"
-msgstr "Nabavi izvor"
+msgstr "Nabavi izvorni kod"
 
 #: Information.qml:77
 msgid "Report issues"
