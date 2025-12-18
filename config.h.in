@@ -76,9 +76,6 @@ inline QString cameraAppLocaleDirectory() {
 
 inline QString sourceQml(const CameraMode& mode) {
     static QString qmlFile("camera-app.qml");
-    if (mode == CameraMode::BARCODE_READER) {
-        qmlFile = QString("barcode-reader-app.qml");
-    }
     if (isClick()) {
         return QDir::currentPath() + "/qml/" + qmlFile;
     } else {
